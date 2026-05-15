@@ -12,6 +12,7 @@ import {
   digitalMarketingLinks,
   brandingLinks,
   advertisingLinks,
+  eventsLinks,
 } from "./MenuItems";
 import {
   faBars,
@@ -27,9 +28,11 @@ import {
   faRightToBracket,
   faTimes,
   faBlog,
+  faCalendarAlt,
+  faFileInvoiceDollar,
 } from "@fortawesome/free-solid-svg-icons";
 import NavbarLogo from "../../assets/LeormediaLogo.svg";
-
+import { EventHeroCover } from "../../assets/data/Imagedata";
 import { GlobalData } from "../../assets/data/GlodalData";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPinterestP } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -256,7 +259,14 @@ const Navbar = () => {
   };
 
   const menuConfigs = [
-  
+    {
+      key: "Events",
+      title: "Events",
+      href: "/events",
+      links: eventsLinks,
+      imageSrc: EventHeroCover,
+      icon: faCalendarAlt,
+    },
     {
       key: "weddings",
       title: "Wedding Planners",
@@ -314,6 +324,14 @@ const Navbar = () => {
       links: [],
       imageSrc: null,
       icon: faCommentDots,
+    },
+    {
+      key: "getquotation",
+      title: "Get Quotation",
+      href: "/get-quotation",
+      links: [],
+      imageSrc: null,
+      icon: faFileInvoiceDollar,
     },
 
   ];
@@ -420,7 +438,7 @@ const Navbar = () => {
         <div className="justify-end">
           <ul className="flex items-center">
             {/* Dynamic desktop menu items */}
-            {menuConfigs.slice(0, 8).map((menu) => (
+            {menuConfigs.slice(0, 9).map((menu) => (
               <li
                 key={menu.key}
                 className="relative inline-block text-left hidden lg:block"

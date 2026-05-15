@@ -193,7 +193,121 @@ const Aboutus = () => {
         </div>
       </section>
 
-    
+      {/* Testimonials Section */}
+      <section className="py-24 bg-gray-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-yellow-400/10 text-yellow-700 rounded-full text-sm font-bold mb-6">
+                <span className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </span>
+                4.7/5 Based on 62+ Google Reviews
+              </div>
+              <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
+                What Our Clients Say
+              </h2>
+              <p className="text-gray-600 text-lg">
+                Don't just take our word for it. Here is what people have to say about their experience with Leor Media.
+              </p>
+            </div>
+            <div className="flex gap-4">
+              <a 
+                href="https://search.google.com/local/writereview?placeid=ChIJYUkDCiZDOToRaohqEOMBUqU" 
+                target="_blank" 
+                rel="noreferrer"
+                className="px-6 py-3 bg-white border border-gray-200 rounded-xl font-bold text-gray-700 hover:bg-gray-50 transition-colors shadow-sm flex items-center gap-2"
+              >
+                <img src="https://www.google.com/favicon.ico" alt="Google" className="w-4 h-4" />
+                Write a Review
+              </a>
+              <a 
+                href="https://www.google.com/search?sca_esv=3037e92767d15074&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qObqM7PLJrr7NvDCJalAKXt9IxFxVcTZ_oheLMZU_bXxbin3PMCqMZukJCK1ZnvYFqI4XwR2T3j3LjhjbcHpwClAsWqI_&q=Leormedia+Reviews&sa=X&ved=2ahUKEwjQpefMo6mUAxVUR2cHHTLgGnYQ0bkNegQIPRAI&biw=1920&bih=945&dpr=1" 
+                target="_blank" 
+                rel="noreferrer"
+                className="px-6 py-3 bg-primary text-gray-900 rounded-xl font-bold hover:shadow-lg transition-all shadow-sm"
+              >
+                View All Reviews
+              </a>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                author: "surarapu rajesh",
+                text: "Had a fantastic experience with Leor Media's event management team! The event was flawlessly organized, from the seamless registration process to the attention to detail during the entire event. Highly recommend their services.",
+                rating: 5,
+                time: "a month ago"
+              },
+              {
+                author: "balu Jammana",
+                text: "Amazing work by LEOR Media Event Management! ✨ Team coordination super, event chala smooth ga ayindi. Thank you for making it memorable 😊",
+                rating: 5,
+                time: "2 months ago"
+              },
+              {
+                author: "Rajesh MKL",
+                text: "Best event management company with good and well planned execution. They executed my brother's wedding perfectly. I highly recommend Leor for best event planning and wedding decor.",
+                rating: 5,
+                time: "3 months ago"
+              },
+              {
+                author: "charishma aleti",
+                text: "The best wedding planner! Pavan put extra effort to bring grandeur to the wedding mandap. Execution of design turned out beyond our expectations. Everything was natural and magnificent.",
+                rating: 5,
+                time: "4 months ago"
+              },
+              {
+                author: "Sai Teja",
+                text: "Exceptional digital marketing services. They helped our brand grow significantly in just a few months. The team is very professional and result-oriented.",
+                rating: 5,
+                time: "1 month ago"
+              },
+              {
+                author: "Venkatesh P",
+                text: "One of the top agencies in Vizag for branding and advertising. Their creative team is outstanding and very responsive to feedback.",
+                rating: 4,
+                time: "5 months ago"
+              }
+            ].map((testimonial, idx) => (
+              <div key={idx} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow relative group">
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className={`w-4 h-4 ${i < testimonial.rating ? 'text-yellow-400 fill-current' : 'text-gray-200 fill-current'}`} viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-gray-700 leading-relaxed mb-6 italic">"{testimonial.text}"</p>
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center font-bold text-primary uppercase">
+                    {testimonial.author[0]}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">{testimonial.author}</h4>
+                    <p className="text-xs text-gray-400">{testimonial.time}</p>
+                  </div>
+                  <img src="https://www.google.com/favicon.ico" alt="Google" className="w-4 h-4 ml-auto opacity-40 group-hover:opacity-100 transition-opacity" />
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-12 text-center">
+            <p className="text-sm text-gray-400 flex items-center justify-center gap-2">
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V7h2v9zm4 0h-2V7h2v9z"/>
+              </svg>
+              Verified Reviews via Google Maps
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-primary px-4 text-center text-gray-900">

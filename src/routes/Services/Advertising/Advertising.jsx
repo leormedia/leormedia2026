@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { AdvertisingCompany } from "../../../assets/data/PageData";
-import LineofEngagement from "../../../components/LineofEngagement";
 import { HomeCommunityCover } from "../../../assets/data/Imagedata";
 import { GlobalData } from "../../../assets/data/GlodalData";
 import seoData from "../../../assets/data/seo.json";
@@ -146,8 +145,141 @@ const Advertising = () => {
           </div>
         </section>
 
-        {/* Engagement Section */}
-        <LineofEngagement />
+        {/* SEO Content Section */}
+        <section className="px-4 py-12 bg-white mx-4 my-8 rounded-xl shadow-sm border border-gray-100">
+          <div className="max-w-5xl mx-auto space-y-12 text-gray-800">
+            {/* Home section */}
+            <div className="text-center max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Grow Your Brand with Powerful Advertising</h2>
+              <p className="mb-4 text-gray-600 leading-relaxed text-lg">
+                In today’s competitive market, advertising is more than promotion—it’s about creating visibility, trust, and real business growth. At Leor Media, we help businesses reach the right audience with creative and result-driven advertising solutions.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Whether you want to increase brand awareness, generate leads, promote a product, or grow sales, our team creates advertising campaigns that deliver measurable results.
+              </p>
+            </div>
+
+            {/* Our Advertisement Services */}
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 border-b pb-4">Our Advertisement Services</h2>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition-all hover:-translate-y-1">
+                  <h3 className="text-xl font-bold mb-3 text-gray-800">Digital Advertising</h3>
+                  <p className="mb-4 text-sm text-gray-600">Reach your audience online through high-performing digital campaigns.</p>
+                  <ul className="list-disc pl-5 text-sm space-y-2 text-gray-700 font-medium">
+                    <li>Google Ads</li>
+                    <li>YouTube Advertising</li>
+                    <li>Social Media Ads</li>
+                    <li>Display Advertising</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition-all hover:-translate-y-1">
+                  <h3 className="text-xl font-bold mb-3 text-gray-800">Lead Generation Campaigns</h3>
+                  <p className="text-sm text-gray-600">We create targeted campaigns that help businesses attract quality customers and improve conversions.</p>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition-all hover:-translate-y-1">
+                  <h3 className="text-xl font-bold mb-3 text-gray-800">Outdoor Advertising</h3>
+                  <p className="mb-4 text-sm text-gray-600">Make your brand visible everywhere with impactful outdoor promotions.</p>
+                  <ul className="list-disc pl-5 text-sm space-y-2 text-gray-700 font-medium">
+                    <li>Hoardings & Billboards</li>
+                    <li>Flex & Banner Advertising</li>
+                    <li>Bus & Auto Branding</li>
+                    <li>Pole Kiosks</li>
+                    <li>LED Screen Promotions</li>
+                  </ul>
+                  <p className="mt-4 text-sm text-gray-500 italic">Our outdoor advertising solutions help your business gain strong local visibility and brand recognition.</p>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition-all hover:-translate-y-1">
+                  <h3 className="text-xl font-bold mb-3 text-gray-800">Print Advertising</h3>
+                  <p className="mb-4 text-sm text-gray-600">Professional print advertising solutions that create lasting impressions.</p>
+                  <ul className="list-disc pl-5 text-sm space-y-2 text-gray-700 font-medium">
+                    <li>Newspaper Ads</li>
+                    <li>Magazine Promotions</li>
+                    <li>Flyers & Pamphlets</li>
+                    <li>Brochures & Catalogues</li>
+                  </ul>
+                  <p className="mt-4 text-sm text-gray-500 italic">We design attractive and informative print materials that effectively communicate your brand message.</p>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition-all hover:-translate-y-1 md:col-span-2">
+                  <h3 className="text-xl font-bold mb-3 text-gray-800">Branding & Promotional Campaigns</h3>
+                  <p className="mb-4 text-sm text-gray-600">Creative promotional strategies to increase customer engagement.</p>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <ul className="list-disc pl-5 text-sm space-y-2 text-gray-700 font-medium">
+                      <li>Product Launch Promotions</li>
+                      <li>Event Promotions</li>
+                      <li>Store Branding</li>
+                    </ul>
+                    <ul className="list-disc pl-5 text-sm space-y-2 text-gray-700 font-medium">
+                      <li>Corporate Branding</li>
+                      <li>Seasonal Campaigns</li>
+                    </ul>
+                  </div>
+                  <p className="mt-4 text-sm text-gray-500 italic">We combine creativity and strategy to make your brand stand out in the market.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Why Choose Leor Media? */}
+            <div className="bg-orange-50/50 p-8 rounded-2xl">
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Why Choose Leor Media?</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-white p-5 rounded-lg shadow-sm">
+                  <h4 className="font-bold text-lg text-primary mb-2">Creative Advertising Strategies</h4>
+                  <p className="text-sm text-gray-600">We create campaigns that are visually attractive, engaging, and result-oriented.</p>
+                </div>
+                <div className="bg-white p-5 rounded-lg shadow-sm">
+                  <h4 className="font-bold text-lg text-primary mb-2">Targeted Audience Reach</h4>
+                  <p className="text-sm text-gray-600">Our advertising solutions focus on reaching the right people at the right time.</p>
+                </div>
+                <div className="bg-white p-5 rounded-lg shadow-sm">
+                  <h4 className="font-bold text-lg text-primary mb-2">Affordable & Effective</h4>
+                  <p className="text-sm text-gray-600">We provide cost-effective advertising services without compromising quality.</p>
+                </div>
+                <div className="bg-white p-5 rounded-lg shadow-sm">
+                  <h4 className="font-bold text-lg text-primary mb-2">End-to-End Support</h4>
+                  <p className="text-sm text-gray-600">From planning and design to execution and monitoring, we handle everything.</p>
+                </div>
+                <div className="bg-white p-5 rounded-lg shadow-sm md:col-span-2 lg:col-span-2">
+                  <h4 className="font-bold text-lg text-primary mb-2">Result-Driven Approach</h4>
+                  <p className="text-sm text-gray-600">Our focus is not just visibility but real business growth and customer engagement.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Industries We Serve */}
+            <div className="text-center">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6">Industries We Serve</h2>
+              <p className="mb-6 text-gray-600">We provide advertisement solutions for:</p>
+              <div className="flex flex-wrap justify-center gap-3">
+                {["Real Estate", "Restaurants & Cafes", "Fashion & Retail", "Education Institutes", "Healthcare Businesses", "Corporate Companies", "Events & Entertainment", "Startups & Local Businesses"].map((industry, index) => (
+                  <span key={index} className="bg-white border border-gray-200 text-gray-800 px-5 py-2.5 rounded-full text-sm font-semibold shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">
+                    {industry}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Let’s Promote Your Brand */}
+            <div className="bg-gradient-to-br from-primary to-orange-600 p-8 md:p-12 rounded-2xl text-center text-white shadow-lg">
+              <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white">Let’s Promote Your Brand</h2>
+              <p className="mb-8 max-w-2xl mx-auto text-white/90 text-lg">
+                At Leor Media, we help businesses build strong brand visibility through innovative advertising solutions. Whether you need digital campaigns or large-scale outdoor promotions, we are ready to take your brand to the next level.
+              </p>
+              <div className="flex flex-col items-center justify-center gap-4">
+                <p className="font-semibold text-xl text-yellow-300">📞 Contact Us Today</p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <a href="tel:+919666643456" className="text-primary hover:text-orange-600 font-bold text-lg bg-white px-6 py-3 rounded-full shadow-md transition-transform hover:scale-105">+91-9666643456</a>
+                  <a href="tel:+919542248999" className="text-primary hover:text-orange-600 font-bold text-lg bg-white px-6 py-3 rounded-full shadow-md transition-transform hover:scale-105">+91-9542248999</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section className="text-center bg-primary py-8 px-4 rounded-lg mx-4">

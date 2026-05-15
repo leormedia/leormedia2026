@@ -84,9 +84,8 @@ import {
   faGlassCheers,
   faChampagneGlasses,
   faMasksTheater,
-  faWater,
   faGlassMartiniAlt,
-  faHandshake,
+  faWater,
   faChalkboard,
   faMicrophoneLines,
   faAward,
@@ -403,6 +402,59 @@ export const advertisingLinks = [
       { path: "/services/advertisement/direct-marketing", title: "Direct Marketing", icon: faEnvelope },
       { path: "/services/advertisement/digital-marketing-btl", title: "Digital Marketing", icon: faGlobe },
       { path: "/services/advertisement/tele-marketing", title: "Tele Marketing", icon: faPhone },
+    ],
+  },
+];
+
+export const eventsLinks = [
+  {
+    category: "Corporate Events",
+    links: [
+      { path: "/events/corporate-meetings", title: "Corporate Meetings", icon: faWater },
+      { path: "/events/conferences-seminars", title: "Conferences & Seminars", icon: faChalkboard },
+      { path: "/events/product-launch-events", title: "Product Launch Events", icon: faBullhorn },
+      { path: "/events/award-functions", title: "Award Functions", icon: faAward },
+      { path: "/events/team-outings", title: "Team Outings", icon: faUsers },
+      { path: "/events/annual-day-celebrations", title: "Annual Day Celebrations", icon: faCalendarCheck },
+      { path: "/events/employee-engagement-events", title: "Employee Engagement Events", icon: faSmile },
+    ],
+  },
+  {
+    category: "Entertainment Events",
+    links: [
+      { path: "/events/celebrity-management", title: "Celebrity Management", icon: faStar },
+      { path: "/events/live-concerts", title: "Live Concerts", icon: faMicrophoneLines },
+      { path: "/events/dj-nights", title: "DJ Nights", icon: faMusic },
+      { path: "/events/fashion-shows", title: "Fashion Shows", icon: faUserTie },
+      { path: "/events/cultural-events", title: "Cultural Events", icon: faMasksTheater },
+      { path: "/events/college-fest-events", title: "College Fest Events", icon: faSchool },
+    ],
+  },
+  {
+    category: "Promotional Events",
+    links: [
+      { path: "/events/brand-promotions", title: "Brand Promotions", icon: faBullseye },
+      { path: "/events/mall-activations", title: "Mall Activations", icon: faStore },
+      { path: "/events/road-shows", title: "Road Shows", icon: faTruck },
+      { path: "/events/store-launches", title: "Store Launches", icon: faStore },
+      { path: "/events/political-campaign-events", title: "Political Campaign Events", icon: faFlag },
+      { path: "/events/public-relation-events", title: "Public Relation Events", icon: faCommentAlt },
+    ],
+  },
+  {
+    category: "Exhibition & Trade Shows",
+    links: [
+      { path: "/events/exhibition-stall-design", title: "Exhibition Stall Design", icon: faDraftingCompass },
+      { path: "/events/trade-show-management", title: "Trade Show Management", icon: faSitemap },
+      { path: "/events/expo-promotions", title: "Expo Promotions", icon: faImages },
+    ],
+  },
+  {
+    category: "Religious & Traditional Events",
+    links: [
+      { path: "/events/pooja-events", title: "Pooja Events", icon: faWater },
+      { path: "/events/temple-festivals", title: "Temple Festivals", icon: faLandmark },
+      { path: "/events/traditional-ceremonies", title: "Traditional Ceremonies", icon: faScroll },
     ],
   },
 ];

@@ -7,10 +7,9 @@ import {
   FaPhone,
   FaQuestion,
   FaWhatsapp,
+  FaFileInvoiceDollar,
 } from "react-icons/fa";
 import { IoCall } from "react-icons/io5";
-
-import LineofEngagement from "../../components/LineofEngagement";
 
 import { HomeCommunityCover } from "../../assets/data/Imagedata";
 
@@ -75,6 +74,11 @@ const Services = () => {
                   <Link to="/contactus">
                     <span className="transform flex rounded-md bg-white px-5 py-3 font-medium text-black transition-colors hover:bg-black sm:text-[14px] text-[12px] hover:text-white">
                       <IoCall className="my-auto mr-2" /> Get in Touch
+                    </span>
+                  </Link>
+                  <Link to="/get-quotation">
+                    <span className="transform flex rounded-md bg-primary px-5 py-3 font-medium text-white transition-colors hover:bg-primary/90 sm:text-[14px] text-[12px]">
+                      <FaFileInvoiceDollar className="my-auto mr-2" /> Get Quotation
                     </span>
                   </Link>
 
@@ -189,8 +193,6 @@ const Services = () => {
 
         </section>
 
-        {/*section -5*/}
-        <LineofEngagement />
 
         {/* section -6 */}
         {/* "need more help" section */}

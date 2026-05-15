@@ -9,7 +9,7 @@ const GlobalData = {
 
     /*Social media */
     companyfacebook: "https://www.facebook.com/leormedia/",
-    companyinstagram: "https://www.instagram.com/leormedia/",
+    companyinstagram: "https://www.instagram.com/leor_media_events/",
     companytwitter: "https://x.com/leormedia/",
     companylinkedin: "https://www.linkedin.com/company/leormedia/",
     companypinterest: "https://www.pinterest.com/leormedia/",
@@ -18,3 +18,4 @@ const GlobalData = {
 };
 
 export { GlobalData, Companylogo };
+

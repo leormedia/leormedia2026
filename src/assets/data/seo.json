@@ -804,6 +804,251 @@
     "canonical": "https://leormedia.com/services/branding/catalogue",
     "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
   },
+  "events": {
+    "title": "Events & Celebrations Management in Vizag | Leor Media",
+    "description": "Leor Media is Vizag's leading event management agency. We specialize in weddings, corporate events, entertainment shows, and traditional ceremonies.",
+    "keywords": "event management vizag, event planners visakhapatnam, wedding planners vizag, corporate events vizag, celebrity management vizag",
+    "canonical": "https://leormedia.com/events",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "weddingPlanning": {
+    "title": "Wedding Planning Services in Vizag | Leor Media",
+    "description": "Professional wedding planning services in Visakhapatnam. From venue selection to decor and catering, we handle everything for your dream wedding.",
+    "keywords": "wedding planning vizag, wedding planners visakhapatnam, marriage planners vizag",
+    "canonical": "https://leormedia.com/events/wedding-planning",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "engagementEvents": {
+    "title": "Engagement Event Planning in Vizag | Leor Media",
+    "description": "Elegant and memorable engagement event planning in Visakhapatnam. Beautiful decor and seamless coordination for your ring ceremony.",
+    "keywords": "engagement planning vizag, ring ceremony planners vizag",
+    "canonical": "https://leormedia.com/events/engagement-events",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "haldiMehendi": {
+    "title": "Haldi & Mehendi Event Decor in Vizag | Leor Media",
+    "description": "Vibrant and traditional Haldi and Mehendi event planning in Visakhapatnam. Creative decor and artist management.",
+    "keywords": "haldi decor vizag, mehendi event planners vizag",
+    "canonical": "https://leormedia.com/events/haldi-mehendi",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "sangeetEvents": {
+    "title": "Sangeet Event Planning & Management in Vizag | Leor Media",
+    "description": "High-energy Sangeet night planning in Visakhapatnam. Professional sound, lighting, and DJ services.",
+    "keywords": "sangeet planning vizag, sangeet night management vizag",
+    "canonical": "https://leormedia.com/events/sangeet-events",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "receptionEvents": {
+    "title": "Wedding Reception Planning in Vizag | Leor Media",
+    "description": "Grand wedding reception planning in Visakhapatnam. Sophisticated decor and top-notch hospitality management.",
+    "keywords": "reception planners vizag, wedding reception management vizag",
+    "canonical": "https://leormedia.com/events/reception-events",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "destinationWeddings": {
+    "title": "Destination Wedding Planners in Vizag | Leor Media",
+    "description": "Expert destination wedding planning in Visakhapatnam and exotic locations. Full logistics and guest management.",
+    "keywords": "destination wedding vizag, destination wedding planners visakhapatnam",
+    "canonical": "https://leormedia.com/events/destination-weddings",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "birthdayParties": {
+    "title": "Birthday Party Organizers in Vizag | Leor Media",
+    "description": "Fun and creative birthday party planning in Visakhapatnam. Themed decor, activities, and entertainment for all ages.",
+    "keywords": "birthday party planners vizag, birthday organizers visakhapatnam",
+    "canonical": "https://leormedia.com/events/birthday-parties",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "anniversaryCelebrations": {
+    "title": "Anniversary Event Planning in Vizag | Leor Media",
+    "description": "Celebrate your milestones with elegant anniversary event planning in Visakhapatnam.",
+    "keywords": "anniversary planners vizag, anniversary celebration organizers vizag",
+    "canonical": "https://leormedia.com/events/anniversary-celebrations",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "babyShower": {
+    "title": "Baby Shower Event Planning in Vizag | Leor Media",
+    "description": "Memorable baby shower event planning in Visakhapatnam. Sweet themes and gentle decor.",
+    "keywords": "baby shower planners vizag, baby shower organizers visakhapatnam",
+    "canonical": "https://leormedia.com/events/baby-shower-events",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "corporateMeetings": {
+    "title": "Corporate Meeting Planners in Vizag | Leor Media",
+    "description": "Professional corporate meeting management in Visakhapatnam. Seamless coordination for business excellence.",
+    "keywords": "corporate meeting planners vizag, business meeting organizers vizag",
+    "canonical": "https://leormedia.com/events/corporate-meetings",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "conferencesSeminars": {
+    "title": "Conference & Seminar Management in Vizag | Leor Media",
+    "description": "Full-scale logistics for conferences and seminars in Visakhapatnam. AV setup and delegate management.",
+    "keywords": "conference planners vizag, seminar organizers vizag",
+    "canonical": "https://leormedia.com/events/conferences-seminars",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "productLaunch": {
+    "title": "Product Launch Event Management in Vizag | Leor Media",
+    "description": "High-impact product launch events in Visakhapatnam. Creative branding and strategic launch marketing.",
+    "keywords": "product launch planners vizag, brand launch organizers vizag",
+    "canonical": "https://leormedia.com/events/product-launch-events",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "awardFunctions": {
+    "title": "Award Function Organizers in Vizag | Leor Media",
+    "description": "Grand award ceremony planning in Visakhapatnam. Professional stage production and event management.",
+    "keywords": "award function planners vizag, award ceremony organizers vizag",
+    "canonical": "https://leormedia.com/events/award-functions",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "teamOutings": {
+    "title": "Corporate Team Outing Planners in Vizag | Leor Media",
+    "description": "Engaging team building activities and outings in Visakhapatnam for corporate teams.",
+    "keywords": "team outing planners vizag, corporate team building vizag",
+    "canonical": "https://leormedia.com/events/team-outings",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "annualDay": {
+    "title": "Annual Day Event Planners in Vizag | Leor Media",
+    "description": "Memorable corporate annual day celebrations in Visakhapatnam. Full event execution.",
+    "keywords": "annual day planners vizag, corporate annual day organizers vizag",
+    "canonical": "https://leormedia.com/events/annual-day-celebrations",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "employeeEngagement": {
+    "title": "Employee Engagement Event Planners in Vizag | Leor Media",
+    "description": "Creative employee engagement activities in Visakhapatnam to boost morale and productivity.",
+    "keywords": "employee engagement planners vizag, staff engagement organizers vizag",
+    "canonical": "https://leormedia.com/events/employee-engagement-events",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "celebrityManagement": {
+    "title": "Celebrity Management Agency in Vizag | Leor Media",
+    "description": "Artist and celebrity management services in Visakhapatnam. Booking, coordination, and event logistics.",
+    "keywords": "celebrity management vizag, artist management visakhapatnam",
+    "canonical": "https://leormedia.com/events/celebrity-management",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "liveConcerts": {
+    "title": "Live Concert Organizers in Vizag | Leor Media",
+    "description": "Large-scale live concert planning and management in Visakhapatnam. World-class production.",
+    "keywords": "concert planners vizag, live music event organizers vizag",
+    "canonical": "https://leormedia.com/events/live-concerts",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "djNights": {
+    "title": "DJ Night Event Planners in Vizag | Leor Media",
+    "description": "High-energy DJ night events in Visakhapatnam. Professional sound systems and club-style setups.",
+    "keywords": "dj night planners vizag, party organizers visakhapatnam",
+    "canonical": "https://leormedia.com/events/dj-nights",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "fashionShows": {
+    "title": "Fashion Show Organizers in Vizag | Leor Media",
+    "description": "Professional fashion show management in Visakhapatnam. Choreography, staging, and runway design.",
+    "keywords": "fashion show planners vizag, runway event organizers vizag",
+    "canonical": "https://leormedia.com/events/fashion-shows",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "culturalEvents": {
+    "title": "Cultural Event Management in Vizag | Leor Media",
+    "description": "Planning and management for cultural festivals and performances in Visakhapatnam.",
+    "keywords": "cultural event planners vizag, heritage event organizers vizag",
+    "canonical": "https://leormedia.com/events/cultural-events",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "collegeFest": {
+    "title": "College Fest Event Planners in Vizag | Leor Media",
+    "description": "Dynamic and engaging college festival planning in Visakhapatnam. Youth-focused events.",
+    "keywords": "college fest planners vizag, campus event organizers vizag",
+    "canonical": "https://leormedia.com/events/college-fest-events",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "brandPromotions": {
+    "title": "Brand Promotion Services in Vizag | Leor Media",
+    "description": "Strategic brand promotion and activation services in Visakhapatnam to boost visibility.",
+    "keywords": "brand promotion vizag, brand activation organizers vizag",
+    "canonical": "https://leormedia.com/events/brand-promotions",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "mallActivations": {
+    "title": "Mall Activation Event Planners in Vizag | Leor Media",
+    "description": "High-footfall mall activation events in Visakhapatnam. Creative setups and engagement.",
+    "keywords": "mall activation vizag, shopping mall event organizers vizag",
+    "canonical": "https://leormedia.com/events/mall-activations",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "roadShows": {
+    "title": "Road Show Organizers in Vizag | Leor Media",
+    "description": "Mobile marketing and road show management in Visakhapatnam. Nationwide reach.",
+    "keywords": "road show organizers vizag, mobile marketing vizag",
+    "canonical": "https://leormedia.com/events/road-shows",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "storeLaunches": {
+    "title": "Retail Store Launch Events in Vizag | Leor Media",
+    "description": "Grand opening events for retail stores in Visakhapatnam. Memorable launches.",
+    "keywords": "store launch planners vizag, retail opening organizers vizag",
+    "canonical": "https://leormedia.com/events/store-launches",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "politicalCampaign": {
+    "title": "Political Event Management in Vizag | Leor Media",
+    "description": "Professional management for political rallies and campaign events in Visakhapatnam.",
+    "keywords": "political rally planners vizag, campaign organizers vizag",
+    "canonical": "https://leormedia.com/events/political-campaign-events",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "publicRelations": {
+    "title": "PR & Media Event Planners in Vizag | Leor Media",
+    "description": "PR events, press conferences, and media networking in Visakhapatnam.",
+    "keywords": "pr event planners vizag, media event organizers vizag",
+    "canonical": "https://leormedia.com/events/public-relation-events",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "stallDesign": {
+    "title": "Exhibition Stall Design & Fabrication in Vizag | Leor Media",
+    "description": "Custom exhibition stall design and construction in Visakhapatnam.",
+    "keywords": "stall design vizag, exhibition stall fabrication visakhapatnam",
+    "canonical": "https://leormedia.com/events/exhibition-stall-design",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "tradeShow": {
+    "title": "Trade Show Management in Vizag | Leor Media",
+    "description": "Full trade show logistics and management in Visakhapatnam.",
+    "keywords": "trade show organizers vizag, expo management visakhapatnam",
+    "canonical": "https://leormedia.com/events/trade-show-management",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "expoPromotions": {
+    "title": "Exhibition Marketing & Promotions in Vizag | Leor Media",
+    "description": "Promotional strategies to maximize your exhibition ROI in Visakhapatnam.",
+    "keywords": "exhibition marketing vizag, expo promotions visakhapatnam",
+    "canonical": "https://leormedia.com/events/expo-promotions",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "poojaEvents": {
+    "title": "Religious Pooja Event Planning in Vizag | Leor Media",
+    "description": "Traditional pooja and ceremony management in Visakhapatnam with devotion.",
+    "keywords": "pooja organizers vizag, religious event planners vizag",
+    "canonical": "https://leormedia.com/events/pooja-events",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "templeFestivals": {
+    "title": "Temple Festival Event Management in Vizag | Leor Media",
+    "description": "Large-scale temple festival and procession management in Visakhapatnam.",
+    "keywords": "temple festival planners vizag, religious procession organizers vizag",
+    "canonical": "https://leormedia.com/events/temple-festivals",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
+  "traditionalCeremonies": {
+    "title": "Traditional Ceremony Planners in Vizag | Leor Media",
+    "description": "Planning for traditional and family ceremonies in Visakhapatnam. Preserving heritage.",
+    "keywords": "traditional ceremony planners vizag, family event organizers vizag",
+    "canonical": "https://leormedia.com/events/traditional-ceremonies",
+    "ogImage": "https://leormedia.com/images/Thumbmail-demo.png"
+  },
   "brochure": {
     "title": "Brochure Services in Visakhapatnam | Leor Media",
     "description": "Premium Brochure services by Leor Media, Visakhapatnam's leading branding agency. Elevate your brand identity and market presence.",

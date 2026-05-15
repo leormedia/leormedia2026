@@ -7,6 +7,7 @@ import {
   ServicesCoverImage,
   DefaultCoverImage,
   WeddingCoverImage,
+  EventHeroCover,
 } from "../data/Imagedata";
 import {
   faMousePointer,
@@ -73,6 +74,16 @@ import {
   faAward,
   faStar,
   faChalkboard,
+  faHeart,
+  faBaby,
+  faWater,
+  faCalendarCheck,
+  faSmile,
+  faMicrophoneLines,
+  faSchool,
+  faFlag,
+  faDraftingCompass,
+  faScroll,
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -284,53 +295,50 @@ export const GenericAdvertisementDetailPageData = {
   SeoName: { seotitle: "advertising" },
   coverimage: AdvertisitngCoverImage,
   title: "Advertising Solutions",
-  subtitle: "Strategic advertisement services to boost your brand reach and visibility.",
+  subtitle: "Strategic advertisement services to boost your brand reach and visibility across all channels.",
   coverImage: { src: AdvertisitngCoverImage, style: { backgroundSize: "cover", backgroundPosition: "center" } },
   section2: { tagline: "Reach More People", heading: "Professional Advertising Services", description: "We provide expert advertising solutions across multiple channels to ensure your message reaches the right audience effectively." },
   services: [
     { icon: faCheckCircle, title: "Strategic Planning", description: "Customized ad strategies for your brand.", details: ["Audience Research", "Media Planning", "ROI Optimization"], link: "/contactus" },
     { icon: faPalette, title: "Creative Design", description: "Stunning ad designs that capture attention.", details: ["Graphic Design", "Copywriting", "Visual Storytelling"], link: "/contactus" },
   ],
-  pricing: [{ title: "Custom Plan", price: "Contact Us", features: ["Media Buying", "Creative Design", "Campaign Management", "Performance Reports"], link: "/contactus", highlighted: true }],
-  faqs: [{ question: "How do you choose the best ad channel?", answer: "We analyze your target audience, goals, and budget to recommend the most effective ATL, BTL, or digital channels." }],
+  pricing: [
+    { title: "Standard", price: "₹25K+", features: ["Site Research", "Basic Ad Design", "Placement Support"], highlighted: false },
+    { title: "Business", price: "₹1L+", features: ["Premium Location", "LED Tech", "Maintenance"], highlighted: true },
+    { title: "Premium", price: "Custom", features: ["Network of Boards", "Dynamic Content", "24/7 Support"], highlighted: false },
+  ],
+  faqs: [
+    { question: "How do you choose the best ad channel?", answer: "We analyze your target audience, goals, and budget to recommend the most effective ATL, BTL, or digital channels." },
+    { question: "Do you handle the permissions?", answer: "Yes, we handle all legal permissions and municipal requirements for outdoor advertising." }
+  ],
 };
 
 // Individual Advertisement Sub-Page Data
 export const DisplayBoardsPageData = {
-  SeoName: {
-    seotitle: "display-boards",
-  },
-  title: "Display Boards",
-  subtitle: "Effective Display Boards services by Leor Media to maximize your brand reach.",
+  SeoName: { seotitle: "display-boards" },
+  title: "Premium Display Boards Advertising in Vizag",
+  subtitle: "Capture attention with high-impact, illuminated and non-illuminated display boards strategically placed across Visakhapatnam.",
   coverimage: AdvertisitngCoverImage,
   section2: {
-    tagline: "Display Boards Advertising",
-    heading: "Impactful Display Boards Solutions",
-    description: "Leor Media delivers strategic Display Boards campaigns that drive visibility and results.",
+    tagline: "MAXIMIZE VISIBILITY",
+    heading: "Brilliant Display Board Solutions",
+    description: "Leor Media specializes in designing and placing premium display boards that ensure your brand message is seen by thousands every day. From LED screens to traditional glow-signs, we offer the best in OOH advertising.",
   },
   services: [
-    {
-      icon: faCheckCircle,
-      title: "Display Boards Campaign",
-      description: "Professional management of Display Boards.",
-      details: ["Location Targeting", "Creative Design", "Campaign Tracking"],
-      link: "/contactus",
-    },
+    { title: "LED Display Boards", description: "Dynamic, high-brightness digital displays.", icon: faCheckCircle },
+    { title: "Glow-Sign Boards", description: "Backlit boards for 24/7 brand visibility.", icon: faCheckCircle },
+    { title: "Neon Signs", description: "Creative and eye-catching night advertising.", icon: faCheckCircle },
+    { title: "3D Letter Boards", description: "Premium architectural signage for stores.", icon: faCheckCircle },
   ],
   pricing: [
-    {
-      title: "Custom Quote",
-      price: "Contact Us",
-      features: ["Premium Placement", "Ad Design", "Performance Report"],
-      link: "/contactus",
-      highlighted: true,
-    },
+    { title: "Small Scale", price: "₹25K+", features: ["Site Survey", "Basic Design", "Installation"], highlighted: false },
+    { title: "Commercial", price: "₹1L+", features: ["Premium Location", "LED Tech", "Maintenance"], highlighted: true },
+    { title: "Enterprise", price: "Custom", features: ["Network of Boards", "Dynamic Content", "24/7 Support"], highlighted: false },
   ],
   faqs: [
-    {
-      question: "How effective is Display Boards for my business?",
-      answer: "It provides high visibility and targeted reach to your potential customers in specific locations.",
-    },
+    { question: "What is the life span of these display boards?", answer: "Our premium LED and glow-sign boards are built to last 3-5 years with minimal maintenance." },
+    { question: "Do you handle the permissions for outdoor boards?", answer: "Yes, Leor Media handles all necessary municipal permissions and legal requirements." },
+    { question: "Can we change the content on digital boards?", answer: "Yes, our digital LED boards come with remote management software to update content instantly." },
   ],
 };
 
@@ -2020,41 +2028,27 @@ export const BrandAuditPageData = {
   ],
 };
 
+
+
 export const BrandStrategyPageData = {
-  SeoName: {
-    seotitle: "brand-strategy",
-  },
-  title: "Brand Strategy",
-  subtitle: "Premium Brand Strategy services by Leor Media to elevate your brand presence.",
+  SeoName: { seotitle: "brand-strategy" },
+  title: "Data-Driven Brand Strategy & Positioning",
+  subtitle: "Transform your business into a powerful brand with our strategic framework designed for long-term growth.",
   coverimage: BrandingCoverImage,
   section2: {
-    tagline: "Brand Strategy Excellence",
-    heading: "Enhance Your Brand with Brand Strategy",
-    description: "Leor Media provides specialized Brand Strategy solutions tailored to your business goals.",
+    tagline: "BLUEPRINT FOR SUCCESS",
+    heading: "Strategic Brand Foundation",
+    description: "A great brand isn't built by accident. At Leor Media, we dive deep into market research, competitor analysis, and consumer behavior to craft a brand strategy that resonates and lasts.",
   },
   services: [
-    {
-      icon: faCheckCircle,
-      title: "Brand Strategy Expertise",
-      description: "Professional approach to Brand Strategy.",
-      details: ["Strategic Analysis", "Creative Execution", "Impact Assessment"],
-      link: "/contactus",
-    },
-  ],
-  pricing: [
-    {
-      title: "Custom Package",
-      price: "Contact Us",
-      features: ["Personalized Consultation", "Creative Assets", "Brand Support"],
-      link: "/contactus",
-      highlighted: true,
-    },
+    { title: "Market Research", description: "In-depth analysis of your industry and trends.", icon: faSearch },
+    { title: "Competitor Benchmarking", description: "Identifying gaps and opportunities in the market.", icon: faSearchDollar },
+    { title: "Brand Architecture", description: "Organizing your brand portfolio for clarity.", icon: faSitemap },
+    { title: "Voice & Messaging", description: "Defining how your brand speaks to the world.", icon: faCommentAlt },
   ],
   faqs: [
-    {
-      question: "Why is Brand Strategy important for my brand?",
-      answer: "It helps in creating a consistent and professional brand image that resonates with your audience.",
-    },
+    { question: "Why do I need a brand strategy?", answer: "A strategy ensures consistency across all touchpoints, builds trust, and helps you command premium pricing." },
+    { question: "How long does the strategy process take?", answer: "Typically, a comprehensive brand strategy takes 4-8 weeks depending on the complexity of the business." },
   ],
 };
 
@@ -2707,40 +2701,30 @@ export const DigitalMarketingCompany = {
 
 // Individual Digital Media Marketing Sub-Page Data
 export const DigitalMarketingPageData = {
-  SeoName: {
-    seotitle: "digital-marketing",
-  },
-  title: "Digital Marketing",
-  subtitle: "Expert Digital Marketing services by Leor Media to grow your brand digitally.",
+  SeoName: { seotitle: "digital-marketing" },
+  title: "Digital Marketing Agency in Vizag",
+  subtitle: "Boost your online presence with strategic SEO, PPC, social media marketing, and data-driven content campaigns. We drive traffic, build engagement, and increase conversions.",
   coverimage: DigitalMarketingCoverImage,
   section2: {
-    tagline: "Digital Marketing Solutions",
-    heading: "Scale Your Business with Digital Marketing",
-    description: "Leor Media provides specialized Digital Marketing strategies to help your brand reach the right audience.",
+    tagline: "GROW YOUR DIGITAL FOOTPRINT",
+    heading: "Full-Service Digital Marketing",
+    description: "In today's digital-first world, your online presence is your most valuable asset. At Leor Media, we combine data analytics with creative storytelling to build digital marketing campaigns that don't just look good—they perform.",
   },
   services: [
-    {
-      icon: faCheckCircle,
-      title: "Digital Marketing Strategy",
-      description: "Comprehensive approach to Digital Marketing.",
-      details: ["Strategy Development", "Audience Targeting", "Performance Analysis"],
-      link: "/contactus",
-    },
+    { title: "Search Engine Optimization", description: "Rank higher on Google and drive organic traffic.", icon: faSearch },
+    { title: "Pay-Per-Click Ads", description: "Targeted advertising for instant results and ROI.", icon: faSearchDollar },
+    { title: "Social Media Marketing", description: "Engage your audience on platforms they love.", icon: faUsers },
+    { title: "Content Marketing", description: "Value-driven content that builds brand authority.", icon: faFileLines },
   ],
   pricing: [
-    {
-      title: "Custom Plan",
-      price: "Contact Us",
-      features: ["Expert Consultation", "Custom Implementation", "Monthly Reporting"],
-      link: "/contactus",
-      highlighted: true,
-    },
+    { title: "Growth Plan", price: "₹30K/mo", features: ["Social Media", "SEO Basics", "Weekly Reports"], highlighted: false },
+    { title: "Accelerator", price: "₹75K/mo", features: ["Paid Ads", "Full SEO", "Content Creation"], highlighted: true },
+    { title: "Dominator", price: "Custom", features: ["Multi-Channel", "Influencer PR", "Video Marketing"], highlighted: false },
   ],
   faqs: [
-    {
-      question: "How does Digital Marketing help my business?",
-      answer: "It increases visibility, engagement, and conversions in the digital space.",
-    },
+    { question: "How long does it take to see results from SEO?", answer: "SEO is a long-term strategy. Typically, you'll start seeing significant improvements in rankings and traffic within 3-6 months." },
+    { question: "Do you handle paid ad spend?", answer: "We manage the campaigns and optimize the budget. The actual ad spend is paid directly to the platforms (Google/Facebook)." },
+    { question: "Can you manage our social media daily?", answer: "Yes, we provide full-service social media management including posting, engagement, and reporting." },
   ],
 };
 
@@ -3278,7 +3262,6 @@ export const YoutubeEntertainmentPageData = {
 };
 
 
-// Generic Digital Media Marketing Detail Page Data (Original fallback)
 export const GenericDigitalMediaMarketingDetailPageData = {
   SeoName: { seotitle: "digitalmarketing" },
   coverimage: DigitalMarketingCoverImage,
@@ -3301,151 +3284,114 @@ export const DestinationWeddingData = {
   SeoName: {
     seotitle: "destination-wedding",
   },
-  title: "Destination Wedding Arrangements & Planning",
-  subtitle: "Exquisite Destination Wedding Arrangements & Planning services by Leor Media in Visakhapatnam.",
+  title: "Destination Wedding Planners in Vizag",
+  subtitle: "Create unforgettable wedding memories with beautifully planned destination weddings by Leor Media. From venue selection to complete event management, we handle everything with elegance and perfection.",
   coverimage: WeddingCoverImage,
   section2: {
-    tagline: "Planning Destination Wedding Arrangements & Planning?",
-    heading: "Make Your Destination Wedding Arrangements & Planning Memorable.",
-    description: "Leor Media provides premium Destination Wedding Arrangements & Planning services tailored to your needs.",
+    tagline: "UNFORGETTABLE MEMORIES",
+    heading: "Luxury Destination Weddings in Visakhapatnam",
+    description: "A destination wedding is more than just a ceremony—it’s a once-in-a-lifetime experience. At Leor Media, we specialize in planning elegant and stress-free destination weddings tailored to your style, traditions, and budget.",
   },
   services: [
-    {
-      icon: faCheckCircle,
-      title: "Full Planning",
-      description: "Complete management of your Destination Wedding Arrangements & Planning.",
-      details: ["Concept Design", "Vendor Management", "Execution"],
-      link: "/contactus",
-    },
+    { title: "Venue Selection", description: "Finding the perfect luxury resort or beach front.", icon: faGlobe },
+    { title: "Wedding Decoration", description: "Stunning theme-based decor and lighting.", icon: faPalette },
+    { title: "Catering", description: "Exquisite multi-cuisine menus for all ceremonies.", icon: faUtensils },
+    { title: "Guest Management", description: "End-to-end hospitality for your loved ones.", icon: faUsers },
+    { title: "Entertainment", description: "Celebrity artists, DJs, and live performances.", icon: faMusic },
+    { title: "Travel & Stay", description: "Accommodation and travel logistics for guests.", icon: faPlaneDeparture },
   ],
   pricing: [
-    {
-      title: "Standard",
-      price: "Contact Us",
-      features: ["Consultation", "Coordination", "Support"],
-      link: "/contactus",
-      highlighted: true,
-    },
+    { title: "Basic Package", price: "₹1.5L+", features: ["Coordination", "Basic Decor", "Vendor Listing"], highlighted: false },
+    { title: "Premium Package", price: "₹5L+", features: ["Full Decor", "Artist Booking", "Hospitality"], highlighted: true },
+    { title: "Luxury Package", price: "Custom", features: ["Exotic Venues", "Celebrity Guests", "Concierge"], highlighted: false },
   ],
   faqs: [
-    {
-      question: "Do you handle all aspects of Destination Wedding Arrangements & Planning?",
-      answer: "Yes, we provide end-to-end solutions for your event.",
-    },
+    { question: "How much does a destination wedding cost?", answer: "Costs vary significantly based on location and guest count. Our packages start from ₹1.5L for coordination." },
+    { question: "Which locations are best for destination weddings?", answer: "Vizag's beach resorts, Udaipur's palaces, and Goa's sands are top choices. We specialize in Vizag beach weddings." },
+    { question: "Do you provide complete wedding planning?", answer: "Yes, we handle everything from pre-wedding shoots to post-wedding logistics." },
+    { question: "Can you arrange beach weddings?", answer: "Absolutely! We are experts in beach wedding permissions and setups in Vizag." },
+    { question: "How early should we book?", answer: "For destination weddings, we recommend booking 6-12 months in advance to secure the best venues." },
   ],
 };
 
 export const RingCeremonyData = {
-  SeoName: {
-    seotitle: "ring-ceremony",
-  },
-  title: "Ring Ceremony (Engagements)",
-  subtitle: "Exquisite Ring Ceremony (Engagements) services by Leor Media in Visakhapatnam.",
+  SeoName: { seotitle: "ring-ceremony" },
+  title: "Elegant Ring Ceremony & Engagement Planning",
+  subtitle: "Celebrate your first step towards forever with a beautifully organized engagement event that reflects your love story.",
   coverimage: WeddingCoverImage,
   section2: {
-    tagline: "Planning Ring Ceremony (Engagements)?",
-    heading: "Make Your Ring Ceremony (Engagements) Memorable.",
-    description: "Leor Media provides premium Ring Ceremony (Engagements) services tailored to your needs.",
+    tagline: "A PROMISE FOR LIFE",
+    heading: "Perfect Engagement Celebrations",
+    description: "At Leor Media, we create the perfect ambiance for your ring ceremony. From exquisite floral arrangements to thematic backdrops, we ensure your engagement is as special as the wedding itself.",
   },
   services: [
-    {
-      icon: faCheckCircle,
-      title: "Full Planning",
-      description: "Complete management of your Ring Ceremony (Engagements).",
-      details: ["Concept Design", "Vendor Management", "Execution"],
-      link: "/contactus",
-    },
+    { title: "Stage & Backdrop", description: "Customized engagement stage designs.", icon: faCheckCircle },
+    { title: "Photography", description: "Candid and cinematic coverage of your special moments.", icon: faCamera },
+    { title: "Artist Management", description: "DJs, MCs, and performers for your event.", icon: faMusic },
+    { title: "Catering", description: "Delicious food and beverage services.", icon: faUtensils },
   ],
   pricing: [
-    {
-      title: "Standard",
-      price: "Contact Us",
-      features: ["Consultation", "Coordination", "Support"],
-      link: "/contactus",
-      highlighted: true,
-    },
+    { title: "Essential", price: "₹50K+", features: ["Decor", "Sound", "Basic Photography"], highlighted: false },
+    { title: "Classic", price: "₹1.5L+", features: ["Premium Decor", "Full AV", "Candid Shoots"], highlighted: true },
+    { title: "Royal", price: "Custom", features: ["Designer Sets", "Celebrity Artist", "Premium Hospitality"], highlighted: false },
   ],
   faqs: [
-    {
-      question: "Do you handle all aspects of Ring Ceremony (Engagements)?",
-      answer: "Yes, we provide end-to-end solutions for your event.",
-    },
+    { question: "Can you provide theme-based decor for engagements?", answer: "Yes, we specialize in theme-based decor ranging from floral elegance to modern minimalist designs." },
+    { question: "How early should we book for a ring ceremony?", answer: "We recommend booking 2-3 months in advance to ensure the best vendors and designers are available." },
   ],
 };
 
 export const WeddingPlannersData = {
-  SeoName: {
-    seotitle: "wedding-planners",
-  },
-  title: "Wedding Planners",
-  subtitle: "Exquisite Wedding Planners services by Leor Media in Visakhapatnam.",
+  SeoName: { seotitle: "wedding-planners" },
+  title: "Professional Wedding Planning Services",
+  subtitle: "End-to-end wedding planning services in Visakhapatnam to make your dream wedding a reality with style and grace.",
   coverimage: WeddingCoverImage,
   section2: {
-    tagline: "Planning Wedding Planners?",
-    heading: "Make Your Wedding Planners Memorable.",
-    description: "Leor Media provides premium Wedding Planners services tailored to your needs.",
+    tagline: "YOUR WEDDING, OUR RESPONSIBILITY",
+    heading: "Comprehensive Wedding Solutions",
+    description: "We take the stress out of wedding planning. From vendor sourcing and budget management to on-the-day execution, Leor Media handles every detail with precision and care.",
   },
   services: [
-    {
-      icon: faCheckCircle,
-      title: "Full Planning",
-      description: "Complete management of your Wedding Planners.",
-      details: ["Concept Design", "Vendor Management", "Execution"],
-      link: "/contactus",
-    },
+    { title: "Full Event Planning", description: "End-to-end coordination of all ceremonies.", icon: faCheckCircle },
+    { title: "Budget Management", description: "Efficient planning within your budget.", icon: faUsers },
+    { title: "Vendor Coordination", description: "Managing top-tier photographers, caterers, and decorators.", icon: faPalette },
+    { title: "Logistics Support", description: "Handling transportation and guest hospitality.", icon: faPlaneDeparture },
   ],
   pricing: [
-    {
-      title: "Standard",
-      price: "Contact Us",
-      features: ["Consultation", "Coordination", "Support"],
-      link: "/contactus",
-      highlighted: true,
-    },
+    { title: "Standard", price: "₹2L+", features: ["Day-of Coordination", "Vendor Referral"], highlighted: false },
+    { title: "Premium", price: "₹7L+", features: ["Full Planning", "On-site Mgmt", "Custom Design"], highlighted: true },
+    { title: "Elite", price: "Custom", features: ["Full Wedding Flow", "Celebrity Artist", "Complete Hospitality"], highlighted: false },
   ],
   faqs: [
-    {
-      question: "Do you handle all aspects of Wedding Planners?",
-      answer: "Yes, we provide end-to-end solutions for your event.",
-    },
+    { question: "What does your wedding planning service include?", answer: "We provide full-service planning including budget management, vendor sourcing, event design, and day-of execution." },
+    { question: "Can you help with budget management?", answer: "Yes, we assist in creating a balanced budget and ensuring all wedding elements stay within it." },
   ],
 };
 
 export const ReceptionsData = {
-  SeoName: {
-    seotitle: "receptions",
-  },
-  title: "Receptions",
-  subtitle: "Exquisite Receptions services by Leor Media in Visakhapatnam.",
+  SeoName: { seotitle: "receptions" },
+  title: "Grand Wedding Receptions & Post-Wedding Events",
+  subtitle: "Host a grand reception that leaves a lasting impression. We specialize in creating sophisticated and elegant post-wedding celebrations.",
   coverimage: WeddingCoverImage,
   section2: {
-    tagline: "Planning Receptions?",
-    heading: "Make Your Receptions Memorable.",
-    description: "Leor Media provides premium Receptions services tailored to your needs.",
+    tagline: "GRAND FINALE",
+    heading: "Elegant Reception Management",
+    description: "The reception is the perfect time to celebrate with all your friends and family. Leor Media ensures a grand atmosphere with world-class catering, stunning stage designs, and high-quality entertainment.",
   },
   services: [
-    {
-      icon: faCheckCircle,
-      title: "Full Planning",
-      description: "Complete management of your Receptions.",
-      details: ["Concept Design", "Vendor Management", "Execution"],
-      link: "/contactus",
-    },
+    { title: "Grand Stage Design", description: "Massive and elegant stage setups.", icon: faCheckCircle },
+    { title: "Gourmet Catering", description: "Exquisite menus curated by top chefs.", icon: faUtensils },
+    { title: "Entertainment", description: "Live bands, orchestras, and celebrity hosts.", icon: faMusic },
+    { title: "Guest Concierge", description: "Professional reception area management.", icon: faUsers },
   ],
   pricing: [
-    {
-      title: "Standard",
-      price: "Contact Us",
-      features: ["Consultation", "Coordination", "Support"],
-      link: "/contactus",
-      highlighted: true,
-    },
+    { title: "Classic", price: "₹1L+", features: ["Stage Decor", "Sound System", "Guest Mgmt"], highlighted: false },
+    { title: "Grand", price: "₹3L+", features: ["Thematic Decor", "LED Wall", "Professional MC"], highlighted: true },
+    { title: "Imperial", price: "Custom", features: ["Designer Sets", "Celebrity Performance", "International Cuisine"], highlighted: false },
   ],
   faqs: [
-    {
-      question: "Do you handle all aspects of Receptions?",
-      answer: "Yes, we provide end-to-end solutions for your event.",
-    },
+    { question: "What kind of themes do you offer for receptions?", answer: "We offer various themes including Royal Vintage, Modern Minimalist, Enchanted Forest, and Classic Gold." },
+    { question: "Can you handle large guest counts up to 5000?", answer: "Yes, we have extensive experience in managing large-scale receptions with thousands of guests." },
   ],
 };
 
@@ -5408,4 +5354,60 @@ export const AdvertisementDetailPageData = {
   "direct-marketing": DirectMarketingPageData,
   "digital-marketing-btl": DigitalMarketingBtlPageData,
   "tele-marketing": TeleMarketingPageData,
+};
+
+/* Events & Celebrations */
+export const EventsCompany = {
+  coverimage: EventHeroCover,
+  title: "Events & Celebrations",
+  subtitle: "We create moments that last a lifetime. From grand weddings to corporate conferences, we handle it all with precision and creativity.",
+  section2: {
+    tagline: "EXPERTISE IN EVERY DETAIL",
+    heading: "Vizag's Leading Event Management Agency",
+    description: "Leor Media is a full-service event management agency based in Visakhapatnam. We specialize in planning, designing, and executing events of all scales with a focus on creativity, quality, and excellence."
+  },
+  services: [
+    { title: "Corporate Events", path: "/events/corporate-meetings", icon: faWater, description: "Professional event management for businesses and corporations." },
+    { title: "Entertainment", path: "/events/celebrity-management", icon: faStar, description: "High-energy entertainment events, concerts, and celebrity management." },
+    { title: "Promotions", path: "/events/brand-promotions", icon: faBullseye, description: "Strategic promotional events and brand activation solutions." },
+    { title: "Exhibitions", path: "/events/exhibition-stall-design", icon: faDraftingCompass, description: "Creative exhibition stalls and trade show management." },
+    { title: "Traditional", path: "/events/pooja-events", icon: faWater, description: "Cultural and religious event planning with traditional values." },
+  ]
+};
+
+export const EventsDetailPageData = {
+  // Corporate Events
+  "corporate-meetings": { title: "Corporate Meetings", subtitle: "Professional settings for business excellence.", coverimage: EventHeroCover, section2: { tagline: "BUSINESS FIRST", heading: "Corporate Meeting Planning", description: "Seamless coordination for your business meetings and discussions." }, services: [{ title: "Coordination", icon: faWater, description: "Professional meeting management." }], faqs: [], SeoName: { seotitle: "corporateMeetings" } },
+  "conferences-seminars": { title: "Conferences & Seminars", subtitle: "Knowledge sharing on a grand scale.", coverimage: EventHeroCover, section2: { tagline: "EDUCATIONAL EXCELLENCE", heading: "Conference Management", description: "Full-scale logistics for conferences and seminars." }, services: [{ title: "AV Setup", icon: faChalkboard, description: "State-of-the-art audio-visual equipment." }], faqs: [], SeoName: { seotitle: "conferencesSeminars" } },
+  "product-launch-events": { title: "Product Launch Events", subtitle: "Introduce your brand to the world.", coverimage: EventHeroCover, section2: { tagline: "BRAND IMPACT", heading: "Professional Product Launches", description: "Creative and high-impact launch events for your products." }, services: [{ title: "Branding", icon: faBullhorn, description: "Strategic launch marketing." }], faqs: [], SeoName: { seotitle: "productLaunch" } },
+  "award-functions": { title: "Award Functions", subtitle: "Celebrate excellence and achievement.", coverimage: EventHeroCover, section2: { tagline: "RECOGNIZING SUCCESS", heading: "Grand Award Ceremonies", description: "Sophisticated planning for corporate and public award nights." }, services: [{ title: "Production", icon: faAward, description: "High-quality stage and lighting production." }], faqs: [], SeoName: { seotitle: "awardFunctions" } },
+  "team-outings": { title: "Team Outings", subtitle: "Building stronger bonds through fun.", coverimage: EventHeroCover, section2: { tagline: "TEAM SPIRIT", heading: "Corporate Team Outings", description: "Engaging and fun-filled activities for your employees." }, services: [{ title: "Planning", icon: faUsers, description: "Themed outings and team building." }], faqs: [], SeoName: { seotitle: "teamOutings" } },
+  "annual-day-celebrations": { title: "Annual Day Celebrations", subtitle: "Celebrate your company's journey.", coverimage: EventHeroCover, section2: { tagline: "CORPORATE MILESTONES", heading: "Annual Day Events", description: "Memorable annual day celebrations for your organization." }, services: [{ title: "Execution", icon: faCalendarCheck, description: "Full event execution and management." }], faqs: [], SeoName: { seotitle: "annualDay" } },
+  "employee-engagement-events": { title: "Employee Engagement Events", subtitle: "Keep your team motivated and happy.", coverimage: EventHeroCover, section2: { tagline: "HAPPY TEAMS", heading: "Engagement Activities", description: "Creative activities to boost employee morale and engagement." }, services: [{ title: "Activities", icon: faSmile, description: "In-office and outdoor engagement events." }], faqs: [], SeoName: { seotitle: "employeeEngagement" } },
+
+  // Entertainment Events
+  "celebrity-management": { title: "Celebrity Management", subtitle: "Connecting you with the stars.", coverimage: EventHeroCover, section2: { tagline: "STAR POWER", heading: "Artist & Celeb Coordination", description: "End-to-end management for celebrity appearances and performances." }, services: [{ title: "Booking", icon: faStar, description: "Artist selection and booking." }], faqs: [], SeoName: { seotitle: "celebrityManagement" } },
+  "live-concerts": { title: "Live Concerts", subtitle: "Grand musical experiences.", coverimage: EventHeroCover, section2: { tagline: "MUSICAL MAGIC", heading: "Live Concert Planning", description: "Large-scale concert management with world-class production." }, services: [{ title: "Production", icon: faMicrophoneLines, description: "Professional stage and sound." }], faqs: [], SeoName: { seotitle: "liveConcerts" } },
+  "dj-nights": { title: "DJ Nights", subtitle: "High-energy beats for your party.", coverimage: EventHeroCover, section2: { tagline: "DANCE & MUSIC", heading: "Electronic Music Events", description: "Professional DJ services and club-style setups." }, services: [{ title: "Sound", icon: faMusic, description: "Premium audio equipment." }], faqs: [], SeoName: { seotitle: "djNights" } },
+  "fashion-shows": { title: "Fashion Shows", subtitle: "The ultimate runway experience.", coverimage: EventHeroCover, section2: { tagline: "RUNWAY STYLE", heading: "Fashion Event Management", description: "Choreography, staging, and management for fashion shows." }, services: [{ title: "Staging", icon: faUserTie, description: "Custom runway and lighting designs." }], faqs: [], SeoName: { seotitle: "fashionShows" } },
+  "cultural-events": { title: "Cultural Events", subtitle: "Celebrate heritage and art.", coverimage: EventHeroCover, section2: { tagline: "HERITAGE PRIDE", heading: "Art & Culture Events", description: "Festivals, exhibitions, and performances showcasing culture." }, services: [{ title: "Management", icon: faMasksTheater, description: "Artist and logistics coordination." }], faqs: [], SeoName: { seotitle: "culturalEvents" } },
+  "college-fest-events": { title: "College Fest Events", subtitle: "Youth, energy, and creativity.", coverimage: EventHeroCover, section2: { tagline: "CAMPUS FUN", heading: "College Festival Planning", description: "Dynamic and engaging events for college students." }, services: [{ title: "Planning", icon: faSchool, description: "End-to-end fest management." }], faqs: [], SeoName: { seotitle: "collegeFest" } },
+
+  // Promotional Events
+  "brand-promotions": { title: "Brand Promotions", subtitle: "Boost your brand visibility.", coverimage: EventHeroCover, section2: { tagline: "MARKET IMPACT", heading: "Strategic Brand Activation", description: "Creative promotion strategies to engage your target audience." }, services: [{ title: "Activation", icon: faBullseye, description: "On-ground promotion activities." }], faqs: [], SeoName: { seotitle: "brandPromotions" } },
+  "mall-activations": { title: "Mall Activations", subtitle: "Engage customers where they shop.", coverimage: EventHeroCover, section2: { tagline: "RETAIL ENGAGEMENT", heading: "Shopping Mall Events", description: "High-footfall promotional activities in premium malls." }, services: [{ title: "Execution", icon: faStore, description: "Creative setup and management." }], faqs: [], SeoName: { seotitle: "mallActivations" } },
+  "road-shows": { title: "Road Shows", subtitle: "Take your brand to the streets.", coverimage: EventHeroCover, section2: { tagline: "MOBILE MARKETING", heading: "Nationwide Road Shows", description: "Moving promotions with custom vehicles and displays." }, services: [{ title: "Logistics", icon: faTruck, description: "Vehicle branding and route planning." }], faqs: [], SeoName: { seotitle: "roadShows" } },
+  "store-launches": { title: "Store Launches", subtitle: "A grand opening for your business.", coverimage: EventHeroCover, section2: { tagline: "GRAND OPENINGS", heading: "Retail Store Launches", description: "Memorable launch events for your new store or outlet." }, services: [{ title: "Event Design", icon: faStore, description: "Store decor and launch activities." }], faqs: [], SeoName: { seotitle: "storeLaunches" } },
+  "political-campaign-events": { title: "Political Campaign Events", subtitle: "Connecting leaders with people.", coverimage: EventHeroCover, section2: { tagline: "PUBLIC IMPACT", heading: "Political Event Management", description: "Professional management for rallies, meetings, and campaigns." }, services: [{ title: "Rally Planning", icon: faFlag, description: "Logistics and crowd management." }], faqs: [], SeoName: { seotitle: "politicalCampaign" } },
+  "public-relation-events": { title: "Public Relation Events", subtitle: "Manage your brand's reputation.", coverimage: EventHeroCover, section2: { tagline: "REPUTATION MATTERS", heading: "PR & Media Events", description: "Press conferences and networking events for media coverage." }, services: [{ title: "PR Support", icon: faCommentAlt, description: "Media invites and kit management." }], faqs: [], SeoName: { seotitle: "publicRelations" } },
+
+  // Exhibition & Trade Shows
+  "exhibition-stall-design": { title: "Exhibition Stall Design", subtitle: "Creative spaces that stand out.", coverimage: EventHeroCover, section2: { tagline: "SPACE DESIGN", heading: "Stall Design & Fabrication", description: "Custom exhibition stalls that reflect your brand identity." }, services: [{ title: "Design", icon: faDraftingCompass, description: "3D design and construction." }], faqs: [], SeoName: { seotitle: "stallDesign" } },
+  "trade-show-management": { title: "Trade Show Management", subtitle: "Seamless expo operations.", coverimage: EventHeroCover, section2: { tagline: "EXPO EXCELLENCE", heading: "Trade Show Logistics", description: "Full-scale management for trade shows and exhibitions." }, services: [{ title: "Management", icon: faSitemap, description: "Floor planning and vendor coordination." }], faqs: [], SeoName: { seotitle: "tradeShow" } },
+  "expo-promotions": { title: "Expo Promotions", subtitle: "Drive traffic to your booth.", coverimage: EventHeroCover, section2: { tagline: "BOOTH TRAFFIC", heading: "Exhibition Marketing", description: "Promotional strategies to maximize your expo ROI." }, services: [{ title: "Marketing", icon: faImages, description: "Digital and on-site promotions." }], faqs: [], SeoName: { seotitle: "expoPromotions" } },
+
+  // Religious & Traditional Events
+  "pooja-events": { title: "Pooja Events", subtitle: "Divine celebrations with tradition.", coverimage: EventHeroCover, section2: { tagline: "SPIRITUAL SESSIONS", heading: "Religious Event Planning", description: "Traditional pooja and ceremony management with devotion." }, services: [{ title: "Ceremony", icon: faWater, description: "Pooja samagri and pundit coordination." }], faqs: [], SeoName: { seotitle: "poojaEvents" } },
+  "temple-festivals": { title: "Temple Festivals", subtitle: "Grand celebrations of faith.", coverimage: EventHeroCover, section2: { tagline: "DIVINE FESTIVALS", heading: "Temple Event Management", description: "Large-scale management for annual festivals and processions." }, services: [{ title: "Logistics", icon: faLandmark, description: "Crowd control and setup." }], faqs: [], SeoName: { seotitle: "templeFestivals" } },
+  "traditional-ceremonies": { title: "Traditional Ceremonies", subtitle: "Preserving heritage through events.", coverimage: EventHeroCover, section2: { tagline: "HERITAGE EVENTS", heading: "Ceremony Management", description: "Planning for all types of traditional and family ceremonies." }, services: [{ title: "Coordination", icon: faScroll, description: "End-to-end traditional event support." }], faqs: [], SeoName: { seotitle: "traditionalCeremonies" } },
 };

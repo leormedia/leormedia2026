@@ -30,6 +30,10 @@ import BrandServices from "../routes/Services/BrandServices/BrandServices";
 /*Digital marketing */
 import DigitalMarketing from "../routes/Services/DigitalMarketing/DigitalMarketing";
 
+/*Events*/
+import Events from "./Events/Events";
+import GetQuotation from "./GetQuotation";
+
 
 export {
   /*Fixed */
@@ -66,4 +70,8 @@ export {
   /*Branding*/
   BrandServices,
 
+  /*Events*/
+  Events,
+
+  GetQuotation,
 };

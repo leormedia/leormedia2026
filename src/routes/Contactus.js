@@ -86,9 +86,8 @@ const ContactForm = () => {
             >
               <span className="text-sm font-medium">{faq.question}</span>
               <FaChevronRight
-                className={`transition-transform ${
-                  openIndex === index ? "rotate-90" : ""
-                }`}
+                className={`transition-transform ${openIndex === index ? "rotate-90" : ""
+                  }`}
               />
             </button>
             {openIndex === index && (
@@ -246,16 +245,16 @@ const ContactForm = () => {
                         field === "email"
                           ? "email"
                           : field === "phone"
-                          ? "tel"
-                          : "text"
+                            ? "tel"
+                            : "text"
                       }
                       name={field}
                       placeholder={
                         field === "name"
                           ? "Your full name"
                           : field === "email"
-                          ? "your.email@example.com"
-                          : "+91 00000 00000"
+                            ? "your.email@example.com"
+                            : "+91 00000 00000"
                       }
                       value={formData[field]}
                       onChange={handleChange}
@@ -305,11 +304,10 @@ const ContactForm = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-                  loading
+                className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${loading
                     ? "bg-gray-400 cursor-not-allowed text-gray-200"
                     : "bg-primary hover:bg-primary-100 text-white shadow-sm"
-                }`}
+                  }`}
               >
                 {loading ? "Sending Message..." : "Send Message"}
               </button>

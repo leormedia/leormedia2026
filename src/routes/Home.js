@@ -2,6 +2,7 @@ import { CSDLogoAbout } from "../assets/data/icon_data";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { homepage, EventHeroCover } from "../assets/data/Imagedata";
+import { FaFileInvoiceDollar } from "react-icons/fa";
 import { CONTACTUS_API } from "../hooks/Apis";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -12,6 +13,7 @@ import WeddingSliderImg from "../assets/Generated/wedding_slider.png";
 import MarketingSliderImg from "../assets/Generated/marketing_slider.png";
 import BrandingSliderImg from "../assets/Generated/branding_slider.png";
 import AdvertisingBgImg from "../assets/Generated/advertising_bg.png";
+import OurClientsComponent from "../components/OurClientsComponent";
 
 const HomePage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -270,12 +272,20 @@ const HomePage = () => {
                   <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-2xl mx-auto">
                     {slide.subtitle}
                   </p>
-                  <Link
-                    to={slide.link}
-                    className="inline-block px-10 py-4 bg-primary text-white font-bold rounded-full hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105"
-                  >
-                    {slide.cta}
-                  </Link>
+                  <div className="flex flex-wrap justify-center gap-4">
+                    <Link
+                      to={slide.link}
+                      className="inline-block px-10 py-4 bg-primary text-white font-bold rounded-full hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105"
+                    >
+                      {slide.cta}
+                    </Link>
+                    <Link
+                      to="/get-quotation"
+                      className="inline-block px-10 py-4 bg-white text-primary font-bold rounded-full hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105"
+                    >
+                      Get Quotation
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -359,26 +369,35 @@ const HomePage = () => {
                 </div>
               ))}
             </div>
-            <Link
-              to="/contactus"
-              className="inline-flex items-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105"
-            >
-              Let's Create Something Amazing
-              <svg
-                className="w-5 h-5 ml-3"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/contactus"
+                className="inline-flex items-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                ></path>
-              </svg>
-            </Link>
+                Let's Create Something Amazing
+                <svg
+                  className="w-5 h-5 ml-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  ></path>
+                </svg>
+              </Link>
+              <Link
+                to="/get-quotation"
+                className="inline-flex items-center px-8 py-4 bg-white text-primary border-2 border-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105"
+              >
+                <FaFileInvoiceDollar className="mr-2" />
+                Get a Quotation
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -412,6 +431,9 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      {/* Our Clients Section */}
+      <OurClientsComponent />
 
       {/* Our Services */}
       <div className="relative">

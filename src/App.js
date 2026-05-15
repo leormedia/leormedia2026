@@ -17,6 +17,8 @@ import {
   Blog,
   BlogFullPost,
   FAQ,
+  Events,
+  GetQuotation,
 } from "./routes/Routes";
 
 import seoData from "./assets/data/seo.json";
@@ -46,6 +48,7 @@ import {
   BrandingDetailPageData,
   DigitalMarketingCompany,
   DigitalMediaMarketingDetailPageData,
+  EventsDetailPageData,
 } from "./assets/data/PageData";
 
 
@@ -66,6 +69,7 @@ const routes = [
 
   { path: "/aboutus", element: <Aboutus /> },
   { path: "/contactus", element: <Contactus /> },
+  { path: "/get-quotation", element: <GetQuotation /> },
 
 
   { path: "/Legal/privacy-policy", element: <PrivacyPolicy /> },
@@ -122,6 +126,14 @@ const routes = [
     ),
   },
   /*---------Advertisement End---------*/
+
+  /*---------Events---------*/
+  { path: "/events", element: <Events /> },
+  {
+    path: "/events/:category",
+    element: <SubPages pageData={EventsDetailPageData} seoData={seoData} />,
+  },
+  /*---------Events End---------*/
 ];
 
 export function App() {
