@@ -14,9 +14,9 @@ module.exports = {
           100: "#f37a20", //orange
         },
       },
-      fontFamily: {
-        TuskerGrotesk: ["TuskerGrotesk", "sans-serif"], // Changed from 'tusker' to 'TuskerGrotesk'
-      },
+      // fontFamily: {
+      //   TuskerGrotesk: ["TuskerGrotesk", "sans-serif"], // Changed from 'tusker' to 'TuskerGrotesk'
+      //},
       keyframes: {
         wiggle: {
           "0%, 100%": { transform: "translateX(0)" },

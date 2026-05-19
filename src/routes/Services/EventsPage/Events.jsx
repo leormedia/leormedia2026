@@ -6,9 +6,10 @@ import {
   FaRocket, FaCheckCircle, FaUserFriends, FaPhone, FaQuestion,
   FaCalendarAlt, FaStar, FaAward, FaUsers, FaClock
 } from "react-icons/fa";
-import { EventsCompany } from "../../assets/data/PageData";
-import { GlobalData } from "../../assets/data/GlodalData";
-import seoData from "../../assets/data/seo.json";
+import { EventsCompany } from "./EventsDetailPageData.jsx";
+import { GlobalData } from "../../../assets/data/GlodalData";
+import seoData from "../../../assets/data/seo.json";
+import { eventsLinks } from "../../../components/Navbar/MenuItems.js";
 
 const Events = () => {
   const { title, description, keywords, canonical, ogImage } = seoData.events;
@@ -101,20 +102,40 @@ const Events = () => {
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {EventsCompany.services.map((service, i) => (
-              <div key={i} className="group p-10 bg-gray-50 rounded-3xl hover:bg-white hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-gray-100">
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-3xl text-primary mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-all duration-500">
-                  <FontAwesomeIcon icon={service.icon} />
+            {EventsCompany.services.map((service, i) => {
+              const categoryGroup = eventsLinks.find(
+                (group) => group.category === service.title
+              );
+              return (
+                <div key={i} className="group p-10 bg-gray-50 rounded-3xl hover:bg-white hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-gray-100 flex flex-col justify-between">
+                  <div>
+                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-3xl text-primary mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                      <FontAwesomeIcon icon={service.icon} />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">{service.title}</h3>
+                    <p className="text-gray-600 leading-relaxed text-sm mb-6">
+                      {service.description}
+                    </p>
+                  </div>
+                  
+                  {categoryGroup && (
+                    <ul className="space-y-3 mt-6 border-t border-gray-200/60 pt-6">
+                      {categoryGroup.links.map((subLink, subIdx) => (
+                        <li key={subIdx}>
+                          <Link
+                            to={subLink.path}
+                            className="flex items-center gap-2.5 text-gray-600 hover:text-primary transition-colors text-sm font-semibold group/link"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary group-hover/link:scale-150 transition-all duration-300"></span>
+                            {subLink.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">{service.title}</h3>
-                <p className="text-gray-600 mb-8 leading-relaxed">
-                  {service.description}
-                </p>
-                <Link to={service.path} className="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all">
-                  LEARN MORE <FaRocket />
-                </Link>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

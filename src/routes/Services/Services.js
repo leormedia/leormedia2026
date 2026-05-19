@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { ServicesPageDetails } from "../../assets/data/PageData"; // Adjust the path as necessary
+import { ServicesPageDetails } from "./ServicesDataPage"; // Adjust the path as necessary
 import {
   FaArrowRight,
   FaFileInvoice,
@@ -22,7 +22,7 @@ const { title, description, keywords, canonical, ogImage } = seoData.services;
 const Services = () => {
   return (
     <div className="services">
-    
+
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />

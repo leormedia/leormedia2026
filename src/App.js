@@ -36,20 +36,19 @@ import {
   BrandServices,
 
   SubPages,
-  Calculator,
+  SubpagesDigitalMarketing,
+  SubpagesWeddingplanners,
+  SubpagesAdvertising,
+  SubpagesBranding,
+  SubpagesEvents,
 } from "./routes/Routes";
 
-import {
-  WeddingPlannersPageData,
-  WeddingPlannersDetailPageData,
-  AdvertisingCompany,
-  AdvertisementDetailPageData,
-  BrandingCompany,
-  BrandingDetailPageData,
-  DigitalMarketingCompany,
-  DigitalMediaMarketingDetailPageData,
-  EventsDetailPageData,
-} from "./assets/data/PageData";
+import { WeddingPlannersDetailPageData } from "./routes/Services/WeddingPlannersPage/WeddingPlannersDetailPageData.jsx";
+import { AdvertisementDetailPageData } from "./routes/Services/AdvertisingPage/AdvertisementDetailPageData.jsx";
+import { BrandingDetailPageData } from "./routes/Services/BrandServicesPage/BrandingDetailPageData.jsx";
+import { DigitalMediaMarketingDetailPageData } from "./routes/Services/DigitalMarketingPage/DigitalMediaMarketingDetailPageData.jsx";
+import { EventsDetailPageData } from "./routes/Services/EventsPage/EventsDetailPageData.jsx";
+
 
 
 
@@ -86,7 +85,7 @@ const routes = [
   { path: "/services/wedding-planners", element: <WeddingPlanners /> },
   {
     path: "/services/wedding-planners/:category",
-    element: <SubPages pageData={WeddingPlannersDetailPageData} seoData={seoData} />,
+    element: <SubpagesWeddingplanners pageData={WeddingPlannersDetailPageData} seoData={seoData} />,
   },
   /*---------Wedding Planners End---------*/
 
@@ -101,7 +100,7 @@ const routes = [
   {
     path: "/services/digital-media-marketing/:category",
     element: (
-      <SubPages
+      <SubpagesDigitalMarketing
         pageData={DigitalMediaMarketingDetailPageData}
         seoData={seoData}
       />
@@ -113,7 +112,7 @@ const routes = [
   { path: "/services/branding", element: <BrandServices /> },
   {
     path: "/services/branding/:category",
-    element: <SubPages pageData={BrandingDetailPageData} seoData={seoData} />,
+    element: <SubpagesBranding pageData={BrandingDetailPageData} seoData={seoData} />,
   },
   /*---------Branding End---------*/
 
@@ -122,16 +121,16 @@ const routes = [
   {
     path: "/services/advertisement/:category",
     element: (
-      <SubPages pageData={AdvertisementDetailPageData} seoData={seoData} />
+      <SubpagesAdvertising pageData={AdvertisementDetailPageData} seoData={seoData} />
     ),
   },
   /*---------Advertisement End---------*/
 
   /*---------Events---------*/
-  { path: "/events", element: <Events /> },
+  { path: "/services/events", element: <Events /> },
   {
-    path: "/events/:category",
-    element: <SubPages pageData={EventsDetailPageData} seoData={seoData} />,
+    path: "/services/events/:category",
+    element: <SubpagesEvents pageData={EventsDetailPageData} seoData={seoData} />,
   },
   /*---------Events End---------*/
 ];

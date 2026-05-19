@@ -9,7 +9,8 @@ import {
   HiringModel,
   DigitalMarketingImage,
   BrandingImage,
-  AdvertisingImage
+  AdvertisingImage,
+  GoogleFavicon
 } from "../assets/data/Imagedata.jsx";
 import seoData from "../assets/data/seo.json";
 
@@ -222,7 +223,7 @@ const Aboutus = () => {
                 rel="noreferrer"
                 className="px-6 py-3 bg-white border border-gray-200 rounded-xl font-bold text-gray-700 hover:bg-gray-50 transition-colors shadow-sm flex items-center gap-2"
               >
-                <img src="https://www.google.com/favicon.ico" alt="Google" className="w-4 h-4" />
+                <img src={GoogleFavicon} alt="Google" className="w-4 h-4" />
                 Write a Review
               </a>
               <a 
@@ -292,7 +293,7 @@ const Aboutus = () => {
                     <h4 className="font-bold text-gray-900">{testimonial.author}</h4>
                     <p className="text-xs text-gray-400">{testimonial.time}</p>
                   </div>
-                  <img src="https://www.google.com/favicon.ico" alt="Google" className="w-4 h-4 ml-auto opacity-40 group-hover:opacity-100 transition-opacity" />
+                  <img src={GoogleFavicon} alt="Google" className="w-4 h-4 ml-auto opacity-40 group-hover:opacity-100 transition-opacity" />
                 </div>
               </div>
             ))}

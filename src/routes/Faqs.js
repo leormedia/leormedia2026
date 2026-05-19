@@ -1,11 +1,9 @@
 import React, { useState, useMemo } from "react";
 import { HiChevronDown, HiSearch } from "react-icons/hi";
-import {
-  GenericWeddingPlannersDetailPageData,
-  GenericDigitalMediaMarketingDetailPageData,
-  GenericBrandingDetailPageData,
-  GenericAdvertisementDetailPageData,
-} from "../assets/data/PageData";
+import { GenericWeddingPlannersDetailPageData } from "./Services/WeddingPlannersPage/WeddingPlannersDetailPageData";
+import { GenericDigitalMediaMarketingDetailPageData } from "./Services/DigitalMarketingPage/DigitalMediaMarketingDetailPageData";
+import { GenericBrandingDetailPageData } from "./Services/BrandServicesPage/BrandingDetailPageData";
+
 import seoData from "../assets/data/seo.json";
 import { Helmet } from "react-helmet-async";
 
@@ -82,11 +80,7 @@ function Faqs() {
       title: "Frequently Asked Questions - Branding",
       data: GenericBrandingDetailPageData.faqs || [],
     },
-    {
-      id: "advertisement",
-      title: "Frequently Asked Questions - Advertisement",
-      data: GenericAdvertisementDetailPageData.faqs || [],
-    },
+
   ];
 
   // Combine all FAQs with their section info for search
@@ -248,8 +242,8 @@ function Faqs() {
             <button
               onClick={() => setActiveSection("all")}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${activeSection === "all"
-                  ? "bg-blue-600 text-white"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                ? "bg-blue-600 text-white"
+                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
             >
               All FAQs
@@ -259,8 +253,8 @@ function Faqs() {
                 key={section.id}
                 onClick={() => setActiveSection(section.id)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${activeSection === section.id
-                    ? "bg-blue-600 text-white"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                  ? "bg-blue-600 text-white"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   }`}
               >
                 {section.title.split(" - ")[1] || section.title}

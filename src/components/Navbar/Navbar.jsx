@@ -262,7 +262,7 @@ const Navbar = () => {
     {
       key: "Events",
       title: "Events",
-      href: "/events",
+      href: "/services/events",
       links: eventsLinks,
       imageSrc: EventHeroCover,
       icon: faCalendarAlt,

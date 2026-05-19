@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { AdvertisingCompany } from "../../../assets/data/PageData";
+import { AdvertisingCompany } from "./AdvertisementDetailPageData";
 import { HomeCommunityCover } from "../../../assets/data/Imagedata";
 import { GlobalData } from "../../../assets/data/GlodalData";
 import seoData from "../../../assets/data/seo.json";

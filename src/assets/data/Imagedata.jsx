@@ -39,6 +39,9 @@ import HomeCommunityCover from "../Images/HomeCommunityCover.webp";
 
 import aboutcover from "../Aboutus/aboutcover.webp";
 import CEO_OriginalImage from "../Aboutus/CEO_OriginalImage.webp";
+
+import BrandServicesBg from "../Images/pexels-photo-196644.jpeg";
+import GoogleFavicon from "../Images/google-favicon.ico";
 export {
   DefaultCoverImage,
   homepage,
@@ -77,4 +80,5 @@ export {
   EventHeroCover,
 
   Blogimage1, WeddingCoverImage,
+  BrandServicesBg, GoogleFavicon,
 };

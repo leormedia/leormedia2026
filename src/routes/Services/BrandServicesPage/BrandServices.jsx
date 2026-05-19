@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Slider from "react-slick";
+import BrandServicesBg from "../../../assets/Images/pexels-photo-196644.jpeg";
 import { 
   FaRocket, FaLightbulb, FaCheckCircle, FaUserCheck, 
   FaPalette, FaGlobe, FaPrint, FaStrategy, FaQuoteLeft,
@@ -11,7 +12,7 @@ import {
 import { MdOutlineDesignServices, MdOutlineBrandingWatermark, MdCampaign } from "react-icons/md";
 import { BiTask, BiSupport } from "react-icons/bi";
 import { GlobalData } from "../../../assets/data/GlodalData";
-import { BrandingCompany } from "../../../assets/data/PageData";
+import { BrandingCompany } from "./BrandingDetailPageData";
 import seoData from "../../../assets/data/seo.json";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -160,7 +161,7 @@ const BrandingServices = () => {
             <div className="relative group">
                <div className="absolute inset-0 bg-primary/20 rounded-[3rem] rotate-3 group-hover:rotate-0 transition-transform duration-500"></div>
                <img 
-                src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                src={BrandServicesBg} 
                 alt="Branding Strategy" 
                 className="relative rounded-[3rem] shadow-2xl w-full h-[500px] object-cover group-hover:-translate-x-2 group-hover:-translate-y-2 transition-transform duration-500"
                />

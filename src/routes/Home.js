@@ -1,12 +1,24 @@
 import { CSDLogoAbout } from "../assets/data/icon_data";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { homepage, EventHeroCover } from "../assets/data/Imagedata";
-import { FaFileInvoiceDollar } from "react-icons/fa";
+import {
+  homepage,
+  EventHeroCover,
+  WeddingCoverImage,
+  AdvertisingCoverHomeImage,
+  DigiatalMarketingCoverHomeImage,
+  BrandingCoverHomeImage,
+} from "../assets/data/Imagedata";
+import {
+  FaFileInvoiceDollar,
+  FaCalendarAlt,
+  FaRing,
+  FaBullhorn,
+  FaLaptop,
+  FaPencilRuler,
+  FaArrowRight,
+} from "react-icons/fa";
 import { CONTACTUS_API } from "../hooks/Apis";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 // Import generated images
 import WeddingSliderImg from "../assets/Generated/wedding_slider.png";
@@ -17,6 +29,7 @@ import OurClientsComponent from "../components/OurClientsComponent";
 
 const HomePage = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [selected, setSelected] = useState("Events");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [honeypot, setHoneypot] = useState("");
@@ -241,72 +254,183 @@ const HomePage = () => {
     },
   ];
 
+  const heroCategories = ["Events", "Weddings", "Advertising", "Digital Marketing", "Branding"];
+
+  const heroData = {
+    Events: {
+      icon: <FaCalendarAlt />,
+      title: "EVENTS MANAGEMENT",
+      desc: "Unforgettable experiences. From luxury weddings to high-impact corporate launches.",
+      bg: EventHeroCover,
+      link: "/services/events"
+    },
+    Weddings: {
+      icon: <FaRing />,
+      title: "LUXURY WEDDINGS",
+      desc: "Timeless Elegance for Your Special Day. Flawless execution and beautiful memories.",
+      bg: WeddingCoverImage,
+      link: "/services/wedding-planners"
+    },
+    Advertising: {
+      icon: <FaBullhorn />,
+      title: "STRATEGIC ADVERTISING",
+      desc: "High-impact advertising campaigns across OOH, Print, and Transit media.",
+      bg: AdvertisingCoverHomeImage,
+      link: "/services/advertising"
+    },
+    "Digital Marketing": {
+      icon: <FaLaptop />,
+      title: "DIGITAL MARKETING",
+      desc: "Driving Growth through Innovation. SEO, Social Media, and Performance Ads.",
+      bg: DigiatalMarketingCoverHomeImage,
+      link: "/services/digital-marketing"
+    },
+    Branding: {
+      icon: <FaPencilRuler />,
+      title: "POWERFUL BRANDING",
+      desc: "Creating Identities that Resonate. Building lasting emotional connections.",
+      bg: BrandingCoverHomeImage,
+      link: "/services/brand-services"
+    }
+  };
+
   useEffect(() => {
     setIsVisible(true);
-    // Auto rotate titles
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % titles.length);
-    }, 3000);
+      setSelected((prev) => {
+        const nextIndex = (heroCategories.indexOf(prev) + 1) % heroCategories.length;
+        return heroCategories[nextIndex];
+      });
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <>
       {/* Hero Section */}
-      {/* Hero Slider Section */}
-      <section className="relative h-screen overflow-hidden">
-        <Slider {...sliderSettings} className="h-full">
-          {heroSlides.map((slide, index) => (
-            <div key={index} className="relative h-screen">
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] scale-110"
-                style={{
-                  backgroundImage: `url("${slide.image}")`,
-                }}
-              ></div>
-              <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                <div className="text-center px-4">
-                  <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 transform transition-all duration-1000">
-                    {slide.title}
-                  </h2>
-                  <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-2xl mx-auto">
-                    {slide.subtitle}
-                  </p>
-                  <div className="flex flex-wrap justify-center gap-4">
-                    <Link
-                      to={slide.link}
-                      className="inline-block px-10 py-4 bg-primary text-white font-bold rounded-full hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105"
-                    >
-                      {slide.cta}
-                    </Link>
-                    <Link
-                      to="/get-quotation"
-                      className="inline-block px-10 py-4 bg-white text-primary font-bold rounded-full hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105"
-                    >
-                      Get Quotation
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
+      <section className="flex flex-col md:flex-row w-full text-white h-[90vh] md:h-screen bg-black pt-14 md:pt-0 overflow-hidden relative justify-between md:justify-center items-center">
+        {/* Background Image Layer */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <img
+            src={heroData[selected].bg}
+            alt={selected}
+            className="w-full h-full object-cover object-center opacity-50 scale-105 transition-all duration-1000 ease-in-out"
+            key={selected}
+          />
+        </div>
 
-        {/* Custom Styles for Slick Dots */}
-        <style dangerouslySetInnerHTML={{ __html: `
-          .custom-dots {
-            bottom: 40px !important;
-          }
-          .custom-dots li button:before {
-            color: white !important;
-            font-size: 12px !important;
-            opacity: 0.5 !important;
-          }
-          .custom-dots li.slick-active button:before {
-            color: #FF5E0E !important; /* Your primary color */
-            opacity: 1 !important;
-          }
-        `}} />
+        {/* Title Section (Top on mobile, Absolute Top on Desktop) */}
+        <div className="relative md:absolute top-20 md:top-40 left-0 w-full z-20 text-center px-4 mb-2 md:mb-0 order-1">
+          <h2 className="text-[24px] md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white font-TuskerGrotesk uppercase tracking-wider">
+            <span className="block">
+              Building Smart Solutions for
+              <span className="block text-primary"> Your Digital Success.</span>
+            </span>
+          </h2>
+          <p className="text-[12px] md:text-sm mt-0.5 md:mt-3 text-white font-medium opacity-80 tracking-widest uppercase">
+            Since 2016
+          </p>
+        </div>
+
+        {/* Info Section (Bottom-aligned on mobile, Center-left on Desktop) */}
+        <div className="flex-none w-full md:flex-[0_0_70%] flex flex-col items-center md:items-start text-center md:text-left px-6 py-2 md:p-12 lg:pl-32 z-10 order-2 mt-auto md:mt-32">
+          <div className="max-w-md lg:max-w-xl w-full">
+            <h2
+              key={selected}
+              className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white font-TuskerGrotesk tracking-wider uppercase animate-fade-in-up"
+            >
+              <span className="block text-primary drop-shadow-[0_4px_20px_rgba(255,165,0,0.4)]">
+                {heroData[selected].title}
+              </span>
+            </h2>
+
+            <p className="text-[14px] sm:text-base lg:text-xl text-white mt-2 md:mt-6 mb-4 md:mb-10 opacity-90 leading-tight md:leading-relaxed font-light">
+              {heroData[selected].desc}
+            </p>
+
+            <Link
+              to={heroData[selected].link}
+              className="flex mx-auto md:mx-0 mb-4 md:mb-10 px-8 py-4 bg-primary text-black text-sm md:text-lg font-bold rounded-full hover:bg-white transition-all duration-300 items-center gap-2 group w-fit shadow-lg hover:shadow-primary/50"
+            >
+              LEARN MORE <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
+          {/* Slogan Statement (Desktop Only) */}
+          <div className="hidden md:block w-full max-w-md lg:max-w-lg mt-12 lg:mt-20 border-t border-white/20 pt-8 lg:pt-12">
+            <h3 className="text-xl lg:text-2xl font-bold text-white text-left tracking-wide uppercase font-TuskerGrotesk">
+              Creating Memories, <span className="text-primary"> Delivering Excellence.</span>
+            </h3>
+          </div>
+        </div>
+
+        {/* Bottom Section (Tabs + Vision Mobile) */}
+        <div className="flex-none w-full md:flex-[0_0_30%] flex flex-col justify-center items-center z-20 order-3 pb-4 md:pb-0 md:h-full">
+          {/* Slogan Statement (Mobile Only) */}
+          <div className="md:hidden w-full px-6 mb-2 text-center">
+            <h3 className="text-[14px] font-bold text-white uppercase font-TuskerGrotesk tracking-wider">
+              Creating Memories, <span className="text-primary"> Delivering Excellence.</span>
+            </h3>
+          </div>
+
+          {/* Grid layout on mobile to show all 5 tabs */}
+          <div className="md:hidden grid grid-cols-5 w-full px-1 py-2 gap-1">
+            {heroCategories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelected(category)}
+                className={`flex flex-col items-center text-center transition-all duration-300 ${
+                  selected === category ? "opacity-100" : "opacity-40 scale-90"
+                }`}
+              >
+                <div
+                  className={`relative p-2 rounded-full mb-1 transition-all duration-500 text-2xl ${
+                    selected === category
+                      ? "bg-primary/20 ring-1 ring-primary/40 shadow-[0_0_20px_rgba(255,165,0,0.3)] text-primary"
+                      : "text-white"
+                  }`}
+                >
+                  {heroData[category].icon}
+                </div>
+                <p className="text-[7px] font-bold uppercase tracking-tighter leading-tight px-0.5 break-words max-w-full text-white">
+                  {category}
+                </p>
+              </button>
+            ))}
+          </div>
+
+          {/* Vertical list on medium+ screens */}
+          <div className="hidden md:flex flex-col justify-center items-stretch gap-4 lg:gap-5 px-6 lg:px-8 w-full max-w-[280px] lg:max-w-[340px] h-full">
+            {heroCategories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelected(category)}
+                className={`flex flex-row items-center gap-4 p-2.5 lg:p-3.5 rounded-2xl transition-all duration-300 group ${
+                  selected === category
+                    ? "bg-primary/10 opacity-100 ring-1 ring-primary/20 shadow-[0_4px_20px_rgba(255,165,0,0.1)]"
+                    : "opacity-40 hover:opacity-100 hover:bg-white/5"
+                }`}
+              >
+                <div
+                  className={`relative p-2.5 lg:p-3 rounded-full transition-all duration-500 text-2xl lg:text-3xl flex items-center justify-center ${
+                    selected === category
+                      ? "bg-primary/20 ring-2 ring-primary/40 shadow-[0_0_20px_rgba(255,165,0,0.3)] text-primary"
+                      : "text-white bg-white/5 group-hover:scale-110"
+                  }`}
+                >
+                  {heroData[category].icon}
+                </div>
+                <span
+                  className={`text-[12px] lg:text-sm font-extrabold text-left uppercase tracking-widest transition-colors ${
+                    selected === category ? "text-primary" : "text-white"
+                  }`}
+                 >
+                  {category}
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
       </section>
       <section id="about" className="py-16 md:py-24 bg-white text-black">
         <div className="container mx-auto px-4 md:px-8 lg:px-16">

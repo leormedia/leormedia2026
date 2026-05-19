@@ -18,20 +18,24 @@ import Services from "./Services/Services.js";
 
 import FAQ from "./Faqs";
 
-import SubPages from "../routes/Services/SubPages.js";
-import WeddingPlanners from "./Services/WeddingPlanners/WeddingPlanners.jsx";
+import SubpagesDigitalMarketing from "./Services/DigitalMarketingPage/SubpagesDigitalMarketing.js";
+import SubpagesWeddingplanners from "./Services/WeddingPlannersPage/SubpagesWeddingplanners.js";
+import SubpagesAdvertising from "./Services/AdvertisingPage/SubpagesAdvertising.js";
+import SubpagesBranding from "./Services/BrandServicesPage/SubpagesBranding.js";
+import SubpagesEvents from "./Services/EventsPage/SubpagesEvents.js";
+import WeddingPlanners from "./Services/WeddingPlannersPage/WeddingPlanners.jsx";
 
 /*Advertising */
-import Advertising from "../routes/Services/Advertising/Advertising";
+import Advertising from "./Services/AdvertisingPage/Advertising.jsx";
 
 /*Brand Services*/
-import BrandServices from "../routes/Services/BrandServices/BrandServices";
+import BrandServices from "./Services/BrandServicesPage/BrandServices.jsx";
 
 /*Digital marketing */
-import DigitalMarketing from "../routes/Services/DigitalMarketing/DigitalMarketing";
+import DigitalMarketing from "./Services/DigitalMarketingPage/DigitalMarketing.jsx";
 
 /*Events*/
-import Events from "./Events/Events";
+import Events from "./Services/EventsPage/Events.jsx";
 import GetQuotation from "./GetQuotation";
 
 
@@ -53,7 +57,11 @@ export {
   ReturnPolicy,
   Services,
   FAQ,
-  SubPages,
+  SubpagesDigitalMarketing,
+  SubpagesWeddingplanners,
+  SubpagesAdvertising,
+  SubpagesBranding,
+  SubpagesEvents,
 
   /*Web Development */
   WeddingPlanners,
