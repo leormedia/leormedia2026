@@ -1,4 +1,10 @@
 import { AdvertisitngCoverImage } from "../../../assets/data/Imagedata";
+import AtlOohImg from "./AdvertisingImages/atl_ooh.png";
+import TransitMediaImg from "./AdvertisingImages/transit_media.png";
+import StrategicFormatImg from "./AdvertisingImages/strategic_format.png";
+import PrintMediaImg from "./AdvertisingImages/print_media.png";
+import ElectronicMediaImg from "./AdvertisingImages/electronic_media.png";
+import BtlAdvertisingImg from "./AdvertisingImages/btl_advertising.png";
 import {
   faAd,
   faBuilding,
@@ -259,3 +265,13 @@ export const AdvertisementDetailPageData = {
   "electronic-media": ElectronicMediaData,
   "btl-advertisement": BtlAdvertisementData,
 };
+
+// Assign unique cover images to each subpage data object
+AdvertisingCompany.coverimage = AtlOohImg;
+AtlOohAdvertisementData.coverimage = AtlOohImg;
+TransitMediaData.coverimage = TransitMediaImg;
+StrategicFormatData.coverimage = StrategicFormatImg;
+PrintMediaData.coverimage = PrintMediaImg;
+ElectronicMediaData.coverimage = ElectronicMediaImg;
+BtlAdvertisementData.coverimage = BtlAdvertisingImg;
+

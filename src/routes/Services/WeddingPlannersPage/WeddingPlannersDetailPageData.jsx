@@ -1,21 +1,21 @@
 // New Premium Service Images
-import DestinationWeddingImg from "../../../assets/Images/WeddingPlannersImages/destination-wedding.png";
-import RingCeremonyImg from "../../../assets/Images/WeddingPlannersImages/ring-ceremony.png";
-import ReceptionsImg from "../../../assets/Images/WeddingPlannersImages/receptions.png";
-import MehendiImg from "../../../assets/Images/WeddingPlannersImages/mehendi.png";
-import SangeetImg from "../../../assets/Images/WeddingPlannersImages/sangeet.png";
-import EntertainmentImg from "../../../assets/Images/WeddingPlannersImages/entertainment.png";
-import HospitalityImg from "../../../assets/Images/WeddingPlannersImages/hospitality.png";
-import GuestManagementImg from "../../../assets/Images/WeddingPlannersImages/guest-management.png";
-import PhotographyImg from "../../../assets/Images/WeddingPlannersImages/photography.png";
-import ThemeDecorImg from "../../../assets/Images/WeddingPlannersImages/theme-decor.png";
-import BirthdayPartiesImg from "../../../assets/Images/WeddingPlannersImages/birthday-parties.png";
-import PersonalCelebrationsImg from "../../../assets/Images/WeddingPlannersImages/personal-celebrations.png";
-import CulturalEventsImg from "../../../assets/Images/WeddingPlannersImages/cultural-events.png";
-import CorporateEventsImg from "../../../assets/Images/WeddingPlannersImages/corporate-events.png";
-import ProductLaunchesImg from "../../../assets/Images/WeddingPlannersImages/product-launches.png";
-import ConcertAndGigsImg from "../../../assets/Images/WeddingPlannersImages/concert-and-gigs.png";
-import FashionShowsImg from "../../../assets/Images/WeddingPlannersImages/fashion-shows.png";
+import DestinationWeddingImg from "./WeddingPlannersImages/destination-wedding.png";
+import RingCeremonyImg from "./WeddingPlannersImages/ring-ceremony.png";
+import ReceptionsImg from "./WeddingPlannersImages/receptions.png";
+import MehendiImg from "./WeddingPlannersImages/mehendi.png";
+import SangeetImg from "./WeddingPlannersImages/sangeet.png";
+import EntertainmentImg from "./WeddingPlannersImages/entertainment.png";
+import HospitalityImg from "./WeddingPlannersImages/hospitality.png";
+import GuestManagementImg from "./WeddingPlannersImages/guest-management.png";
+import PhotographyImg from "./WeddingPlannersImages/photography.png";
+import ThemeDecorImg from "./WeddingPlannersImages/theme-decor.png";
+import BirthdayPartiesImg from "./WeddingPlannersImages/birthday-parties.png";
+import PersonalCelebrationsImg from "./WeddingPlannersImages/personal-celebrations.png";
+import CulturalEventsImg from "./WeddingPlannersImages/cultural-events.png";
+import CorporateEventsImg from "./WeddingPlannersImages/corporate-events.png";
+import ProductLaunchesImg from "./WeddingPlannersImages/product-launches.png";
+import ConcertAndGigsImg from "./WeddingPlannersImages/concert-and-gigs.png";
+import FashionShowsImg from "./WeddingPlannersImages/fashion-shows.png";
 import {
   faGlobe,
   faPalette,

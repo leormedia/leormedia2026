@@ -1,4 +1,34 @@
 import { EventHeroCover } from "../../../assets/data/Imagedata";
+import CorporateEventsImg from "./EventsImages/corporate_events.png";
+import EntertainmentEventsImg from "./EventsImages/entertainment_events.png";
+import PromotionalEventsImg from "./EventsImages/promotional_events.png";
+import ExhibitionTradeImg from "./EventsImages/exhibition_trade.png";
+import ReligiousTraditionalImg from "./EventsImages/religious_traditional.png";
+import CorporateMeetingsImg from "./EventsImages/corporate_meetings.png";
+import ConferencesSeminarsImg from "./EventsImages/conferences_seminars.png";
+import ProductLaunchImg from "./EventsImages/product_launch.png";
+import AwardFunctionsImg from "./EventsImages/award_functions.png";
+import TeamOutingsImg from "./EventsImages/team_outings.png";
+import AnnualDayImg from "./EventsImages/annual_day.png";
+import EmployeeEngagementImg from "./EventsImages/employee_engagement.png";
+import CelebrityManagementImg from "./EventsImages/celebrity_management.png";
+import LiveConcertsImg from "./EventsImages/live_concerts.png";
+import DjNightsImg from "./EventsImages/dj_nights.png";
+import FashionShowsImg from "./EventsImages/fashion_shows.png";
+import CulturalEventsImg from "./EventsImages/cultural_events.png";
+import CollegeFestImg from "./EventsImages/college_fest.png";
+import BrandPromotionsImg from "./EventsImages/brand_promotions.png";
+import MallActivationsImg from "./EventsImages/mall_activations.png";
+import RoadShowsImg from "./EventsImages/road_shows.png";
+import StoreLaunchesImg from "./EventsImages/store_launches.png";
+import PoliticalCampaignImg from "./EventsImages/political_campaign.png";
+import PublicRelationImg from "./EventsImages/public_relation.png";
+import ExhibitionStallImg from "./EventsImages/exhibition_stall.png";
+import TradeShowImg from "./EventsImages/trade_show.png";
+import ExpoPromotionsImg from "./EventsImages/expo_promotions.png";
+import PoojaEventsImg from "./EventsImages/pooja_events.png";
+import TempleFestivalsImg from "./EventsImages/temple_festivals.png";
+import TraditionalCeremoniesImg from "./EventsImages/traditional_ceremonies.png";
 import {
   faBriefcase,
   faStar,
@@ -948,6 +978,38 @@ export const TraditionalCeremoniesData = {
   }
 };
 
+
+// Assign unique cover images to each subpage data object
+CorporateEventsData.coverimage = CorporateEventsImg;
+EntertainmentEventsData.coverimage = EntertainmentEventsImg;
+PromotionalEventsData.coverimage = PromotionalEventsImg;
+ExhibitionTradeShowsData.coverimage = ExhibitionTradeImg;
+ReligiousTraditionalEventsData.coverimage = ReligiousTraditionalImg;
+CorporateMeetingsData.coverimage = CorporateMeetingsImg;
+ConferencesSeminarsData.coverimage = ConferencesSeminarsImg;
+ProductLaunchEventsData.coverimage = ProductLaunchImg;
+AwardFunctionsData.coverimage = AwardFunctionsImg;
+TeamOutingsData.coverimage = TeamOutingsImg;
+AnnualDayCelebrationsData.coverimage = AnnualDayImg;
+EmployeeEngagementEventsData.coverimage = EmployeeEngagementImg;
+CelebrityManagementData.coverimage = CelebrityManagementImg;
+LiveConcertsData.coverimage = LiveConcertsImg;
+DjNightsData.coverimage = DjNightsImg;
+FashionShowsData.coverimage = FashionShowsImg;
+CulturalEventsData.coverimage = CulturalEventsImg;
+CollegeFestEventsData.coverimage = CollegeFestImg;
+BrandPromotionsData.coverimage = BrandPromotionsImg;
+MallActivationsData.coverimage = MallActivationsImg;
+RoadShowsData.coverimage = RoadShowsImg;
+StoreLaunchesData.coverimage = StoreLaunchesImg;
+PoliticalCampaignEventsData.coverimage = PoliticalCampaignImg;
+PublicRelationEventsData.coverimage = PublicRelationImg;
+ExhibitionStallDesignData.coverimage = ExhibitionStallImg;
+TradeShowManagementData.coverimage = TradeShowImg;
+ExpoPromotionsData.coverimage = ExpoPromotionsImg;
+PoojaEventsData.coverimage = PoojaEventsImg;
+TempleFestivalsData.coverimage = TempleFestivalsImg;
+TraditionalCeremoniesData.coverimage = TraditionalCeremoniesImg;
 
 // Mapping for individual pages
 export const EventsDetailPageData = {

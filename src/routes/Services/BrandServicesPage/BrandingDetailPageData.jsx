@@ -1,4 +1,22 @@
 import { BrandingCoverImage } from "../../../assets/data/Imagedata";
+import BrandAuditImg from "./Brandingimages/brand_audit.png";
+import BrandStrategyImg from "./Brandingimages/brand_strategy.png";
+import BrandIdentityImg from "./Brandingimages/brand_identity.png";
+import BrandPositioningImg from "./Brandingimages/brand_positioning.png";
+import BrandActivationsImg from "./Brandingimages/brand_activations.png";
+import InfilmBrandingImg from "./Brandingimages/infilm_branding.png";
+import CorporateBrandingImg from "./Brandingimages/corporate_branding.png";
+import SocialCreativesImg from "./Brandingimages/social_creatives.png";
+import PostersImg from "./Brandingimages/posters.png";
+import LabelingImg from "./Brandingimages/labeling.png";
+import CalendarsImg from "./Brandingimages/calendars.png";
+import FoldersImg from "./Brandingimages/folders.png";
+import DiariesImg from "./Brandingimages/diaries.png";
+import BulletinImg from "./Brandingimages/bulletin.png";
+import BookletsImg from "./Brandingimages/booklets.png";
+import CatalogueImg from "./Brandingimages/catalogue.png";
+import BrochureImg from "./Brandingimages/brochure.png";
+import LeafletsImg from "./Brandingimages/leaflets.png";
 import {
   faCheckCircle,
   faSearch,
@@ -763,3 +781,24 @@ export const BrandingDetailPageData = {
   "brochure": BrochurePageData,
   "leaflets": LeafletsPageData,
 };
+
+// Assign unique cover images to each subpage data object
+BrandAuditPageData.coverimage = BrandAuditImg;
+BrandStrategyPageData.coverimage = BrandStrategyImg;
+BrandIdentityPageData.coverimage = BrandIdentityImg;
+BrandPositioningPageData.coverimage = BrandPositioningImg;
+BrandActivationsPageData.coverimage = BrandActivationsImg;
+InfilmBrandingPageData.coverimage = InfilmBrandingImg;
+CorporateBrandingPageData.coverimage = CorporateBrandingImg;
+SocialMediaCreativesPageData.coverimage = SocialCreativesImg;
+PostersPageData.coverimage = PostersImg;
+LabelingPageData.coverimage = LabelingImg;
+CalendarsPageData.coverimage = CalendarsImg;
+FoldersPageData.coverimage = FoldersImg;
+DiariesPageData.coverimage = DiariesImg;
+BulletinPageData.coverimage = BulletinImg;
+BookletsPageData.coverimage = BookletsImg;
+CataloguePageData.coverimage = CatalogueImg;
+BrochurePageData.coverimage = BrochureImg;
+LeafletsPageData.coverimage = LeafletsImg;
+

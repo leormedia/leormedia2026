@@ -449,13 +449,16 @@ const Navbar = () => {
                   handleMouseLeave(menu.key, menu.links.length > 0)
                 }
               >
-                <div className="inline-flex flex-col font-normal antialiased justify-center items-center gap-1 w-full rounded-md px-3 py-1 text-[11px] text-gray-800 hover:text-yellow-500 cursor-pointer transition-colors group">
+                <a
+                  href={menu.href}
+                  className="inline-flex flex-col font-normal antialiased justify-center items-center gap-1 w-full rounded-md px-3 py-1 text-[11px] text-gray-800 hover:text-yellow-500 cursor-pointer transition-colors group"
+                >
                   <FontAwesomeIcon
                     icon={menu.icon}
                     className="text-lg mb-0.5 text-gray-500 group-hover:text-yellow-500 transition-colors"
                   />
                   <div className="flex items-center">
-                    <a href={menu.href} className="font-semibold">{menu.title}</a>
+                    <span className="font-semibold">{menu.title}</span>
 
                     {/* Toggle Chevron Up/Down */}
                     {menu.links.length > 0 && (
@@ -465,7 +468,7 @@ const Navbar = () => {
                       />
                     )}
                   </div>
-                </div>
+                </a>
 
                 <DropdownMenu
                   isOpen={openMenus[menu.key]}

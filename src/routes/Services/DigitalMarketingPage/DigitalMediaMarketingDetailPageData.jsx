@@ -1,4 +1,21 @@
 import { DigitalMarketingCoverImage } from "../../../assets/data/Imagedata";
+import DigitalMarketingImg from "./DigitalMediaMarketingimages/digital_marketing.png";
+import DigitalStrategyImg from "./DigitalMediaMarketingimages/digital_strategy.png";
+import MediaBuyingImg from "./DigitalMediaMarketingimages/media_buying.png";
+import OnlinePrImg from "./DigitalMediaMarketingimages/online_pr.png";
+import SocialCampaignImg from "./DigitalMediaMarketingimages/social_campaign.png";
+import SEOImg from "./DigitalMediaMarketingimages/seo.png";
+import AffiliateImg from "./DigitalMediaMarketingimages/affiliate.png";
+import InfluenceImg from "./DigitalMediaMarketingimages/influence.png";
+import PPCImg from "./DigitalMediaMarketingimages/ppc.png";
+import ContentMarketingImg from "./DigitalMediaMarketingimages/content_marketing.png";
+import SocialManagementImg from "./DigitalMediaMarketingimages/social_management.png";
+import CreativeMediaImg from "./DigitalMediaMarketingimages/creative_media.png";
+import TvcMakingImg from "./DigitalMediaMarketingimages/tvc_making.png";
+import DigitalCommercialsImg from "./DigitalMediaMarketingimages/digital_commercials.png";
+import WebCommercialsImg from "./DigitalMediaMarketingimages/web_commercials.png";
+import ExplanatoryVideosImg from "./DigitalMediaMarketingimages/explanatory_videos.png";
+import CompanyProfileImg from "./DigitalMediaMarketingimages/company_profile.png";
 import {
   faBullhorn,
   faLightbulb,
@@ -912,5 +929,55 @@ export const SocialMediaMarketingPageDetails = SocialMediaManagementPageDetails;
 export const PayPerClickAdvertisingPageDetails = PpcPageData;
 export const AffiliateMarketingPageDetails_Backup = AffiliateMarketingPageDetails;
 export const GenericDigitalMediaMarketingDetailPageData = DigitalMarketingPageData;
-export const DigitalMediaMarketingDetailPageData = DigitalMarketingPageData;
+export const DigitalMediaMarketingDetailPageData = {
+  "digital-marketing": DigitalMarketingPageData,
+  "digital-strategy-consulting": DigitalStrategyConsultingPageData,
+  "digital-media-buying": DigitalMediaBuyingPageData,
+  "online-pr": OnlinePrPageData,
+  "social-media-digital-campaign": SocialMediaDigitalCampaignPageData,
+  "search-engine-optimization": SearchEngineOptimizationPageDetails,
+  "affiliate-marketing": AffiliateMarketingPageDetails,
+  "influence-marketing": InfluenceMarketingPageData,
+  "ppc": PpcPageData,
+  "content-marketing": ContentMarketingPageDetails,
+  "social-media-management": SocialMediaManagementPageDetails,
+  "digital-creative-media": DigitalCreativeMediaPageData,
+  "tvc-ad-film-making": TvcAdFilmMakingPageData,
+  "digital-commercials": DigitalCommercialsPageData,
+  "web-commercials": WebCommercialsPageData,
+  "product-services-explanatory-videos": ProductServicesExplanatoryVideosPageData,
+  "company-profile-videos": CompanyProfileVideosPageData,
+  "customer-testimonial-videos": CustomerTestimonialVideosPageData,
+  "company-corporate-film": CompanyCorporateFilmPageData,
+  "product-photo-videography": ProductPhotoVideographyPageData,
+  "multi-channel-networking": MultiChannelNetworkingPageData,
+  "youtube-entertainment": YoutubeEntertainmentPageData,
+};
+
+// Assign unique cover images to each subpage data object
+DigitalMarketingCompany.coverimage = DigitalMarketingImg;
+DigitalMarketingPageData.coverimage = DigitalMarketingImg;
+DigitalStrategyConsultingPageData.coverimage = DigitalStrategyImg;
+DigitalMediaBuyingPageData.coverimage = MediaBuyingImg;
+OnlinePrPageData.coverimage = OnlinePrImg;
+SocialMediaDigitalCampaignPageData.coverimage = SocialCampaignImg;
+SearchEngineOptimizationPageDetails.coverimage = SEOImg;
+AffiliateMarketingPageDetails.coverimage = AffiliateImg;
+InfluenceMarketingPageData.coverimage = InfluenceImg;
+PpcPageData.coverimage = PPCImg;
+ContentMarketingPageDetails.coverimage = ContentMarketingImg;
+SocialMediaManagementPageDetails.coverimage = SocialManagementImg;
+DigitalCreativeMediaPageData.coverimage = CreativeMediaImg;
+TvcAdFilmMakingPageData.coverimage = TvcMakingImg;
+DigitalCommercialsPageData.coverimage = DigitalCommercialsImg;
+WebCommercialsPageData.coverimage = WebCommercialsImg;
+ProductServicesExplanatoryVideosPageData.coverimage = ExplanatoryVideosImg;
+CompanyProfileVideosPageData.coverimage = CompanyProfileImg;
+CustomerTestimonialVideosPageData.coverimage = CompanyProfileImg;
+CompanyCorporateFilmPageData.coverimage = TvcMakingImg;
+ProductPhotoVideographyPageData.coverimage = TvcMakingImg;
+MultiChannelNetworkingPageData.coverimage = SocialManagementImg;
+YoutubeEntertainmentPageData.coverimage = TvcMakingImg;
+
 export const InfluencerMarketingPageDetails = InfluenceMarketingPageData;
+

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { WeddingPlannersPageData } from "./WeddingPlannersDetailPageData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { WeddingPlannersCoverimage, WeddingCoverImage } from "../../../assets/data/Imagedata";
 import { GlobalData } from "../../../assets/data/GlodalData";
