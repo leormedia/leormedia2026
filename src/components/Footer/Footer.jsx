@@ -1,4 +1,4 @@
-import { googlereview } from "../../assets/data/icon_data";
+
 
 import footer_csd from "../../assets/LogoFooter.svg";
 
@@ -110,22 +110,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-center mt-8">
-              <a
-                className="p-2"
-                href="https://g.page/r/Cci0AD_-b2q3EAI/review"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="h-10 hover:animate-pulse max-w-full"
-                  src={googlereview}
-                  alt="googlereview_icon"
-                  width="120"
-                  height="50"
-                />
-              </a>
-            </div>
+           
 
             {/* Divider */}
             <div className="border-t border-gray-600 my-6" />

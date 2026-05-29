@@ -374,7 +374,8 @@ const Navbar = () => {
 
         <div className="relative flex-1 overflow-hidden min-h-[20px] mx-4 hidden lg:block">
           <div className="animate-scroll whitespace-nowrap text-xs sm:text-sm">
-            Your vision. Our code. Backed by 10+ years of expertise to build and scale your digital presence.
+            Crafting Extraordinary Events & Creative
+            Digital Success Stories in 2026
           </div>
         </div>
 
@@ -429,7 +430,7 @@ const Navbar = () => {
       <div className="sm:px-4 w-full h-18 flex justify-between items-center text-gray-800 relative">
         <a href="/" className="z-50">
           <img
-            className="p-2 h-auto w-[60px]  "
+            className="p-2 h-auto w-[100px]  "
             src={NavbarLogo}
             alt="leormedia_logo"
           />

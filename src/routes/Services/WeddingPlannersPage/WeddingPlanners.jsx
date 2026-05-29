@@ -9,7 +9,6 @@ import {
   FaArrowRight, 
   FaPhone, 
   FaWhatsapp, 
-  FaCheckCircle, 
   FaStar, 
   FaQuoteLeft,
   FaPlayCircle
@@ -27,7 +26,6 @@ import {
   faCalendarAlt,
   faUserTie,
   faProjectDiagram,
-  faAward
 } from "@fortawesome/free-solid-svg-icons";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";

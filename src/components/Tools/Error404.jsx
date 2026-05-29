@@ -1,7 +1,7 @@
 // Error404.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LogoLoader from '../../assets/LogoLoader.svg';
+import LogoLoader from '../../assets/LogoFooter.svg';
 
 const Error404 = () => {
   return (

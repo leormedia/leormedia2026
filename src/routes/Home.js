@@ -2,15 +2,16 @@ import { CSDLogoAbout } from "../assets/data/icon_data";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  EventHeroCover,
-  WeddingCoverImage,
-  AdvertisingCoverHomeImage,
-  DigiatalMarketingCoverHomeImage,
-  BrandingCoverHomeImage,
+  Eventmanagementhomeslider,
+  Digitalmarketinghomeslider,
+  Luxeryweddinghomeslider
 } from "../assets/data/Imagedata";
 import {
   FaFileInvoiceDollar,
   FaArrowRight,
+  FaEnvelope,
+  FaPhone,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { CONTACTUS_API } from "../hooks/Apis";
 import GoogleMapReviews from "../components/GoogleMapReviews/GoogleMapReviews"
@@ -20,6 +21,8 @@ import MarketingSliderImg from "../assets/Generated/marketing_slider.png";
 import BrandingSliderImg from "../assets/Generated/branding_slider.png";
 import AdvertisingBgImg from "../assets/Generated/advertising_bg.png";
 import OurClientsComponent from "../components/OurClientsComponent";
+import LogoOnly from "../assets/LogoOnly.svg";
+import { GlobalData } from "../assets/data/GlodalData";
 
 const HomePage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -247,19 +250,19 @@ const HomePage = () => {
     Events: {
       title: "EVENTS MANAGEMENT",
       desc: "Unforgettable experiences. From luxury weddings to high-impact corporate launches.",
-      bg: EventHeroCover,
+      bg: Eventmanagementhomeslider,
       link: "/services/events"
     },
     Weddings: {
       title: "LUXURY WEDDINGS",
       desc: "Timeless Elegance for Your Special Day. Flawless execution and beautiful memories.",
-      bg: WeddingCoverImage,
+      bg: Luxeryweddinghomeslider,
       link: "/services/wedding-planners"
     },
     "Digital Marketing": {
       title: "DIGITAL MARKETING",
       desc: "Driving Growth through Innovation. SEO, Social Media, and Performance Ads.",
-      bg: DigiatalMarketingCoverHomeImage,
+      bg: Digitalmarketinghomeslider,
       link: "/digital-media-marketing"
     }
   };
@@ -287,7 +290,7 @@ const HomePage = () => {
 
   return (
     <>
-      <section className="relative w-full text-white h-[90vh] md:h-[80vh] bg-black pt-14 md:pt-0 overflow-hidden flex flex-col justify-center items-center mt-10">
+      <section className="relative w-full text-white h-[90vh] bg-black mt-10 overflow-hidden ">
         {/* Background Image Layer */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
@@ -298,23 +301,24 @@ const HomePage = () => {
           />
         </div>
 
-        {/* Content Container (Fully Centered) */}
-        <div className="relative z-10 w-full max-w-6xl px-6 flex flex-col items-center text-center justify-center my-auto">
-          {/* Main Top Header */}
-          <div className="mb-6 md:mb-8">
+        {/* Content Container (Full Height, Flex Between) */}
+        <div className="relative z-10 w-full h-full max-w-6xl mx-auto px-6 py-12 md:py-20 flex flex-col items-center text-center justify-between">
+
+          {/* Main Top Header (Positioned at Top) */}
+          <div className="mt-10">
             <h2 className="text-[24px] md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white font-TuskerGrotesk uppercase tracking-wider">
               <span className="block">
                 Crafting Extraordinary Events & Creative
                 <span className="block text-primary"> Digital Success Stories in 2026</span>
               </span>
             </h2>
-            <p className="text-[12px] md:text-sm mt-1 text-white font-medium opacity-80 tracking-widest uppercase">
+            <p className="text-[12px] md:text-sm mt-2 text-white font-medium opacity-80 tracking-widest uppercase">
               Since 2016
             </p>
           </div>
 
-          {/* Slider Content */}
-          <div className="w-full max-w-2xl mb-6 md:mb-8">
+          {/* Slider Content (Positioned at Bottom) */}
+          <div className="w-full max-w-2xl flex flex-col items-center">
             <h1
               key={selected}
               className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white font-TuskerGrotesk tracking-wider uppercase animate-fade-in-up"
@@ -324,7 +328,7 @@ const HomePage = () => {
               </span>
             </h1>
 
-            <p className="text-[14px] sm:text-base lg:text-lg text-white mt-3 mb-6 opacity-90 leading-relaxed font-light">
+            <p className="text-[14px] sm:text-base lg:text-lg text-white mt-4 mb-8 opacity-90 leading-relaxed font-light">
               {heroData[selected].desc}
             </p>
 
@@ -336,31 +340,42 @@ const HomePage = () => {
             </Link>
           </div>
 
-          {/* Slogan Statement */}
-          <div className="w-full max-w-xl border-t border-white/20 pt-6">
-            <h3 className="text-[12px] sm:text-sm md:text-base font-medium text-white/90 tracking-wide leading-relaxed">
-              - From unforgettable celebrations to result-driven digital marketing, we create powerful experiences that connect brands with people and turn ideas into <span className="text-primary font-bold">lasting success stories.</span>
-            </h3>
-          </div>
         </div>
       </section>
+
+
+ {/* Our Clients Section */}
+      <OurClientsComponent />
+    
+
+
+{/* Aboutus */}
       <section id="about" className="py-16 md:py-24 bg-white text-black">
         <div className="container mx-auto px-4 md:px-8 lg:px-16">
           {/* Section Header */}
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto relative">
+            {/* Background Watermark Logo */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.2] select-none z-0">
+              <img
+                src={LogoOnly}
+                alt="Logo Watermark"
+                className="w-[280px] md:w-[450px] lg:w-[500px] max-w-[85vw] h-auto object-contain"
+              />
+            </div>
+
             {/* Left Column: Mission & Journey */}
-            <div className="mb-12">
+            <div className="mb-12 relative z-10">
               <div className="mb-10 text-center">
                 <h3 className="text-2xl md:text-4xl font-bold mb-8">
                   Creating Memories, <span className="text-primary">Delivering Excellence.</span>
                 </h3>
-                <p className="text-gray-600 text-lg md:text-xl leading-relaxed mb-6">
+                <p className="text-balck text-lg md:text-xl leading-relaxed mb-6">
                   Leor Media has been successfully organizing small to big scale weddings since 2016. We create the
                   perfect weddings for customers right from the planning to its execution. Our personalized wedding
                   packages and creative works, add that glam to your wedding while keeping customers budget in
                   mind.
                 </p>
-                <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
+                <p className="text-black text-lg md:text-xl leading-relaxed">
                   Our packages incorporate even minute details from venue selection, theme recommendation, menu options
                   and to hospitality so that we can make worry-free big day. We believe making memories are the best gifts
                   to any events for which Leor Media strives 100% to make them more beautiful.
@@ -372,7 +387,13 @@ const HomePage = () => {
 
           </div>
 
-          {/* CTA & Process Slider Section */}
+       
+        </div>
+      </section>
+
+
+         {/* CTA & Process Slider Section */}
+              <section id="about" className="py-16 md:py-24 bg-white text-black">
           <div className="text-center mt-24 pt-16 border-t border-gray-100 max-w-4xl mx-auto">
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-semibold uppercase tracking-widest mb-4">
               Our Methodology
@@ -399,8 +420,8 @@ const HomePage = () => {
                 >
                   <div
                     className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm border transition-all duration-500 shadow-md ${activeProcessIndex === idx
-                        ? "bg-primary text-white border-primary scale-110 shadow-primary/20"
-                        : "bg-white text-gray-400 border-gray-100 group-hover:border-primary/30 group-hover:text-primary"
+                      ? "bg-primary text-white border-primary scale-110 shadow-primary/20"
+                      : "bg-white text-gray-400 border-gray-100 group-hover:border-primary/30 group-hover:text-primary"
                       }`}
                   >
                     0{idx + 1}
@@ -601,41 +622,62 @@ const HomePage = () => {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
+</section>
 
       {/* Fun Factor Section */}
-      <section className="py-20 bg-primary text-white overflow-hidden relative">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10">
-          <div className="absolute top-10 left-10 w-64 h-64 border-8 border-white rounded-full"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 border-8 border-white rounded-full"></div>
-        </div>
+     <section className="py-12 md:py-16 bg-primary text-white overflow-hidden relative">
+  {/* Subtle Background Elements (Scaled down slightly and pushed to edges) */}
+  <div className="absolute inset-0 opacity-10 pointer-events-none">
+    <div className="absolute -top-10 -left-10 w-48 h-48 border-[6px] border-white rounded-full"></div>
+    <div className="absolute -bottom-10 -right-10 w-72 h-72 border-[6px] border-white rounded-full"></div>
+  </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 font-TuskerGrotesk">OUR TRACK RECORD</h2>
-            <p className="text-xl text-white/80">A decade of excellence, hundreds of projects, and thousands of happy memories.</p>
+  <div className="container mx-auto px-4 md:px-6 relative z-10 max-w-5xl">
+    
+    {/* Header - Tightened margins and text sizes */}
+    <div className="text-center mb-10">
+      <h2 className="text-3xl md:text-4xl font-bold mb-2 font-TuskerGrotesk tracking-wide uppercase">
+        Our Track Record
+      </h2>
+      <p className="text-sm md:text-base text-white/80 font-light max-w-xl mx-auto">
+        A decade of excellence, hundreds of projects, and thousands of happy memories.
+      </p>
+    </div>
+
+    {/* Stats Grid - Reduced gaps and card padding */}
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+      {[
+        { value: "10+", label: "Years Experience", icon: "⏳" },
+        { value: "600+", label: "Projects Delivered", icon: "💼" },
+        { value: "2000+", label: "Events & Projects", icon: "🎉" },
+        { value: "100%", label: "Client Satisfaction", icon: "😊" }
+      ].map((stat, idx) => (
+        <div 
+          key={idx} 
+          className="bg-white/10 backdrop-blur-sm p-5 md:p-6 rounded-2xl border border-white/20 transform hover:-translate-y-1.5 transition-all duration-300 text-center flex flex-col justify-center items-center group shadow-sm hover:shadow-lg"
+        >
+          {/* Icon with a subtle hover bounce */}
+          <div className="text-2xl md:text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
+            {stat.icon}
           </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            {[
-              { value: "10+", label: "Years of Experience", icon: "⏳" },
-              { value: "600+", label: "Projects Delivered", icon: "💼" },
-              { value: "2000+", label: "Events & Projects", icon: "🎉" },
-              { value: "100%", label: "Clients Satisfaction", icon: "😊" }
-            ].map((stat, idx) => (
-              <div key={idx} className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 transform hover:-translate-y-2 transition-all duration-300 text-center">
-                <div className="text-4xl mb-4">{stat.icon}</div>
-                <div className="text-4xl md:text-5xl font-bold mb-2 font-TuskerGrotesk">{stat.value}</div>
-                <div className="text-sm md:text-base font-medium text-white/80 uppercase tracking-widest">{stat.label}</div>
-              </div>
-            ))}
+          
+          {/* Value */}
+          <div className="text-3xl md:text-4xl font-bold mb-1 font-TuskerGrotesk tracking-wide drop-shadow-sm">
+            {stat.value}
+          </div>
+          
+          {/* Label */}
+          <div className="text-[10px] md:text-xs font-medium text-white/80 uppercase tracking-wider">
+            {stat.label}
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+    
+  </div>
+</section>
 
-      {/* Our Clients Section */}
-      <OurClientsComponent />
+     
 
       {/* Our Services Section Introduction */}
       <section className="bg-black text-white pt-24 pb-12 relative overflow-hidden">
@@ -784,107 +826,163 @@ const HomePage = () => {
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-orange-400/5 blur-3xl pointer-events-none"></div>
 
-        <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 z-10 relative">
-          <div className="text-center mb-10 md:mb-14">
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
-              LET'S TALK
-            </span>
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              Get in <span className="text-primary">Touch</span>
-            </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Have a project in mind or need expert advice? Let's discuss how we can bring your ideas to life.
-            </p>
-          </div>
+        <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 z-10 relative">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left side: Text content & Contact Info */}
+            <div className="lg:col-span-5 flex flex-col justify-between h-full space-y-8 lg:pr-6">
+              <div>
+                <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                  LET'S TALK
+                </span>
+                <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                  Get in <span className="text-primary">Touch</span>
+                </h2>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  Have a project in mind or need expert advice? Let's discuss how we can bring your ideas to life.
+                </p>
+              </div>
 
-          <div className="bg-white p-8 md:p-12 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <input
-                type="text"
-                name="honeypot"
-                value={honeypot}
-                onChange={(e) => setHoneypot(e.target.value)}
-                className="hidden"
-              />
+              {/* Premium Contact Cards */}
+              <div className="space-y-4">
+                <a
+                  href={`tel:${GlobalData.company.companyPhone}`}
+                  className="flex items-center p-4 bg-white rounded-2xl border border-gray-100 hover:border-primary hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 group"
+                >
+                  <div className="p-3 rounded-full bg-primary/10 text-primary mr-4 group-hover:scale-110 transition-transform">
+                    <FaPhone className="text-lg" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-400 uppercase tracking-wider font-semibold">Call Us</p>
+                    <p className="font-bold text-gray-800 text-sm md:text-base">
+                      {GlobalData.company.companyPhone}
+                    </p>
+                  </div>
+                </a>
 
-              <div className="grid md:grid-cols-2 gap-4">
-                {["name", "email", "phone"].map((field, idx) => (
-                  <div key={idx}>
-                    <label className="block text-sm font-medium text-gray-700 mb-2 capitalize">
-                      {field}
+                <a
+                  href={`mailto:${GlobalData.company.companyEmail}`}
+                  className="flex items-center p-4 bg-white rounded-2xl border border-gray-100 hover:border-primary hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 group"
+                >
+                  <div className="p-3 rounded-full bg-primary/10 text-primary mr-4 group-hover:scale-110 transition-transform">
+                    <FaEnvelope className="text-lg" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-400 uppercase tracking-wider font-semibold">Email Us</p>
+                    <p className="font-bold text-gray-800 text-sm md:text-base">
+                      {GlobalData.company.companyEmail}
+                    </p>
+                  </div>
+                </a>
+
+                <a
+                  href={GlobalData.company.companyWhatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center p-4 bg-white rounded-2xl border border-gray-100 hover:border-primary hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 group"
+                >
+                  <div className="p-3 rounded-full bg-[#128C7E]/10 text-[#128C7E] mr-4 group-hover:scale-110 transition-transform">
+                    <FaWhatsapp className="text-lg" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-400 uppercase tracking-wider font-semibold">WhatsApp Us</p>
+                    <p className="font-bold text-gray-800 text-sm md:text-base">
+                      Chat with our team
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            {/* Right side: Form */}
+            <div className="lg:col-span-7 bg-white p-8 md:p-12 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <input
+                  type="text"
+                  name="honeypot"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                  className="hidden"
+                />
+
+                <div className="grid md:grid-cols-2 gap-4">
+                  {["name", "email", "phone"].map((field, idx) => (
+                    <div key={idx}>
+                      <label className="block text-sm font-medium text-gray-700 mb-2 capitalize">
+                        {field}
+                      </label>
+                      <input
+                        type={
+                          field === "email"
+                            ? "email"
+                            : field === "phone"
+                              ? "tel"
+                              : "text"
+                        }
+                        name={field}
+                        placeholder={
+                          field === "name"
+                            ? "Your full name"
+                            : field === "email"
+                              ? "your.email@example.com"
+                              : "+91 00000 00000"
+                        }
+                        value={formData[field]}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
+                        required
+                      />
+                    </div>
+                  ))}
+
+                  {/* Subject Dropdown */}
+                  <div className="md:col-span-2">
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Subject
                     </label>
-                    <input
-                      type={
-                        field === "email"
-                          ? "email"
-                          : field === "phone"
-                            ? "tel"
-                            : "text"
-                      }
-                      name={field}
-                      placeholder={
-                        field === "name"
-                          ? "Your full name"
-                          : field === "email"
-                            ? "your.email@example.com"
-                            : "+91 00000 00000"
-                      }
-                      value={formData[field]}
+                    <select
+                      name="subject"
+                      value={formData.subject}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
                       required
-                    />
+                    >
+                      <option value="">Select a subject</option>
+                      {subjectOptions.map((option, index) => (
+                        <option key={index} value={option}>
+                          {option}
+                        </option>
+                      ))}
+                    </select>
                   </div>
-                ))}
-
-                {/* Subject Dropdown */}
-                <div className="md:col-span-2">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Subject
-                  </label>
-                  <select
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
-                    required
-                  >
-                    <option value="">Select a subject</option>
-                    {subjectOptions.map((option, index) => (
-                      <option key={index} value={option}>
-                        {option}
-                      </option>
-                    ))}
-                  </select>
                 </div>
-              </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
-                </label>
-                <textarea
-                  name="message"
-                  placeholder="Tell us about your project or inquiry..."
-                  rows="5"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors resize-none"
-                  required
-                />
-              </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    name="message"
+                    placeholder="Tell us about your project or inquiry..."
+                    rows="5"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors resize-none"
+                    required
+                  />
+                </div>
 
-              <button
-                type="submit"
-                disabled={loading}
-                className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${loading
-                  ? "bg-gray-400 cursor-not-allowed text-gray-200"
-                  : "bg-primary hover:bg-primary/90 text-white shadow-sm"
-                  }`}
-              >
-                {loading ? "Sending Message..." : "Send Message"}
-              </button>
-            </form>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${loading
+                    ? "bg-gray-400 cursor-not-allowed text-gray-200"
+                    : "bg-primary hover:bg-primary/90 text-white shadow-sm"
+                    }`}
+                >
+                  {loading ? "Sending Message..." : "Send Message"}
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>

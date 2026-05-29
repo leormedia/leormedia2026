@@ -26,7 +26,6 @@ import {
   faCheckCircle,
   faCamera,
   faRing,
-  faChampagneGlasses,
   faMicrophone,
   faShapes,
   faCakeCandles,

@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import { IoCall } from "react-icons/io5";
 
-import { HomeCommunityCover } from "../../assets/data/Imagedata";
+import { ServicesCoverImage } from "../../assets/data/Imagedata";
 
 import { GlobalData } from "../../assets/data/GlodalData";
 import seoData from "../../assets/data/seo.json";
@@ -156,7 +156,7 @@ const Services = () => {
         {/* Section - 3 */}
         <section
           style={{
-            backgroundImage: `url(${HomeCommunityCover})`,
+            backgroundImage: `url(${ServicesCoverImage})`,
             backgroundSize: "cover",
             backgroundPosition: "top",
           }}

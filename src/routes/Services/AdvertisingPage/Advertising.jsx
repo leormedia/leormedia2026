@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { AdvertisingCompany } from "./AdvertisementDetailPageData";
-import { HomeCommunityCover } from "../../../assets/data/Imagedata";
+import { ServicesCoverImage } from "../../../assets/data/Imagedata";
 import { GlobalData } from "../../../assets/data/GlodalData";
 import seoData from "../../../assets/data/seo.json";
 import { Helmet } from "react-helmet-async";
@@ -129,7 +129,7 @@ const Advertising = () => {
         <section
           className="py-12 md:py-20 px-4 rounded-lg mx-4"
           style={{
-            backgroundImage: `url(${HomeCommunityCover})`,
+            backgroundImage: `url(${ServicesCoverImage})`,
             backgroundSize: "cover",
             backgroundPosition: "top",
           }}

@@ -1,5 +1,9 @@
 import DefaultCoverImage from "../../assets/CoverImages/BlogCover.webp";
-/*Videos */
+
+/*HomeSlider */
+import Eventmanagementhomeslider from "../Images/eventmanagementhomeslider.jpg"
+import Digitalmarketinghomeslider from "../Images/digitalmarketinghomeslider.jpg"
+import Luxeryweddinghomeslider from "../Images/luxeryweddinghomeslider.jpg"
 
 import Blogimage1 from "../../assets/Blogimages/Blogimage1.png";
 /*Cover Images */
@@ -27,15 +31,11 @@ import OntimeDelivery from "../Icons/OntimeDelivery.webp";
 import DigitalMarketingImage from "../Images/DigitalMarketingImage.webp";
 import AdvertisingImage from "../Images/AdvertisingImage.webp";
 import BrandingImage from "../Images/BrandingImage.webp";
-import GraphicDesignImage from "../Images/GraphicDesignImage.webp";
 import WebDevelopmentImage from "../Images/WebDevelopmentImage.webp";
-
-import GraphicDesignBG from "../Images/GraphicDesignBG.webp";
 
 import ContactUsCover from "../Images/Contact_us.png";
 import ourproducts_contact from "../Images/ourproducts_contact.jpg";
 
-import HomeCommunityCover from "../Images/HomeCommunityCover.webp";
 
 import aboutcover from "../Aboutus/aboutcover.webp";
 import CEO_OriginalImage from "../Aboutus/CEO_OriginalImage.webp";
@@ -44,6 +44,12 @@ import BrandServicesBg from "../Images/pexels-photo-196644.jpeg";
 import GoogleFavicon from "../Images/google-favicon.ico";
 export {
   DefaultCoverImage,
+  Eventmanagementhomeslider,
+Digitalmarketinghomeslider,
+Luxeryweddinghomeslider,
+
+
+
   homepage,
   WeddingPlannersCoverimage,
   GraphicDesigningCoverImage,
@@ -51,14 +57,11 @@ export {
   BrandingCoverImage,
   DigitalMarketingCoverImage,
   ServicesCoverImage,
-  HomeCommunityCover,
   aboutcover,
   DigitalMarketingImage,
   AdvertisingImage,
-  GraphicDesignImage,
   BrandingImage,
   WebDevelopmentImage,
-  GraphicDesignBG,
   ContactUsCover,
   ourproducts_contact,
   CEO_OriginalImage,

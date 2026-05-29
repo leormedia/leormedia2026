@@ -144,7 +144,7 @@ export function App() {
       setIsLoading(true);
       const timer = setTimeout(() => {
         setIsLoading(false);
-      }, 1000); // Reduced time as animation is removed
+      }, 4500); // Wait for text animation and logo reveal
       return () => clearTimeout(timer);
     } else {
       setIsLoading(false);

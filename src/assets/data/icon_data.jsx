@@ -65,8 +65,6 @@ import  UserExperienceDesign from '../Icons/Services_icons/MultiMedia/User Exper
 import  UserInterfaceDesign from '../Icons/Services_icons/MultiMedia/User Interface Design.webp'
 import  WebDesign from '../Icons/Services_icons/MultiMedia/Web Design.webp'
 
-import googlereview from "../Icons/googlereview.png";
-import goodfirms from "../Icons/Goodfirms_Logo.jpg";
 
 import BrandAwarness from '../Icons/Services_icons/Branding/Brand Awareness Campaigns.webp'
 import BrandExp from '../Icons/Services_icons/Branding/Brand Experience Design.webp'
@@ -104,7 +102,5 @@ ConversionRateOptimization,MobileMarketing,VideoMarketing,LocalSEOandMarketing,E
   crmermpannel,
   ecommerce,
   WebRevamp,
-  goodfirms,
-  googlereview,
 
  };
