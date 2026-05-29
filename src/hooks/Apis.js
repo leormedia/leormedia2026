@@ -1,5 +1,5 @@
 const CONTACTUS_API =
-  "https://leormedia.com/apis/ContactSubmissions.php";
+  "/api/contact";
 
 export {
   CONTACTUS_API,

@@ -8,13 +8,9 @@ import CSDLogo from "../CSDLogo.svg"
 import CSDLogoAbout from "../CSDLogo.svg" 
 
 
-import businesswebsite from "../Icons/Services_icons/WebDevelopment/businesswebsite.webp";
-import crmermpannel from "../Icons/Services_icons/WebDevelopment/crmermpannel.webp";
-import ecommerce from "../Icons/Services_icons/WebDevelopment/ecommerce.webp";
 import WebRevamp from "../Icons/Services_icons/WebDevelopment/WebRevamp.webp";
 
 
-import DisplayAdvertising from "../Icons/Services_icons/Advertising/DisplayAdvertising.webp";
 import InGameAdvertising from "../Icons/Services_icons/Advertising/In-GameAdvertising.webp";
 import NativeAdvertising from "../Icons/Services_icons/Advertising/NativeAdvertising.webp";
 import OutdoorAdvertising from "../Icons/Services_icons/Advertising/OutdoorAdvertising.webp";
@@ -26,7 +22,6 @@ import TVAdvertising from "../Icons/Services_icons/Advertising/TVAdvertising.web
 import VideoAdvertising from "../Icons/Services_icons/Advertising/VideoAdvertising.webp";
 
 
-import affiliatemarketing from '../Icons/Services_icons/DigitalMarketingIcons/affiliatemarketing.webp'
 import SearchEngineOptimization from '../Icons/Services_icons/DigitalMarketingIcons/searchengineoptimization.webp'
 import ContentMarketing from '../Icons/Services_icons/DigitalMarketingIcons/contentmarketing.webp'
 import SocialMediaMarketing from '../Icons/Services_icons/DigitalMarketingIcons/socialmediamarketing.webp'
@@ -84,7 +79,7 @@ import VisualID from '../Icons/Services_icons/Branding/Visual Identity Design.we
 
 export {DefaultIcon, DigitalmarketingIcon,Advertisingicon,Graphicdesignicon,Webdevelopmenticon,Brandingicon,CSDLogo,
 
-    DisplayAdvertising,InGameAdvertising,NativeAdvertising,OutdoorAdvertising,PrintAdvertising,ProgrammaticAdvertising,RadioAdvertising,
+    InGameAdvertising,NativeAdvertising,OutdoorAdvertising,PrintAdvertising,ProgrammaticAdvertising,RadioAdvertising,
 TheatreAdvertising,TVAdvertising,VideoAdvertising,
 
 BrandAwarness,BrandExp,BrandGuide,BrandID,BrandLogo,BrandMessage,BrandName,BrandPosition,BrandResearch,BrandStory,BrandTracking,Rebranding,VisualID,
@@ -93,14 +88,14 @@ BrandAwarness,BrandExp,BrandGuide,BrandID,BrandLogo,BrandMessage,BrandName,Brand
 MotionGraphics,PackagingDesign,PhotoEditing,PosterandFlyerDesign,PrintDesign,RenderingandVisualizationBannerDesign,SignageandBillboardDesign,
 SocialMediaGraphics,TShirtandMerchandiseDesign,UserExperienceDesign,UserInterfaceDesign,WebDesign,
 
-  affiliatemarketing,SearchEngineOptimization,ContentMarketing,SocialMediaMarketing,EmailMarketing,PayPerClickAdvertising,AnalyticsandDataAnalysis,
+  SearchEngineOptimization,ContentMarketing,SocialMediaMarketing,EmailMarketing,PayPerClickAdvertising,AnalyticsandDataAnalysis,
 ConversionRateOptimization,MobileMarketing,VideoMarketing,LocalSEOandMarketing,EcommerceMarketing,MarketingAutomation,RemarketingandRetargeting,InfluencerMarketing,
 
 
 
-  businesswebsite,CSDLogoAbout,
-  crmermpannel,
-  ecommerce,
+  CSDLogoAbout,
+  
+  
   WebRevamp,
 
  };

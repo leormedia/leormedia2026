@@ -5,7 +5,6 @@ import Eventmanagementhomeslider from "../Images/eventmanagementhomeslider.jpg"
 import Digitalmarketinghomeslider from "../Images/digitalmarketinghomeslider.jpg"
 import Luxeryweddinghomeslider from "../Images/luxeryweddinghomeslider.jpg"
 
-import Blogimage1 from "../../assets/Blogimages/Blogimage1.png";
 /*Cover Images */
 import AdvertisingCoverHomeImage from "../../assets/CoverImages/AdvertisingCoverHomeImage.webp";
 import BrandingCoverHomeImage from "../../assets/CoverImages/BrandingCoverHomeImage.webp";
@@ -13,10 +12,8 @@ import DigiatalMarketingCoverHomeImage from "../../assets/CoverImages/DigiatalMa
 import GraphicDesigningCoverHomeImage from "../../assets/CoverImages/GraphicDesigningCoverHomeImage.webp";
 import WebDevelopmentCoverHomeImage from "../../assets/CoverImages/WebDevelopmentCoverHomeImage.webp";
 import BlogCoverimage from "../../assets/CoverImages/BlogCover.webp";
-import homepage from "../../assets/CoverImages/homepage.webp";
 import EventHeroCover from "../../assets/CoverImages/EventHeroCover.png";
 import WeddingPlannersCoverimage from "../../assets/CoverImages/WeddingPlannersCoverimage.png";
-import GraphicDesigningCoverImage from "../../assets/CoverImages/GraphicDesigningCoverImage.png";
 import AdvertisitngCoverImage from "../../assets/CoverImages/AdvertisitngCoverImage.png";
 import BrandingCoverImage from "../../assets/CoverImages/BrandingCoverImage.png";
 import DigitalMarketingCoverImage from "../../assets/CoverImages/DigitalMarketingCoverImage.png";
@@ -42,17 +39,20 @@ import CEO_OriginalImage from "../Aboutus/CEO_OriginalImage.webp";
 
 import BrandServicesBg from "../Images/pexels-photo-196644.jpeg";
 import GoogleFavicon from "../Images/google-favicon.ico";
+
+/*Blogimages */
+import Blogimage1 from "../Blogimages/Blogimage1.png";
 export {
   DefaultCoverImage,
   Eventmanagementhomeslider,
 Digitalmarketinghomeslider,
-Luxeryweddinghomeslider,
+Luxeryweddinghomeslider,Blogimage1,
 
 
 
-  homepage,
+  
   WeddingPlannersCoverimage,
-  GraphicDesigningCoverImage,
+  
   AdvertisitngCoverImage,
   BrandingCoverImage,
   DigitalMarketingCoverImage,
@@ -82,6 +82,6 @@ Luxeryweddinghomeslider,
   /* Home */
   EventHeroCover,
 
-  Blogimage1, WeddingCoverImage,
+   WeddingCoverImage,
   BrandServicesBg, GoogleFavicon,
 };
