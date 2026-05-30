@@ -306,10 +306,10 @@ const HomePage = () => {
 
           {/* Main Top Header (Positioned at Top) */}
           <div className="mt-10">
-            <h2 className="text-[24px] md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white font-TuskerGrotesk uppercase tracking-wider">
+            <h2 className="text-[22px] md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white font-TuskerGrotesk uppercase tracking-wider">
               <span className="block">
-                Crafting Extraordinary Events & Creative
-                <span className="block text-primary"> Digital Success Stories in 2026</span>
+                Crafting Extraordinary 
+                <span className="block text-primary">Events & Creative Digital Success</span>
               </span>
             </h2>
             <p className="text-[12px] md:text-sm mt-2 text-white font-medium opacity-80 tracking-widest uppercase">

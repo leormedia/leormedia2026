@@ -12,6 +12,8 @@ import FooterLogo1 from "./FooterLogo1.png";
 import FooterLogo2 from "./FooterLogo2.png";
 import FooterLogo3 from "./FooterLogo3.png";
 import FooterLogo4 from "./FooterLogo4.png";
+import ChatBot from "../ChatBot/ChatBot";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
@@ -153,32 +155,7 @@ const Footer = () => {
         <section />
       </section>
 
-      <div
-        className="flex flex-col fixed right-2 z-50 items-center"
-        style={{
-          bottom: "calc(env(safe-area-inset-bottom, 0px) + 1rem)",
-        }}
-      >
-        {/* WhatsApp Button Container */}
-        <div className="group relative flex flex-col">
-          {/* Main Button */}
-          <a
-            href={GlobalData.company.companyWhatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 transform hover:rotate-[-5deg] group-hover:bg-[#128C7E]"
-            aria-label="Chat on WhatsApp"
-          >
-            <FaWhatsapp size={28} />
-
-            {/* Notification Badge */}
-            <span className="absolute -top-1 -right-1 w-6 h-6 flex items-center justify-center bg-red-500 text-white text-xs font-bold rounded-full border-2 border-white animate-bounce">
-              <span className="relative">!</span>
-            </span>
-          </a>
-
-        </div>
-      </div>
+      <ChatBot />
     </main>
   );
 };
