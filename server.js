@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
@@ -18,17 +19,17 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: 'mail@leormedia.com',
-        pass: 'ilovemotherA1!'
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
     }
 });
 
 // DB connection pool
 const db = mysql.createPool({
-    host: 'localhost',
-    user: 'u895915244_leormedia',
-    password: 'ilovemotherA1!',
-    database: 'u895915244_leormedia',
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
