@@ -60,7 +60,7 @@ const GetQuotation = () => {
               }`}
             >
               <div className="flex items-center justify-between">
-                <span className="text-xl font-semibold">{type}</span>
+                <span className="text-[20px] font-semibold">{type}</span>
                 {formData.eventType === type && <FaCheck className="text-primary" />}
               </div>
             </button>
@@ -76,19 +76,19 @@ const GetQuotation = () => {
       component: (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl mx-auto p-8 rounded-3xl bg-black/30 backdrop-blur-md border border-white/10">
           <div className="space-y-4 text-left">
-            <label className="block text-lg font-medium text-white/90">Event Date (Approximate)</label>
+            <label className="block text-[18px] font-medium text-white/90">Event Date (Approximate)</label>
             <div className="relative">
               <FaCalendarAlt className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
               <input
                 type="date"
                 value={formData.eventDate}
                 onChange={(e) => handleInputChange("eventDate", e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-lg text-white"
+                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[18px] text-white"
               />
             </div>
           </div>
           <div className="space-y-4 text-left">
-            <label className="block text-lg font-medium text-white/90">Location / Venue</label>
+            <label className="block text-[18px] font-medium text-white/90">Location / Venue</label>
             <div className="relative">
               <FaMapMarkerAlt className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
               <input
@@ -96,12 +96,12 @@ const GetQuotation = () => {
                 placeholder="Where is the event?"
                 value={formData.location}
                 onChange={(e) => handleInputChange("location", e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-lg text-white placeholder:text-white/40"
+                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[18px] text-white placeholder:text-white/40"
               />
             </div>
           </div>
           <div className="space-y-4 text-left md:col-span-2">
-            <label className="block text-lg font-medium text-white/90">Estimated Guest Count</label>
+            <label className="block text-[18px] font-medium text-white/90">Estimated Guest Count</label>
             <div className="relative">
               <FaUsers className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
               <input
@@ -109,7 +109,7 @@ const GetQuotation = () => {
                 placeholder="How many people are attending?"
                 value={formData.guests}
                 onChange={(e) => handleInputChange("guests", e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-lg text-white placeholder:text-white/40"
+                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[18px] text-white placeholder:text-white/40"
               />
             </div>
           </div>
@@ -134,7 +134,7 @@ const GetQuotation = () => {
               }`}
             >
               <div className="flex items-center justify-between">
-                <span className="text-xl font-semibold">{range}</span>
+                <span className="text-[20px] font-semibold">{range}</span>
                 {formData.budget === range && <FaCheck className="text-primary" />}
               </div>
             </button>
@@ -150,7 +150,7 @@ const GetQuotation = () => {
       component: (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl mx-auto p-8 rounded-3xl bg-black/40 backdrop-blur-md border border-white/10">
           <div className="space-y-4 text-left">
-            <label className="block text-lg font-medium text-white/90">Full Name</label>
+            <label className="block text-[18px] font-medium text-white/90">Full Name</label>
             <div className="relative">
               <FaUser className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
               <input
@@ -158,13 +158,13 @@ const GetQuotation = () => {
                 placeholder="Enter your name"
                 value={formData.name}
                 onChange={(e) => handleInputChange("name", e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-lg text-white placeholder:text-white/40"
+                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[18px] text-white placeholder:text-white/40"
                 required
               />
             </div>
           </div>
           <div className="space-y-4 text-left">
-            <label className="block text-lg font-medium text-white/90">Phone Number</label>
+            <label className="block text-[18px] font-medium text-white/90">Phone Number</label>
             <div className="relative">
               <FaPhone className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
               <input
@@ -172,13 +172,13 @@ const GetQuotation = () => {
                 placeholder="+91 00000 00000"
                 value={formData.phone}
                 onChange={(e) => handleInputChange("phone", e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-lg text-white placeholder:text-white/40"
+                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[18px] text-white placeholder:text-white/40"
                 required
               />
             </div>
           </div>
           <div className="space-y-4 text-left md:col-span-2">
-            <label className="block text-lg font-medium text-white/90">Email Address</label>
+            <label className="block text-[18px] font-medium text-white/90">Email Address</label>
             <div className="relative">
               <FaEnvelope className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
               <input
@@ -186,19 +186,19 @@ const GetQuotation = () => {
                 placeholder="your.email@example.com"
                 value={formData.email}
                 onChange={(e) => handleInputChange("email", e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-lg text-white placeholder:text-white/40"
+                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[18px] text-white placeholder:text-white/40"
                 required
               />
             </div>
           </div>
           <div className="space-y-4 text-left md:col-span-2">
-            <label className="block text-lg font-medium text-white/90">Any Additional Details?</label>
+            <label className="block text-[18px] font-medium text-white/90">Any Additional Details?</label>
             <textarea
               placeholder="Tell us more about your specific requirements..."
               rows="4"
               value={formData.message}
               onChange={(e) => handleInputChange("message", e.target.value)}
-              className="w-full p-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-lg text-white placeholder:text-white/40 resize-none"
+              className="w-full p-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[18px] text-white placeholder:text-white/40 resize-none"
             />
           </div>
         </div>
@@ -288,8 +288,8 @@ const GetQuotation = () => {
           <div className="w-24 h-24 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-8 animate-bounce">
             <FaCheck size={40} />
           </div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Thank You!</h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 mb-4">Thank You!</h2>
+          <p className="text-[14px] md:text-[18px] text-gray-600 mb-8">
             Your quotation request has been sent successfully. Our team will review your requirements and get back to you within 24 hours.
           </p>
           <button
@@ -336,7 +336,7 @@ const GetQuotation = () => {
           {currentStep > 0 && (
             <button
               onClick={prevStep}
-              className="mb-8 flex items-center text-white/70 hover:text-primary transition-colors font-medium text-lg group"
+              className="mb-8 flex items-center text-white/70 hover:text-primary transition-colors font-medium text-[18px] group"
             >
               <FaArrowLeft className="mr-2 group-hover:-translate-x-1 transition-transform" /> Previous Step
             </button>
@@ -344,13 +344,13 @@ const GetQuotation = () => {
 
           {/* Question Section */}
           <div className="text-center mb-12 animate-fadeIn">
-            <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block drop-shadow-md">
+            <span className="text-primary font-bold tracking-widest uppercase text-[14px] mb-4 block drop-shadow-md">
               Step {currentStep + 1} of {steps.length}
             </span>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 px-4 drop-shadow-lg">
+            <h1 className="text-[28px] md:text-[45px] font-bold text-white mb-4 px-4 drop-shadow-lg">
               {steps[currentStep].question}
             </h1>
-            <p className="text-lg md:text-xl text-white/80 px-4 max-w-2xl mx-auto">
+            <p className="text-[14px] md:text-[18px] text-white/80 px-4 max-w-2xl mx-auto">
               {steps[currentStep].subtitle}
             </p>
           </div>
@@ -366,7 +366,7 @@ const GetQuotation = () => {
               <button
                 onClick={handleSubmit}
                 disabled={loading}
-                className="px-12 py-5 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all shadow-xl text-xl flex items-center gap-3 transform hover:scale-105 active:scale-95 disabled:bg-gray-400"
+                className="px-12 py-5 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all shadow-xl text-[20px] flex items-center gap-3 transform hover:scale-105 active:scale-95 disabled:bg-gray-400"
               >
                 {loading ? "Sending..." : "Submit Quotation Request"}
                 {!loading && <FaCheck />}
@@ -375,7 +375,7 @@ const GetQuotation = () => {
               (currentStep === 1) && (
                 <button
                   onClick={nextStep}
-                  className="px-12 py-5 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all shadow-xl text-xl flex items-center gap-3 transform hover:scale-105 active:scale-95"
+                  className="px-12 py-5 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all shadow-xl text-[20px] flex items-center gap-3 transform hover:scale-105 active:scale-95"
                 >
                   Continue
                   <FaArrowRight />

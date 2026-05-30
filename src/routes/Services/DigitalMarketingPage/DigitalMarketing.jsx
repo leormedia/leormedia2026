@@ -89,17 +89,17 @@ const DigitalMarketing = () => {
         </video>
         <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-10"></div>
         <div className="relative z-20 text-center text-white px-4 max-w-4xl">
-          <h1 className="text-4xl md:text-7xl font-bold mb-6 font-TuskerGrotesk tracking-wider animate-fade-in-up">
+          <h1 className="text-[28px] md:text-[45px] font-bold mb-6 font-TuskerGrotesk tracking-wider animate-fade-in-up">
             DIGITAL MARKETING <span className="text-primary">EXCELLENCE</span>
           </h1>
-          <p className="text-lg md:text-xl mb-10 opacity-90 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-[14px] md:text-[18px] mb-10 opacity-90 leading-relaxed max-w-2xl mx-auto">
             Drive growth, build authority, and dominate your niche with Vizag's most trusted digital marketing partner.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link to="/contactus" className="button1 text-lg py-4 px-10">
+            <Link to="/contactus" className="button1 text-[18px] py-4 px-10">
               Get Started <FaRocket className="ml-2" />
             </Link>
-            <a href="#services" className="button2 text-lg py-4 px-10 border-white text-white hover:bg-white hover:text-black">
+            <a href="#services" className="button2 text-[18px] py-4 px-10 border-white text-white hover:bg-white hover:text-black">
               Explore Services
             </a>
           </div>
@@ -110,23 +110,23 @@ const DigitalMarketing = () => {
       <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-12 items-start">
           <div className="lg:col-span-1">
-            <span className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">ABOUT OUR AGENCY</span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gray-900 leading-tight">
+            <span className="text-primary font-bold tracking-[0.2em] uppercase text-[14px] mb-4 block">ABOUT OUR AGENCY</span>
+            <h2 className="text-[28px] md:text-[45px] font-bold mb-8 text-gray-900 leading-tight">
               We are the <br />
               <span className="text-primary">Digital Marketing in Vizag</span>
             </h2>
-            <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+            <p className="text-[14px] md:text-[18px] text-gray-600 mb-8 leading-relaxed">
               Leor Media is more than just an agency; we are your strategic partners in the digital world. 
               Based in the heart of Visakhapatnam, we specialize in creating 360-degree digital solutions 
               that help brands connect with their audience effectively.
             </p>
             <div className="flex items-center gap-4 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 w-fit">
-              <div className="bg-primary/10 p-4 rounded-full text-primary text-2xl">
+              <div className="bg-primary/10 p-4 rounded-full text-primary text-[24px]">
                 <FaUserFriends />
               </div>
               <div>
-                <p className="text-sm text-gray-500 uppercase font-bold tracking-wider">Join Our Success</p>
-                <p className="text-xl font-bold text-gray-900">Partner with Experts</p>
+                <p className="text-[14px] md:text-[18px] text-gray-500 uppercase font-bold tracking-wider">Join Our Success</p>
+                <p className="text-[14px] md:text-[18px] font-bold text-gray-900">Partner with Experts</p>
               </div>
             </div>
           </div>
@@ -146,7 +146,7 @@ const DigitalMarketing = () => {
                   "Innovative Creative Solutions"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center text-gray-700">
-                    <FaCheckCircle className="text-primary mr-3 text-xl" /> {item}
+                    <FaCheckCircle className="text-primary mr-3 text-[20px]" /> {item}
                   </li>
                 ))}
               </ul>
@@ -155,7 +155,7 @@ const DigitalMarketing = () => {
           
           <div className="lg:col-span-1 bg-white p-8 md:p-10 rounded-[2rem] shadow-2xl border border-gray-100 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16"></div>
-            <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
+            <h3 className="text-[28px] md:text-[45px] font-bold mb-8 flex items-center gap-3">
               <span className="w-1 h-8 bg-primary rounded-full"></span>
               Enquire Now
             </h3>
@@ -170,7 +170,7 @@ const DigitalMarketing = () => {
                 {services.map((s, i) => <option key={i}>{s.title}</option>)}
               </select>
               <textarea placeholder="Tell us about your project" className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all bg-gray-50 h-32"></textarea>
-              <button type="submit" className="button1 w-full py-5 text-lg font-bold rounded-xl shadow-lg shadow-primary/20">
+              <button type="submit" className="button1 w-full py-5 text-[18px] font-bold rounded-xl shadow-lg shadow-primary/20">
                 Send Enquiry
               </button>
             </form>
@@ -182,8 +182,8 @@ const DigitalMarketing = () => {
       <section id="services" className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">WHAT WE OFFER</span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">Comprehensive Marketing Services</h2>
+            <span className="text-primary font-bold tracking-[0.2em] uppercase text-[14px] mb-4 block">WHAT WE OFFER</span>
+            <h2 className="text-[28px] md:text-[45px] font-bold mb-6 text-gray-900">Comprehensive Marketing Services</h2>
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
           
@@ -193,11 +193,11 @@ const DigitalMarketing = () => {
                 key={index} 
                 className="group p-10 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-primary/20 transition-all duration-500 flex flex-col items-start"
               >
-                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
+                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-[30px] text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
                   {service.icon}
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">
+                <h3 className="text-[28px] md:text-[45px] font-bold mb-4 text-gray-900">{service.title}</h3>
+                <p className="text-[14px] md:text-[18px] text-gray-600 leading-relaxed mb-6">
                   {service.desc}
                 </p>
                 <Link to="/contactus" className="text-primary font-bold inline-flex items-center group/link hover:underline">
@@ -219,10 +219,10 @@ const DigitalMarketing = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
             {stats.map((stat, i) => (
               <div key={i} className="group">
-                <div className="text-5xl md:text-7xl font-bold text-primary mb-2 font-TuskerGrotesk tracking-widest group-hover:scale-110 transition-transform duration-300">
+                <div className="text-[48px] md:text-[72px] font-bold text-primary mb-2 font-TuskerGrotesk tracking-widest group-hover:scale-110 transition-transform duration-300">
                   {stat.value}
                 </div>
-                <div className="text-sm md:text-base uppercase tracking-[0.3em] font-bold text-gray-400 group-hover:text-white transition-colors">
+                <div className="text-[14px] md:text-[16px] uppercase tracking-[0.3em] font-bold text-gray-400 group-hover:text-white transition-colors">
                   {stat.label}
                 </div>
               </div>
@@ -235,9 +235,9 @@ const DigitalMarketing = () => {
       <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <span className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">OUR STRATEGY</span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">The Growth Process</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">A systematic approach to scale your business and achieve predictable results.</p>
+            <span className="text-primary font-bold tracking-[0.2em] uppercase text-[14px] mb-4 block">OUR STRATEGY</span>
+            <h2 className="text-[28px] md:text-[45px] font-bold mb-6 text-gray-900">The Growth Process</h2>
+            <p className="text-[14px] md:text-[18px] text-gray-600 max-w-2xl mx-auto">A systematic approach to scale your business and achieve predictable results.</p>
           </div>
           
           <div className="relative">
@@ -247,11 +247,11 @@ const DigitalMarketing = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
               {processSteps.map((step, i) => (
                 <div key={i} className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col items-center text-center group hover:border-primary transition-all duration-300">
-                  <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-6 shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-[24px] font-bold mb-6 shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
                     {i + 1}
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">{step.title}</h3>
-                  <p className="text-gray-600">{step.desc}</p>
+                  <h3 className="text-[28px] md:text-[45px] font-bold mb-3 text-gray-900">{step.title}</h3>
+                  <p className="text-[14px] md:text-[18px] text-gray-600">{step.desc}</p>
                 </div>
               ))}
             </div>
@@ -263,23 +263,23 @@ const DigitalMarketing = () => {
       <section className="py-24 px-4 bg-white overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">TESTIMONIALS</span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">What Our Clients Say</h2>
+            <span className="text-primary font-bold tracking-[0.2em] uppercase text-[14px] mb-4 block">TESTIMONIALS</span>
+            <h2 className="text-[28px] md:text-[45px] font-bold mb-6 text-gray-900">What Our Clients Say</h2>
           </div>
           
           <div className="bg-gray-50 p-8 md:p-16 rounded-[3rem] relative shadow-inner">
-            <FaQuoteLeft className="absolute top-10 left-10 text-gray-200 text-6xl md:text-8xl -z-0" />
+            <FaQuoteLeft className="absolute top-10 left-10 text-gray-200 text-[60px] md:text-[96px] -z-0" />
             <Slider {...reviewSettings} className="relative z-10 testimonial-slider">
               {reviews.map((review, i) => (
                 <div key={i} className="outline-none">
-                  <p className="text-xl md:text-2xl text-gray-700 italic mb-10 leading-relaxed">
+                  <p className="text-[14px] md:text-[18px] text-gray-700 italic mb-10 leading-relaxed">
                     "{review.text}"
                   </p>
                   <div className="flex items-center gap-5">
                     <img src={review.image} alt={review.name} className="w-16 h-16 rounded-full border-4 border-white shadow-md" />
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900">{review.name}</h4>
-                      <p className="text-primary font-medium">{review.company}</p>
+                      <h4 className="text-[28px] md:text-[45px] font-bold text-gray-900">{review.name}</h4>
+                      <p className="text-[14px] md:text-[18px] text-primary font-medium">{review.company}</p>
                     </div>
                   </div>
                 </div>
@@ -292,17 +292,17 @@ const DigitalMarketing = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 bg-primary">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-black mb-8 leading-tight">
+          <h2 className="text-[28px] md:text-[45px] font-bold text-black mb-8 leading-tight">
             Ready to Take Your Brand to the <br /> <span className="text-white">Next Level?</span>
           </h2>
-          <p className="text-black/80 text-xl mb-12 max-w-2xl mx-auto">
+          <p className="text-[14px] md:text-[18px] text-black/80 mb-12 max-w-2xl mx-auto">
             Contact us today for a free digital audit and discovery session with our experts.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link to="/contactus" className="button1black text-lg py-4 px-12">
+            <Link to="/contactus" className="button1black text-[18px] py-4 px-12">
               Start Your Project
             </Link>
-            <a href={`tel:${GlobalData.company.companyPhone}`} className="flex items-center gap-3 text-black font-bold text-xl hover:scale-105 transition-transform">
+            <a href={`tel:${GlobalData.company.companyPhone}`} className="flex items-center gap-3 text-black font-bold text-[20px] hover:scale-105 transition-transform">
               <div className="bg-white p-3 rounded-full shadow-lg">
                 <FaRocket />
               </div>

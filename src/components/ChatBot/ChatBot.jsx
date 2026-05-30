@@ -183,8 +183,8 @@ const ChatBot = () => {
                 <img src={chatbotIcon} alt="Leor Assistant" className="w-full h-full object-contain" />
               </div>
               <div>
-                <h3 className="font-bold text-[15px] m-0 leading-tight">Leor Assistant</h3>
-                <p className="text-[11px] text-gray-300 m-0">Typically replies instantly</p>
+                <h3 className="text-[28px] md:text-[45px] font-bold m-0 leading-tight">Leor Assistant</h3>
+                <p className="text-[14px] md:text-[18px] text-gray-300 m-0">Typically replies instantly</p>
               </div>
             </div>
             <button 
@@ -270,7 +270,7 @@ const ChatBot = () => {
                 className="absolute bottom-full right-0 mb-4 mr-1 bg-white text-gray-800 px-4 py-3 rounded-2xl shadow-xl border border-gray-200 flex items-center gap-3 transition-all duration-300 transform scale-100 origin-bottom-right cursor-pointer hover:shadow-2xl hover:-translate-y-1 z-10"
                 onClick={() => { setIsOpen(true); setShowGreeting(false); }}
             >
-              <p className="text-[14px] font-medium m-0 whitespace-nowrap">Hi! Can I help you? 👋</p>
+              <p className="text-[14px] md:text-[18px] font-medium m-0 whitespace-nowrap">Hi! Can I help you? 👋</p>
               <button 
                 onClick={(e) => { e.stopPropagation(); setShowGreeting(false); }}
                 className="text-gray-400 hover:text-gray-700 p-1 transition-colors"

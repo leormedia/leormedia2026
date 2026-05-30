@@ -45,18 +45,18 @@ const Events = () => {
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent z-10"></div>
         <div className="relative z-20 text-center text-white px-4 max-w-4xl">
-          <h1 className="text-4xl md:text-7xl font-bold mb-6 font-TuskerGrotesk tracking-wider uppercase">
+          <h1 className="text-[28px] md:text-[45px] font-bold mb-6 font-TuskerGrotesk tracking-wider uppercase">
             Creating <span className="text-primary">Unforgettable</span> <br />
             Moments
           </h1>
-          <p className="text-lg md:text-xl mb-10 opacity-90 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-[14px] md:text-[18px] mb-10 opacity-90 leading-relaxed max-w-2xl mx-auto">
             From intimate celebrations to grand corporate galas, we bring your vision to life with passion and precision.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link to="/contactus" className="button1 text-lg py-4 px-10">
+            <Link to="/contactus" className="button1 text-[18px] py-4 px-10">
               Book Your Event
             </Link>
-            <Link to="/contactus" className="button2 text-lg py-4 px-10 border-white text-white hover:bg-white hover:text-black">
+            <Link to="/contactus" className="button2 text-[18px] py-4 px-10 border-white text-white hover:bg-white hover:text-black">
               View Gallery
             </Link>
           </div>
@@ -67,18 +67,18 @@ const Events = () => {
       <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">VIZAG'S PREMIER EVENT PLANNERS</span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gray-900 leading-tight">
+            <span className="text-primary font-bold tracking-[0.2em] uppercase text-[14px] mb-4 block">VIZAG'S PREMIER EVENT PLANNERS</span>
+            <h2 className="text-[28px] md:text-[45px] font-bold mb-8 text-gray-900 leading-tight">
               {EventsCompany.section2.heading}
             </h2>
-            <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+            <p className="text-[14px] md:text-[18px] text-gray-600 mb-8 leading-relaxed">
               {EventsCompany.section2.description}
             </p>
             <div className="grid grid-cols-2 gap-6 mb-8">
               {stats.map((stat, i) => (
                 <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                  <p className="text-3xl font-bold text-primary mb-1">{stat.value}</p>
-                  <p className="text-sm text-gray-500 font-bold uppercase tracking-wider">{stat.label}</p>
+                  <p className="text-[14px] md:text-[18px] font-bold text-primary mb-1">{stat.value}</p>
+                  <p className="text-[14px] md:text-[18px] text-gray-500 font-bold uppercase tracking-wider">{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -98,7 +98,7 @@ const Events = () => {
       <section className="py-24 px-4 bg-white" id="services">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900">Our Expertise</h2>
+            <h2 className="text-[28px] md:text-[45px] font-bold mb-4 text-gray-900">Our Expertise</h2>
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -109,11 +109,11 @@ const Events = () => {
               return (
                 <div key={i} className="group p-10 bg-gray-50 rounded-3xl hover:bg-white hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-gray-100 flex flex-col justify-between">
                   <div>
-                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-3xl text-primary mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-[30px] text-primary mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-all duration-500">
                       <FontAwesomeIcon icon={service.icon} />
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 text-gray-900">{service.title}</h3>
-                    <p className="text-gray-600 leading-relaxed text-sm mb-6">
+                    <h3 className="text-[28px] md:text-[45px] font-bold mb-4 text-gray-900">{service.title}</h3>
+                    <p className="text-[14px] md:text-[18px] text-gray-600 leading-relaxed mb-6">
                       {service.description}
                     </p>
                   </div>
@@ -124,7 +124,7 @@ const Events = () => {
                         <li key={subIdx}>
                           <Link
                             to={subLink.path}
-                            className="flex items-center gap-2.5 text-gray-600 hover:text-primary transition-colors text-sm font-semibold group/link"
+                            className="flex items-center gap-2.5 text-gray-600 hover:text-primary transition-colors text-[14px] font-semibold group/link"
                           >
                             <span className="w-1.5 h-1.5 rounded-full bg-primary group-hover/link:scale-150 transition-all duration-300"></span>
                             {subLink.title}
@@ -143,17 +143,17 @@ const Events = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gray-900 text-white">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-8 font-TuskerGrotesk tracking-widest uppercase">
+          <h2 className="text-[28px] md:text-[45px] font-bold mb-8 font-TuskerGrotesk tracking-widest uppercase">
             Ready to Plan Your <span className="text-primary">Next Big Event?</span>
           </h2>
-          <p className="text-gray-400 text-xl mb-12 max-w-2xl mx-auto">
+          <p className="text-[14px] md:text-[18px] text-gray-400 mb-12 max-w-2xl mx-auto">
             Contact us today for a free consultation and let's start creating magic together.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link to="/contactus" className="button1 text-lg py-4 px-12">
+            <Link to="/contactus" className="button1 text-[18px] py-4 px-12">
               Contact Us
             </Link>
-            <a href={`tel:${GlobalData.company.companyPhone}`} className="flex items-center gap-3 text-white font-bold text-xl hover:scale-105 transition-transform">
+            <a href={`tel:${GlobalData.company.companyPhone}`} className="flex items-center gap-3 text-white font-bold text-[20px] hover:scale-105 transition-transform">
               <div className="bg-primary p-3 rounded-full shadow-lg text-black">
                 <FaPhone />
               </div>

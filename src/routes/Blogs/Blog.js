@@ -47,10 +47,10 @@ function BlogPage() {
           }}
         >
           <div className="text-center text-white max-w-2xl mx-auto">
-            <h1 className="text-2xl md:text-4xl font-bold mb-4">
+            <h1 className="text-[28px] md:text-[45px] font-bold mb-4">
               Blogs & Research
             </h1>
-            <p className="text-sm opacity-90">
+            <p className="text-[14px] md:text-[18px] opacity-90">
               Research done for our project and Technologies we use for our community.
             </p>
           </div>
@@ -70,25 +70,25 @@ function BlogPage() {
                         alt={post.title} 
                       />
                       <div className="absolute top-4 left-4">
-                        <span className="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        <span className="bg-primary text-white text-[12px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                           Tech Insights
                         </span>
                       </div>
                     </div>
                     <div className="p-6 flex flex-col flex-1">
-                      <div className="flex items-center text-xs text-gray-400 mb-3 space-x-2">
+                      <div className="flex items-center text-[12px] text-gray-400 mb-3 space-x-2">
                         <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
                         <span>•</span>
                         <span>5 min read</span>
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors line-clamp-2 leading-tight">
+                      <h3 className="text-[28px] md:text-[45px] font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors line-clamp-2 leading-tight">
                         {post.title}
                       </h3>
-                      <p className="text-gray-600 text-sm mb-6 line-clamp-3 leading-relaxed flex-1">
+                      <p className="text-[14px] md:text-[18px] text-gray-600 mb-6 line-clamp-3 leading-relaxed flex-1">
                         {limitContent(post.content)}
                       </p>
                       <div className="mt-auto">
-                        <div className="flex items-center text-primary font-bold text-sm group-hover:translate-x-2 transition-transform duration-300">
+                        <div className="flex items-center text-primary font-bold text-[14px] group-hover:translate-x-2 transition-transform duration-300">
                           Read Full Article 
                           <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -101,7 +101,7 @@ function BlogPage() {
               ))
             ) : (
               <div className="col-span-full text-center py-20">
-                <p className="text-gray-500 text-lg">No blog posts available at the moment.</p>
+                <p className="text-[14px] md:text-[18px] text-gray-500">No blog posts available at the moment.</p>
               </div>
             )}
           </div>

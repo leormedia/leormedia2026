@@ -116,22 +116,22 @@ const ImageSlider = () => {
 
             {/* Content at bottom */}
             <div className="absolute inset-0 flex flex-col items-center justify-end text-white text-center pb-8 px-4">
-              <h2 className="font-bold text-3xl md:text-5xl lg:text-6xl">
+              <h2 className="text-[28px] md:text-[45px] font-bold">
                 {image.title}
               </h2>
-              <p className="mt-2 text-xs sm:text-sm md:text-lg">
+              <p className="text-[14px] md:text-[18px] mt-2">
                 {image.description}
               </p>
               <div className="mt-4 flex flex-wrap justify-center gap-3">
                 <a
                   href={image.button1.link}
-                  className="text-sm sm:text-base rounded-sm bg-yellow-500 hover:bg-yellow-600 border border-yellow-400 px-6 sm:px-10 py-2 font-semibold text-white shadow-md transition-all duration-300"
+                  className="text-[14px] sm:text-[16px] rounded-sm bg-yellow-500 hover:bg-yellow-600 border border-yellow-400 px-6 sm:px-10 py-2 font-semibold text-white shadow-md transition-all duration-300"
                 >
                   {image.button1.text}
                 </a>
                 <a
                   href={image.button2.link}
-                  className="text-sm sm:text-base rounded-sm bg-orange-500 hover:bg-orange-600 border border-orange-400 px-6 sm:px-10 py-2 font-semibold text-white shadow-md transition-all duration-300"
+                  className="text-[14px] sm:text-[16px] rounded-sm bg-orange-500 hover:bg-orange-600 border border-orange-400 px-6 sm:px-10 py-2 font-semibold text-white shadow-md transition-all duration-300"
                 >
                   {image.button2.text}
                 </a>

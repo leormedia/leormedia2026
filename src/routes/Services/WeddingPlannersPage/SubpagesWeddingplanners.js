@@ -85,19 +85,19 @@ const SubpagesWeddingplanners = ({ pageData, seoData }) => {
           
           <div className="relative z-10 container mx-auto px-6 text-center text-white">
             <div className="max-w-4xl mx-auto space-y-8 animate-fade-in-up">
-              <span className="inline-block px-4 py-2 bg-primary/20 backdrop-blur-md border border-primary/30 rounded-full text-primary text-sm font-bold tracking-widest uppercase">
+              <span className="inline-block px-4 py-2 bg-primary/20 backdrop-blur-md border border-primary/30 rounded-full text-primary text-[14px] font-bold tracking-widest uppercase">
                 Luxury Wedding Planners
               </span>
-              <h1 className="text-4xl md:text-7xl font-extrabold leading-tight text-white drop-shadow-2xl">
+              <h1 className="text-[28px] md:text-[45px] font-extrabold leading-tight text-white drop-shadow-2xl">
                 {data.hero?.title || data.title}
               </h1>
-              <p className="text-lg md:text-2xl opacity-90 max-w-3xl mx-auto leading-relaxed font-medium">
+              <p className="text-[14px] md:text-[18px] opacity-90 max-w-3xl mx-auto leading-relaxed font-medium">
                 {data.hero?.subtitle || data.subtitle}
               </p>
               
               <div className="flex flex-wrap justify-center gap-4 py-4">
                 {data.hero?.highlights?.map((highlight, idx) => (
-                  <span key={idx} className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-white/20 text-sm font-semibold">
+                  <span key={idx} className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-white/20 text-[14px] font-semibold">
                     <FaCheckCircle className="text-primary" /> {highlight}
                   </span>
                 ))}
@@ -110,8 +110,8 @@ const SubpagesWeddingplanners = ({ pageData, seoData }) => {
                     to={cta.link}
                     className={`${
                       cta.primary 
-                      ? "px-10 py-4 bg-primary text-white rounded-full font-bold text-lg hover:bg-primary-dark transition-all transform hover:scale-105 shadow-xl shadow-primary/30"
-                      : "px-10 py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white rounded-full font-bold text-lg hover:bg-white/20 transition-all transform hover:scale-105"
+                      ? "px-10 py-4 bg-primary text-white rounded-full font-bold text-[18px] hover:bg-primary-dark transition-all transform hover:scale-105 shadow-xl shadow-primary/30"
+                      : "px-10 py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white rounded-full font-bold text-[18px] hover:bg-white/20 transition-all transform hover:scale-105"
                     }`}
                   >
                     {cta.text}
@@ -138,15 +138,15 @@ const SubpagesWeddingplanners = ({ pageData, seoData }) => {
                     <span className="text-primary font-bold tracking-widest uppercase block">
                       {data.introduction?.heading || data.section2?.tagline}
                     </span>
-                    <h2 className="text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
+                    <h2 className="text-[28px] md:text-[45px] font-bold text-slate-900 leading-tight">
                       {data.introduction?.heading ? "Crafting Stories That Last a Lifetime" : data.section2?.heading}
                     </h2>
                   </div>
-                  <p className="text-xl text-gray-600 leading-relaxed italic border-l-4 border-primary pl-6">
+                  <p className="text-[14px] md:text-[18px] text-gray-600 leading-relaxed italic border-l-4 border-primary pl-6">
                     {data.introduction?.text || data.section2?.description}
                   </p>
                   {data.introduction?.details && (
-                    <p className="text-lg text-gray-700 leading-relaxed">
+                    <p className="text-[14px] md:text-[18px] text-gray-700 leading-relaxed">
                       {data.introduction.details}
                     </p>
                   )}
@@ -169,18 +169,18 @@ const SubpagesWeddingplanners = ({ pageData, seoData }) => {
           <div className="container mx-auto px-6 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
               <span className="text-primary font-bold tracking-widest uppercase block">Our Expertise</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-white">Premium Wedding Services</h2>
-              <p className="text-gray-400 text-lg">Comprehensive solutions for every aspect of your destination wedding.</p>
+              <h2 className="text-[28px] md:text-[45px] font-bold text-white">Premium Wedding Services</h2>
+              <p className="text-[14px] md:text-[18px] text-gray-400">Comprehensive solutions for every aspect of your destination wedding.</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {data.services?.map((service, idx) => (
                 <div key={idx} className="p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all group">
                   <div className="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <FontAwesomeIcon icon={service.icon} className="text-2xl text-primary" />
+                    <FontAwesomeIcon icon={service.icon} className="text-[24px] text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{service.description}</p>
+                  <h3 className="text-[28px] md:text-[45px] font-bold mb-3">{service.title}</h3>
+                  <p className="text-[14px] md:text-[18px] text-gray-400 leading-relaxed">{service.description}</p>
                 </div>
               ))}
             </div>
@@ -193,14 +193,14 @@ const SubpagesWeddingplanners = ({ pageData, seoData }) => {
             <div className="flex flex-col lg:flex-row gap-20">
               <div className="lg:w-1/3 space-y-6">
                 <span className="text-primary font-bold tracking-widest uppercase block">Why Choose Us</span>
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+                <h2 className="text-[28px] md:text-[45px] font-bold text-slate-900 leading-tight">
                   Vizag's Most Trusted Wedding Agency
                 </h2>
-                <p className="text-gray-600 text-lg">
+                <p className="text-[14px] md:text-[18px] text-gray-600">
                   We don't just plan weddings; we create legacies. Our commitment to excellence ensures your special day is nothing short of magical.
                 </p>
                 <div className="pt-8">
-                  <Link to="/contactus" className="inline-flex items-center gap-3 text-primary font-bold text-lg group">
+                  <Link to="/contactus" className="inline-flex items-center gap-3 text-primary font-bold text-[18px] group">
                     Learn More About Our Values <FaArrowRight className="group-hover:translate-x-2 transition-transform" />
                   </Link>
                 </div>
@@ -213,8 +213,8 @@ const SubpagesWeddingplanners = ({ pageData, seoData }) => {
                       <FontAwesomeIcon icon={item.icon} className="text-primary" />
                     </div>
                     <div className="space-y-2">
-                      <h3 className="text-xl font-bold text-slate-900">{item.title}</h3>
-                      <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                      <h3 className="text-[28px] md:text-[45px] font-bold text-slate-900">{item.title}</h3>
+                      <p className="text-[14px] md:text-[18px] text-gray-600 leading-relaxed">{item.description}</p>
                     </div>
                   </div>
                 ))}
@@ -228,7 +228,7 @@ const SubpagesWeddingplanners = ({ pageData, seoData }) => {
           <div className="container mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
               <span className="text-primary font-bold tracking-widest uppercase block">Wedding Gallery</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900">A Glimpse of Perfection</h2>
+              <h2 className="text-[28px] md:text-[45px] font-bold text-slate-900">A Glimpse of Perfection</h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -236,7 +236,7 @@ const SubpagesWeddingplanners = ({ pageData, seoData }) => {
                 <div key={idx} className="group relative aspect-[4/5] rounded-3xl overflow-hidden shadow-xl">
                   <LazyImage src={item.image} alt={item.title} className="w-full h-full group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
-                    <h3 className="text-white text-xl font-bold">{item.title}</h3>
+                    <h3 className="text-[28px] md:text-[45px] text-white font-bold">{item.title}</h3>
                   </div>
                 </div>
               ))}
@@ -250,19 +250,19 @@ const SubpagesWeddingplanners = ({ pageData, seoData }) => {
             <div className="container mx-auto px-6">
               <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
                 <span className="text-primary font-bold tracking-widest uppercase block">Our Packages</span>
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-900">Tailored Luxury Experiences</h2>
+                <h2 className="text-[28px] md:text-[45px] font-bold text-slate-900">Tailored Luxury Experiences</h2>
               </div>
               
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {(data.packages || data.pricing).map((pkg, idx) => (
                   <div key={idx} className={`relative p-10 rounded-3xl border transition-all ${pkg.highlighted ? "border-primary bg-slate-900 text-white scale-105 z-10 shadow-2xl" : "border-gray-200 bg-white text-slate-900 hover:border-primary/50"}`}>
                     {pkg.highlighted && (
-                      <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-6 py-2 bg-primary text-white text-sm font-bold rounded-full uppercase tracking-widest">
+                      <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-6 py-2 bg-primary text-white text-[14px] font-bold rounded-full uppercase tracking-widest">
                         Most Popular
                       </span>
                     )}
-                    <h3 className="text-2xl font-bold mb-2">{pkg.title}</h3>
-                    <div className="text-3xl font-extrabold text-primary mb-8">{pkg.price}</div>
+                    <h3 className="text-[28px] md:text-[45px] font-bold mb-2">{pkg.title}</h3>
+                    <div className="text-[30px] font-extrabold text-primary mb-8">{pkg.price}</div>
                     <ul className="space-y-4 mb-12">
                       {pkg.features.map((feature, fIdx) => (
                         <li key={fIdx} className="flex items-center gap-3">
@@ -287,7 +287,7 @@ const SubpagesWeddingplanners = ({ pageData, seoData }) => {
             <div className="container mx-auto px-6">
               <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
                 <span className="text-primary font-bold tracking-widest uppercase block">Our Process</span>
-                <h2 className="text-4xl md:text-5xl font-bold text-white">Six Steps to Perfection</h2>
+                <h2 className="text-[28px] md:text-[45px] font-bold text-white">Six Steps to Perfection</h2>
               </div>
               
               <div className="relative">
@@ -296,12 +296,12 @@ const SubpagesWeddingplanners = ({ pageData, seoData }) => {
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-12 lg:gap-8 text-white">
                   {data.process.map((step, idx) => (
                     <div key={idx} className="relative z-10 text-center space-y-6 group">
-                      <div className="w-16 h-16 bg-slate-900 border-4 border-primary rounded-full flex items-center justify-center mx-auto text-2xl font-black text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                      <div className="w-16 h-16 bg-slate-900 border-4 border-primary rounded-full flex items-center justify-center mx-auto text-[24px] font-black text-primary group-hover:bg-primary group-hover:text-white transition-all">
                         {idx + 1}
                       </div>
                       <div className="space-y-2">
-                        <h3 className="text-lg font-bold">{step.title}</h3>
-                        <p className="text-sm text-gray-400 leading-relaxed">{step.description}</p>
+                        <h3 className="text-[28px] md:text-[45px] font-bold">{step.title}</h3>
+                        <p className="text-[14px] md:text-[18px] text-gray-400 leading-relaxed">{step.description}</p>
                       </div>
                     </div>
                   ))}
@@ -317,18 +317,18 @@ const SubpagesWeddingplanners = ({ pageData, seoData }) => {
           <div className="container mx-auto px-6 relative z-10">
              <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
               <span className="text-primary font-bold tracking-widest uppercase block">Testimonials</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900">What Couples Say</h2>
+              <h2 className="text-[28px] md:text-[45px] font-bold text-slate-900">What Couples Say</h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
               {data.testimonials?.map((t, idx) => (
                 <div key={idx} className="p-10 bg-gray-50 rounded-3xl relative">
-                  <FaQuoteLeft className="text-4xl text-primary/20 absolute top-10 left-10" />
+                  <FaQuoteLeft className="text-[36px] text-primary/20 absolute top-10 left-10" />
                   <div className="relative z-10 space-y-6">
                     <div className="flex gap-1">
                       {[...Array(t.rating)].map((_, i) => <FaStar key={i} className="text-yellow-400" />)}
                     </div>
-                    <p className="text-xl text-gray-700 font-medium italic leading-relaxed">"{t.review}"</p>
+                    <p className="text-[14px] md:text-[18px] text-gray-700 font-medium italic leading-relaxed">"{t.review}"</p>
                     <div className="font-bold text-slate-900">— {t.name}</div>
                   </div>
                 </div>
@@ -343,7 +343,7 @@ const SubpagesWeddingplanners = ({ pageData, seoData }) => {
             <div className="max-w-4xl mx-auto space-y-12">
               <div className="text-center space-y-4">
                 <span className="text-primary font-bold tracking-widest uppercase block">Common Questions</span>
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-900">Expert Wedding Advice</h2>
+                <h2 className="text-[28px] md:text-[45px] font-bold text-slate-900">Expert Wedding Advice</h2>
               </div>
               
               <div className="space-y-4">
@@ -353,7 +353,7 @@ const SubpagesWeddingplanners = ({ pageData, seoData }) => {
                       onClick={() => toggleFaq(idx)}
                       className="w-full p-6 text-left flex items-center justify-between gap-4 group"
                     >
-                      <span className="text-lg font-bold text-slate-900 group-hover:text-primary transition-colors flex items-center gap-3">
+                      <span className="text-[18px] font-bold text-slate-900 group-hover:text-primary transition-colors flex items-center gap-3">
                         <FaRegQuestionCircle className="text-primary flex-shrink-0" /> {faq.question}
                       </span>
                       <FaChevronRight className={`text-primary transition-transform duration-300 ${openFaqIndex === idx ? "rotate-90" : ""}`} />
@@ -378,16 +378,16 @@ const SubpagesWeddingplanners = ({ pageData, seoData }) => {
           
           <div className="container mx-auto px-6 relative z-10 text-center text-white">
             <div className="max-w-4xl mx-auto space-y-10">
-              <h2 className="text-4xl md:text-6xl font-black leading-tight drop-shadow-xl">{data.finalCTA?.title}</h2>
-              <p className="text-xl md:text-2xl opacity-90 leading-relaxed">
+              <h2 className="text-[28px] md:text-[45px] font-black leading-tight drop-shadow-xl">{data.finalCTA?.title}</h2>
+              <p className="text-[14px] md:text-[18px] opacity-90 leading-relaxed">
                 {data.finalCTA?.text}
               </p>
               
               <div className="flex flex-col md:flex-row items-center justify-center gap-10 py-6">
                 {data.finalCTA?.phones?.map((phone, idx) => (
-                  <a key={idx} href={`tel:${phone}`} className="flex items-center gap-4 text-2xl md:text-3xl font-black hover:scale-105 transition-transform group">
+                  <a key={idx} href={`tel:${phone}`} className="flex items-center gap-4 text-[24px] md:text-[30px] font-black hover:scale-105 transition-transform group">
                     <div className="w-12 h-12 bg-white text-primary rounded-full flex items-center justify-center group-hover:bg-slate-900 group-hover:text-white transition-colors">
-                      <FaPhone className="text-lg" />
+                      <FaPhone className="text-[18px]" />
                     </div>
                     {phone}
                   </a>
@@ -399,9 +399,9 @@ const SubpagesWeddingplanners = ({ pageData, seoData }) => {
                   <Link 
                     key={idx} 
                     to={cta.link} 
-                    className={`px-10 py-5 rounded-full font-bold text-lg flex items-center gap-3 transition-all transform hover:scale-105 ${idx === 0 ? "bg-green-500 hover:bg-green-600 text-white shadow-xl shadow-green-900/20" : "bg-slate-900 hover:bg-slate-800 text-white shadow-xl shadow-slate-900/20"}`}
+                    className={`px-10 py-5 rounded-full font-bold text-[18px] flex items-center gap-3 transition-all transform hover:scale-105 ${idx === 0 ? "bg-green-500 hover:bg-green-600 text-white shadow-xl shadow-green-900/20" : "bg-slate-900 hover:bg-slate-800 text-white shadow-xl shadow-slate-900/20"}`}
                   >
-                    {cta.icon === 'whatsapp' ? <FaWhatsapp className="text-2xl" /> : <FaArrowRight />}
+                    {cta.icon === 'whatsapp' ? <FaWhatsapp className="text-[24px]" /> : <FaArrowRight />}
                     {cta.text}
                   </Link>
                 ))}

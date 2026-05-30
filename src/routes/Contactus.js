@@ -84,14 +84,14 @@ const ContactForm = () => {
               onClick={() => toggle(index)}
               className="w-full flex items-center justify-between p-3 text-left bg-white hover:bg-gray-50 transition-colors"
             >
-              <span className="text-sm font-medium">{faq.question}</span>
+              <span className="text-[14px] font-medium">{faq.question}</span>
               <FaChevronRight
                 className={`transition-transform ${openIndex === index ? "rotate-90" : ""
                   }`}
               />
             </button>
             {openIndex === index && (
-              <div className="p-3 bg-gray-50 text-sm text-gray-700 border-t">
+              <div className="p-3 bg-gray-50 text-[14px] text-gray-700 border-t">
                 {faq.answer}
               </div>
             )}
@@ -143,7 +143,7 @@ const ContactForm = () => {
 
   const contactMethods = [
     {
-      icon: <HiOutlineMail className="text-xl" />,
+      icon: <HiOutlineMail className="text-[20px]" />,
       label: "Email",
       value: GlobalData.company.companyEmail,
       href: `mailto:${GlobalData.company.companyEmail}`,
@@ -189,12 +189,12 @@ const ContactForm = () => {
         }}
       >
         <div className="text-center text-white max-w-2xl mx-auto">
-          <h1 className="text-2xl md:text-4xl font-bold mb-4">
+          <h1 className="text-[28px] md:text-[45px] font-bold mb-4">
             Get in touch,
             <br />
             we'd love to hear from you.
           </h1>
-          <p className="text-sm opacity-90 mb-6">
+          <p className="text-[14px] md:text-[18px] opacity-90 mb-6">
             You can contact us through mail or you can get in touch at our
             digital office.
           </p>
@@ -202,13 +202,13 @@ const ContactForm = () => {
           <div className="flex flex-wrap justify-center gap-3">
             <Link
               to="/contactus"
-              className="inline-flex items-center bg-white text-black px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center bg-white text-black px-4 py-2 rounded-md text-[14px] font-medium hover:bg-gray-100 transition-colors"
             >
               <FaPhone className="mr-2" /> Get in Touch
             </Link>
             <a
               href={GlobalData.company.companyWhatsapp}
-              className="inline-flex items-center bg-white text-black px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center bg-white text-black px-4 py-2 rounded-md text-[14px] font-medium hover:bg-gray-100 transition-colors"
             >
               <FaWhatsapp className="mr-2" /> WhatsApp
             </a>
@@ -221,7 +221,7 @@ const ContactForm = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 mb-6">
               Send us a Message
             </h2>
 
@@ -237,7 +237,7 @@ const ContactForm = () => {
               <div className="grid md:grid-cols-2 gap-4">
                 {["name", "email", "phone"].map((field, idx) => (
                   <div key={idx}>
-                    <label className="block text-sm font-medium text-gray-700 mb-2 capitalize">
+                    <label className="block text-[14px] font-medium text-gray-700 mb-2 capitalize">
                       {field}
                     </label>
                     <input
@@ -266,7 +266,7 @@ const ContactForm = () => {
 
                 {/* Subject Dropdown */}
                 <div className="md:col-span-2">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-[14px] font-medium text-gray-700 mb-2">
                     Subject
                   </label>
                   <select
@@ -287,7 +287,7 @@ const ContactForm = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-[14px] font-medium text-gray-700 mb-2">
                   Message
                 </label>
                 <textarea
@@ -317,10 +317,10 @@ const ContactForm = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 mb-4">
                 Let's Start a Conversation
               </h2>
-              <p className="text-gray-600">
+              <p className="text-[14px] md:text-[18px] text-gray-600">
                 Whether you're ready to begin a project or just want to explore
                 possibilities, we're here to help you succeed.
               </p>
@@ -339,8 +339,8 @@ const ContactForm = () => {
                     {method.icon}
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">{method.label}</p>
-                    <p className="font-semibold text-gray-900">
+                    <p className="text-[14px] md:text-[18px] text-gray-500">{method.label}</p>
+                    <p className="text-[14px] md:text-[18px] font-semibold text-gray-900">
                       {method.value}
                     </p>
                   </div>
@@ -350,7 +350,7 @@ const ContactForm = () => {
 
             {/* Quick Action Buttons */}
             <div className="bg-yellow-50 p-6 rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-3">
+              <h3 className="text-[28px] md:text-[45px] font-semibold text-gray-900 mb-3">
                 Quick Connect
               </h3>
               <div className="flex flex-wrap gap-3">
@@ -359,21 +359,21 @@ const ContactForm = () => {
                   className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg border border-gray-300 hover:border-primary transition-colors"
                 >
                   <FaEnvelope className="text-primary" />
-                  <span className="text-sm font-medium">Email</span>
+                  <span className="text-[14px] font-medium">Email</span>
                 </a>
                 <a
                   href={`tel:${GlobalData.company.companyPhone}`}
                   className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg border border-gray-300 hover:border-primary transition-colors"
                 >
                   <FaPhone className="text-green-600" />
-                  <span className="text-sm font-medium">Call</span>
+                  <span className="text-[14px] font-medium">Call</span>
                 </a>
                 <a
                   href={GlobalData.company.companyWhatsapp}
                   className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg border border-gray-300 hover:border-primary transition-colors"
                 >
                   <FaWhatsapp className="text-green-500" />
-                  <span className="text-sm font-medium">WhatsApp</span>
+                  <span className="text-[14px] font-medium">WhatsApp</span>
                 </a>
               </div>
             </div>
@@ -383,10 +383,10 @@ const ContactForm = () => {
 
       {/* FAQ Section */}
       <section className="px-4 max-w-4xl mx-auto py-12">
-        <h2 className="text-2xl font-bold text-center mb-2">
+        <h2 className="text-[28px] md:text-[45px] font-bold text-center mb-2">
           Frequently Asked Questions
         </h2>
-        <p className="text-[14px] text-center mb-6">
+        <p className="text-[14px] md:text-[18px] text-center mb-6">
           Find answers to common questions about our programs and academy.
         </p>
         {faqSection}
@@ -395,10 +395,10 @@ const ContactForm = () => {
       {/* CTA Section */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 mb-4">
             Ready to Transform Your Digital Presence?
           </h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-[14px] md:text-[18px] text-gray-600 mb-8 max-w-2xl mx-auto">
             Let's create something amazing together. We're just a message away.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

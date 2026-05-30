@@ -9,7 +9,7 @@ const brandImages = importAll(
 const BrandGallery = () => {
   return (
     <div className="py-10">
-      <p className="text-center font-bold pb-5 text-secondary">OUR CLIENTS</p>
+      <p className="text-[14px] md:text-[18px] text-center font-bold pb-5 text-secondary">OUR CLIENTS</p>
       <div className="container mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-items-center">
         {brandImages.map((imageUrl, index) => {
           // Extract file name without extension and remove extra hash

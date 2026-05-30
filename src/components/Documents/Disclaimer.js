@@ -39,11 +39,11 @@ const Disclaimer = () => {
         <link rel="canonical" href={canonical} />
       </Helmet>
       <div className="disclaimer px-5 mt-6 text-black mx-4">
-        <h1 className="text-center text-2xl py-10 font-bold"> DISCLAIMER </h1>
+        <h1 className="text-[28px] md:text-[45px] text-center py-10 font-bold"> DISCLAIMER </h1>
         Last updated: 2022-11-01
         <br />
         <br />
-        <h2 className="text-lg font-medium">WEBSITE DISCLAIMER</h2>
+        <h2 className="text-[28px] md:text-[45px] font-medium">WEBSITE DISCLAIMER</h2>
         <br />
         The information provided by leormedia Pvt Ltd (“Company”, “we”,
         “our”, “us”) on https://leormedia.com (the “Site”) is for general
@@ -57,7 +57,7 @@ const Disclaimer = () => {
         SITE AND YOUR RELIANCE ON ANY INFORMATION ON THE SITE IS SOLELY AT YOUR
         OWN RISK.
         <br />
-        <h2 className="text-lg font-medium">EXTERNAL LINKS DISCLAIMER</h2>
+        <h2 className="text-[28px] md:text-[45px] font-medium">EXTERNAL LINKS DISCLAIMER</h2>
         <br />
         The Site may contain (or you may be sent through the Site) links to
         other websites or content belonging to or originating from third parties
@@ -75,7 +75,7 @@ const Disclaimer = () => {
         RESPONSIBLE FOR MONITORING ANY TRANSACTION BETWEEN YOU AND THIRD-PARTY
         PROVIDERS OF PRODUCTS OR SERVICES.
         <br />
-        <h2 className="text-lg font-medium">PROFESSIONAL DISCLAIMER</h2>
+        <h2 className="text-[28px] md:text-[45px] font-medium">PROFESSIONAL DISCLAIMER</h2>
         <br />
         The Site can not and does not contain financial advice. The information
         is provided for general informational and educational purposes only and
@@ -91,7 +91,7 @@ const Disclaimer = () => {
         you find on our Website and wish to rely upon. THE USE OR RELIANCE OF
         ANY INFORMATION CONTAINED ON THIS SITE IS SOLELY AT YOUR OWN RISK.
         <br />
-        <h2 className="text-lg font-medium">TESTIMONIALS DISCLAIMER</h2>
+        <h2 className="text-[28px] md:text-[45px] font-medium">TESTIMONIALS DISCLAIMER</h2>
         <br />
         The Site may contain testimonials by users of our products and/or
         services. These testimonials reflect the real-life experiences and
@@ -100,7 +100,7 @@ const Disclaimer = () => {
         of our products and/or services. We do not claim, and you should not
         assume that all users will have the same experiences.
         <br />
-        <h2 className="text-lg font-medium">YOUR INDIVIDUAL RESULTS MAY VARY.</h2>
+        <h2 className="text-[28px] md:text-[45px] font-medium">YOUR INDIVIDUAL RESULTS MAY VARY.</h2>
         <br />
         The testimonials on the Site are submitted in various forms such as
         text, audio and/or video, and are reviewed by us before being posted.
@@ -111,7 +111,7 @@ const Disclaimer = () => {
         opinions contained in the testimonials belong solely to the individual
         user and do not reflect our views and opinions.
         <br />
-        <h2 className="text-lg font-medium">ERRORS AND OMISSIONS DISCLAIMER</h2>
+        <h2 className="text-[28px] md:text-[45px] font-medium">ERRORS AND OMISSIONS DISCLAIMER</h2>
         <br />
         While we have made every attempt to ensure that the information
         contained in this site has been obtained from reliable sources,
@@ -128,7 +128,7 @@ const Disclaimer = () => {
         information in this Site or for any consequential, special or similar
         damages, even if advised of the possibility of such damages.
         <br />
-        <h2 className="text-lg font-medium">LOGOS AND TRADEMARKS DISCLAIMER</h2>
+        <h2 className="text-[28px] md:text-[45px] font-medium">LOGOS AND TRADEMARKS DISCLAIMER</h2>
         <br />
         All logos and trademarks of third parties referenced on
         https://leormedia.com are the trademarks and logos of their
@@ -136,7 +136,7 @@ const Disclaimer = () => {
         imply or constitute any approval, endorsement or sponsorship of
         leormedia Pvt Ltd by such owners.
         <br />
-        <h2 className="text-lg font-medium">CONTACT US</h2>
+        <h2 className="text-[28px] md:text-[45px] font-medium">CONTACT US</h2>
         <br />
         Should you have any feedback, comments, requests for technical support
         or other inquiries, please contact us by email:

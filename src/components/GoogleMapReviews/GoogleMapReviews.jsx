@@ -81,15 +81,15 @@ const Testimonials = () => {
     <section className="py-20 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-bold mb-4 tracking-wider uppercase">
+          <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-[14px] font-bold mb-4 tracking-wider uppercase">
             Testimonials
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-6xl font-extrabold text-gray-900 mb-6 font-VictoryStriker uppercase tracking-widest leading-relaxed"
+          <h2 className="text-[28px] md:text-[45px] font-extrabold text-gray-900 mb-6 font-VictoryStriker uppercase tracking-widest leading-relaxed"
               style={{ lineHeight: "1.3" }}>
             Our Clients <span className="text-primary">Feedback</span>
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8"></div>
-          <p className="text-[14px] sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto opacity-90 leading-relaxed">
+          <p className="text-[14px] md:text-[18px] text-gray-600 max-w-3xl mx-auto opacity-90 leading-relaxed">
             Discover why clients trust Leor Media for their events, branding, and digital success. Real feedback from real clients.
           </p>
         </div>
@@ -108,13 +108,13 @@ const Testimonials = () => {
                   
                   <div className="flex items-center justify-between mb-8 relative z-10">
                     <div className="flex items-center gap-4">
-                      <div className={`w-14 h-14 rounded-2xl ${item.color} flex items-center justify-center text-white font-bold text-2xl shadow-lg transform rotate-3 group-hover:rotate-0 transition-transform duration-500`}>
+                      <div className={`w-14 h-14 rounded-2xl ${item.color} flex items-center justify-center text-white font-bold text-[24px] shadow-lg transform rotate-3 group-hover:rotate-0 transition-transform duration-500`}>
                         {item.initial}
                       </div>
                       <div>
-                        <h4 className="font-bold text-gray-900 text-lg leading-tight">{item.name}</h4>
+                        <h4 className="text-[28px] md:text-[45px] font-bold text-gray-900 leading-tight">{item.name}</h4>
                         <div className="flex items-center gap-2">
-                          <p className="text-xs text-gray-400 font-medium">{item.date}</p>
+                          <p className="text-[14px] md:text-[18px] text-gray-400 font-medium">{item.date}</p>
                           <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
                           <div className="flex">
                             {[...Array(item.rating)].map((_, i) => (
@@ -129,7 +129,7 @@ const Testimonials = () => {
                     </div>
                   </div>
 
-                  <p className="text-gray-600 leading-relaxed flex-grow relative z-10 font-medium">
+                  <p className="text-[14px] md:text-[18px] text-gray-600 leading-relaxed flex-grow relative z-10 font-medium">
                     "{item.text}"
                   </p>
                 </div>
@@ -155,7 +155,7 @@ const Testimonials = () => {
           }
         `}</style>
 
-        <div className="mt-12 flex items-center justify-center gap-2 text-gray-500 text-sm font-medium">
+        <div className="mt-12 flex items-center justify-center gap-2 text-gray-500 text-[14px] font-medium">
           <span className="w-4 h-4 rounded-full bg-gray-200 flex items-center justify-center text-[10px] text-gray-500">
             ✓
           </span>

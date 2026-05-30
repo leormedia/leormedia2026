@@ -41,14 +41,14 @@ const PrivacyPolicy = () => {
       </Helmet>
 
       <div className="privacypoliocy px-5 text-black mx-4">
-        <h1 className="text-center text-2xl py-10 font-bold text-black pt-20">
+        <h1 className="text-[28px] md:text-[45px] text-center py-10 font-bold text-black pt-20">
           {" "}
           PRIVACY POLICY
         </h1>
         Effective date: 2022-11-01
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">
           1. Introduction{" "}
         </h2>{" "}
         <br />
@@ -66,7 +66,7 @@ const PrivacyPolicy = () => {
         (“agreement”).
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">2. Definitions</h2>
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">2. Definitions</h2>
         <br />
         SERVICE means the https://leormedia.com website operated by
         leormedia Pvt Ltc. PERSONAL DATA means data about a living
@@ -88,7 +88,7 @@ const PrivacyPolicy = () => {
         corresponds to the Data Subject, who is the subject of Personal Data.
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">
           3. Information Collection and Use
         </h2>
         <br />
@@ -96,7 +96,7 @@ const PrivacyPolicy = () => {
         to provide and improve our Service to you.
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">
           4. Types of Data Collected
         </h2>
         <br />
@@ -150,7 +150,7 @@ const PrivacyPolicy = () => {
         identification) number, office location and other data.
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">5. Use of Data</h2>
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">5. Use of Data</h2>
         <br />
         leormedia Pvt Ltc uses the collected data for various purposes:
         0.1. to provide and maintain our Service; 0.2. to notify you about
@@ -172,7 +172,7 @@ const PrivacyPolicy = () => {
         purpose with your consent.
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">
           6. Retention of Data
         </h2>
         <br />
@@ -188,7 +188,7 @@ const PrivacyPolicy = () => {
         retain this data for longer time periods.
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">
           7. Transfer of Data
         </h2>
         <br />
@@ -209,7 +209,7 @@ const PrivacyPolicy = () => {
         information.
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">
           8. Disclosure of Data
         </h2>
         <br />
@@ -230,7 +230,7 @@ const PrivacyPolicy = () => {
         the Company, our customers, or others.
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">
           9. Security of Data
         </h2>
         <br />
@@ -240,7 +240,7 @@ const PrivacyPolicy = () => {
         protect your Personal Data, we cannot guarantee its absolute security.
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">
           10. Your Data Protection Rights Under General Data Protection
           Regulation (GDPR)
         </h2>
@@ -271,7 +271,7 @@ const PrivacyPolicy = () => {
         European Economic Area (EEA).
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">
           11. Your Data Protection Rights under the California Privacy
           Protection Act (CalOPPA)
         </h2>
@@ -297,7 +297,7 @@ const PrivacyPolicy = () => {
         Track by visiting the Preferences or Settings page of your web browser.
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">
           12. Your Data Protection Rights under the California Consumer Privacy
           Act (CCPA)
         </h2>
@@ -349,7 +349,7 @@ const PrivacyPolicy = () => {
         Information website. The CCPA took effect on 01/01/2020.
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">
           13. Service Providers
         </h2>
         <br />
@@ -361,19 +361,19 @@ const PrivacyPolicy = () => {
         use it for any other purpose.
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">14. Analytics</h2>
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">14. Analytics</h2>
         <br />
         We may use third-party Service Providers to monitor and analyze the use
         of our Service.
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">15. CI/CD tools</h2>
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">15. CI/CD tools</h2>
         <br />
         We may use third-party Service Providers to automate the development
         process of our Service.
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">
           16. Behavioral Remarketing
         </h2>
         <br />
@@ -383,7 +383,7 @@ const PrivacyPolicy = () => {
         our Service.
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">17. Payments</h2>
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">17. Payments</h2>
         <br />
         We may provide paid products and/or services within Service. In that
         case, we use third-party services for payment processing (e.g. payment
@@ -397,7 +397,7 @@ const PrivacyPolicy = () => {
         payment information.
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">
           18. Links to Other Sites
         </h2>
         <br />
@@ -413,7 +413,7 @@ const PrivacyPolicy = () => {
         e-commerce store or mobile app.
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">
           19. Children’s Privacy
         </h2>
         <br />
@@ -426,7 +426,7 @@ const PrivacyPolicy = () => {
         information from our servers.
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">
           20. Changes to This Privacy Policy
         </h2>
         <br />
@@ -439,7 +439,7 @@ const PrivacyPolicy = () => {
         effective when they are posted on this page.
         <br />
         <br />
-        <h2 className="text-2xl font-medium text-black">21. Contact Us</h2>
+        <h2 className="text-[28px] md:text-[45px] font-medium text-black">21. Contact Us</h2>
         <br />
         If you have any questions about this Privacy Policy, please contact us
         by email: admin@leormedia.com. This Privacy Policy was created

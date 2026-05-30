@@ -306,13 +306,13 @@ const HomePage = () => {
 
           {/* Main Top Header (Positioned at Top) */}
           <div className="mt-10">
-            <h2 className="text-[22px] md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white font-TuskerGrotesk uppercase tracking-wider">
+            <h2 className="text-[28px] md:text-[45px] font-bold text-white font-TuskerGrotesk uppercase tracking-wider">
               <span className="block">
                 Crafting Extraordinary 
                 <span className="block text-primary">Events & Creative Digital Success</span>
               </span>
             </h2>
-            <p className="text-[12px] md:text-sm mt-2 text-white font-medium opacity-80 tracking-widest uppercase">
+            <p className="text-[14px] md:text-[18px] mt-2 text-white font-medium opacity-80 tracking-widest uppercase">
               Since 2016
             </p>
           </div>
@@ -321,20 +321,20 @@ const HomePage = () => {
           <div className="w-full max-w-2xl flex flex-col items-center">
             <h1
               key={selected}
-              className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white font-TuskerGrotesk tracking-wider uppercase animate-fade-in-up"
+              className="text-[28px] md:text-[45px] font-extrabold text-white font-TuskerGrotesk tracking-wider uppercase animate-fade-in-up"
             >
               <span className="block text-primary drop-shadow-[0_4px_20px_rgba(255,165,0,0.4)]">
                 {heroData[selected].title}
               </span>
             </h1>
 
-            <p className="text-[14px] sm:text-base lg:text-lg text-white mt-4 mb-8 opacity-90 leading-relaxed font-light">
+            <p className="text-[14px] md:text-[18px] text-white mt-4 mb-8 opacity-90 leading-relaxed font-light">
               {heroData[selected].desc}
             </p>
 
             <Link
               to={heroData[selected].link}
-              className="inline-flex mx-auto px-8 py-3.5 bg-primary text-black text-sm md:text-base font-bold rounded-full hover:bg-white transition-all duration-300 items-center gap-2 group shadow-lg hover:shadow-primary/50"
+              className="inline-flex mx-auto px-8 py-3.5 bg-primary text-black text-[14px] md:text-[16px] font-bold rounded-full hover:bg-white transition-all duration-300 items-center gap-2 group shadow-lg hover:shadow-primary/50"
             >
               Enquiry now! <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -366,16 +366,18 @@ const HomePage = () => {
             {/* Left Column: Mission & Journey */}
             <div className="mb-12 relative z-10">
               <div className="mb-10 text-center">
-                <h3 className="text-2xl md:text-4xl font-bold mb-8">
-                  Creating Memories, <span className="text-primary">Delivering Excellence.</span>
+                <h3 className="text-[28px] md:text-[45px] font-bold mb-8">
+                  Creating Memories,
                 </h3>
-                <p className="text-balck text-lg md:text-xl leading-relaxed mb-6">
+                 <span className="text-primary">Delivering Excellence.</span>
+
+                <p className="text-[14px] md:text-[18px] text-balck leading-relaxed mb-6">
                   Leor Media has been successfully organizing small to big scale weddings since 2016. We create the
                   perfect weddings for customers right from the planning to its execution. Our personalized wedding
                   packages and creative works, add that glam to your wedding while keeping customers budget in
                   mind.
                 </p>
-                <p className="text-black text-lg md:text-xl leading-relaxed">
+                <p className="text-[14px] md:text-[18px] text-black leading-relaxed">
                   Our packages incorporate even minute details from venue selection, theme recommendation, menu options
                   and to hospitality so that we can make worry-free big day. We believe making memories are the best gifts
                   to any events for which Leor Media strives 100% to make them more beautiful.
@@ -395,10 +397,10 @@ const HomePage = () => {
          {/* CTA & Process Slider Section */}
               <section id="about" className="py-16 md:py-24 bg-white text-black">
           <div className="text-center mt-24 pt-16 border-t border-gray-100 max-w-4xl mx-auto">
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-semibold uppercase tracking-widest mb-4">
+            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[12px] font-semibold uppercase tracking-widest mb-4">
               Our Methodology
             </span>
-            <h3 className="text-3xl md:text-5xl font-extrabold mb-12 font-TuskerGrotesk tracking-wide text-gray-900">
+            <h3 className="text-[28px] md:text-[45px] font-extrabold mb-12 font-TuskerGrotesk tracking-wide text-gray-900">
               OUR PROFESSIONAL <span className="text-primary">WORK PROCESS</span>
             </h3>
 
@@ -419,7 +421,7 @@ const HomePage = () => {
                   className="relative z-10 flex flex-col items-center focus:outline-none group"
                 >
                   <div
-                    className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm border transition-all duration-500 shadow-md ${activeProcessIndex === idx
+                    className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-[14px] border transition-all duration-500 shadow-md ${activeProcessIndex === idx
                       ? "bg-primary text-white border-primary scale-110 shadow-primary/20"
                       : "bg-white text-gray-400 border-gray-100 group-hover:border-primary/30 group-hover:text-primary"
                       }`}
@@ -427,7 +429,7 @@ const HomePage = () => {
                     0{idx + 1}
                   </div>
                   <span
-                    className={`absolute top-12 text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-500 ${activeProcessIndex === idx ? "text-primary opacity-100 translate-y-0" : "text-gray-400 opacity-60 group-hover:opacity-100"
+                    className={`absolute top-12 text-[12px] font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-500 ${activeProcessIndex === idx ? "text-primary opacity-100 translate-y-0" : "text-gray-400 opacity-60 group-hover:opacity-100"
                       }`}
                   >
                     {stepTitle}
@@ -566,13 +568,13 @@ const HomePage = () => {
                       </div>
 
                       {/* Info */}
-                      <span className="text-xs font-extrabold uppercase tracking-widest text-primary mb-2">
+                      <span className="text-[12px] font-extrabold uppercase tracking-widest text-primary mb-2">
                         STAGE {item.step}
                       </span>
-                      <h4 className="font-extrabold text-2xl md:text-3xl text-gray-900 mb-4 uppercase tracking-wider">
+                      <h4 className="text-[28px] md:text-[45px] font-extrabold text-gray-900 mb-4 uppercase tracking-wider">
                         {item.title}
                       </h4>
-                      <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-md mx-auto">
+                      <p className="text-[14px] md:text-[18px] text-gray-600 leading-relaxed max-w-md mx-auto">
                         {item.desc}
                       </p>
                     </div>
@@ -636,10 +638,10 @@ const HomePage = () => {
     
     {/* Header - Tightened margins and text sizes */}
     <div className="text-center mb-10">
-      <h2 className="text-3xl md:text-4xl font-bold mb-2 font-TuskerGrotesk tracking-wide uppercase">
+      <h2 className="text-[28px] md:text-[45px] font-bold mb-2 font-TuskerGrotesk tracking-wide uppercase">
         Our Track Record
       </h2>
-      <p className="text-sm md:text-base text-white/80 font-light max-w-xl mx-auto">
+      <p className="text-[14px] md:text-[18px] text-white/80 font-light max-w-xl mx-auto">
         A decade of excellence, hundreds of projects, and thousands of happy memories.
       </p>
     </div>
@@ -657,17 +659,17 @@ const HomePage = () => {
           className="bg-white/10 backdrop-blur-sm p-5 md:p-6 rounded-2xl border border-white/20 transform hover:-translate-y-1.5 transition-all duration-300 text-center flex flex-col justify-center items-center group shadow-sm hover:shadow-lg"
         >
           {/* Icon with a subtle hover bounce */}
-          <div className="text-2xl md:text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
+          <div className="text-[24px] md:text-[30px] mb-2 group-hover:scale-110 transition-transform duration-300">
             {stat.icon}
           </div>
           
           {/* Value */}
-          <div className="text-3xl md:text-4xl font-bold mb-1 font-TuskerGrotesk tracking-wide drop-shadow-sm">
+          <div className="text-[30px] md:text-[36px] font-bold mb-1 font-TuskerGrotesk tracking-wide drop-shadow-sm">
             {stat.value}
           </div>
           
           {/* Label */}
-          <div className="text-[10px] md:text-xs font-medium text-white/80 uppercase tracking-wider">
+          <div className="text-[10px] md:text-[12px] font-medium text-white/80 uppercase tracking-wider">
             {stat.label}
           </div>
         </div>
@@ -686,13 +688,13 @@ const HomePage = () => {
         </div>
 
         <div className="container mx-auto px-4 text-center relative z-10">
-          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-4">
+          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[12px] font-bold uppercase tracking-widest mb-4">
             UNFORGETTABLE EXPERIENCES
           </span>
-          <h2 className="text-4xl md:text-6xl font-extrabold mb-4 font-TuskerGrotesk tracking-wide">
+          <h2 className="text-[28px] md:text-[45px] font-extrabold mb-4 font-TuskerGrotesk tracking-wide">
             OUR <span className="text-primary">SERVICES</span>
           </h2>
-          <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto font-light tracking-wide">
+          <p className="text-[14px] md:text-[18px] text-gray-200 max-w-2xl mx-auto tracking-wide">
             What we provide at Leor Media to craft your memorable events and creative digital success stories.
           </p>
         </div>
@@ -718,23 +720,18 @@ const HomePage = () => {
               <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 {/* Left Column */}
                 <div>
-                  {/* Section Number */}
-                  <div className="text-8xl md:text-9xl font-bold text-white/10 mb-2 md:mb-4 tracking-tighter">
-                    {sec.number}
-                  </div>
-
                   {/* Title & Subtitle */}
                   <div className="mb-6 md:mb-8">
-                    <div className="text-white/80 text-sm md:text-base font-semibold tracking-widest uppercase mb-2">
+                    <div className="text-white/80 text-[10px] md:text-[20px] font-semibold tracking-widest uppercase mb-2">
                       {sec.subtitle}
                     </div>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                    <h1 className="text-[28px] md:text-[45px] font-bold text-white leading-tight">
                       {sec.title}
                     </h1>
                   </div>
 
                   {/* Description */}
-                  <p className="text-lg md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed max-w-lg">
+                  <p className="text-[14px] md:text-[18px] text-white/90 mb-6 md:mb-8 leading-relaxed max-w-lg">
                     {sec.description}
                   </p>
 
@@ -742,7 +739,7 @@ const HomePage = () => {
                   {sec.detailedServices && (
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-8">
                       {sec.detailedServices.map((service, idx) => (
-                        <div key={idx} className="flex items-center text-white/80 text-sm">
+                        <div key={idx} className="flex items-center text-white/80 text-[14px]">
                           <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>
                           {service}
                         </div>
@@ -755,10 +752,10 @@ const HomePage = () => {
                     <div className="grid grid-cols-3 gap-4 mb-8">
                       {sec.stats.map((stat, idx) => (
                         <div key={idx} className="text-center">
-                          <div className="text-2xl md:text-3xl font-bold text-white">
+                          <div className="text-[24px] md:text-[30px] font-bold text-white">
                             {stat.value}
                           </div>
-                          <div className="text-xs md:text-sm text-white/70">
+                          <div className="text-[12px] md:text-[14px] text-white/70">
                             {stat.label}
                           </div>
                         </div>
@@ -787,7 +784,7 @@ const HomePage = () => {
               {/* Indicator */}
               <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
                 <div className="flex items-center space-x-4">
-                  <div className="text-white/70 text-sm">
+                  <div className="text-white/70 text-[14px]">
                     {index + 1} / {sections.length}
                   </div>
                   <div className="flex space-x-2">
@@ -807,7 +804,7 @@ const HomePage = () => {
             {index === 0 && (
               <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 animate-bounce">
                 <div className="text-white text-center">
-                  <div className="text-sm mb-2 opacity-70">
+                  <div className="text-[14px] mb-2 opacity-70">
                     Scroll to explore
                   </div>
                   <div className="w-6 h-10 border-2 border-white/50 rounded-full mx-auto flex justify-center">
@@ -831,13 +828,13 @@ const HomePage = () => {
             {/* Left side: Text content & Contact Info */}
             <div className="lg:col-span-5 flex flex-col justify-between h-full space-y-8 lg:pr-6">
               <div>
-                <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+                <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[14px] font-semibold mb-4">
                   LET'S TALK
                 </span>
-                <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 mb-4 leading-tight">
                   Get in <span className="text-primary">Touch</span>
                 </h2>
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <p className="text-[14px] md:text-[18px] text-gray-600 leading-relaxed">
                   Have a project in mind or need expert advice? Let's discuss how we can bring your ideas to life.
                 </p>
               </div>
@@ -849,11 +846,11 @@ const HomePage = () => {
                   className="flex items-center p-4 bg-white rounded-2xl border border-gray-100 hover:border-primary hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 group"
                 >
                   <div className="p-3 rounded-full bg-primary/10 text-primary mr-4 group-hover:scale-110 transition-transform">
-                    <FaPhone className="text-lg" />
+                    <FaPhone className="text-[18px]" />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-400 uppercase tracking-wider font-semibold">Call Us</p>
-                    <p className="font-bold text-gray-800 text-sm md:text-base">
+                    <p className="text-[14px] md:text-[18px] text-gray-400 uppercase tracking-wider font-semibold">Call Us</p>
+                    <p className="text-[14px] md:text-[18px] font-bold text-gray-800">
                       {GlobalData.company.companyPhone}
                     </p>
                   </div>
@@ -864,11 +861,11 @@ const HomePage = () => {
                   className="flex items-center p-4 bg-white rounded-2xl border border-gray-100 hover:border-primary hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 group"
                 >
                   <div className="p-3 rounded-full bg-primary/10 text-primary mr-4 group-hover:scale-110 transition-transform">
-                    <FaEnvelope className="text-lg" />
+                    <FaEnvelope className="text-[18px]" />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-400 uppercase tracking-wider font-semibold">Email Us</p>
-                    <p className="font-bold text-gray-800 text-sm md:text-base">
+                    <p className="text-[14px] md:text-[18px] text-gray-400 uppercase tracking-wider font-semibold">Email Us</p>
+                    <p className="text-[14px] md:text-[18px] font-bold text-gray-800">
                       {GlobalData.company.companyEmail}
                     </p>
                   </div>
@@ -881,11 +878,11 @@ const HomePage = () => {
                   className="flex items-center p-4 bg-white rounded-2xl border border-gray-100 hover:border-primary hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 group"
                 >
                   <div className="p-3 rounded-full bg-[#128C7E]/10 text-[#128C7E] mr-4 group-hover:scale-110 transition-transform">
-                    <FaWhatsapp className="text-lg" />
+                    <FaWhatsapp className="text-[18px]" />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-400 uppercase tracking-wider font-semibold">WhatsApp Us</p>
-                    <p className="font-bold text-gray-800 text-sm md:text-base">
+                    <p className="text-[14px] md:text-[18px] text-gray-400 uppercase tracking-wider font-semibold">WhatsApp Us</p>
+                    <p className="text-[14px] md:text-[18px] font-bold text-gray-800">
                       Chat with our team
                     </p>
                   </div>
@@ -907,7 +904,7 @@ const HomePage = () => {
                 <div className="grid md:grid-cols-2 gap-4">
                   {["name", "email", "phone"].map((field, idx) => (
                     <div key={idx}>
-                      <label className="block text-sm font-medium text-gray-700 mb-2 capitalize">
+                      <label className="block text-[14px] font-medium text-gray-700 mb-2 capitalize">
                         {field}
                       </label>
                       <input
@@ -936,7 +933,7 @@ const HomePage = () => {
 
                   {/* Subject Dropdown */}
                   <div className="md:col-span-2">
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-[14px] font-medium text-gray-700 mb-2">
                       Subject
                     </label>
                     <select
@@ -957,7 +954,7 @@ const HomePage = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-[14px] font-medium text-gray-700 mb-2">
                     Message
                   </label>
                   <textarea

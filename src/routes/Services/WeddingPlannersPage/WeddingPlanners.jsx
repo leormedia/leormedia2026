@@ -57,13 +57,13 @@ const Counter = ({ end, label, icon }) => {
 
   return (
     <div className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 transform hover:-translate-y-2 transition-all duration-300">
-      <div className="text-3xl text-yellow-400 mb-4">
+      <div className="text-[30px] text-yellow-400 mb-4">
         <FontAwesomeIcon icon={icon} />
       </div>
-      <div className="text-4xl md:text-5xl font-bold text-white mb-2 font-TuskerGrotesk">
+      <div className="text-[36px] md:text-[48px] font-bold text-white mb-2 font-TuskerGrotesk">
         {count}+
       </div>
-      <div className="text-sm md:text-base font-medium text-white/80 uppercase tracking-widest text-center">
+      <div className="text-[14px] md:text-[16px] font-medium text-white/80 uppercase tracking-widest text-center">
         {label}
       </div>
     </div>
@@ -148,13 +148,13 @@ const WeddingPlannersPage = () => {
         </div>
         
         <div className="relative z-10 text-center px-4 max-w-4xl">
-          <span className="inline-block px-4 py-1.5 bg-yellow-400/20 text-yellow-400 rounded-full text-sm font-semibold mb-6 animate-fade-in-up">
+          <span className="inline-block px-4 py-1.5 bg-yellow-400/20 text-yellow-400 rounded-full text-[14px] font-semibold mb-6 animate-fade-in-up">
             PREMIUM WEDDING PLANNERS
           </span>
-          <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 font-TuskerGrotesk tracking-tight leading-none animate-fade-in-up">
+          <h1 className="text-[28px] md:text-[45px] font-bold text-white mb-6 font-TuskerGrotesk tracking-tight leading-none animate-fade-in-up">
             Crafting Dream Weddings <br /> <span className="text-yellow-400">into Reality</span>
           </h1>
-          <p className="text-lg md:text-2xl text-white/90 mb-10 font-light tracking-wide animate-fade-in-up">
+          <p className="text-[14px] md:text-[18px] text-white/90 mb-10 font-light tracking-wide animate-fade-in-up">
             Luxury Wedding Planning • Destination Weddings • Decor • Entertainment
           </p>
           
@@ -179,7 +179,7 @@ const WeddingPlannersPage = () => {
       <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 font-TuskerGrotesk uppercase">
+            <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 mb-4 font-TuskerGrotesk uppercase">
               Our Premium Services
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
@@ -195,15 +195,15 @@ const WeddingPlannersPage = () => {
                 
                 <div className="relative z-10">
                   <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
-                    <FontAwesomeIcon icon={service.icon} className="text-2xl" />
+                    <FontAwesomeIcon icon={service.icon} className="text-[24px]" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-[28px] md:text-[45px] font-bold text-gray-900 mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-[14px] md:text-[18px] text-gray-600 leading-relaxed">
                     {service.description}
                   </p>
-                  <div className="mt-6 flex items-center text-primary font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="mt-6 flex items-center text-primary font-bold text-[14px] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     LEARN MORE <FaArrowRight className="ml-2" />
                   </div>
                 </div>
@@ -229,10 +229,10 @@ const WeddingPlannersPage = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 font-TuskerGrotesk uppercase tracking-widest">
+            <h2 className="text-[28px] md:text-[45px] font-bold text-white mb-4 font-TuskerGrotesk uppercase tracking-widest">
               Why Choose Us
             </h2>
-            <p className="text-white/70 max-w-2xl mx-auto">
+            <p className="text-[14px] md:text-[18px] text-white/70 max-w-2xl mx-auto">
               A decade of crafting magical moments and turning visions into breathtaking celebrations.
             </p>
           </div>
@@ -252,10 +252,10 @@ const WeddingPlannersPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
             <div className="max-w-2xl">
-              <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4 font-TuskerGrotesk">
+              <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 mb-4 font-TuskerGrotesk">
                 OUR GALLERY
               </h2>
-              <p className="text-gray-600 text-lg">
+              <p className="text-[14px] md:text-[18px] text-gray-600">
                 Explore our portfolio of luxury cinematic weddings and breathtaking decors.
               </p>
             </div>
@@ -287,9 +287,9 @@ const WeddingPlannersPage = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                  {item.type === "video" && <FaPlayCircle className="text-white text-5xl mb-4" />}
-                  <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-white/70">Luxury Cinematic Experience</p>
+                  {item.type === "video" && <FaPlayCircle className="text-white text-[48px] mb-4" />}
+                  <h3 className="text-[28px] md:text-[45px] font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-[14px] md:text-[18px] text-white/70">Luxury Cinematic Experience</p>
                 </div>
               </div>
             ))}
@@ -301,8 +301,8 @@ const WeddingPlannersPage = () => {
       <section className="py-24 px-4 bg-primary text-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <FaQuoteLeft className="text-white/20 text-7xl mx-auto mb-6" />
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 font-TuskerGrotesk uppercase tracking-tighter">
+            <FaQuoteLeft className="text-white/20 text-[72px] mx-auto mb-6" />
+            <h2 className="text-[28px] md:text-[45px] font-bold mb-4 font-TuskerGrotesk uppercase tracking-tighter">
               Couple Testimonials
             </h2>
           </div>
@@ -319,10 +319,10 @@ const WeddingPlannersPage = () => {
                       <FaStar key={i} />
                     ))}
                   </div>
-                  <p className="text-xl md:text-2xl italic mb-10 leading-relaxed font-light">
+                  <p className="text-[14px] md:text-[18px] italic mb-10 leading-relaxed font-light">
                     "{testi.review}"
                   </p>
-                  <h4 className="text-xl font-bold uppercase tracking-widest">
+                  <h4 className="text-[28px] md:text-[45px] font-bold uppercase tracking-widest">
                     - {testi.name}
                   </h4>
                 </div>
@@ -335,7 +335,7 @@ const WeddingPlannersPage = () => {
       {/* CTA SECTION */}
       <section className="py-20 text-center bg-white px-4 border-t border-gray-100">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-8 font-TuskerGrotesk">
+          <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 mb-8 font-TuskerGrotesk">
             READY TO PLAN YOUR <br /> <span className="text-primary">BIG DAY?</span>
           </h2>
           <div className="flex flex-wrap justify-center gap-6">
@@ -349,7 +349,7 @@ const WeddingPlannersPage = () => {
               href={GlobalData.company.companyWhatsapp}
               className="inline-flex items-center px-10 py-4 bg-green-500 text-white font-bold rounded-full hover:bg-green-600 transition-all duration-300 shadow-xl"
             >
-              <FaWhatsapp className="mr-3 text-xl" /> WhatsApp Us
+              <FaWhatsapp className="mr-3 text-[20px]" /> WhatsApp Us
             </a>
           </div>
         </div>

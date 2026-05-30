@@ -63,10 +63,10 @@ const Services = () => {
             <div className="md:w-1/2 md:pr-10"></div>
             <div className="md:w-1/2 px-5">
               <div className="text-right md:text-left">
-                <h1 className="text-2xl pb-5 md:text-6xl fade-in-down font-extrabold text-center text-white font-tusker">
+                <h1 className="text-[28px] md:text-[45px] pb-5 fade-in-down font-extrabold text-center text-white font-tusker">
                   {ServicesPageDetails.title}
                 </h1>
-                <p className="text-white sm:text-sm text-xs text-center sm:ml-0">
+                <p className="text-[14px] md:text-[18px] text-white text-center sm:ml-0">
                   {ServicesPageDetails.subtitle}
                 </p>
 
@@ -96,13 +96,13 @@ const Services = () => {
         {/* Section - 2 */}
         <section>
           <section className="text-center mx-auto my-12 lg:px-20">
-            <p className="text-sm font-medium text-black">
+            <p className="text-[14px] md:text-[18px] font-medium text-black">
               {ServicesPageDetails.section2.tagline}
             </p>
-            <h2 className="font-tusker pb-2 text-2xl md:text-5xl lg:text-6xl text-black mt-3">
+            <h2 className="text-[28px] md:text-[45px] font-tusker pb-2 text-black mt-3">
               {ServicesPageDetails.section2.heading}
             </h2>
-            <p className="text-sm font-medium text-white">
+            <p className="text-[14px] md:text-[18px] font-medium text-white">
               {ServicesPageDetails.section2.description}
             </p>
 
@@ -134,10 +134,10 @@ const Services = () => {
                       alt="illustration"
                       loading="lazy"
                     />
-                    <p className="font-medium text-black sm:text-[14px] text-[12px]">
+                    <p className="text-[14px] md:text-[18px] font-medium text-black">
                       {service.title}
                     </p>
-                    <p className="sm:text-[12px] text-black text-[10px]">
+                    <p className="text-[14px] md:text-[18px] text-black">
                       {service.description}
                     </p>
                     <Link to={service.link}>
@@ -163,17 +163,17 @@ const Services = () => {
         >
           <div className="cursor-default py-40 flex flex-col items-center justify-center bg-black/70">
             <div className="text-center">
-              <h2 className="font-extrabold text-transparent text-4xl md:text-5xl lg:text-8xl bg-clip-text bg-yellow-400 tracking-tight">
+              <h2 className="text-[28px] md:text-[45px] font-extrabold text-transparent bg-clip-text bg-yellow-400 tracking-tight">
                 WE BUILD
               </h2>
             </div>
             <div className="text-center">
-              <h2 className="font-extrabold text-transparent text-5xl md:text-5xl lg:text-5xl bg-clip-text bg-orange-600 tracking-tight">
+              <h2 className="text-[28px] md:text-[45px] font-extrabold text-transparent bg-clip-text bg-orange-600 tracking-tight">
                 SIMPLE BUT COMPLEX
               </h2>
             </div>
             <div className="text-center">
-              <h2 className="font-extrabold text-transparent text-4xl md:text-5xl lg:text-8xl bg-clip-text bg-yellow-400 tracking-tight">
+              <h2 className="text-[28px] md:text-[45px] font-extrabold text-transparent bg-clip-text bg-yellow-400 tracking-tight">
                 STABLE COMMUNITY
               </h2>
             </div>
@@ -182,10 +182,10 @@ const Services = () => {
 
         {/* section -4 */}
         <section className="text-center mx-auto my-8">
-          <h2 className="cursor-default pb-2 font-extrabold text-transparent text-2xl md:text-5xl lg:text-6xl bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 mt-3 tracking-tight ">
+          <h2 className="text-[28px] md:text-[45px] cursor-default pb-2 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 mt-3 tracking-tight">
             Need more information?
           </h2>
-          <p className="cursor-default text-sm font-medium text-black mt-5 mb-10">
+          <p className="text-[14px] md:text-[18px] cursor-default font-medium text-black mt-5 mb-10">
             Explore our comprehensive documentation for more information on our
             services.
           </p>
@@ -197,10 +197,10 @@ const Services = () => {
         {/* section -6 */}
         {/* "need more help" section */}
         <section className="text-center mx-auto py-8 bg-primary/70 drop-shadow-lg backdrop-blur-sm">
-          <h2 className="cursor-default font-extrabold text-transparent text-2xl md:text-5xl lg:text-6xl bg-clip-text bg-white mt-3  tracking-tight ">
+          <h2 className="text-[28px] md:text-[45px] cursor-default font-extrabold text-transparent bg-clip-text bg-white mt-3 tracking-tight">
             Need Help ?
           </h2>
-          <p className="cursor-default text-sm text-black  mb-2">
+          <p className="text-[14px] md:text-[18px] cursor-default text-black mb-2">
             Explore our comprehensive documentation for more information on our
             services.
           </p>
