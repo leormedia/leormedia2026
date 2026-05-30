@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaTimes, FaPaperPlane } from 'react-icons/fa';
 import { CONTACTUS_API } from "../../hooks/Apis";
-import chatbotIcon from "../../assets/Icons/chatbot_Floating Robot.png";
+import leoGif from "../../assets/aichatbot/AltasWaving.gif";
+import chatbotIcon from "../../assets/aichatbot/chatbot_Floating Robot.webp";
+import leoThink from "../../assets/aichatbot/chatbotcsd_think.png";
+import leoAnswering from "../../assets/aichatbot/chatbotcsd_answering.png";
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +49,7 @@ const ChatBot = () => {
   // Initialization
   useEffect(() => {
     if (isOpen && messages.length === 0) {
-      addBotMessage("Hi there! 👋 Welcome to Leor Media. Could you please provide your full name?");
+      addBotMessage("Hi there! 👋 I'm Leo, your AI agent for Leor Media. Could you please provide your full name?");
       setStep(1);
     }
   }, [isOpen]);
@@ -72,7 +75,13 @@ const ChatBot = () => {
     addUserMessage(text);
     setInputValue('');
 
+    const greetings = ['hi', 'hey', 'hello', 'greetings', 'yo', 'hi there', 'hello there', 'hiya'];
+
     if (step === 1) { // Provided Name
+      if (greetings.includes(text.toLowerCase())) {
+        addBotMessage(`Hello! Could you please provide your full name so I know who I'm talking to?`);
+        return;
+      }
       setUserData(prev => ({ ...prev, name: text }));
       addBotMessage(`Thanks, ${text}! What is the best phone number to reach you at?`);
       setStep(2);
@@ -177,14 +186,14 @@ const ChatBot = () => {
       {isOpen && (
         <div className="bg-white w-[350px] sm:w-[380px] h-[500px] max-h-[80vh] shadow-2xl rounded-2xl mb-4 flex flex-col overflow-hidden border border-gray-200 transition-all duration-300 transform origin-bottom-right scale-100">
           {/* Header */}
-          <div className="bg-black text-white p-4 flex justify-between items-center shadow-md z-10">
+          <div className="bg-primary text-white p-4 flex justify-between items-center z-10">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 flex items-center justify-center">
-                <img src={chatbotIcon} alt="Leor Assistant" className="w-full h-full object-contain" />
+              <div className="w-16 h-16 flex items-center justify-center bg-white rounded-full p-1">
+                <img src={chatbotIcon} alt="Leo" className="w-full h-full object-contain" />
               </div>
               <div>
-                <h3 className="text-[28px] md:text-[45px] font-bold m-0 leading-tight">Leor Assistant</h3>
-                <p className="text-[14px] md:text-[18px] text-gray-300 m-0">Typically replies instantly</p>
+                <h3 className="text-[18px] md:text-[20px] font-bold m-0 leading-tight">Leo</h3>
+                <p className="text-[12px] md:text-[14px] text-black m-0">Typically replies instantly</p>
               </div>
             </div>
             <button 
@@ -198,40 +207,46 @@ const ChatBot = () => {
           {/* Messages Area */}
           <div className="flex-1 overflow-y-auto p-4 bg-gray-50 flex flex-col gap-4">
             {messages.map((msg, idx) => (
-              <div key={idx} className={`flex flex-col ${msg.sender === 'user' ? 'items-end' : 'items-start'}`}>
-                <div 
-                  className={`max-w-[85%] px-4 py-2.5 text-[14px] leading-relaxed ${
-                    msg.sender === 'user' 
-                      ? 'bg-primary text-white rounded-2xl rounded-tr-sm shadow-sm' 
-                      : 'bg-white text-gray-800 border border-gray-200 rounded-2xl rounded-tl-sm shadow-sm'
-                  }`}
-                >
-                  {msg.text}
-                </div>
-                {/* Options (if any) */}
-                {msg.options && msg.options.length > 0 && (
-                  <div className="mt-3 flex flex-col gap-2 w-full max-w-[90%]">
-                    {msg.options.map((opt, oIdx) => (
-                      <button
-                        key={oIdx}
-                        onClick={() => handleOptionClick(opt)}
-                        disabled={step !== 4}
-                        className="text-left text-[13px] font-medium bg-white border border-primary text-primary hover:bg-primary hover:text-white py-2 px-4 rounded-xl transition-all duration-200 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-md"
-                      >
-                        {opt}
-                      </button>
-                    ))}
-                  </div>
+              <div key={idx} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start items-end gap-2'}`}>
+                {msg.sender === 'bot' && (
+                  <img src={leoAnswering} alt="Leo" className="w-16 h-16 flex-shrink-0" />
                 )}
+                <div className={`flex flex-col ${msg.sender === 'user' ? 'items-end' : 'items-start'}`}>
+                  <div 
+                    className={`max-w-[240px] px-4 py-2.5 text-[14px] leading-relaxed ${
+                      msg.sender === 'user' 
+                        ? 'bg-primary text-white rounded-2xl rounded-tr-sm shadow-sm' 
+                        : 'bg-white text-gray-800 border border-gray-200 rounded-2xl rounded-tl-sm shadow-sm'
+                    }`}
+                  >
+                    {msg.text}
+                  </div>
+                  {/* Options (if any) */}
+                  {msg.options && msg.options.length > 0 && (
+                    <div className="mt-3 flex flex-col gap-2 w-full max-w-[240px]">
+                      {msg.options.map((opt, oIdx) => (
+                        <button
+                          key={oIdx}
+                          onClick={() => handleOptionClick(opt)}
+                          disabled={step !== 4}
+                          className="text-left text-[13px] font-medium bg-white border border-primary text-primary hover:bg-primary hover:text-white py-2 px-4 rounded-xl transition-all duration-200 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-md"
+                        >
+                          {opt}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
             {isTyping && (
-              <div className="flex items-start">
-                <div className="bg-white border border-gray-200 rounded-2xl rounded-tl-sm px-4 py-3 shadow-sm flex gap-1.5 items-center h-10">
-                  <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                  <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                  <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
-                </div>
+              <div className="flex items-start gap-2 mt-2">
+                <img src={leoAnswering} alt="Leo" className="w-8 h-8 rounded-full border border-gray-200 bg-white shadow-sm flex-shrink-0" />
+                <img 
+                  src={leoThink} 
+                  alt="Leo is thinking..." 
+                  className="w-14 h-14 object-contain drop-shadow-md animate-pulse" 
+                />
               </div>
             )}
             <div ref={messagesEndRef} />
@@ -262,44 +277,42 @@ const ChatBot = () => {
       )}
 
       {/* FAB Button and Greeting */}
-      {!isOpen && (
-        <div className="relative flex flex-col items-end">
-          {/* Greeting Popup */}
-          {showGreeting && (
-            <div 
-                className="absolute bottom-full right-0 mb-4 mr-1 bg-white text-gray-800 px-4 py-3 rounded-2xl shadow-xl border border-gray-200 flex items-center gap-3 transition-all duration-300 transform scale-100 origin-bottom-right cursor-pointer hover:shadow-2xl hover:-translate-y-1 z-10"
-                onClick={() => { setIsOpen(true); setShowGreeting(false); }}
-            >
-              <p className="text-[14px] md:text-[18px] font-medium m-0 whitespace-nowrap">Hi! Can I help you? 👋</p>
-              <button 
-                onClick={(e) => { e.stopPropagation(); setShowGreeting(false); }}
-                className="text-gray-400 hover:text-gray-700 p-1 transition-colors"
-                aria-label="Close greeting"
-              >
-                <FaTimes size={12} />
-              </button>
-              
-              {/* Triangle Pointer */}
-              <div className="absolute -bottom-2 right-6 w-4 h-4 bg-white border-b border-r border-gray-200 transform rotate-45 rounded-sm" />
-            </div>
-          )}
-
-          <button
-            onClick={() => { setIsOpen(true); setShowGreeting(false); }}
-            className="relative flex items-center justify-center hover:scale-105 active:scale-95 transition-all duration-300"
-            aria-label="Open Chatbot"
+      <div className="relative flex flex-col items-end">
+        {/* Greeting Popup */}
+        {!isOpen && showGreeting && (
+          <div 
+              className="absolute bottom-full right-0 mb-4 mr-1 bg-white text-gray-800 px-4 py-3 rounded-2xl shadow-xl border border-gray-200 flex items-center gap-3 transition-all duration-300 transform scale-100 origin-bottom-right cursor-pointer hover:shadow-2xl hover:-translate-y-1 z-10"
+              onClick={() => { setIsOpen(true); setShowGreeting(false); }}
           >
-            <img src={chatbotIcon} alt="Chatbot" className="w-16 h-16 md:w-20 md:h-20 object-contain drop-shadow-2xl" />
+            <p className="text-[14px] md:text-[14px] font-medium m-0 whitespace-nowrap">Hi! I'm Leo, Leor Media's AI agent 👋</p>
+            <button 
+              onClick={(e) => { e.stopPropagation(); setShowGreeting(false); }}
+              className="text-gray-400 hover:text-gray-700 p-1 transition-colors"
+              aria-label="Close greeting"
+            >
+              <FaTimes size={12} />
+            </button>
             
-            {/* Notification Badge */}
-            {messages.length === 0 && (
-              <span className="absolute top-0 right-0 w-5 h-5 flex items-center justify-center bg-red-500 text-white text-[10px] font-bold rounded-full border-2 border-white animate-bounce shadow-sm">
-                1
-              </span>
-            )}
-          </button>
-        </div>
-      )}
+            {/* Triangle Pointer */}
+            <div className="absolute -bottom-2 right-6 w-4 h-4 bg-white border-b border-r border-gray-200 transform rotate-45 rounded-sm" />
+          </div>
+        )}
+
+        <button
+          onClick={() => { setIsOpen(!isOpen); setShowGreeting(false); }}
+          className="relative flex items-center justify-center hover:scale-105 active:scale-95 transition-all duration-300"
+          aria-label="Toggle Chatbot"
+        >
+          <img src={leoGif} alt="Leo" className="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-2xl" />
+          
+          {/* Notification Badge */}
+          {!isOpen && messages.length === 0 && (
+            <span className="absolute top-0 right-0 w-5 h-5 flex items-center justify-center bg-red-500 text-white text-[10px] font-bold rounded-full border-2 border-white animate-bounce shadow-sm">
+              1
+            </span>
+          )}
+        </button>
+      </div>
     </div>
   );
 };
