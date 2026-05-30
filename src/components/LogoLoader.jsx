@@ -49,7 +49,7 @@ const LogoLoader = ({ isLoading }) => {
         }`}
       >
         <div className="text-center overflow-hidden mb-1 sm:mb-3">
-          <div className="flex uppercase flex-wrap justify-center font-playfair text-xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-800 tracking-wide">
+          <div className="flex uppercase flex-nowrap whitespace-nowrap justify-center font-playfair text-[3.2vw] sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-800 tracking-wide">
             {text1.map((char, i) => (
               <span 
                 key={i} 
@@ -65,7 +65,7 @@ const LogoLoader = ({ isLoading }) => {
           </div>
         </div>
         <div className="text-center overflow-hidden pt-1">
-          <div className="flex flex-wrap justify-center font-playfair text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary tracking-wide">
+          <div className="flex flex-nowrap whitespace-nowrap justify-center font-playfair text-[7vw] sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary tracking-wide">
             {text2.map((char, i) => (
               <span 
                 key={i} 
