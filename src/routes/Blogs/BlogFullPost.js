@@ -64,7 +64,7 @@ function FullBlog() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
           <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full">
 
-            <h1 className="text-[28px] md:text-[45px] font-extrabold text-white leading-tight">
+            <h1 className="font-extrabold text-white leading-tight">
               {post.title}
             </h1>
           </div>
@@ -78,7 +78,7 @@ function FullBlog() {
           ></div>
 
           <div className="mt-16 pt-8 border-t border-gray-200">
-            <h3 className="text-[28px] md:text-[45px] font-bold mb-4">Share this article</h3>
+            <h3 className="font-bold mb-4">Share this article</h3>
             <div className="flex space-x-4">
               {/* Simple share buttons placeholder */}
               <button className="p-3 bg-gray-100 rounded-full hover:bg-primary hover:text-white transition-colors">

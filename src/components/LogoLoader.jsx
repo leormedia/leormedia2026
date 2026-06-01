@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logoLoaderSvg from "../assets/LogoOnly.svg";
+import logoLoaderSvg from "../assets/LeormediaLogo.svg";
 
 const LogoLoader = ({ isLoading }) => {
   const [shouldRender, setShouldRender] = useState(true);
@@ -33,7 +33,7 @@ const LogoLoader = ({ isLoading }) => {
 
   // Split text into arrays of words and then letters for the stagger effect
   const text1 = "Crafting Extraordinary Events &".split("");
-  const text2 = "Success Stories".split("");
+  const text2 = "Digital Success Stories".split("");
 
   return (
     <div
@@ -99,7 +99,7 @@ const LogoLoader = ({ isLoading }) => {
           <img
             src={logoLoaderSvg}
             alt="Leor Media Logo"
-            className="w-full h-auto drop-shadow-xl"
+            className="w-[200px] h-[200px] drop-shadow-xl"
           />
         </div>
       </div>

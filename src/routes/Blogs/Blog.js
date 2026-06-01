@@ -64,10 +64,10 @@ function BlogPage() {
           }}
         >
           <div className="text-center text-white max-w-2xl mx-auto">
-            <h1 className="text-[28px] md:text-[45px] font-bold mb-4">
+            <h1 className="font-bold mb-4">
               Blogs & Research
             </h1>
-            <p className="text-[14px] md:text-[18px] opacity-90">
+            <p className="opacity-90">
               Research done for our project and Technologies we use for our community.
             </p>
           </div>
@@ -100,10 +100,10 @@ function BlogPage() {
                         <span>•</span>
                         <span>5 min read</span>
                       </div>
-                      <h3 className="text-[28px] md:text-[45px] font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors line-clamp-2 leading-tight">
+                      <h3 className="font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors line-clamp-2 leading-tight">
                         {post.title}
                       </h3>
-                      <p className="text-[14px] md:text-[18px] text-gray-600 mb-6 line-clamp-3 leading-relaxed flex-1">
+                      <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed flex-1">
                         {limitContent(post.content)}
                       </p>
                       <div className="mt-auto">
@@ -120,7 +120,7 @@ function BlogPage() {
               ))
             ) : (
               <div className="col-span-full text-center py-20">
-                <p className="text-[14px] md:text-[18px] text-gray-500">No blog posts available at the moment.</p>
+                <p className="text-gray-500">No blog posts available at the moment.</p>
               </div>
             )}
           </div>

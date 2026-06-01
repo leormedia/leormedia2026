@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link } from"react-router-dom";
 
-import { ServicesPageDetails } from "./ServicesDataPage"; // Adjust the path as necessary
+import { ServicesPageDetails } from"./ServicesDataPage"; // Adjust the path as necessary
 import {
   FaArrowRight,
   FaFileInvoice,
@@ -8,14 +8,14 @@ import {
   FaQuestion,
   FaWhatsapp,
   FaFileInvoiceDollar,
-} from "react-icons/fa";
-import { IoCall } from "react-icons/io5";
+} from"react-icons/fa";
+import { IoCall } from"react-icons/io5";
 
-import { ServicesCoverImage } from "../../assets/data/Imagedata";
+import { ServicesCoverImage } from"../../assets/data/Imagedata";
 
-import { GlobalData } from "../../assets/data/GlodalData";
-import seoData from "../../assets/data/seo.json";
-import { Helmet } from "react-helmet-async";
+import { GlobalData } from"../../assets/data/GlodalData";
+import seoData from"../../assets/data/seo.json";
+import { Helmet } from"react-helmet-async";
 
 
 const { title, description, keywords, canonical, ogImage } = seoData.services;
@@ -63,27 +63,27 @@ const Services = () => {
             <div className="md:w-1/2 md:pr-10"></div>
             <div className="md:w-1/2 px-5">
               <div className="text-right md:text-left">
-                <h1 className="text-[28px] md:text-[45px] pb-5 fade-in-down font-extrabold text-center text-white font-tusker">
+                <h1 className="pb-5 fade-in-down font-extrabold text-center text-white font-tusker">
                   {ServicesPageDetails.title}
                 </h1>
-                <p className="text-[14px] md:text-[18px] text-white text-center sm:ml-0">
+                <p className="text-white text-center sm:ml-0">
                   {ServicesPageDetails.subtitle}
                 </p>
 
                 <div className="mt-8 flex flex-wrap justify-center gap-4">
                   <Link to="/contactus">
-                    <span className="transform flex rounded-md bg-white px-5 py-3 font-medium text-black transition-colors hover:bg-black sm:text-[14px] text-[12px] hover:text-white">
+                    <span className="transform flex rounded-md bg-white px-5 py-3 font-medium text-black transition-colors hover:bg-black   hover:text-white">
                       <IoCall className="my-auto mr-2" /> Get in Touch
                     </span>
                   </Link>
                   <Link to="/get-quotation">
-                    <span className="transform flex rounded-md bg-primary px-5 py-3 font-medium text-white transition-colors hover:bg-primary/90 sm:text-[14px] text-[12px]">
+                    <span className="transform flex rounded-md bg-primary px-5 py-3 font-medium text-white transition-colors hover:bg-primary/90">
                       <FaFileInvoiceDollar className="my-auto mr-2" /> Get Quotation
                     </span>
                   </Link>
 
                   <a href={GlobalData.company.companyWhatsapp}>
-                    <span className="transform flex sm:text-[14px] text-[12px] rounded-md bg-white px-5 py-3 font-medium text-black transition-colors hover:bg-black hover:text-white">
+                    <span className="transform flex   rounded-md bg-white px-5 py-3 font-medium text-black transition-colors hover:bg-black hover:text-white">
                       <FaWhatsapp className="my-auto mr-2" /> WhatsApp
                     </span>
                   </a>
@@ -96,13 +96,13 @@ const Services = () => {
         {/* Section - 2 */}
         <section>
           <section className="text-center mx-auto my-12 lg:px-20">
-            <p className="text-[14px] md:text-[18px] font-medium text-black">
+            <p className="font-medium text-black">
               {ServicesPageDetails.section2.tagline}
             </p>
-            <h2 className="text-[28px] md:text-[45px] font-tusker pb-2 text-black mt-3">
+            <h2 className="font-tusker pb-2 text-black mt-3">
               {ServicesPageDetails.section2.heading}
             </h2>
-            <p className="text-[14px] md:text-[18px] font-medium text-white">
+            <p className="font-medium text-white">
               {ServicesPageDetails.section2.description}
             </p>
 
@@ -134,15 +134,15 @@ const Services = () => {
                       alt="illustration"
                       loading="lazy"
                     />
-                    <p className="text-[14px] md:text-[18px] font-medium text-black">
+                    <p className="font-medium text-black">
                       {service.title}
                     </p>
-                    <p className="text-[14px] md:text-[18px] text-black">
+                    <p className="text-black">
                       {service.description}
                     </p>
                     <Link to={service.link}>
-                      <button className="bg-primary flex sm:text-[14px] text-[10px] font-medium px-2 py-2 mt-2 rounded-md">
-                        <FaArrowRight className="mr-2 my-auto animate-wiggle" />{" "}
+                      <button className="bg-primary flex   font-medium px-2 py-2 mt-2 rounded-md">
+                        <FaArrowRight className="mr-2 my-auto animate-wiggle" />{""}
                         Know More
                       </button>
                     </Link>
@@ -157,23 +157,23 @@ const Services = () => {
         <section
           style={{
             backgroundImage: `url(${ServicesCoverImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "top",
+            backgroundSize:"cover",
+            backgroundPosition:"top",
           }}
         >
           <div className="cursor-default py-40 flex flex-col items-center justify-center bg-black/70">
             <div className="text-center">
-              <h2 className="text-[28px] md:text-[45px] font-extrabold text-transparent bg-clip-text bg-yellow-400 tracking-tight">
+              <h2 className="font-extrabold text-transparent bg-clip-text bg-yellow-400 tracking-tight">
                 WE BUILD
               </h2>
             </div>
             <div className="text-center">
-              <h2 className="text-[28px] md:text-[45px] font-extrabold text-transparent bg-clip-text bg-orange-600 tracking-tight">
+              <h2 className="font-extrabold text-transparent bg-clip-text bg-orange-600 tracking-tight">
                 SIMPLE BUT COMPLEX
               </h2>
             </div>
             <div className="text-center">
-              <h2 className="text-[28px] md:text-[45px] font-extrabold text-transparent bg-clip-text bg-yellow-400 tracking-tight">
+              <h2 className="font-extrabold text-transparent bg-clip-text bg-yellow-400 tracking-tight">
                 STABLE COMMUNITY
               </h2>
             </div>
@@ -182,10 +182,10 @@ const Services = () => {
 
         {/* section -4 */}
         <section className="text-center mx-auto my-8">
-          <h2 className="text-[28px] md:text-[45px] cursor-default pb-2 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 mt-3 tracking-tight">
+          <h2 className="cursor-default pb-2 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 mt-3 tracking-tight">
             Need more information?
           </h2>
-          <p className="text-[14px] md:text-[18px] cursor-default font-medium text-black mt-5 mb-10">
+          <p className="cursor-default font-medium text-black mt-5 mb-10">
             Explore our comprehensive documentation for more information on our
             services.
           </p>
@@ -195,12 +195,12 @@ const Services = () => {
 
 
         {/* section -6 */}
-        {/* "need more help" section */}
+        {/*"need more help" section */}
         <section className="text-center mx-auto py-8 bg-primary/70 drop-shadow-lg backdrop-blur-sm">
-          <h2 className="text-[28px] md:text-[45px] cursor-default font-extrabold text-transparent bg-clip-text bg-white mt-3 tracking-tight">
+          <h2 className="cursor-default font-extrabold text-transparent bg-clip-text bg-white mt-3 tracking-tight">
             Need Help ?
           </h2>
-          <p className="text-[14px] md:text-[18px] cursor-default text-black mb-2">
+          <p className="cursor-default text-black mb-2">
             Explore our comprehensive documentation for more information on our
             services.
           </p>

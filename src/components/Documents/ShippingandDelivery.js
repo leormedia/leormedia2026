@@ -40,12 +40,12 @@ const ShippingandDelivery = () => {
       </Helmet>
 
       <div className="disclaimer px-5 mt-6 text-black mx-4">
-        <h1 className="text-[28px] md:text-[45px] text-center py-10 font-bold">
+        <h1 className="text-center py-10 font-bold">
           Shipping & Delivery Policy
         </h1>
-        <p className="text-[14px] md:text-[18px]">Last updated: 2022-11-01</p>
+        <p className="">Last updated: 2022-11-01</p>
         <br />
-        <p className="text-[14px] md:text-[18px] font-medium">
+        <p className="font-medium">
           Shipping is not applicable for our business.
         </p>
       </div>

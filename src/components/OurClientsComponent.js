@@ -58,7 +58,7 @@ const OurClientsComponent = () => {
             <div className="container mx-auto px-4 mb-16">
                 <div className="text-center">
                     <span className="text-primary font-bold tracking-[0.2em] uppercase text-[12px] mb-3 block">TRUSTED BY INDUSTRY LEADERS</span>
-                    <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 mb-6">Our Clients</h2>
+                    <h2 className="font-bold text-gray-900 mb-6">Our Clients</h2>
                     <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
                 </div>
             </div>

@@ -1,56 +1,56 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import Slider from "react-slick";
+import React from"react";
+import { Link } from"react-router-dom";
+import { Helmet } from"react-helmet-async";
+import Slider from"react-slick";
 import { 
   FaRocket, FaSearch, FaGoogle, FaHashtag, FaPenNib, 
   FaBullhorn, FaPalette, FaChartLine, FaQuoteLeft,
   FaCheckCircle, FaUserFriends, FaBuilding, FaGlobe
-} from "react-icons/fa";
-import { MdOutlineWeb, MdAdsClick } from "react-icons/md";
-import { BiNetworkChart } from "react-icons/bi";
+} from"react-icons/fa";
+import { MdOutlineWeb, MdAdsClick } from"react-icons/md";
+import { BiNetworkChart } from"react-icons/bi";
 import { 
   DigitalMarketingCoverImage, 
   DigitalMarketingImage 
-} from "../../../assets/data/Imagedata";
-import { GlobalData } from "../../../assets/data/GlodalData";
-import seoData from "../../../assets/data/seo.json";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+} from"../../../assets/data/Imagedata";
+import { GlobalData } from"../../../assets/data/GlodalData";
+import seoData from"../../../assets/data/seo.json";
+import"slick-carousel/slick/slick.css";
+import"slick-carousel/slick/slick-theme.css";
 
 const { title, description, keywords, canonical, ogImage } = seoData.digitalmarketing;
 
 const DigitalMarketing = () => {
   const services = [
-    { title: "Performance Marketing", icon: <FaChartLine />, desc: "Data-driven campaigns focused on ROI and measurable growth." },
-    { title: "Website Design", icon: <MdOutlineWeb />, desc: "Modern, responsive, and high-conversion web experiences." },
-    { title: "SEO", icon: <FaSearch />, desc: "Boost your organic visibility and rank higher on search engines." },
-    { title: "Google Ads", icon: <FaGoogle />, desc: "Targeted PPC campaigns to reach your customers instantly." },
-    { title: "Social Media Marketing", icon: <FaHashtag />, desc: "Engage your audience where they spend most of their time." },
-    { title: "Content Writing", icon: <FaPenNib />, desc: "Compelling storytelling that resonates with your brand voice." },
-    { title: "Branding", icon: <FaBullhorn />, desc: "Creating unique brand identities that stand out in the market." },
-    { title: "Lead Generation Campaigns", icon: <MdAdsClick />, desc: "High-quality lead acquisition strategies for your sales team." },
-    { title: "Logo & Brand Design", icon: <FaPalette />, desc: "Visual identity systems that leave a lasting impression." },
+    { title:"Performance Marketing", icon: <FaChartLine />, desc:"Data-driven campaigns focused on ROI and measurable growth." },
+    { title:"Website Design", icon: <MdOutlineWeb />, desc:"Modern, responsive, and high-conversion web experiences." },
+    { title:"SEO", icon: <FaSearch />, desc:"Boost your organic visibility and rank higher on search engines." },
+    { title:"Google Ads", icon: <FaGoogle />, desc:"Targeted PPC campaigns to reach your customers instantly." },
+    { title:"Social Media Marketing", icon: <FaHashtag />, desc:"Engage your audience where they spend most of their time." },
+    { title:"Content Writing", icon: <FaPenNib />, desc:"Compelling storytelling that resonates with your brand voice." },
+    { title:"Branding", icon: <FaBullhorn />, desc:"Creating unique brand identities that stand out in the market." },
+    { title:"Lead Generation Campaigns", icon: <MdAdsClick />, desc:"High-quality lead acquisition strategies for your sales team." },
+    { title:"Logo & Brand Design", icon: <FaPalette />, desc:"Visual identity systems that leave a lasting impression." },
   ];
 
   const stats = [
-    { label: "Years", value: "10" },
-    { label: "Team", value: "100+" },
-    { label: "Brands", value: "250+" },
-    { label: "Generated", value: "200+M" },
+    { label:"Years", value:"10" },
+    { label:"Team", value:"100+" },
+    { label:"Brands", value:"250+" },
+    { label:"Generated", value:"200+M" },
   ];
 
   const processSteps = [
-    { title: "Discovery", desc: "Understanding your business goals and audience." },
-    { title: "Strategy", desc: "Developing a tailored roadmap for success." },
-    { title: "Execution", desc: "Implementing campaigns with precision." },
-    { title: "Optimization", desc: "Continuous monitoring and improvements." },
+    { title:"Discovery", desc:"Understanding your business goals and audience." },
+    { title:"Strategy", desc:"Developing a tailored roadmap for success." },
+    { title:"Execution", desc:"Implementing campaigns with precision." },
+    { title:"Optimization", desc:"Continuous monitoring and improvements." },
   ];
 
   const reviews = [
-    { name: "John Doe", company: "Tech Solutions", text: "Leor Media transformed our online presence. Our leads increased by 300% in just six months!", image: "https://i.pravatar.cc/150?u=1" },
-    { name: "Sarah Smith", company: "Fashion Hub", text: "The team is professional and highly creative. Their social media strategies are top-notch.", image: "https://i.pravatar.cc/150?u=2" },
-    { name: "Robert Wilson", company: "Global Exports", text: "Best digital marketing agency in Vizag. They really understand the local and global market.", image: "https://i.pravatar.cc/150?u=3" },
+    { name:"John Doe", company:"Tech Solutions", text:"Leor Media transformed our online presence. Our leads increased by 300% in just six months!", image:"https://i.pravatar.cc/150?u=1" },
+    { name:"Sarah Smith", company:"Fashion Hub", text:"The team is professional and highly creative. Their social media strategies are top-notch.", image:"https://i.pravatar.cc/150?u=2" },
+    { name:"Robert Wilson", company:"Global Exports", text:"Best digital marketing agency in Vizag. They really understand the local and global market.", image:"https://i.pravatar.cc/150?u=3" },
   ];
 
   const reviewSettings = {
@@ -89,17 +89,17 @@ const DigitalMarketing = () => {
         </video>
         <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-10"></div>
         <div className="relative z-20 text-center text-white px-4 max-w-4xl">
-          <h1 className="text-[28px] md:text-[45px] font-bold mb-6 font-TuskerGrotesk tracking-wider animate-fade-in-up">
+          <h1 className="font-bold mb-6 font-TuskerGrotesk tracking-wider animate-fade-in-up">
             DIGITAL MARKETING <span className="text-primary">EXCELLENCE</span>
           </h1>
-          <p className="text-[14px] md:text-[18px] mb-10 opacity-90 leading-relaxed max-w-2xl mx-auto">
+          <p className="mb-10 opacity-90 leading-relaxed max-w-2xl mx-auto">
             Drive growth, build authority, and dominate your niche with Vizag's most trusted digital marketing partner.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link to="/contactus" className="button1 text-[18px] py-4 px-10">
+            <Link to="/contactus" className="button1  py-4 px-10">
               Get Started <FaRocket className="ml-2" />
             </Link>
-            <a href="#services" className="button2 text-[18px] py-4 px-10 border-white text-white hover:bg-white hover:text-black">
+            <a href="#services" className="button2  py-4 px-10 border-white text-white hover:bg-white hover:text-black">
               Explore Services
             </a>
           </div>
@@ -110,23 +110,23 @@ const DigitalMarketing = () => {
       <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-12 items-start">
           <div className="lg:col-span-1">
-            <span className="text-primary font-bold tracking-[0.2em] uppercase text-[14px] mb-4 block">ABOUT OUR AGENCY</span>
-            <h2 className="text-[28px] md:text-[45px] font-bold mb-8 text-gray-900 leading-tight">
+            <span className="text-primary font-bold tracking-[0.2em] uppercase  mb-4 block">ABOUT OUR AGENCY</span>
+            <h2 className="font-bold mb-8 text-gray-900 leading-tight">
               We are the <br />
               <span className="text-primary">Digital Marketing in Vizag</span>
             </h2>
-            <p className="text-[14px] md:text-[18px] text-gray-600 mb-8 leading-relaxed">
+            <p className="text-gray-600 mb-8 leading-relaxed">
               Leor Media is more than just an agency; we are your strategic partners in the digital world. 
               Based in the heart of Visakhapatnam, we specialize in creating 360-degree digital solutions 
               that help brands connect with their audience effectively.
             </p>
             <div className="flex items-center gap-4 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 w-fit">
-              <div className="bg-primary/10 p-4 rounded-full text-primary text-[24px]">
+              <div className="bg-primary/10 p-4 rounded-full text-primary">
                 <FaUserFriends />
               </div>
               <div>
-                <p className="text-[14px] md:text-[18px] text-gray-500 uppercase font-bold tracking-wider">Join Our Success</p>
-                <p className="text-[14px] md:text-[18px] font-bold text-gray-900">Partner with Experts</p>
+                <p className="text-gray-500 uppercase font-bold tracking-wider">Join Our Success</p>
+                <p className="font-bold text-gray-900">Partner with Experts</p>
               </div>
             </div>
           </div>
@@ -139,14 +139,10 @@ const DigitalMarketing = () => {
             />
             <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100">
                <ul className="space-y-4">
-                {[
-                  "Strategic Brand Growth",
-                  "Data-Driven Campaigns",
-                  "Local Market Expertise",
-                  "Innovative Creative Solutions"
+                {["Strategic Brand Growth","Data-Driven Campaigns","Local Market Expertise","Innovative Creative Solutions"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center text-gray-700">
-                    <FaCheckCircle className="text-primary mr-3 text-[20px]" /> {item}
+                    <FaCheckCircle className="text-primary mr-3" /> {item}
                   </li>
                 ))}
               </ul>
@@ -155,7 +151,7 @@ const DigitalMarketing = () => {
           
           <div className="lg:col-span-1 bg-white p-8 md:p-10 rounded-[2rem] shadow-2xl border border-gray-100 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16"></div>
-            <h3 className="text-[28px] md:text-[45px] font-bold mb-8 flex items-center gap-3">
+            <h3 className="font-bold mb-8 flex items-center gap-3">
               <span className="w-1 h-8 bg-primary rounded-full"></span>
               Enquire Now
             </h3>
@@ -170,7 +166,7 @@ const DigitalMarketing = () => {
                 {services.map((s, i) => <option key={i}>{s.title}</option>)}
               </select>
               <textarea placeholder="Tell us about your project" className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all bg-gray-50 h-32"></textarea>
-              <button type="submit" className="button1 w-full py-5 text-[18px] font-bold rounded-xl shadow-lg shadow-primary/20">
+              <button type="submit" className="button1 w-full py-5  font-bold rounded-xl shadow-lg shadow-primary/20">
                 Send Enquiry
               </button>
             </form>
@@ -182,8 +178,8 @@ const DigitalMarketing = () => {
       <section id="services" className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-primary font-bold tracking-[0.2em] uppercase text-[14px] mb-4 block">WHAT WE OFFER</span>
-            <h2 className="text-[28px] md:text-[45px] font-bold mb-6 text-gray-900">Comprehensive Marketing Services</h2>
+            <span className="text-primary font-bold tracking-[0.2em] uppercase  mb-4 block">WHAT WE OFFER</span>
+            <h2 className="font-bold mb-6 text-gray-900">Comprehensive Marketing Services</h2>
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
           
@@ -193,11 +189,11 @@ const DigitalMarketing = () => {
                 key={index} 
                 className="group p-10 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-primary/20 transition-all duration-500 flex flex-col items-start"
               >
-                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-[30px] text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
+                <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center  text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
                   {service.icon}
                 </div>
-                <h3 className="text-[28px] md:text-[45px] font-bold mb-4 text-gray-900">{service.title}</h3>
-                <p className="text-[14px] md:text-[18px] text-gray-600 leading-relaxed mb-6">
+                <h3 className="font-bold mb-4 text-gray-900">{service.title}</h3>
+                <p className="text-gray-600 leading-relaxed mb-6">
                   {service.desc}
                 </p>
                 <Link to="/contactus" className="text-primary font-bold inline-flex items-center group/link hover:underline">
@@ -219,10 +215,10 @@ const DigitalMarketing = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
             {stats.map((stat, i) => (
               <div key={i} className="group">
-                <div className="text-[48px] md:text-[72px] font-bold text-primary mb-2 font-TuskerGrotesk tracking-widest group-hover:scale-110 transition-transform duration-300">
+                <div className="font-bold text-primary mb-2 font-TuskerGrotesk tracking-widest group-hover:scale-110 transition-transform duration-300">
                   {stat.value}
                 </div>
-                <div className="text-[14px] md:text-[16px] uppercase tracking-[0.3em] font-bold text-gray-400 group-hover:text-white transition-colors">
+                <div className="uppercase tracking-[0.3em] font-bold text-gray-400 group-hover:text-white transition-colors">
                   {stat.label}
                 </div>
               </div>
@@ -235,9 +231,9 @@ const DigitalMarketing = () => {
       <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <span className="text-primary font-bold tracking-[0.2em] uppercase text-[14px] mb-4 block">OUR STRATEGY</span>
-            <h2 className="text-[28px] md:text-[45px] font-bold mb-6 text-gray-900">The Growth Process</h2>
-            <p className="text-[14px] md:text-[18px] text-gray-600 max-w-2xl mx-auto">A systematic approach to scale your business and achieve predictable results.</p>
+            <span className="text-primary font-bold tracking-[0.2em] uppercase  mb-4 block">OUR STRATEGY</span>
+            <h2 className="font-bold mb-6 text-gray-900">The Growth Process</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">A systematic approach to scale your business and achieve predictable results.</p>
           </div>
           
           <div className="relative">
@@ -247,11 +243,11 @@ const DigitalMarketing = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
               {processSteps.map((step, i) => (
                 <div key={i} className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col items-center text-center group hover:border-primary transition-all duration-300">
-                  <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-[24px] font-bold mb-6 shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center  font-bold mb-6 shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
                     {i + 1}
                   </div>
-                  <h3 className="text-[28px] md:text-[45px] font-bold mb-3 text-gray-900">{step.title}</h3>
-                  <p className="text-[14px] md:text-[18px] text-gray-600">{step.desc}</p>
+                  <h3 className="font-bold mb-3 text-gray-900">{step.title}</h3>
+                  <p className="text-gray-600">{step.desc}</p>
                 </div>
               ))}
             </div>
@@ -263,23 +259,22 @@ const DigitalMarketing = () => {
       <section className="py-24 px-4 bg-white overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-primary font-bold tracking-[0.2em] uppercase text-[14px] mb-4 block">TESTIMONIALS</span>
-            <h2 className="text-[28px] md:text-[45px] font-bold mb-6 text-gray-900">What Our Clients Say</h2>
+            <span className="text-primary font-bold tracking-[0.2em] uppercase  mb-4 block">TESTIMONIALS</span>
+            <h2 className="font-bold mb-6 text-gray-900">What Our Clients Say</h2>
           </div>
           
           <div className="bg-gray-50 p-8 md:p-16 rounded-[3rem] relative shadow-inner">
-            <FaQuoteLeft className="absolute top-10 left-10 text-gray-200 text-[60px] md:text-[96px] -z-0" />
+            <FaQuoteLeft className="absolute top-10 left-10 text-gray-200   -z-0" />
             <Slider {...reviewSettings} className="relative z-10 testimonial-slider">
               {reviews.map((review, i) => (
                 <div key={i} className="outline-none">
-                  <p className="text-[14px] md:text-[18px] text-gray-700 italic mb-10 leading-relaxed">
-                    "{review.text}"
+                  <p className="text-gray-700 italic mb-10 leading-relaxed">"{review.text}"
                   </p>
                   <div className="flex items-center gap-5">
                     <img src={review.image} alt={review.name} className="w-16 h-16 rounded-full border-4 border-white shadow-md" />
                     <div>
-                      <h4 className="text-[28px] md:text-[45px] font-bold text-gray-900">{review.name}</h4>
-                      <p className="text-[14px] md:text-[18px] text-primary font-medium">{review.company}</p>
+                      <h4 className="font-bold text-gray-900">{review.name}</h4>
+                      <p className="text-primary font-medium">{review.company}</p>
                     </div>
                   </div>
                 </div>
@@ -292,17 +287,17 @@ const DigitalMarketing = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 bg-primary">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-[28px] md:text-[45px] font-bold text-black mb-8 leading-tight">
+          <h2 className="font-bold text-black mb-8 leading-tight">
             Ready to Take Your Brand to the <br /> <span className="text-white">Next Level?</span>
           </h2>
-          <p className="text-[14px] md:text-[18px] text-black/80 mb-12 max-w-2xl mx-auto">
+          <p className="text-black/80 mb-12 max-w-2xl mx-auto">
             Contact us today for a free digital audit and discovery session with our experts.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link to="/contactus" className="button1black text-[18px] py-4 px-12">
+            <Link to="/contactus" className="button1black  py-4 px-12">
               Start Your Project
             </Link>
-            <a href={`tel:${GlobalData.company.companyPhone}`} className="flex items-center gap-3 text-black font-bold text-[20px] hover:scale-105 transition-transform">
+            <a href={`tel:${GlobalData.company.companyPhone}`} className="flex items-center gap-3 text-black font-bold  hover:scale-105 transition-transform">
               <div className="bg-white p-3 rounded-full shadow-lg">
                 <FaRocket />
               </div>

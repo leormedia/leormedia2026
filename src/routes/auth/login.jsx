@@ -106,7 +106,7 @@ export default function LoginPage() {
 
             {error && (
               <div className="bg-rose-500/10 border border-rose-500/20 p-3 rounded-xl">
-                <p className="text-rose-500 text-[11px] text-center font-medium tracking-tight uppercase tracking-widest">
+                <p className="text-rose-500 text-center font-medium tracking-tight uppercase tracking-widest">
                   {error}
                 </p>
               </div>
@@ -131,7 +131,7 @@ export default function LoginPage() {
 
         {/* Bottom Navigation */}
         <div className="mt-12 text-center space-y-4">
-          <p className="text-gray-600 text-[11px] tracking-widest uppercase">
+          <p className="text-gray-600 tracking-widest uppercase">
             Unauthorized access is strictly prohibited
           </p>
           <div className="flex items-center justify-center gap-2 text-gray-400 text-[10px]">

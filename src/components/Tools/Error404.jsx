@@ -6,17 +6,17 @@ import LogoLoader from '../../assets/LogoFooter.svg';
 const Error404 = () => {
   return (
     <div className="bg-black flex flex-col items-center justify-center min-h-screen px-4 text-center">
-      <h1 className="text-[28px] md:text-[45px] font-extrabold text-secondary tracking-wide animate-pulse">
+      <h1 className="font-extrabold text-secondary tracking-wide animate-pulse">
         404
       </h1>
-      <h2 className="text-[28px] md:text-[45px] font-semibold text-secondary mt-4">
+      <h2 className="font-semibold text-secondary mt-4">
         Page Not Found
       </h2>
-      <p className="text-[14px] md:text-[18px] mt-6 text-secondary max-w-xl">
+      <p className="mt-6 text-secondary max-w-xl">
         Oops! It seems the page you're looking for doesn't exist.  
         For security reasons, some pages are restricted.
       </p>
-      <p className="text-[14px] md:text-[18px] mt-4 text-gray-400 text-md">
+      <p className="mt-4 text-gray-400 text-md">
         Here are some helpful links instead:
       </p>
 

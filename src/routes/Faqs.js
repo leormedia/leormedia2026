@@ -13,7 +13,7 @@ const { title, description, keywords, canonical, ogImage } = seoData.faq;
 const FaqSection = ({ title, faqs, openIndex, toggle, offset }) => (
   <section className="py-8 px-4 max-w-4xl mx-auto">
     <div className="mb-8">
-      <p className="text-[14px] md:text-[18px] font-bold text-gray-900 border-l-4 border-blue-600 pl-4 py-2">
+      <p className="font-bold text-gray-900 border-l-4 border-blue-600 pl-4 py-2">
         {title}
       </p>
     </div>
@@ -207,10 +207,10 @@ function Faqs() {
 
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-[28px] md:text-[45px] font-bold text-gray-900 mb-4">
+          <h1 className="font-bold text-gray-900 mb-4">
             Frequently Asked Questions
           </h1>
-          <p className="text-[14px] md:text-[18px] text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto">
             Find answers to common questions about our services and solutions
           </p>
         </div>
@@ -265,7 +265,7 @@ function Faqs() {
           {/* Search Results Info */}
           {searchQuery && (
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-              <p className="text-[14px] md:text-[18px] text-blue-800">
+              <p className="text-blue-800">
                 Found <span className="font-bold">{filteredFaqs.length}</span>{" "}
                 result{filteredFaqs.length !== 1 ? "s" : ""} for "
                 <span className="font-bold">{searchQuery}</span>"
@@ -290,7 +290,7 @@ function Faqs() {
               Object.entries(groupedFilteredFaqs).map(([sectionId, sectionData]) => (
                 <section key={sectionId} className="py-8 px-4 max-w-4xl mx-auto">
                   <div className="mb-8">
-                    <p className="text-[14px] md:text-[18px] font-bold text-gray-900 border-l-4 border-blue-600 pl-4 py-2">
+                    <p className="font-bold text-gray-900 border-l-4 border-blue-600 pl-4 py-2">
                       {sectionData.title}
                     </p>
                   </div>
@@ -331,7 +331,7 @@ function Faqs() {
               ))
             ) : (
               <div className="text-center py-12">
-                <p className="text-[14px] md:text-[18px] text-gray-500">
+                <p className="text-gray-500">
                   No results found for "{searchQuery}"
                 </p>
                 <button

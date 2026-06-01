@@ -288,8 +288,8 @@ const GetQuotation = () => {
           <div className="w-24 h-24 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-8 animate-bounce">
             <FaCheck size={40} />
           </div>
-          <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 mb-4">Thank You!</h2>
-          <p className="text-[14px] md:text-[18px] text-gray-600 mb-8">
+          <h2 className="font-bold text-gray-900 mb-4">Thank You!</h2>
+          <p className="text-gray-600 mb-8">
             Your quotation request has been sent successfully. Our team will review your requirements and get back to you within 24 hours.
           </p>
           <button
@@ -347,10 +347,10 @@ const GetQuotation = () => {
             <span className="text-primary font-bold tracking-widest uppercase text-[14px] mb-4 block drop-shadow-md">
               Step {currentStep + 1} of {steps.length}
             </span>
-            <h1 className="text-[28px] md:text-[45px] font-bold text-white mb-4 px-4 drop-shadow-lg">
+            <h1 className="font-bold text-white mb-4 px-4 drop-shadow-lg">
               {steps[currentStep].question}
             </h1>
-            <p className="text-[14px] md:text-[18px] text-white/80 px-4 max-w-2xl mx-auto">
+            <p className="text-white/80 px-4 max-w-2xl mx-auto">
               {steps[currentStep].subtitle}
             </p>
           </div>

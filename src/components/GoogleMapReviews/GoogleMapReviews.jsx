@@ -84,12 +84,12 @@ const Testimonials = () => {
           <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-[14px] font-bold mb-4 tracking-wider uppercase">
             Testimonials
           </span>
-          <h2 className="text-[28px] md:text-[45px] font-extrabold text-gray-900 mb-6 font-VictoryStriker uppercase tracking-widest leading-relaxed"
+          <h2 className="font-extrabold text-gray-900 mb-6 font-VictoryStriker uppercase tracking-widest leading-relaxed"
               style={{ lineHeight: "1.3" }}>
             Our Clients <span className="text-primary">Feedback</span>
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8"></div>
-          <p className="text-[14px] md:text-[18px] text-gray-600 max-w-3xl mx-auto opacity-90 leading-relaxed">
+          <p className="text-gray-600 max-w-3xl mx-auto opacity-90 leading-relaxed">
             Discover why clients trust Leor Media for their events, branding, and digital success. Real feedback from real clients.
           </p>
         </div>
@@ -112,9 +112,9 @@ const Testimonials = () => {
                         {item.initial}
                       </div>
                       <div>
-                        <h4 className="text-[28px] md:text-[45px] font-bold text-gray-900 leading-tight">{item.name}</h4>
+                        <h4 className="font-bold text-gray-900 leading-tight">{item.name}</h4>
                         <div className="flex items-center gap-2">
-                          <p className="text-[14px] md:text-[18px] text-gray-400 font-medium">{item.date}</p>
+                          <p className="text-gray-400 font-medium">{item.date}</p>
                           <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
                           <div className="flex">
                             {[...Array(item.rating)].map((_, i) => (
@@ -129,7 +129,7 @@ const Testimonials = () => {
                     </div>
                   </div>
 
-                  <p className="text-[14px] md:text-[18px] text-gray-600 leading-relaxed flex-grow relative z-10 font-medium">
+                  <p className="text-gray-600 leading-relaxed flex-grow relative z-10 font-medium">
                     "{item.text}"
                   </p>
                 </div>

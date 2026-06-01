@@ -189,12 +189,12 @@ const ContactForm = () => {
         }}
       >
         <div className="text-center text-white max-w-2xl mx-auto">
-          <h1 className="text-[28px] md:text-[45px] font-bold mb-4">
+          <h1 className="font-bold mb-4">
             Get in touch,
             <br />
             we'd love to hear from you.
           </h1>
-          <p className="text-[14px] md:text-[18px] opacity-90 mb-6">
+          <p className="opacity-90 mb-6">
             You can contact us through mail or you can get in touch at our
             digital office.
           </p>
@@ -221,7 +221,7 @@ const ContactForm = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
-            <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 mb-6">
+            <h2 className="font-bold text-gray-900 mb-6">
               Send us a Message
             </h2>
 
@@ -317,10 +317,10 @@ const ContactForm = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 mb-4">
+              <h2 className="font-bold text-gray-900 mb-4">
                 Let's Start a Conversation
               </h2>
-              <p className="text-[14px] md:text-[18px] text-gray-600">
+              <p className="text-gray-600">
                 Whether you're ready to begin a project or just want to explore
                 possibilities, we're here to help you succeed.
               </p>
@@ -339,8 +339,8 @@ const ContactForm = () => {
                     {method.icon}
                   </div>
                   <div>
-                    <p className="text-[14px] md:text-[18px] text-gray-500">{method.label}</p>
-                    <p className="text-[14px] md:text-[18px] font-semibold text-gray-900">
+                    <p className="text-gray-500">{method.label}</p>
+                    <p className="font-semibold text-gray-900">
                       {method.value}
                     </p>
                   </div>
@@ -350,7 +350,7 @@ const ContactForm = () => {
 
             {/* Quick Action Buttons */}
             <div className="bg-yellow-50 p-6 rounded-lg">
-              <h3 className="text-[28px] md:text-[45px] font-semibold text-gray-900 mb-3">
+              <h3 className="font-semibold text-gray-900 mb-3">
                 Quick Connect
               </h3>
               <div className="flex flex-wrap gap-3">
@@ -383,10 +383,10 @@ const ContactForm = () => {
 
       {/* FAQ Section */}
       <section className="px-4 max-w-4xl mx-auto py-12">
-        <h2 className="text-[28px] md:text-[45px] font-bold text-center mb-2">
+        <h2 className="font-bold text-center mb-2">
           Frequently Asked Questions
         </h2>
-        <p className="text-[14px] md:text-[18px] text-center mb-6">
+        <p className="text-center mb-6">
           Find answers to common questions about our programs and academy.
         </p>
         {faqSection}
@@ -395,10 +395,10 @@ const ContactForm = () => {
       {/* CTA Section */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 mb-4">
+          <h2 className="font-bold text-gray-900 mb-4">
             Ready to Transform Your Digital Presence?
           </h2>
-          <p className="text-[14px] md:text-[18px] text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Let's create something amazing together. We're just a message away.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

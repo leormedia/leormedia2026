@@ -14,6 +14,19 @@ module.exports = {
           100: "#f37a20", //orange
         },
       },
+      fontSize: {
+        '14px': '14px',
+        '16px': '16px',
+        '18px': '18px',
+        '20px': '20px',
+        '24px': '24px',
+        '26px': '26px',
+        '28px': '28px',
+        '30px': '30px',
+        '48px': '48px',
+        '50px': '50px',
+        '72px': '72px',
+      },
       // fontFamily: {
       //   TuskerGrotesk: ["TuskerGrotesk", "sans-serif"], // Changed from 'tusker' to 'TuskerGrotesk'
       //},

@@ -116,10 +116,10 @@ const ImageSlider = () => {
 
             {/* Content at bottom */}
             <div className="absolute inset-0 flex flex-col items-center justify-end text-white text-center pb-8 px-4">
-              <h2 className="text-[28px] md:text-[45px] font-bold">
+              <h2 className="font-bold">
                 {image.title}
               </h2>
-              <p className="text-[14px] md:text-[18px] mt-2">
+              <p className="mt-2">
                 {image.description}
               </p>
               <div className="mt-4 flex flex-wrap justify-center gap-3">

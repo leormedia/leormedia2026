@@ -69,10 +69,10 @@ const ServicesTab = () => {
       <div className="flex-1" style={{ flex: "0 0 40%" }}>
         <div className="flex flex-col justify-center items-center text-center p-4 md:p-6 lg:p-12 relative h-full">
           <div className="text-center p-2">
-            <h1 className="text-[28px] md:text-[45px] font-bold mb-2">
+            <h1 className="font-bold mb-2">
               {selected}
             </h1>
-            <p className="text-[14px] md:text-[18px] max-w-md">
+            <p className="max-w-md">
               {descriptions[selected]}
             </p>
           </div>
@@ -92,7 +92,7 @@ const ServicesTab = () => {
               }`}
             >
               <img src={icons[category]} alt={category} className="w-10 h-10" />
-              <p className="text-[14px] md:text-[18px] font-medium text-secondary mt-1">
+              <p className="font-medium text-secondary mt-1">
                 {category}
               </p>
             </button>

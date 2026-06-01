@@ -10,7 +10,7 @@ const GoogleAnalytics = () => {
             </Helmet>
 
             <div className="mb-6">
-                <h1 className="text-3xl font-bold text-gray-800">Google Analytics</h1>
+                <h1 className="font-bold text-gray-800">Google Analytics</h1>
                 <p className="text-gray-600 mt-2">Website traffic and performance data</p>
             </div>
 
@@ -18,7 +18,7 @@ const GoogleAnalytics = () => {
                 <div className="bg-green-50 p-6 rounded-full mb-4">
                     <FcStatistics className="text-6xl" />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-800 mb-2">Analytics Dashboard Coming Soon</h2>
+                <h2 className="font-bold text-gray-800 mb-2">Analytics Dashboard Coming Soon</h2>
                 <p className="text-gray-500 max-w-md mx-auto">
                     Integration with Google Analytics Data API is required to show live traffic charts here. 
                     Please set up your GA4 property and configure the backend service account to enable this feature.

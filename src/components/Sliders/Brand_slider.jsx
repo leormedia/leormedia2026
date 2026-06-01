@@ -32,7 +32,7 @@ const BrandCarousel = () => {
 
   return (
     <div className="py-10 bg-gray-100 overflow-hidden">
-      <p className="text-[14px] md:text-[18px] text-center font-bold pb-5">OUR CLIENTS</p>
+      <p className="text-center font-bold pb-5">OUR CLIENTS</p>
       <div className="container mx-auto">
         <Slider {...settings}>
           {brandImages.map((imageUrl, index) => (

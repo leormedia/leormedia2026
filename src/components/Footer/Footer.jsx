@@ -32,7 +32,7 @@ const Footer = () => {
                     height="80"
                   />
                 </a>
-                <p className="text-[14px] md:text-[18px] max-w-xs mt-4 text-secondary">
+                <p className="max-w-xs mt-4 text-secondary">
                   Leor Media offers creative event management, branding, and
                   advertising solutions that elevate your brand and connect with
                   your audience effectively.
@@ -58,7 +58,7 @@ const Footer = () => {
               </div>
               <div className="grid grid-cols-2 gap-8 lg:col-span-2 lg:grid-cols-3">
                 <div>
-                  <p className="text-[14px] md:text-[18px] font-medium text-secondary uppercase tracking-wider">Services</p>
+                  <p className="font-medium text-secondary uppercase tracking-wider">Services</p>
                   <nav className="flex flex-col mt-4 space-y-2 text-[12px] text-secondary">
                     <a href="/services/wedding-planners" className="hover:text-primary transition-colors"> Wedding Planners </a>
                     <a href="https://www.vivahamco.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"> Wedding </a>
@@ -68,7 +68,7 @@ const Footer = () => {
                   </nav>
                 </div>
                 <div>
-                  <p className="text-[14px] md:text-[18px] font-medium text-secondary uppercase tracking-wider">Useful links</p>
+                  <p className="font-medium text-secondary uppercase tracking-wider">Useful links</p>
                   <nav className="flex flex-col mt-4 space-y-2 text-[12px] text-secondary">
                     <a href="/aboutus" className="hover:text-primary transition-colors"> About Us </a>
                     <a href="/services" className="hover:text-primary transition-colors"> Services </a>
@@ -78,7 +78,7 @@ const Footer = () => {
                   </nav>
                 </div>
                 <div>
-                  <p className="text-[14px] md:text-[18px] font-medium text-secondary uppercase tracking-wider">Legal</p>
+                  <p className="font-medium text-secondary uppercase tracking-wider">Legal</p>
                   <nav className="flex flex-col mt-4 space-y-2 text-[12px] text-secondary">
                     <a href="/Legal/privacy-policy" className="hover:text-primary transition-colors"> Privacy Policy </a>
                     <a href="/Legal/terms-and-conditions" className="hover:text-primary transition-colors"> Terms & Conditions </a>
@@ -92,8 +92,8 @@ const Footer = () => {
 
             <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start border-t border-gray-800 pt-8">
               <div>
-                <p className="text-[14px] md:text-[18px] font-medium text-secondary mb-4 uppercase tracking-wider">Address</p>
-                <p className="text-[14px] md:text-[18px] text-secondary leading-relaxed">
+                <p className="font-medium text-secondary mb-4 uppercase tracking-wider">Address</p>
+                <p className="text-secondary leading-relaxed">
                   flot no 404, 4th Floor, Near GVK Plaza, Gurudwara, Madhuranagar,<br />
                   Dwaraka Nagar, Visakhapatnam, Andhra Pradesh 530016
                 </p>
@@ -118,7 +118,7 @@ const Footer = () => {
             <div className="border-t border-gray-600 my-6" />
 
             {/* Bottom Logos */}
-            <p className="text-[14px] md:text-[18px] text-secondary text-center py-2">
+            <p className="text-secondary text-center py-2">
               Registered on
             </p>
             <div className="flex justify-center items-center gap-4 flex-wrap ">
@@ -137,7 +137,7 @@ const Footer = () => {
             <div className="h-px my-8 border-0 bg-gray-600" />
             <p
               id="copyright"
-              className="text-[14px] md:text-[18px] cursor-default text-center text-secondary"
+              className="cursor-default text-center text-secondary"
             >
               © 2018-<span> {currentYear} </span>
               <span className="font-bold">leormedia.com.</span> All Rights

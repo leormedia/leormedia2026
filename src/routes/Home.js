@@ -248,7 +248,7 @@ const HomePage = () => {
 
   const heroData = {
     Events: {
-      title: "EVENTS MANAGEMENT",
+      title: "EVENT MANAGEMENT",
       desc: "Unforgettable experiences. From luxury weddings to high-impact corporate launches.",
       bg: Eventmanagementhomeslider,
       link: "/services/events"
@@ -306,13 +306,13 @@ const HomePage = () => {
 
           {/* Main Top Header (Positioned at Top) */}
           <div className="mt-10">
-            <h2 className="text-[28px] md:text-[45px] font-bold text-white font-TuskerGrotesk uppercase tracking-wider">
+            <h2 className="font-bold text-white font-TuskerGrotesk uppercase tracking-wider">
               <span className="block">
                 Crafting Extraordinary 
                 <span className="block text-primary">Events & Creative Digital Success</span>
               </span>
             </h2>
-            <p className="text-[14px] md:text-[18px] mt-2 text-white font-medium opacity-80 tracking-widest uppercase">
+            <p className="mt-2 text-white font-medium opacity-80 tracking-widest uppercase">
               Since 2016
             </p>
           </div>
@@ -321,14 +321,14 @@ const HomePage = () => {
           <div className="w-full max-w-2xl flex flex-col items-center">
             <h1
               key={selected}
-              className="text-[28px] md:text-[45px] font-extrabold text-white font-TuskerGrotesk tracking-wider uppercase animate-fade-in-up"
+              className="font-extrabold text-white font-TuskerGrotesk tracking-wider uppercase animate-fade-in-up"
             >
               <span className="block text-primary drop-shadow-[0_4px_20px_rgba(255,165,0,0.4)]">
                 {heroData[selected].title}
               </span>
             </h1>
 
-            <p className="text-[14px] md:text-[18px] text-white mt-4 mb-8 opacity-90 leading-relaxed font-light">
+            <p className="text-white mt-4 mb-8 opacity-90 leading-relaxed font-light">
               {heroData[selected].desc}
             </p>
 
@@ -366,18 +366,18 @@ const HomePage = () => {
             {/* Left Column: Mission & Journey */}
             <div className="mb-12 relative z-10">
               <div className="mb-10 text-center">
-                <h3 className="text-[28px] md:text-[45px] font-bold mb-8">
+                <h3 className="font-bold mb-8">
                   Creating Memories,
                 </h3>
                  <span className="text-primary">Delivering Excellence.</span>
 
-                <p className="text-[14px] md:text-[18px] text-balck leading-relaxed mb-6">
+                <p className="text-balck leading-relaxed mb-6">
                   Leor Media has been successfully organizing small to big scale weddings since 2016. We create the
                   perfect weddings for customers right from the planning to its execution. Our personalized wedding
                   packages and creative works, add that glam to your wedding while keeping customers budget in
                   mind.
                 </p>
-                <p className="text-[14px] md:text-[18px] text-black leading-relaxed">
+                <p className="text-black leading-relaxed">
                   Our packages incorporate even minute details from venue selection, theme recommendation, menu options
                   and to hospitality so that we can make worry-free big day. We believe making memories are the best gifts
                   to any events for which Leor Media strives 100% to make them more beautiful.
@@ -400,7 +400,7 @@ const HomePage = () => {
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[12px] font-semibold uppercase tracking-widest mb-4">
               Our Methodology
             </span>
-            <h3 className="text-[28px] md:text-[45px] font-extrabold mb-12 font-TuskerGrotesk tracking-wide text-gray-900">
+            <h3 className="font-extrabold mb-12 font-TuskerGrotesk tracking-wide text-gray-900">
               OUR PROFESSIONAL <span className="text-primary">WORK PROCESS</span>
             </h3>
 
@@ -571,10 +571,10 @@ const HomePage = () => {
                       <span className="text-[12px] font-extrabold uppercase tracking-widest text-primary mb-2">
                         STAGE {item.step}
                       </span>
-                      <h4 className="text-[28px] md:text-[45px] font-extrabold text-gray-900 mb-4 uppercase tracking-wider">
+                      <h4 className="font-extrabold text-gray-900 mb-4 uppercase tracking-wider">
                         {item.title}
                       </h4>
-                      <p className="text-[14px] md:text-[18px] text-gray-600 leading-relaxed max-w-md mx-auto">
+                      <p className="text-gray-600 leading-relaxed max-w-md mx-auto">
                         {item.desc}
                       </p>
                     </div>
@@ -638,10 +638,10 @@ const HomePage = () => {
     
     {/* Header - Tightened margins and text sizes */}
     <div className="text-center mb-10">
-      <h2 className="text-[28px] md:text-[45px] font-bold mb-2 font-TuskerGrotesk tracking-wide uppercase">
+      <h2 className="font-bold mb-2 font-TuskerGrotesk tracking-wide uppercase">
         Our Track Record
       </h2>
-      <p className="text-[14px] md:text-[18px] text-white/80 font-light max-w-xl mx-auto">
+      <p className="text-white/80 font-light max-w-xl mx-auto">
         A decade of excellence, hundreds of projects, and thousands of happy memories.
       </p>
     </div>
@@ -691,10 +691,10 @@ const HomePage = () => {
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[12px] font-bold uppercase tracking-widest mb-4">
             UNFORGETTABLE EXPERIENCES
           </span>
-          <h2 className="text-[28px] md:text-[45px] font-extrabold mb-4 font-TuskerGrotesk tracking-wide">
+          <h2 className="font-extrabold mb-4 font-TuskerGrotesk tracking-wide">
             OUR <span className="text-primary">SERVICES</span>
           </h2>
-          <p className="text-[14px] md:text-[18px] text-gray-200 max-w-2xl mx-auto tracking-wide">
+          <p className="text-gray-200 max-w-2xl mx-auto tracking-wide">
             What we provide at Leor Media to craft your memorable events and creative digital success stories.
           </p>
         </div>
@@ -725,13 +725,13 @@ const HomePage = () => {
                     <div className="text-white/80 text-[10px] md:text-[20px] font-semibold tracking-widest uppercase mb-2">
                       {sec.subtitle}
                     </div>
-                    <h1 className="text-[28px] md:text-[45px] font-bold text-white leading-tight">
+                    <h1 className="font-bold text-white leading-tight">
                       {sec.title}
                     </h1>
                   </div>
 
                   {/* Description */}
-                  <p className="text-[14px] md:text-[18px] text-white/90 mb-6 md:mb-8 leading-relaxed max-w-lg">
+                  <p className="text-white/90 mb-6 md:mb-8 leading-relaxed max-w-lg">
                     {sec.description}
                   </p>
 
@@ -831,10 +831,10 @@ const HomePage = () => {
                 <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[14px] font-semibold mb-4">
                   LET'S TALK
                 </span>
-                <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 mb-4 leading-tight">
+                <h2 className="font-bold text-gray-900 mb-4 leading-tight">
                   Get in <span className="text-primary">Touch</span>
                 </h2>
-                <p className="text-[14px] md:text-[18px] text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   Have a project in mind or need expert advice? Let's discuss how we can bring your ideas to life.
                 </p>
               </div>
@@ -849,8 +849,8 @@ const HomePage = () => {
                     <FaPhone className="text-[18px]" />
                   </div>
                   <div>
-                    <p className="text-[14px] md:text-[18px] text-gray-400 uppercase tracking-wider font-semibold">Call Us</p>
-                    <p className="text-[14px] md:text-[18px] font-bold text-gray-800">
+                    <p className="text-gray-400 uppercase tracking-wider font-semibold">Call Us</p>
+                    <p className="font-bold text-gray-800">
                       {GlobalData.company.companyPhone}
                     </p>
                   </div>
@@ -864,8 +864,8 @@ const HomePage = () => {
                     <FaEnvelope className="text-[18px]" />
                   </div>
                   <div>
-                    <p className="text-[14px] md:text-[18px] text-gray-400 uppercase tracking-wider font-semibold">Email Us</p>
-                    <p className="text-[14px] md:text-[18px] font-bold text-gray-800">
+                    <p className="text-gray-400 uppercase tracking-wider font-semibold">Email Us</p>
+                    <p className="font-bold text-gray-800">
                       {GlobalData.company.companyEmail}
                     </p>
                   </div>
@@ -881,8 +881,8 @@ const HomePage = () => {
                     <FaWhatsapp className="text-[18px]" />
                   </div>
                   <div>
-                    <p className="text-[14px] md:text-[18px] text-gray-400 uppercase tracking-wider font-semibold">WhatsApp Us</p>
-                    <p className="text-[14px] md:text-[18px] font-bold text-gray-800">
+                    <p className="text-gray-400 uppercase tracking-wider font-semibold">WhatsApp Us</p>
+                    <p className="font-bold text-gray-800">
                       Chat with our team
                     </p>
                   </div>

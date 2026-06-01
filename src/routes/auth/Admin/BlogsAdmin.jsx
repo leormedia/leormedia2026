@@ -85,7 +85,7 @@ const BlogsAdmin = () => {
             </Helmet>
 
             <div className="flex justify-between items-center mb-6">
-                <h1 className="text-3xl font-bold text-gray-800">Manage Blogs</h1>
+                <h1 className="font-bold text-gray-800">Manage Blogs</h1>
                 {!isEditing && (
                     <button 
                         onClick={() => {
@@ -102,7 +102,7 @@ const BlogsAdmin = () => {
             {isEditing ? (
                 <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                     <div className="flex justify-between items-center mb-6">
-                        <h2 className="text-xl font-bold text-gray-800">{currentBlog.id ? 'Edit Blog' : 'Create New Blog'}</h2>
+                        <h2 className="font-bold text-gray-800">{currentBlog.id ? 'Edit Blog' : 'Create New Blog'}</h2>
                         <button onClick={() => setIsEditing(false)} className="text-gray-500 hover:text-gray-800"><FiX size={24} /></button>
                     </div>
                     <form onSubmit={handleSubmit} className="space-y-6">

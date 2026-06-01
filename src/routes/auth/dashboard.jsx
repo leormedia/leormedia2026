@@ -14,7 +14,7 @@ export default function Dashboard() {
       </Helmet>
 
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-800">Welcome back, {user?.identifier || 'Admin'}</h1>
+        <h1 className="font-bold text-gray-800">Welcome back, {user?.identifier || 'Admin'}</h1>
         <p className="text-gray-600 mt-2">Here is what's happening with your platform today.</p>
       </div>
 
@@ -25,7 +25,7 @@ export default function Dashboard() {
           </div>
           <div>
             <h3 className="font-bold text-gray-800">Manage Blogs</h3>
-            <p className="text-sm text-gray-500">Create & edit content</p>
+            <p className="text-gray-500">Create & edit content</p>
           </div>
         </Link>
 
@@ -35,7 +35,7 @@ export default function Dashboard() {
           </div>
           <div>
             <h3 className="font-bold text-gray-800">Analytics</h3>
-            <p className="text-sm text-gray-500">View traffic data</p>
+            <p className="text-gray-500">View traffic data</p>
           </div>
         </Link>
 
@@ -45,7 +45,7 @@ export default function Dashboard() {
           </div>
           <div>
             <h3 className="font-bold text-gray-800">Contact Forms</h3>
-            <p className="text-sm text-gray-500">View submissions</p>
+            <p className="text-gray-500">View submissions</p>
           </div>
         </Link>
 
@@ -55,7 +55,7 @@ export default function Dashboard() {
           </div>
           <div>
             <h3 className="font-bold text-gray-800">Leads Manager</h3>
-            <p className="text-sm text-gray-500">Track inquiries</p>
+            <p className="text-gray-500">Track inquiries</p>
           </div>
         </Link>
       </div>

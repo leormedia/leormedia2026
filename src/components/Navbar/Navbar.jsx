@@ -62,7 +62,7 @@ const DropdownMenu = memo(
                   key={catIdx}
                   className="w-1/5 min-w-[200px] px-4 border-r border-gray-100 last:border-0"
                 >
-                  <h3 className="text-yellow-600 font-bold text-[11px] uppercase tracking-widest border-b border-yellow-500/20 pb-2 mb-4">
+                  <h3 className="text-yellow-600 font-bold uppercase tracking-widest border-b border-yellow-500/20 pb-2 mb-4">
                     {category.category}
                   </h3>
                   <div className="space-y-1">
@@ -123,7 +123,7 @@ const DropdownMenu = memo(
                               <span className="font-semibold block mb-0.5">
                                 {link.title}
                               </span>
-                              <p className="text-[11px] text-gray-500 leading-tight">
+                              <p className="text-gray-500 leading-tight">
                                 {link.description}
                               </p>
                             </div>
@@ -146,12 +146,12 @@ const DropdownMenu = memo(
               />
               <div className="text-center">
                 <a href="/services" className="inline-block">
-                  <h2 className="text-gray-900 hover:text-yellow-400 cursor-pointer font-bold text-lg flex items-center gap-2 transition-colors">
+                  <h2 className="text-gray-900 hover:text-yellow-400 cursor-pointer font-bold flex items-center gap-2 transition-colors">
                     Explore All Services{" "}
                     <span className="text-yellow-500">➤</span>
                   </h2>
                 </a>
-                <p className="text-sm text-gray-600 mt-2">
+                <p className="text-gray-600 mt-2">
                   Discover our comprehensive suite of digital solutions.
                 </p>
               </div>
@@ -559,7 +559,7 @@ const Navbar = () => {
                         {menu.links[0]?.category ? (
                           menu.links.map((category, catIdx) => (
                             <div key={catIdx} className="mb-6 last:mb-0">
-                              <h4 className="text-[10px] font-bold text-yellow-600 uppercase tracking-widest mb-3">
+                              <h4 className="font-bold text-yellow-600 uppercase tracking-widest mb-3">
                                 {category.category}
                               </h4>
                               <div className="space-y-3">
@@ -624,7 +624,7 @@ const Navbar = () => {
 
           {/* Mobile Contact Footer */}
           <div className="mt-8 pt-8 border-t border-gray-200">
-            <h3 className="text-yellow-500 font-semibold mb-4 uppercase text-sm tracking-wider">
+            <h3 className="text-yellow-500 font-semibold mb-4 uppercase tracking-wider">
               Contact Us
             </h3>
             <div className="space-y-4">
