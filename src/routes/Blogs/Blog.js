@@ -1,13 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import BlogsData from "../../assets/data/BlogsData";
+import axios from 'axios';
 import BlogCoverimage from '../../assets/CoverImages/BlogCover.webp';
 import seoData from "../../assets/data/seo.json";
 
 const { title, description, keywords, canonical, ogImage } = seoData.blogs;
 
 function BlogPage() {
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await axios.get('/api/blogs?status=published');
+        setBlogs(response.data);
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchBlogs();
+  }, []);
+
   const limitContent = (content) => {
     const strippedContent = content.replace(/<[^>]*>/g, ' ');
     const words = strippedContent.trim().split(/\s+/);
@@ -59,8 +76,10 @@ function BlogPage() {
         {/* Blog Grid */}
         <section className="px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {BlogsData.length > 0 ? (
-              BlogsData.map(post => (
+            {loading ? (
+              <div className="col-span-full text-center py-20 text-gray-500">Loading blogs...</div>
+            ) : blogs.length > 0 ? (
+              blogs.map(post => (
                 <Link to={`/blogs/${post.slug}`} key={post.slug} className="group">
                   <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col h-full">
                     <div className="relative h-56 overflow-hidden">
@@ -71,13 +90,13 @@ function BlogPage() {
                       />
                       <div className="absolute top-4 left-4">
                         <span className="bg-primary text-white text-[12px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                          Tech Insights
+                          {post.category || 'Tech Insights'}
                         </span>
                       </div>
                     </div>
                     <div className="p-6 flex flex-col flex-1">
                       <div className="flex items-center text-[12px] text-gray-400 mb-3 space-x-2">
-                        <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                        <span>{post.date ? new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : ''}</span>
                         <span>•</span>
                         <span>5 min read</span>
                       </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaTimes, FaPaperPlane } from 'react-icons/fa';
 import { CONTACTUS_API } from "../../hooks/Apis";
-import leoGif from "../../assets/aichatbot/AltasWaving.gif";
+import leoGif from "../../assets/aichatbot/chatbot_Floating Robot.webp";
 import chatbotIcon from "../../assets/aichatbot/chatbot_Floating Robot.webp";
 import leoThink from "../../assets/aichatbot/chatbotcsd_think.png";
 import leoAnswering from "../../assets/aichatbot/chatbotcsd_answering.png";

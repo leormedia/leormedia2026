@@ -1,25 +1,35 @@
 // FullBlog.js
 
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import BlogsData from "../../assets/data/BlogsData"; // Import the local JS file
-import { Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+import axios from 'axios';
+
 function FullBlog() {
-  const [post, setPost] = useState({});
+  const [post, setPost] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { slug } = useParams();
 
   useEffect(() => {
-    const foundPost = BlogsData.find(post => post.slug === slug); // Find the post in the local data
-    if (foundPost) {
-      setPost(foundPost);
-    } else {
-      setError({ message: 'Post not found' });
-    }
+    const fetchBlog = async () => {
+      try {
+        const response = await axios.get(`/api/blogs/${slug}`);
+        setPost(response.data);
+      } catch (err) {
+        setError({ message: 'Post not found or server error' });
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchBlog();
   }, [slug]);
 
+  if (loading) {
+    return <div className="text-center py-20">Loading...</div>;
+  }
+
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <div className="text-center py-20 text-red-500">Error: {error.message}</div>;
   }
 
   const renderContent = () => {

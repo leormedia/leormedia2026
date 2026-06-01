@@ -57,9 +57,26 @@ import { EventsDetailPageData } from "./routes/Services/EventsPage/EventsDetailP
 
 
 
+import PrivateRoute from "./hooks/PrivateRoute";
+import AdminNavbar from "./routes/auth/Navbar/AdminNavbar";
+import Login from "./routes/auth/login";
+import Dashboard from "./routes/auth/dashboard";
+import BlogsAdmin from "./routes/auth/Admin/BlogsAdmin";
+import Leads from "./routes/auth/Admin/Leads";
+import AdminContactus from "./routes/auth/Admin/AdminContactus";
+import GoogleAnalytics from "./routes/auth/Admin/GoogleAnalytics";
+
 const routes = [
   { path: "/", element: <Home /> },
   { path: "/*", element: <Error404 /> },
+  
+  // Admin Routes
+  { path: "/auth/login", element: <Login /> },
+  { path: "/auth/dashboard", element: <PrivateRoute><Dashboard /></PrivateRoute> },
+  { path: "/auth/dashboard/blogs", element: <PrivateRoute><BlogsAdmin /></PrivateRoute> },
+  { path: "/auth/leads", element: <PrivateRoute><Leads /></PrivateRoute> },
+  { path: "/auth/contactus", element: <PrivateRoute><AdminContactus /></PrivateRoute> },
+  { path: "/auth/google-analytics", element: <PrivateRoute><GoogleAnalytics /></PrivateRoute> },
 
 
 
@@ -151,16 +168,18 @@ export function App() {
     }
   }, [location.pathname]);
 
-  // Any route that starts with "/auth" (e.g., /auth/dashboard, /auth/contactus)
-  const isAuthRoute =
-    location.pathname.startsWith("/auth") &&
-
+  useEffect(() => {
     window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  // Any route that starts with "/auth" except the login page itself
+  const isAuthRoute = location.pathname.startsWith("/auth") && location.pathname !== "/auth/login";
 
   return (
     <>
       <LogoLoader isLoading={isLoading} />
-      {!isAuthRoute && <Navbar />}
+      {isAuthRoute && <AdminNavbar />}
+      {!isAuthRoute && location.pathname !== "/auth/login" && <Navbar />}
 
       <div className="flex flex-1">
         <div
@@ -173,7 +192,7 @@ export function App() {
             ))}
           </Routes>
 
-          {!isAuthRoute && <Footer />}
+          {!isAuthRoute && location.pathname !== "/auth/login" && <Footer />}
         </div>
       </div>
     </>
