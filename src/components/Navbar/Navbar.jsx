@@ -62,9 +62,9 @@ const DropdownMenu = memo(
                   key={catIdx}
                   className="w-1/5 min-w-[200px] px-4 border-r border-gray-100 last:border-0"
                 >
-                  <h3 className="text-yellow-600 font-bold uppercase tracking-widest border-b border-yellow-500/20 pb-2 mb-4">
+                  <h8 className="text-yellow-600 font-bold uppercase tracking-widest border-b border-yellow-500/20 pb-2 mb-4">
                     {category.category}
-                  </h3>
+                  </h8>
                   <div className="space-y-1">
                     {category.links.map((link) => (
                       <a

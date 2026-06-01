@@ -88,7 +88,7 @@ const LogoLoader = ({ isLoading }) => {
           phase === "logo" ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
         }`}
       >
-        <div className="relative w-48 sm:w-64 md:w-80 overflow-hidden py-4">
+        <div className="relative flex flex-col items-center justify-center overflow-hidden py-4 px-8">
           {/* A reveal wipe effect for the logo */}
           <div 
             className="absolute inset-0 bg-[#fdfdfd] z-10 origin-right"
@@ -99,8 +99,11 @@ const LogoLoader = ({ isLoading }) => {
           <img
             src={logoLoaderSvg}
             alt="Leor Media Logo"
-            className="w-[200px] h-[200px] drop-shadow-xl"
+            className="w-[200px] h-[200px] drop-shadow-xl mx-auto"
           />
+          <p className="mt-1 text-gray-400 font-bold tracking-[0.3em] uppercase text-xs sm:text-sm text-center">
+            Since 2016
+          </p>
         </div>
       </div>
       

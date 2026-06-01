@@ -301,43 +301,22 @@ const HomePage = () => {
           />
         </div>
 
-        {/* Content Container (Full Height, Flex Between) */}
-        <div className="relative z-10 w-full h-full max-w-6xl mx-auto px-6 py-12 md:py-20 flex flex-col items-center text-center justify-between">
+        {/* Content Container (Bottom Aligned) */}
+        <div className="relative z-10 w-full h-full max-w-6xl mx-auto px-6 pb-24 pt-12 flex flex-col items-center text-center justify-end">
 
-          {/* Main Top Header (Positioned at Top) */}
-          <div className="mt-10">
-            <h2 className="font-bold text-white font-TuskerGrotesk uppercase tracking-wider">
+          {/* Main Hero Header */}
+          <div className="animate-fade-in-up">
+            <h1 className="font-extrabold text-white font-TuskerGrotesk uppercase tracking-wider leading-tight drop-shadow-md">
               <span className="block">
                 Crafting Extraordinary 
-                <span className="block text-primary">Events & Creative Digital Success</span>
               </span>
-            </h2>
-            <p className="mt-2 text-white font-medium opacity-80 tracking-widest uppercase">
-              Since 2016
-            </p>
-          </div>
-
-          {/* Slider Content (Positioned at Bottom) */}
-          <div className="w-full max-w-2xl flex flex-col items-center">
-            <h1
-              key={selected}
-              className="font-extrabold text-white font-TuskerGrotesk tracking-wider uppercase animate-fade-in-up"
-            >
-              <span className="block text-primary drop-shadow-[0_4px_20px_rgba(255,165,0,0.4)]">
-                {heroData[selected].title}
+              <span className="block text-primary drop-shadow-[0_4px_20px_rgba(255,165,0,0.4)] mt-2">
+                Events & Creative Digital Success
               </span>
             </h1>
-
-            <p className="text-white mt-4 mb-8 opacity-90 leading-relaxed font-light">
-              {heroData[selected].desc}
+            <p className="mt-4 text-white font-medium opacity-80 tracking-[0.2em] uppercase">
+              Since 2016
             </p>
-
-            <Link
-              to={heroData[selected].link}
-              className="inline-flex mx-auto px-8 py-3.5 bg-primary text-black text-[14px] md:text-[16px] font-bold rounded-full hover:bg-white transition-all duration-300 items-center gap-2 group shadow-lg hover:shadow-primary/50"
-            >
-              Enquiry now! <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-            </Link>
           </div>
 
         </div>
@@ -394,290 +373,51 @@ const HomePage = () => {
       </section>
 
 
-         {/* CTA & Process Slider Section */}
-              <section id="about" className="py-16 md:py-24 bg-white text-black">
-          <div className="text-center mt-24 pt-16 border-t border-gray-100 max-w-4xl mx-auto">
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[12px] font-semibold uppercase tracking-widest mb-4">
-              Our Methodology
-            </span>
-            <h3 className="font-extrabold mb-12 font-TuskerGrotesk tracking-wide text-gray-900">
-              OUR PROFESSIONAL <span className="text-primary">WORK PROCESS</span>
-            </h3>
 
-            {/* Premium Stepper Headers */}
-            <div className="relative flex justify-between items-center mb-12 max-w-2xl mx-auto px-4">
-              {/* Stepper background line */}
-              <div className="absolute left-8 right-8 top-1/2 h-[2px] bg-gray-100 -translate-y-1/2 z-0">
-                <div
-                  className="h-full bg-primary transition-all duration-500 ease-out"
-                  style={{ width: `${(activeProcessIndex / 3) * 100}%` }}
-                ></div>
-              </div>
+      {/* Track Record Section */}
+      <section className="py-20 md:py-28 bg-[#f37a20] text-white overflow-hidden border-y border-gray-900">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-16 md:mb-24 gap-8">
+            <div className="max-w-xl">
+              <span className="text-white font-bold tracking-[0.2em] uppercase text-[12px] mb-4 block">Proven Experience</span>
+              <h2 className="font-extrabold font-TuskerGrotesk uppercase tracking-wider text-5xl md:text-6xl text-white leading-tight">
+                Our Track Record
+              </h2>
+            </div>
+            <p className="text-white font-light leading-relaxed max-w-md lg:text-right border-l lg:border-l-0 lg:border-r border-primary/30 pl-6 lg:pl-0 lg:pr-6">
+              A decade of excellence, hundreds of ambitious projects, and thousands of unforgettable memories crafted flawlessly.
+            </p>
+          </div>
 
-              {["Understand", "Plan", "Execution", "Delivery"].map((stepTitle, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setActiveProcessIndex(idx)}
-                  className="relative z-10 flex flex-col items-center focus:outline-none group"
-                >
-                  <div
-                    className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-[14px] border transition-all duration-500 shadow-md ${activeProcessIndex === idx
-                      ? "bg-primary text-white border-primary scale-110 shadow-primary/20"
-                      : "bg-white text-gray-400 border-gray-100 group-hover:border-primary/30 group-hover:text-primary"
-                      }`}
-                  >
-                    0{idx + 1}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+            {[
+              { value: "10+", label: "Years Experience" },
+              { value: "600+", label: "Projects Delivered" },
+              { value: "2K+", label: "Events & Projects" },
+              { value: "100%", label: "Client Satisfaction" }
+            ].map((stat, idx) => (
+              <div key={idx} className="group relative">
+                {/* Subtle hover background highlight */}
+                <div className="absolute -inset-4 bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="relative z-10 border-t-2 border-gray-800 group-hover:border-primary transition-colors duration-500 pt-6 md:pt-8">
+                  <div className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-3 font-TuskerGrotesk tracking-wide group-hover:text-primary transition-colors duration-500">
+                    {stat.value}
                   </div>
-                  <span
-                    className={`absolute top-12 text-[12px] font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-500 ${activeProcessIndex === idx ? "text-primary opacity-100 translate-y-0" : "text-gray-400 opacity-60 group-hover:opacity-100"
-                      }`}
-                  >
-                    {stepTitle}
-                  </span>
-                </button>
-              ))}
-            </div>
-
-            {/* Slider Container */}
-            <div className="relative flex items-center justify-center px-4 md:px-12 mb-16">
-              {/* Left Arrow Button */}
-              <button
-                onClick={() => setActiveProcessIndex((prev) => (prev === 0 ? 3 : prev - 1))}
-                className="absolute left-0 md:left-4 z-20 w-12 h-12 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group"
-              >
-                <svg className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-
-              {/* Steps Card Slider Stage */}
-              <div className="w-full max-w-xl transition-all duration-500 transform">
-                {[
-                  {
-                    step: "01",
-                    title: "Understand",
-                    desc: "Requirement Analysis. We carefully analyze your goals, expectations, brand parameters, and constraints to establish a bulletproof strategic alignment.",
-                    color: "from-blue-500 to-indigo-600",
-                    shadow: "shadow-indigo-500/10 hover:shadow-indigo-500/20",
-                    icon: (
-                      <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                          <radialGradient id="3d-grad-1" cx="30%" cy="30%" r="70%">
-                            <stop offset="0%" stopColor="#818CF8" />
-                            <stop offset="60%" stopColor="#4F46E5" />
-                            <stop offset="100%" stopColor="#312E81" />
-                          </radialGradient>
-                          <filter id="3d-shadow-1" x="-10%" y="-10%" width="130%" height="130%">
-                            <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#4F46E5" floodOpacity="0.4" />
-                          </filter>
-                        </defs>
-                        <circle cx="32" cy="32" r="24" fill="url(#3d-grad-1)" filter="url(#3d-shadow-1)" />
-                        <circle cx="26" cy="22" r="10" fill="#ffffff" opacity="0.15" />
-                        <path d="M28 26C28 23.7909 29.7909 22 32 22C34.2091 22 36 23.7909 36 26C36 27.8244 34.7813 28.5 33.75 29.25C32.8438 29.9062 32 30.8125 32 32" stroke="white" strokeWidth="3" strokeLinecap="round" />
-                        <circle cx="32" cy="38" r="2" fill="white" />
-                      </svg>
-                    )
-                  },
-                  {
-                    step: "02",
-                    title: "Plan",
-                    desc: "Strategy & Design. Laying down creative pathways, robust budgets, wireframes, mood boards, and highly organized schedules to streamline execution.",
-                    color: "from-amber-400 to-orange-500",
-                    shadow: "shadow-orange-500/10 hover:shadow-orange-500/20",
-                    icon: (
-                      <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                          <radialGradient id="3d-grad-2" cx="30%" cy="30%" r="70%">
-                            <stop offset="0%" stopColor="#FBBF24" />
-                            <stop offset="60%" stopColor="#F97316" />
-                            <stop offset="100%" stopColor="#7C2D12" />
-                          </radialGradient>
-                          <filter id="3d-shadow-2" x="-10%" y="-10%" width="130%" height="130%">
-                            <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#F97316" floodOpacity="0.4" />
-                          </filter>
-                        </defs>
-                        <rect x="12" y="12" width="40" height="40" rx="10" fill="url(#3d-grad-2)" filter="url(#3d-shadow-2)" transform="rotate(-5 32 32)" />
-                        <circle cx="24" cy="22" r="8" fill="#ffffff" opacity="0.15" />
-                        <path d="M22 28L28 34L42 20" stroke="white" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M22 38H42" stroke="white" strokeWidth="3" strokeLinecap="round" opacity="0.7" />
-                      </svg>
-                    )
-                  },
-                  {
-                    step: "03",
-                    title: "Execution",
-                    desc: "Meticulous Implementation. Our cross-functional creative team goes all in, launching campaigns, coordinating high-end decoration, and monitoring execution dynamically.",
-                    color: "from-pink-500 to-rose-600",
-                    shadow: "shadow-rose-500/10 hover:shadow-rose-500/20",
-                    icon: (
-                      <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                          <radialGradient id="3d-grad-3" cx="30%" cy="30%" r="70%">
-                            <stop offset="0%" stopColor="#F472B6" />
-                            <stop offset="60%" stopColor="#E11D48" />
-                            <stop offset="100%" stopColor="#4C0519" />
-                          </radialGradient>
-                          <filter id="3d-shadow-3" x="-10%" y="-10%" width="130%" height="130%">
-                            <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#E11D48" floodOpacity="0.4" />
-                          </filter>
-                        </defs>
-                        <polygon points="32,8 52,44 12,44" fill="url(#3d-grad-3)" filter="url(#3d-shadow-3)" />
-                        <circle cx="32" cy="28" r="6" fill="#ffffff" opacity="0.2" />
-                        <path d="M32 20V34" stroke="white" strokeWidth="3.5" strokeLinecap="round" />
-                        <path d="M26 30H38" stroke="white" strokeWidth="3.5" strokeLinecap="round" />
-                      </svg>
-                    )
-                  },
-                  {
-                    step: "04",
-                    title: "Delivery",
-                    desc: "Final Result & Support. Launching your celebration or campaign flawlessly, measuring data impact, delivering assets, and offering long-term ongoing consultation.",
-                    color: "from-emerald-400 to-teal-600",
-                    shadow: "shadow-teal-500/10 hover:shadow-teal-500/20",
-                    icon: (
-                      <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                          <radialGradient id="3d-grad-4" cx="30%" cy="30%" r="70%">
-                            <stop offset="0%" stopColor="#34D399" />
-                            <stop offset="60%" stopColor="#0D9488" />
-                            <stop offset="100%" stopColor="#115E59" />
-                          </radialGradient>
-                          <filter id="3d-shadow-4" x="-10%" y="-10%" width="130%" height="130%">
-                            <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#0D9488" floodOpacity="0.4" />
-                          </filter>
-                        </defs>
-                        <circle cx="32" cy="32" r="22" fill="url(#3d-grad-4)" filter="url(#3d-shadow-4)" />
-                        <path d="M24 30L30 36L44 22" stroke="white" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M20 44H44" stroke="white" strokeWidth="3" strokeLinecap="round" opacity="0.6" />
-                      </svg>
-                    )
-                  }
-                ].map((item, idx) => {
-                  if (activeProcessIndex !== idx) return null;
-                  return (
-                    <div
-                      key={idx}
-                      className="w-full bg-white rounded-3xl p-8 md:p-12 border border-gray-100 shadow-[0_30px_70px_rgba(0,0,0,0.06)] transition-all duration-500 hover:scale-102 flex flex-col items-center text-center relative overflow-hidden animate-fade-in-up"
-                    >
-                      {/* Glowing decorative corner */}
-                      <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${item.color} opacity-[0.06] rounded-bl-full`}></div>
-
-                      {/* 3D Premium Icon */}
-                      <div className="mb-6 transform hover:scale-115 hover:rotate-3 transition-transform duration-500">
-                        {item.icon}
-                      </div>
-
-                      {/* Info */}
-                      <span className="text-[12px] font-extrabold uppercase tracking-widest text-primary mb-2">
-                        STAGE {item.step}
-                      </span>
-                      <h4 className="font-extrabold text-gray-900 mb-4 uppercase tracking-wider">
-                        {item.title}
-                      </h4>
-                      <p className="text-gray-600 leading-relaxed max-w-md mx-auto">
-                        {item.desc}
-                      </p>
-                    </div>
-                  );
-                })}
+                  <div className="text-xs md:text-sm text-white uppercase tracking-widest font-medium">
+                    {stat.label}
+                  </div>
+                </div>
               </div>
-
-              {/* Right Arrow Button */}
-              <button
-                onClick={() => setActiveProcessIndex((prev) => (prev === 3 ? 0 : prev + 1))}
-                className="absolute right-0 md:right-4 z-20 w-12 h-12 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group"
-              >
-                <svg className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-
-            {/* Action buttons */}
-            <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <Link
-                to="/contactus"
-                className="inline-flex items-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/20"
-              >
-                Let's Create Something Amazing
-                <svg
-                  className="w-5 h-5 ml-3"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  ></path>
-                </svg>
-              </Link>
-              <Link
-                to="/get-quotation"
-                className="inline-flex items-center px-8 py-4 bg-white text-primary border-2 border-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 shadow-md shadow-gray-100"
-              >
-                <FaFileInvoiceDollar className="mr-2" />
-                Get a Quotation
-              </Link>
-            </div>
-          </div>
-</section>
-
-      {/* Fun Factor Section */}
-     <section className="py-12 md:py-16 bg-primary text-white overflow-hidden relative">
-  {/* Subtle Background Elements (Scaled down slightly and pushed to edges) */}
-  <div className="absolute inset-0 opacity-10 pointer-events-none">
-    <div className="absolute -top-10 -left-10 w-48 h-48 border-[6px] border-white rounded-full"></div>
-    <div className="absolute -bottom-10 -right-10 w-72 h-72 border-[6px] border-white rounded-full"></div>
-  </div>
-
-  <div className="container mx-auto px-4 md:px-6 relative z-10 max-w-5xl">
-    
-    {/* Header - Tightened margins and text sizes */}
-    <div className="text-center mb-10">
-      <h2 className="font-bold mb-2 font-TuskerGrotesk tracking-wide uppercase">
-        Our Track Record
-      </h2>
-      <p className="text-white/80 font-light max-w-xl mx-auto">
-        A decade of excellence, hundreds of projects, and thousands of happy memories.
-      </p>
-    </div>
-
-    {/* Stats Grid - Reduced gaps and card padding */}
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-      {[
-        { value: "10+", label: "Years Experience", icon: "⏳" },
-        { value: "600+", label: "Projects Delivered", icon: "💼" },
-        { value: "2000+", label: "Events & Projects", icon: "🎉" },
-        { value: "100%", label: "Client Satisfaction", icon: "😊" }
-      ].map((stat, idx) => (
-        <div 
-          key={idx} 
-          className="bg-white/10 backdrop-blur-sm p-5 md:p-6 rounded-2xl border border-white/20 transform hover:-translate-y-1.5 transition-all duration-300 text-center flex flex-col justify-center items-center group shadow-sm hover:shadow-lg"
-        >
-          {/* Icon with a subtle hover bounce */}
-          <div className="text-[24px] md:text-[30px] mb-2 group-hover:scale-110 transition-transform duration-300">
-            {stat.icon}
-          </div>
-          
-          {/* Value */}
-          <div className="text-[30px] md:text-[36px] font-bold mb-1 font-TuskerGrotesk tracking-wide drop-shadow-sm">
-            {stat.value}
-          </div>
-          
-          {/* Label */}
-          <div className="text-[10px] md:text-[12px] font-medium text-white/80 uppercase tracking-wider">
-            {stat.label}
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-    
-  </div>
-</section>
+      </section>
+
+
+
+      <GoogleMapReviews />
+
 
      
 
@@ -985,7 +725,232 @@ const HomePage = () => {
       </section>
 
 
-      <GoogleMapReviews />
+      
+         {/* CTA & Process Slider Section */}
+              <section id="about" className="py-16 md:py-24 bg-white text-black">
+          <div className="text-center mt-24 pt-16 border-t border-gray-100 max-w-4xl mx-auto">
+            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[12px] font-semibold uppercase tracking-widest mb-4">
+              Our Methodology
+            </span>
+            <h3 className="font-extrabold mb-12 font-TuskerGrotesk tracking-wide text-gray-900">
+              OUR PROFESSIONAL <span className="text-primary">WORK PROCESS</span>
+            </h3>
+
+            {/* Premium Stepper Headers */}
+            <div className="relative flex justify-between items-center mb-12 max-w-2xl mx-auto px-4">
+              {/* Stepper background line */}
+              <div className="absolute left-8 right-8 top-1/2 h-[2px] bg-gray-100 -translate-y-1/2 z-0">
+                <div
+                  className="h-full bg-primary transition-all duration-500 ease-out"
+                  style={{ width: `${(activeProcessIndex / 3) * 100}%` }}
+                ></div>
+              </div>
+
+              {["Understand", "Plan", "Execution", "Delivery"].map((stepTitle, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setActiveProcessIndex(idx)}
+                  className="relative z-10 flex flex-col items-center focus:outline-none group"
+                >
+                  <div
+                    className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-[14px] border transition-all duration-500 shadow-md ${activeProcessIndex === idx
+                      ? "bg-primary text-white border-primary scale-110 shadow-primary/20"
+                      : "bg-white text-gray-400 border-gray-100 group-hover:border-primary/30 group-hover:text-primary"
+                      }`}
+                  >
+                    0{idx + 1}
+                  </div>
+                  <span
+                    className={`absolute top-12 text-[12px] font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-500 ${activeProcessIndex === idx ? "text-primary opacity-100 translate-y-0" : "text-gray-400 opacity-60 group-hover:opacity-100"
+                      }`}
+                  >
+                    {stepTitle}
+                  </span>
+                </button>
+              ))}
+            </div>
+
+            {/* Slider Container */}
+            <div className="relative flex items-center justify-center px-4 md:px-12 mb-16">
+              {/* Left Arrow Button */}
+              <button
+                onClick={() => setActiveProcessIndex((prev) => (prev === 0 ? 3 : prev - 1))}
+                className="absolute left-0 md:left-4 z-20 w-12 h-12 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group"
+              >
+                <svg className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+
+              {/* Steps Card Slider Stage */}
+              <div className="w-full max-w-xl transition-all duration-500 transform">
+                {[
+                  {
+                    step: "01",
+                    title: "Understand",
+                    desc: "Requirement Analysis. We carefully analyze your goals, expectations, brand parameters, and constraints to establish a bulletproof strategic alignment.",
+                    color: "from-blue-500 to-indigo-600",
+                    shadow: "shadow-indigo-500/10 hover:shadow-indigo-500/20",
+                    icon: (
+                      <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <radialGradient id="3d-grad-1" cx="30%" cy="30%" r="70%">
+                            <stop offset="0%" stopColor="#818CF8" />
+                            <stop offset="60%" stopColor="#4F46E5" />
+                            <stop offset="100%" stopColor="#312E81" />
+                          </radialGradient>
+                          <filter id="3d-shadow-1" x="-10%" y="-10%" width="130%" height="130%">
+                            <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#4F46E5" floodOpacity="0.4" />
+                          </filter>
+                        </defs>
+                        <circle cx="32" cy="32" r="24" fill="url(#3d-grad-1)" filter="url(#3d-shadow-1)" />
+                        <circle cx="26" cy="22" r="10" fill="#ffffff" opacity="0.15" />
+                        <path d="M28 26C28 23.7909 29.7909 22 32 22C34.2091 22 36 23.7909 36 26C36 27.8244 34.7813 28.5 33.75 29.25C32.8438 29.9062 32 30.8125 32 32" stroke="white" strokeWidth="3" strokeLinecap="round" />
+                        <circle cx="32" cy="38" r="2" fill="white" />
+                      </svg>
+                    )
+                  },
+                  {
+                    step: "02",
+                    title: "Plan",
+                    desc: "Strategy & Design. Laying down creative pathways, robust budgets, wireframes, mood boards, and highly organized schedules to streamline execution.",
+                    color: "from-amber-400 to-orange-500",
+                    shadow: "shadow-orange-500/10 hover:shadow-orange-500/20",
+                    icon: (
+                      <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <radialGradient id="3d-grad-2" cx="30%" cy="30%" r="70%">
+                            <stop offset="0%" stopColor="#FBBF24" />
+                            <stop offset="60%" stopColor="#F97316" />
+                            <stop offset="100%" stopColor="#7C2D12" />
+                          </radialGradient>
+                          <filter id="3d-shadow-2" x="-10%" y="-10%" width="130%" height="130%">
+                            <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#F97316" floodOpacity="0.4" />
+                          </filter>
+                        </defs>
+                        <rect x="12" y="12" width="40" height="40" rx="10" fill="url(#3d-grad-2)" filter="url(#3d-shadow-2)" transform="rotate(-5 32 32)" />
+                        <circle cx="24" cy="22" r="8" fill="#ffffff" opacity="0.15" />
+                        <path d="M22 28L28 34L42 20" stroke="white" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M22 38H42" stroke="white" strokeWidth="3" strokeLinecap="round" opacity="0.7" />
+                      </svg>
+                    )
+                  },
+                  {
+                    step: "03",
+                    title: "Execution",
+                    desc: "Meticulous Implementation. Our cross-functional creative team goes all in, launching campaigns, coordinating high-end decoration, and monitoring execution dynamically.",
+                    color: "from-pink-500 to-rose-600",
+                    shadow: "shadow-rose-500/10 hover:shadow-rose-500/20",
+                    icon: (
+                      <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <radialGradient id="3d-grad-3" cx="30%" cy="30%" r="70%">
+                            <stop offset="0%" stopColor="#F472B6" />
+                            <stop offset="60%" stopColor="#E11D48" />
+                            <stop offset="100%" stopColor="#4C0519" />
+                          </radialGradient>
+                          <filter id="3d-shadow-3" x="-10%" y="-10%" width="130%" height="130%">
+                            <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#E11D48" floodOpacity="0.4" />
+                          </filter>
+                        </defs>
+                        <polygon points="32,8 52,44 12,44" fill="url(#3d-grad-3)" filter="url(#3d-shadow-3)" />
+                        <circle cx="32" cy="28" r="6" fill="#ffffff" opacity="0.2" />
+                        <path d="M32 20V34" stroke="white" strokeWidth="3.5" strokeLinecap="round" />
+                        <path d="M26 30H38" stroke="white" strokeWidth="3.5" strokeLinecap="round" />
+                      </svg>
+                    )
+                  },
+                  {
+                    step: "04",
+                    title: "Delivery",
+                    desc: "Final Result & Support. Launching your celebration or campaign flawlessly, measuring data impact, delivering assets, and offering long-term ongoing consultation.",
+                    color: "from-emerald-400 to-teal-600",
+                    shadow: "shadow-teal-500/10 hover:shadow-teal-500/20",
+                    icon: (
+                      <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <radialGradient id="3d-grad-4" cx="30%" cy="30%" r="70%">
+                            <stop offset="0%" stopColor="#34D399" />
+                            <stop offset="60%" stopColor="#0D9488" />
+                            <stop offset="100%" stopColor="#115E59" />
+                          </radialGradient>
+                          <filter id="3d-shadow-4" x="-10%" y="-10%" width="130%" height="130%">
+                            <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#0D9488" floodOpacity="0.4" />
+                          </filter>
+                        </defs>
+                        <circle cx="32" cy="32" r="22" fill="url(#3d-grad-4)" filter="url(#3d-shadow-4)" />
+                        <path d="M24 30L30 36L44 22" stroke="white" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M20 44H44" stroke="white" strokeWidth="3" strokeLinecap="round" opacity="0.6" />
+                      </svg>
+                    )
+                  }
+                ].map((item, idx) => {
+                  if (activeProcessIndex !== idx) return null;
+                  return (
+                    <div
+                      key={idx}
+                      className="w-full bg-white rounded-3xl p-8 md:p-12 border border-gray-100 shadow-[0_30px_70px_rgba(0,0,0,0.06)] transition-all duration-500 hover:scale-102 flex flex-col items-center text-center relative overflow-hidden animate-fade-in-up"
+                    >
+                      {/* Glowing decorative corner */}
+                      <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${item.color} opacity-[0.06] rounded-bl-full`}></div>
+
+                      {/* 3D Premium Icon */}
+                      <div className="mb-6 transform hover:scale-115 hover:rotate-3 transition-transform duration-500">
+                        {item.icon}
+                      </div>
+
+                      {/* Info */}
+                      <span className="text-[12px] font-extrabold uppercase tracking-widest text-primary mb-2">
+                        STAGE {item.step}
+                      </span>
+                      <h4 className="font-extrabold text-gray-900 mb-4 uppercase tracking-wider">
+                        {item.title}
+                      </h4>
+                      <p className="text-gray-600 leading-relaxed max-w-md mx-auto">
+                        {item.desc}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Right Arrow Button */}
+              <button
+                onClick={() => setActiveProcessIndex((prev) => (prev === 3 ? 0 : prev + 1))}
+                className="absolute right-0 md:right-4 z-20 w-12 h-12 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group"
+              >
+                <svg className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Action buttons */}
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              <Link
+                to="/contactus"
+                className="inline-flex items-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/20"
+              >
+                Let's Create Something Amazing
+                <svg
+                  className="w-5 h-5 ml-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  ></path>
+                </svg>
+              </Link>
+            
+            </div>
+          </div>
+</section>
     </>
   );
 };

@@ -139,7 +139,7 @@ const Footer = () => {
               id="copyright"
               className="cursor-default text-center text-secondary"
             >
-              © 2018-<span> {currentYear} </span>
+              © 2016-<span> {currentYear} </span>
               <span className="font-bold">leormedia.com.</span> All Rights
               Reserved.
               <br />A Development & Designer Community ( #CSD )

@@ -29,25 +29,25 @@ const OurClientsComponent = () => {
             {
                 breakpoint: 1280,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 5,
                 }
             },
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 4,
                 }
             },
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                 }
             }
         ]
@@ -65,17 +65,17 @@ const OurClientsComponent = () => {
             
             <div className="client-slider-wrapper relative">
                 {/* Gradient Overlays for Fade Effect */}
-                <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none"></div>
-                <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute left-0 top-0 bottom-0 w-12 md:w-40 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute right-0 top-0 bottom-0 w-12 md:w-40 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none"></div>
 
                 <Slider {...settings}>
                     {clientLogos.map((logo, index) => (
-                        <div key={index} className="px-6 outline-none py-2">
-                            <div className="h-40 flex items-center justify-center transition-all duration-500 group">
+                        <div key={index} className="px-2 md:px-6 outline-none py-2">
+                            <div className="h-24 md:h-40 flex items-center justify-center transition-all duration-500 group">
                                 <img 
                                     src={logo} 
                                     alt={`Client Logo ${index + 1}`} 
-                                    className="max-h-[85%] max-w-[90%] object-contain transition-transform duration-500 group-hover:scale-110"
+                                    className="max-h-[75%] max-w-[85%] object-contain transition-all duration-500 group-hover:scale-110 filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100"
                                 />
                             </div>
                         </div>
