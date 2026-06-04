@@ -1,15 +1,10 @@
-import React, { useState, useMemo, useEffect } from"react";
+import React, { useState, useMemo } from"react";
 import { Link, useParams } from"react-router-dom";
 import { Helmet } from"react-helmet-async";
 import {
-  FaChevronRight,
-  FaPhone,
   FaWhatsapp,
   FaArrowRight,
   FaCheckCircle,
-  FaStar,
-  FaQuoteLeft,
-  FaPlay,
 } from"react-icons/fa";
 import { FontAwesomeIcon } from"@fortawesome/react-fontawesome";
 import { GlobalData } from"../../../assets/data/GlodalData";
@@ -37,7 +32,7 @@ const LazyImage = ({ src, alt, className, ...props }) => {
 
 const SubpagesAdvertising = ({ pageData, seoData }) => {
   const { category } = useParams();
-  const [openFaqIndex, setOpenFaqIndex] = useState(null);
+
 
   // Get current data based on category
   const data = useMemo(() => {
@@ -53,9 +48,7 @@ const SubpagesAdvertising = ({ pageData, seoData }) => {
     return seoData[data.SeoName.seotitle] || {};
   }, [seoData, data?.SeoName?.seotitle]);
 
-  const toggleFaq = (index) => {
-    setOpenFaqIndex(openFaqIndex === index ? null : index);
-  };
+
 
   if (!data) return <div className="mt-32 text-center">Loading...</div>;
 

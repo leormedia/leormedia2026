@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Link, useNavigate } from "react-router-dom";
-import { FaArrowRight, FaArrowLeft, FaCheck, FaCalendarAlt, FaMapMarkerAlt, FaUsers, FaMoneyBillWave, FaUser, FaPhone, FaEnvelope } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { FaArrowRight, FaArrowLeft, FaCheck, FaCalendarAlt, FaMapMarkerAlt, FaUsers, FaUser, FaPhone, FaEnvelope } from "react-icons/fa";
 import { CONTACTUS_API } from "../hooks/Apis";
 import { EventHeroCover, WeddingCoverImage, ServicesCoverImage, ContactUsCover } from "../assets/data/Imagedata";
-import seoData from "../assets/data/seo.json";
 
 const GetQuotation = () => {
   const navigate = useNavigate();
@@ -76,19 +75,19 @@ const GetQuotation = () => {
       component: (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl mx-auto p-8 rounded-3xl bg-black/30 backdrop-blur-md border border-white/10">
           <div className="space-y-4 text-left">
-            <label className="block text-[18px] font-medium text-white/90">Event Date (Approximate)</label>
+            <label className="block text-[16px] md:text-[18px] font-medium text-white/90">Event Date (Approximate)</label>
             <div className="relative">
               <FaCalendarAlt className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
               <input
                 type="date"
                 value={formData.eventDate}
                 onChange={(e) => handleInputChange("eventDate", e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[18px] text-white"
+                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[14px] md:text-[16px] text-white"
               />
             </div>
           </div>
           <div className="space-y-4 text-left">
-            <label className="block text-[18px] font-medium text-white/90">Location / Venue</label>
+            <label className="block text-[16px] md:text-[18px] font-medium text-white/90">Location / Venue</label>
             <div className="relative">
               <FaMapMarkerAlt className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
               <input
@@ -96,12 +95,12 @@ const GetQuotation = () => {
                 placeholder="Where is the event?"
                 value={formData.location}
                 onChange={(e) => handleInputChange("location", e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[18px] text-white placeholder:text-white/40"
+                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[14px] md:text-[16px] text-white placeholder:text-white/40"
               />
             </div>
           </div>
           <div className="space-y-4 text-left md:col-span-2">
-            <label className="block text-[18px] font-medium text-white/90">Estimated Guest Count</label>
+            <label className="block text-[16px] md:text-[18px] font-medium text-white/90">Estimated Guest Count</label>
             <div className="relative">
               <FaUsers className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
               <input
@@ -109,7 +108,7 @@ const GetQuotation = () => {
                 placeholder="How many people are attending?"
                 value={formData.guests}
                 onChange={(e) => handleInputChange("guests", e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[18px] text-white placeholder:text-white/40"
+                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[14px] md:text-[16px] text-white placeholder:text-white/40"
               />
             </div>
           </div>
@@ -150,7 +149,7 @@ const GetQuotation = () => {
       component: (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl mx-auto p-8 rounded-3xl bg-black/40 backdrop-blur-md border border-white/10">
           <div className="space-y-4 text-left">
-            <label className="block text-[18px] font-medium text-white/90">Full Name</label>
+            <label className="block text-[16px] md:text-[18px] font-medium text-white/90">Full Name</label>
             <div className="relative">
               <FaUser className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
               <input
@@ -158,13 +157,13 @@ const GetQuotation = () => {
                 placeholder="Enter your name"
                 value={formData.name}
                 onChange={(e) => handleInputChange("name", e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[18px] text-white placeholder:text-white/40"
+                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[14px] md:text-[16px] text-white placeholder:text-white/40"
                 required
               />
             </div>
           </div>
           <div className="space-y-4 text-left">
-            <label className="block text-[18px] font-medium text-white/90">Phone Number</label>
+            <label className="block text-[16px] md:text-[18px] font-medium text-white/90">Phone Number</label>
             <div className="relative">
               <FaPhone className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
               <input
@@ -172,13 +171,13 @@ const GetQuotation = () => {
                 placeholder="+91 00000 00000"
                 value={formData.phone}
                 onChange={(e) => handleInputChange("phone", e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[18px] text-white placeholder:text-white/40"
+                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[14px] md:text-[16px] text-white placeholder:text-white/40"
                 required
               />
             </div>
           </div>
           <div className="space-y-4 text-left md:col-span-2">
-            <label className="block text-[18px] font-medium text-white/90">Email Address</label>
+            <label className="block text-[16px] md:text-[18px] font-medium text-white/90">Email Address</label>
             <div className="relative">
               <FaEnvelope className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
               <input
@@ -186,19 +185,19 @@ const GetQuotation = () => {
                 placeholder="your.email@example.com"
                 value={formData.email}
                 onChange={(e) => handleInputChange("email", e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[18px] text-white placeholder:text-white/40"
+                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[14px] md:text-[16px] text-white placeholder:text-white/40"
                 required
               />
             </div>
           </div>
           <div className="space-y-4 text-left md:col-span-2">
-            <label className="block text-[18px] font-medium text-white/90">Any Additional Details?</label>
+            <label className="block text-[16px] md:text-[18px] font-medium text-white/90">Any Additional Details?</label>
             <textarea
               placeholder="Tell us more about your specific requirements..."
               rows="4"
               value={formData.message}
               onChange={(e) => handleInputChange("message", e.target.value)}
-              className="w-full p-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[18px] text-white placeholder:text-white/40 resize-none"
+              className="w-full p-4 rounded-xl bg-white/10 border-2 border-white/20 focus:border-primary outline-none transition-colors text-[14px] md:text-[16px] text-white placeholder:text-white/40 resize-none"
             />
           </div>
         </div>
@@ -336,7 +335,7 @@ const GetQuotation = () => {
           {currentStep > 0 && (
             <button
               onClick={prevStep}
-              className="mb-8 flex items-center text-white/70 hover:text-primary transition-colors font-medium text-[18px] group"
+              className="mb-8 flex items-center text-white/70 hover:text-primary transition-colors font-medium text-[16px] md:text-[18px] group"
             >
               <FaArrowLeft className="mr-2 group-hover:-translate-x-1 transition-transform" /> Previous Step
             </button>

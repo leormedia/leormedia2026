@@ -4,8 +4,8 @@ import Advertisingicon from "../Icons/advertisingicon.webp";
 import Graphicdesignicon from "../Icons/graphicdesignicon.webp";
 import Webdevelopmenticon from "../Icons/webdevelopmenticon.webp";
 import Brandingicon from "../Icons/brandingicon.webp";
-import CSDLogo from "../CSDLogo.svg" 
-import CSDLogoAbout from "../CSDLogo.svg" 
+import CSDLogo from "../CSDLogo.svg"
+import CSDLogoAbout from "../CSDLogo.svg"
 
 
 import WebRevamp from "../Icons/Services_icons/WebDevelopment/WebRevamp.webp";
@@ -39,26 +39,26 @@ import InfluencerMarketing from '../Icons/Services_icons/DigitalMarketingIcons/i
 
 
 
-import  BannerDesign from '../Icons/Services_icons/MultiMedia/Banner Design.webp';
-import  BrandIdentityDesign from '../Icons/Services_icons/MultiMedia/Brand Identity Design.webp'
-import  BrochureDesign from '../Icons/Services_icons/MultiMedia/Brochure Design.webp'
-import  BusinessCard from '../Icons/Services_icons/MultiMedia/Business Card.webp'
-import  eBookandPrintBook from '../Icons/Services_icons/MultiMedia/eBook and Print Book Cover Design.webp'
-import  IllustationServices from '../Icons/Services_icons/MultiMedia/Illustation Services.webp'
-import  InfographicDesign from '../Icons/Services_icons/MultiMedia/Infographic Design.webp'
-import  logodesign from '../Icons/Services_icons/MultiMedia/logodesign.webp'
-import  MotionGraphics from '../Icons/Services_icons/MultiMedia/Motion Graphics and Animation.webp'
-import  PackagingDesign from '../Icons/Services_icons/MultiMedia/Packaging Design.webp'
-import  PhotoEditing from '../Icons/Services_icons/MultiMedia/Photo Editing.webp'
-import  PosterandFlyerDesign from '../Icons/Services_icons/MultiMedia/Poster and Flyer Design.webp'
-import  PrintDesign from '../Icons/Services_icons/MultiMedia/Print Design.webp'
-import  RenderingandVisualizationBannerDesign from '../Icons/Services_icons/MultiMedia/Rendering and Visualization.webp'
-import  SignageandBillboardDesign from '../Icons/Services_icons/MultiMedia/Signage and Billboard Design.webp'
-import  SocialMediaGraphics from '../Icons/Services_icons/MultiMedia/Social Media Graphics.webp'
-import  TShirtandMerchandiseDesign from '../Icons/Services_icons/MultiMedia/TShirt and Merchandise Design.webp'
-import  UserExperienceDesign from '../Icons/Services_icons/MultiMedia/User Experience Design.webp'
-import  UserInterfaceDesign from '../Icons/Services_icons/MultiMedia/User Interface Design.webp'
-import  WebDesign from '../Icons/Services_icons/MultiMedia/Web Design.webp'
+import BannerDesign from '../Icons/Services_icons/MultiMedia/Banner Design.webp';
+import BrandIdentityDesign from '../Icons/Services_icons/MultiMedia/Brand Identity Design.webp'
+import BrochureDesign from '../Icons/Services_icons/MultiMedia/Brochure Design.webp'
+import BusinessCard from '../Icons/Services_icons/MultiMedia/Business Card.webp'
+import eBookandPrintBook from '../Icons/Services_icons/MultiMedia/eBook and Print Book Cover Design.webp'
+import IllustationServices from '../Icons/Services_icons/MultiMedia/Illustation Services.webp'
+import InfographicDesign from '../Icons/Services_icons/MultiMedia/Infographic Design.webp'
+import logodesign from '../Icons/Services_icons/MultiMedia/logodesign.webp'
+import MotionGraphics from '../Icons/Services_icons/MultiMedia/Motion Graphics and Animation.webp'
+import PackagingDesign from '../Icons/Services_icons/MultiMedia/Packaging Design.webp'
+import PhotoEditing from '../Icons/Services_icons/MultiMedia/Photo Editing.webp'
+import PosterandFlyerDesign from '../Icons/Services_icons/MultiMedia/Poster and Flyer Design.webp'
+import PrintDesign from '../Icons/Services_icons/MultiMedia/Print Design.webp'
+import RenderingandVisualizationBannerDesign from '../Icons/Services_icons/MultiMedia/Rendering and Visualization.webp'
+import SignageandBillboardDesign from '../Icons/Services_icons/MultiMedia/Signage and Billboard Design.webp'
+import SocialMediaGraphics from '../Icons/Services_icons/MultiMedia/Social Media Graphics.webp'
+import TShirtandMerchandiseDesign from '../Icons/Services_icons/MultiMedia/TShirt and Merchandise Design.webp'
+import UserExperienceDesign from '../Icons/Services_icons/MultiMedia/User Experience Design.webp'
+import UserInterfaceDesign from '../Icons/Services_icons/MultiMedia/User Interface Design.webp'
+import WebDesign from '../Icons/Services_icons/MultiMedia/Web Design.webp'
 
 
 import BrandAwarness from '../Icons/Services_icons/Branding/Brand Awareness Campaigns.webp'
@@ -75,27 +75,34 @@ import BrandTracking from '../Icons/Services_icons/Branding/Brand Tracking and p
 import Rebranding from '../Icons/Services_icons/Branding/Rebranding Services.webp'
 import VisualID from '../Icons/Services_icons/Branding/Visual Identity Design.webp'
 
+import FooterLogo1 from "../Icons/FooterLogo1.png"
+import FooterLogo2 from "../Icons/FooterLogo2.png"
+import FooterLogo3 from "../Icons/FooterLogo3.png"
+import FooterLogo4 from "../Icons/FooterLogo4.png"
 
 
-export {DefaultIcon, DigitalmarketingIcon,Advertisingicon,Graphicdesignicon,Webdevelopmenticon,Brandingicon,CSDLogo,
+export {
+  DefaultIcon, DigitalmarketingIcon, Advertisingicon, Graphicdesignicon, Webdevelopmenticon, Brandingicon, CSDLogo,
 
-    InGameAdvertising,NativeAdvertising,OutdoorAdvertising,PrintAdvertising,ProgrammaticAdvertising,RadioAdvertising,
-TheatreAdvertising,TVAdvertising,VideoAdvertising,
+  InGameAdvertising, NativeAdvertising, OutdoorAdvertising, PrintAdvertising, ProgrammaticAdvertising, RadioAdvertising,
+  TheatreAdvertising, TVAdvertising, VideoAdvertising,
 
-BrandAwarness,BrandExp,BrandGuide,BrandID,BrandLogo,BrandMessage,BrandName,BrandPosition,BrandResearch,BrandStory,BrandTracking,Rebranding,VisualID,
+  BrandAwarness, BrandExp, BrandGuide, BrandID, BrandLogo, BrandMessage, BrandName, BrandPosition, BrandResearch, BrandStory, BrandTracking, Rebranding, VisualID,
 
-  BannerDesign,BrandIdentityDesign,BrochureDesign,BusinessCard,eBookandPrintBook,IllustationServices,InfographicDesign,logodesign,
-MotionGraphics,PackagingDesign,PhotoEditing,PosterandFlyerDesign,PrintDesign,RenderingandVisualizationBannerDesign,SignageandBillboardDesign,
-SocialMediaGraphics,TShirtandMerchandiseDesign,UserExperienceDesign,UserInterfaceDesign,WebDesign,
+  BannerDesign, BrandIdentityDesign, BrochureDesign, BusinessCard, eBookandPrintBook, IllustationServices, InfographicDesign, logodesign,
+  MotionGraphics, PackagingDesign, PhotoEditing, PosterandFlyerDesign, PrintDesign, RenderingandVisualizationBannerDesign, SignageandBillboardDesign,
+  SocialMediaGraphics, TShirtandMerchandiseDesign, UserExperienceDesign, UserInterfaceDesign, WebDesign,
 
-  SearchEngineOptimization,ContentMarketing,SocialMediaMarketing,EmailMarketing,PayPerClickAdvertising,AnalyticsandDataAnalysis,
-ConversionRateOptimization,MobileMarketing,VideoMarketing,LocalSEOandMarketing,EcommerceMarketing,MarketingAutomation,RemarketingandRetargeting,InfluencerMarketing,
+  SearchEngineOptimization, ContentMarketing, SocialMediaMarketing, EmailMarketing, PayPerClickAdvertising, AnalyticsandDataAnalysis,
+  ConversionRateOptimization, MobileMarketing, VideoMarketing, LocalSEOandMarketing, EcommerceMarketing, MarketingAutomation, RemarketingandRetargeting, InfluencerMarketing,
 
 
 
   CSDLogoAbout,
-  
-  
+
+
+
   WebRevamp,
 
- };
+  FooterLogo1, FooterLogo2, FooterLogo3, FooterLogo4,
+};

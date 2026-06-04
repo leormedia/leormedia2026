@@ -1,70 +1,59 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import LogoLoader from "./components/LogoLoader";
-import {
-  Navbar,
-  Footer,
-  PrivacyPolicy,
-  TermsnConditions,
-  Disclaimer,
-  ShippingandDelivery,
-  ReturnPolicy,
-  Error404,
-  Home,
-  Aboutus,
-  Contactus,
-  Services,
-  Blog,
-  BlogFullPost,
-  FAQ,
-  Events,
-  GetQuotation,
-} from "./routes/Routes";
-
 import seoData from "./assets/data/seo.json";
 
-import {
-  /*Wedding Planners */
-  WeddingPlanners,
-  /*Digital marketing */
-  DigitalMarketing,
-  /*MultiMedia */
-  /*Advertising*/
-  Advertising,
-
-  /*Branding*/
-  BrandServices,
-
-  SubPages,
-  SubpagesDigitalMarketing,
-  SubpagesWeddingplanners,
-  SubpagesAdvertising,
-  SubpagesBranding,
-  SubpagesEvents,
-} from "./routes/Routes";
-
+// Import data detail configs statically
 import { WeddingPlannersDetailPageData } from "./routes/Services/WeddingPlannersPage/WeddingPlannersDetailPageData.jsx";
 import { AdvertisementDetailPageData } from "./routes/Services/AdvertisingPage/AdvertisementDetailPageData.jsx";
 import { BrandingDetailPageData } from "./routes/Services/BrandServicesPage/BrandingDetailPageData.jsx";
 import { DigitalMediaMarketingDetailPageData } from "./routes/Services/DigitalMarketingPage/DigitalMediaMarketingDetailPageData.jsx";
 import { EventsDetailPageData } from "./routes/Services/EventsPage/EventsDetailPageData.jsx";
 
-
-
-
-
-
-
-
-
+// Hook helper
 import PrivateRoute from "./hooks/PrivateRoute";
-import AdminNavbar from "./routes/auth/Navbar/AdminNavbar";
-import Login from "./routes/auth/login";
-import Dashboard from "./routes/auth/dashboard";
-import BlogsAdmin from "./routes/auth/Admin/BlogsAdmin";
-import Leads from "./routes/auth/Admin/Leads";
-import AdminContactus from "./routes/auth/Admin/AdminContactus";
-import GoogleAnalytics from "./routes/auth/Admin/GoogleAnalytics";
+
+// Lazy load route layouts & components
+const Navbar = lazy(() => import("./components/Navbar/Navbar"));
+const Footer = lazy(() => import("./components/Footer/Footer"));
+const PrivacyPolicy = lazy(() => import("./components/Documents/PrivacyPolicy"));
+const TermsnConditions = lazy(() => import("./components/Documents/TermsnConditions"));
+const Disclaimer = lazy(() => import("./components/Documents/Disclaimer"));
+const ShippingandDelivery = lazy(() => import("./components/Documents/ShippingandDelivery"));
+const ReturnPolicy = lazy(() => import("./components/Documents/ReturnsPolicy"));
+const Error404 = lazy(() => import("./components/Tools/Error404"));
+
+const Home = lazy(() => import("./routes/Home.js"));
+const Aboutus = lazy(() => import("./routes/Aboutus"));
+const Contactus = lazy(() => import("./routes/Contactus.js"));
+const Services = lazy(() => import("./routes/Services/Services.js"));
+const Blog = lazy(() => import("./routes/Blogs/Blog"));
+const BlogFullPost = lazy(() => import("./routes/Blogs/BlogFullPost"));
+const FAQ = lazy(() => import("./routes/Faqs"));
+const GetQuotation = lazy(() => import("./routes/GetQuotation"));
+
+// Service Main Pages
+const WeddingPlanners = lazy(() => import("./routes/Services/WeddingPlannersPage/WeddingPlanners.jsx"));
+const DigitalMarketing = lazy(() => import("./routes/Services/DigitalMarketingPage/DigitalMarketing.jsx"));
+const Advertising = lazy(() => import("./routes/Services/AdvertisingPage/Advertising.jsx"));
+const BrandServices = lazy(() => import("./routes/Services/BrandServicesPage/BrandServices.jsx"));
+const Events = lazy(() => import("./routes/Services/EventsPage/Events.jsx"));
+
+// Service Subpages
+const SubpagesDigitalMarketing = lazy(() => import("./routes/Services/DigitalMarketingPage/SubpagesDigitalMarketing.js"));
+const SubpagesWeddingplanners = lazy(() => import("./routes/Services/WeddingPlannersPage/SubpagesWeddingplanners.js"));
+const SubpagesAdvertising = lazy(() => import("./routes/Services/AdvertisingPage/SubpagesAdvertising.js"));
+const SubpagesBranding = lazy(() => import("./routes/Services/BrandServicesPage/SubpagesBranding.js"));
+const SubpagesEvents = lazy(() => import("./routes/Services/EventsPage/SubpagesEvents.js"));
+
+// Authentication / Admin Dashboard Components
+const AdminNavbar = lazy(() => import("./routes/auth/Navbar/AdminNavbar"));
+const Login = lazy(() => import("./routes/auth/login"));
+const Dashboard = lazy(() => import("./routes/auth/dashboard"));
+const BlogsAdmin = lazy(() => import("./routes/auth/Admin/BlogsAdmin"));
+const Leads = lazy(() => import("./routes/auth/Admin/Leads"));
+const AdminContactus = lazy(() => import("./routes/auth/Admin/AdminContactus"));
+const GoogleAnalytics = lazy(() => import("./routes/auth/Admin/GoogleAnalytics"));
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -178,23 +167,26 @@ export function App() {
   return (
     <>
       <LogoLoader isLoading={isLoading} />
-      {isAuthRoute && <AdminNavbar />}
-      {!isAuthRoute && location.pathname !== "/auth/login" && <Navbar />}
+      <Suspense fallback={<div className="fixed inset-0 bg-white z-[99]" />}>
+        {isAuthRoute && <AdminNavbar />}
+        {!isAuthRoute && location.pathname !== "/auth/login" && <Navbar />}
 
-      <div className="flex flex-1">
-        <div
-          className={`flex-1 min-w-0 transition-all duration-300 ${isAuthRoute ? "mt-14 md:ml-64" : "mt-0"
+        <div className="flex flex-1">
+          <div
+            className={`flex-1 min-w-0 transition-all duration-300 ${
+              isAuthRoute ? "mt-14 md:ml-64" : "mt-0"
             }`}
-        >
-          <Routes location={location} key={location.pathname}>
-            {routes.map((route, index) => (
-              <Route key={index} path={route.path} element={route.element} />
-            ))}
-          </Routes>
+          >
+            <Routes location={location} key={location.pathname}>
+              {routes.map((route, index) => (
+                <Route key={index} path={route.path} element={route.element} />
+              ))}
+            </Routes>
 
-          {!isAuthRoute && location.pathname !== "/auth/login" && <Footer />}
+            {!isAuthRoute && location.pathname !== "/auth/login" && <Footer />}
+          </div>
         </div>
-      </div>
+      </Suspense>
     </>
   );
 }

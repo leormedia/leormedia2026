@@ -25,7 +25,7 @@ export default function NotificationBar({
   return (
     <div className={`w-full top-0 left-0 right-0 z-50 ${bgClass} shadow-md`}>
       <div className="flex items-center justify-between max-w-7xl mx-auto py-2 px-4">
-        <p className={`text-[14px] md:text-[18px] flex-1 text-center font-medium${textClass}text-[14px] md:text-[18px]`}>{message}</p>
+        <p className={`text-[16px] md:text-[18px] flex-1 text-center font-medium ${textClass}`}>{message}</p>
         <button
           onClick={handleClose}
           aria-label="Close notification"

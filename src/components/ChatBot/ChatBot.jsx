@@ -229,7 +229,7 @@ const ChatBot = () => {
                           key={oIdx}
                           onClick={() => handleOptionClick(opt)}
                           disabled={step !== 4}
-                          className="text-left text-[13px] font-medium bg-white border border-primary text-primary hover:bg-primary hover:text-white py-2 px-4 rounded-xl transition-all duration-200 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-md"
+                          className="text-left text-[14px] font-medium bg-white border border-primary text-primary hover:bg-primary hover:text-white py-2 px-4 rounded-xl transition-all duration-200 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-md"
                         >
                           {opt}
                         </button>

@@ -32,7 +32,7 @@ const FaqSection = ({ title, faqs, openIndex, toggle, offset }) => (
               onClick={() => toggle(currentIndex)}
               className="w-full flex items-center justify-between px-6 py-4 bg-white font-medium text-gray-900 hover:bg-gray-50 focus:outline-none transition-colors duration-200"
             >
-              <span className="text-left text-[18px] font-semibold pr-4">
+              <span className="text-left text-[16px] md:text-[18px] font-semibold pr-4">
                 {faq.question}
               </span>
               <span
@@ -44,7 +44,7 @@ const FaqSection = ({ title, faqs, openIndex, toggle, offset }) => (
             </button>
             {isOpen && (
               <div className="px-6 py-5 bg-gray-50 text-gray-700 border-t border-gray-200">
-                <div className="text-[16px] leading-relaxed">{faq.answer}</div>
+                <div className="text-[14px] md:text-[16px] leading-relaxed">{faq.answer}</div>
               </div>
             )}
           </div>
@@ -308,7 +308,7 @@ function Faqs() {
                             onClick={() => toggle(faq.globalIndex)}
                             className="w-full flex items-center justify-between px-6 py-4 bg-white font-medium text-gray-900 hover:bg-gray-50 focus:outline-none transition-colors duration-200"
                           >
-                            <span className="text-left text-[18px] font-semibold pr-4">
+                            <span className="text-left text-[16px] md:text-[18px] font-semibold pr-4">
                               {faq.question}
                             </span>
                             <span
@@ -320,7 +320,7 @@ function Faqs() {
                           </button>
                           {isOpen && (
                             <div className="px-6 py-5 bg-gray-50 text-gray-700 border-t border-gray-200">
-                              <div className="text-[16px] leading-relaxed">{faq.answer}</div>
+                              <div className="text-[14px] md:text-[16px] leading-relaxed">{faq.answer}</div>
                             </div>
                           )}
                         </div>

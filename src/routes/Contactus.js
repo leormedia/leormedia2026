@@ -1,5 +1,5 @@
 import { CONTACTUS_API } from "../hooks/Apis";
-import { ContactUsCover, ourproducts_contact } from "../assets/data/Imagedata";
+import { ContactUsCover } from "../assets/data/Imagedata";
 import {
   FaEnvelope,
   FaPhone,

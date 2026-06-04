@@ -1,4 +1,4 @@
-import { CSDLogoAbout } from "../assets/data/icon_data";
+
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -7,14 +7,18 @@ import {
   Luxeryweddinghomeslider
 } from "../assets/data/Imagedata";
 import {
-  FaFileInvoiceDollar,
-  FaArrowRight,
   FaEnvelope,
   FaPhone,
   FaWhatsapp,
+  FaArrowRight,
+  FaStar,
+  FaRing,
+  FaBullhorn,
 } from "react-icons/fa";
 import { CONTACTUS_API } from "../hooks/Apis";
 import GoogleMapReviews from "../components/GoogleMapReviews/GoogleMapReviews"
+import { FooterLogo1, FooterLogo2, FooterLogo3, FooterLogo4 } from "../assets/data/icon_data";
+
 // Import generated images
 import WeddingSliderImg from "../assets/Generated/wedding_slider.png";
 import MarketingSliderImg from "../assets/Generated/marketing_slider.png";
@@ -24,10 +28,162 @@ import OurClientsComponent from "../components/OurClientsComponent";
 import LogoOnly from "../assets/LogoOnly.svg";
 import { GlobalData } from "../assets/data/GlodalData";
 
+// Static configuration data moved outside component to optimize React renders
+const subjectOptions = [
+  "Wedding Planning",
+  "Corporate Events",
+  "Social & Birthday Parties",
+  "Entertainment & Music Shows",
+  "Digital Marketing & SEO",
+  "Website & App Development",
+  "Other",
+];
+
+const heroCategories = ["Events", "Weddings", "Digital Marketing"];
+
+const heroData = {
+  Events: {
+    title: "EVENT MANAGEMENT",
+    desc: "Unforgettable experiences. From luxury weddings to high-impact corporate launches.",
+    bg: Eventmanagementhomeslider,
+    link: "/services/events"
+  },
+  Weddings: {
+    title: "LUXURY WEDDINGS",
+    desc: "Timeless Elegance for Your Special Day. Flawless execution and beautiful memories.",
+    bg: Luxeryweddinghomeslider,
+    link: "/services/wedding-planners"
+  },
+  "Digital Marketing": {
+    title: "DIGITAL MARKETING",
+    desc: "Driving Growth through Innovation. SEO, Social Media, and Performance Ads.",
+    bg: Digitalmarketinghomeslider,
+    link: "/digital-media-marketing"
+  }
+};
+
+const sections = [
+  {
+    title: "Event Management",
+    subtitle: "UNFORGETTABLE EXPERIENCES",
+    color: "bg-gradient-to-br from-blue-900/90 to-indigo-950/90",
+    number: "01",
+    description:
+      "The success of any event largely depends on many tasks that go behind the scenes and tireless hard work of the team. At Leor Media, we believe in creating memories by organising events to perfection for which we customise every minute detail of the event and tailor accordingly with interest of our valued customers.",
+    image:
+      "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=1200&auto=format&fit=crop&q=80",
+    stats: [
+      { value: "2000+", label: "Events Managed" },
+      { value: "220+", label: "Corporate Clients" },
+      { value: "100%", label: "Execution" },
+    ],
+    cta: "Plan Your Event",
+    detailedServices: [
+      "Weddings",
+      "Corporate Events & Product Launches",
+      "Concerts, Award Nights & Music Shows",
+      "Celebrity & Artist Management",
+      "Protocol Events & Carnivals",
+      "Sports Events & Marathons",
+      "Exhibitions & Trade Fairs",
+    ],
+  },
+  {
+    title: "LUXURY WEDDINGS",
+    subtitle: "TIMELESS CELEBRATIONS",
+    color: "bg-gradient-to-br from-pink-900/90 to-rose-950/90",
+    number: "02",
+    description:
+      "Turning your dream wedding into a reality. We specialize in breathtaking decor, seamless coordination, and creating memories that last a lifetime.",
+    image: WeddingSliderImg,
+    stats: [
+      { value: "500+", label: "Weddings" },
+      { value: "Luxury", label: "Decor" },
+      { value: "End-to-End", label: "Planning" },
+    ],
+    cta: "Plan Your Wedding",
+    detailedServices: [
+      "Destination Wedding Planning",
+      "Theme Decors & Floral Design",
+      "Catering & Hospitality",
+      "Photography & Cinematography",
+      "Mehendi, Sangeet & Reception",
+      "Guest Management",
+    ],
+  },
+  {
+    title: "DIGITAL MEDIA MARKETING",
+    subtitle: "DOMINATE THE DIGITAL SPACE",
+    color: "bg-gradient-to-br from-cyan-900/90 to-blue-950/90",
+    number: "03",
+    description:
+      "Innovative digital strategies to boost your online presence. From social media growth to performance marketing, we help you win the digital game.",
+    image: MarketingSliderImg,
+    stats: [
+      { value: "10M+", label: "Reach" },
+      { value: "300%", label: "Growth" },
+      { value: "Data", label: "Driven" },
+    ],
+    cta: "Go Digital",
+    detailedServices: [
+      "Social Media Management",
+      "Performance Marketing (Ads)",
+      "Search Engine Optimization",
+      "Content & Video Marketing",
+      "Influencer Marketing",
+      "Email & WhatsApp Marketing",
+    ],
+  },
+  {
+    title: "BRANDING SOLUTIONS",
+    subtitle: "CRAFTING UNIQUE IDENTITIES",
+    color: "bg-gradient-to-br from-amber-900/90 to-orange-950/90",
+    number: "04",
+    description:
+      "We create powerful brand identities that resonate with your audience. Our design-led approach ensures your brand stands out in a crowded market.",
+    image: BrandingSliderImg,
+    stats: [
+      { value: "200+", label: "Brands Built" },
+      { value: "360°", label: "Branding" },
+      { value: "Unique", label: "Design" },
+    ],
+    cta: "Build Your Brand",
+    detailedServices: [
+      "Logo & Visual Identity Design",
+      "Brand Strategy & Positioning",
+      "Packaging & Label Design",
+      "Corporate Stationery",
+      "Brand Guidelines",
+      "Rebranding Services",
+    ],
+  },
+  {
+    title: "STRATEGIC ADVERTISING",
+    subtitle: "MAXIMUM REACH & IMPACT",
+    color: "bg-gradient-to-br from-red-900/90 to-red-950/90",
+    number: "05",
+    description:
+      "High-impact advertising campaigns across all platforms. We ensure your message reaches the right audience through strategic media placement.",
+    image: AdvertisingBgImg,
+    stats: [
+      { value: "Wide", label: "Coverage" },
+      { value: "High", label: "ROI" },
+      { value: "Expert", label: "Buying" },
+    ],
+    cta: "Advertise Now",
+    detailedServices: [
+      "Outdoor Media (Billboards, Bus Ads)",
+      "Print Media Advertising",
+      "Radio & TV Commercials",
+      "Cinema Advertising",
+      "Transit & Airport Branding",
+      "Mall & BTL Activations",
+    ],
+  },
+];
+
 const HomePage = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const [selected, setSelected] = useState("Events");
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [honeypot, setHoneypot] = useState("");
   const [formData, setFormData] = useState({
@@ -37,17 +193,6 @@ const HomePage = () => {
     subject: "",
     message: "",
   });
-
-  // Subject options for dropdown
-  const subjectOptions = [
-    "Wedding Planning",
-    "Corporate Events",
-    "Social & Birthday Parties",
-    "Entertainment & Music Shows",
-    "Digital Marketing & SEO",
-    "Website & App Development",
-    "Other",
-  ];
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -85,250 +230,142 @@ const HomePage = () => {
     }
   };
 
-
-
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    fade: true,
-    arrows: false,
-    dotsClass: "slick-dots custom-dots",
-  };
-
-  const heroSlides = [
-    {
-      title: "Wedding Mandapam",
-      subtitle: "Timeless Elegance for Your Special Day",
-      image: WeddingSliderImg,
-      cta: "Plan Your Wedding",
-      link: "/contactus"
-    },
-    {
-      title: "Strategic Marketing",
-      subtitle: "Driving Growth through Innovation",
-      image: MarketingSliderImg,
-      cta: "Grow Your Brand",
-      link: "/contactus"
-    },
-    {
-      title: "Powerful Branding",
-      subtitle: "Creating Identities that Resonate",
-      image: BrandingSliderImg,
-      cta: "Start Branding",
-      link: "/contactus"
-    }
-  ];
-
-  const sections = [
-    {
-      title: "Event Management",
-      subtitle: "UNFORGETTABLE EXPERIENCES",
-      color: "bg-gradient-to-br from-blue-900/90 to-indigo-950/90",
-      number: "01",
-      description:
-        "The success of any event largely depends on many tasks that go behind the scenes and tireless hard work of the team. At Leor Media, we believe in creating memories by organising events to perfection for which we customise every minute detail of the event and tailor accordingly with interest of our valued customers.",
-      image:
-        "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=1200&auto=format&fit=crop&q=80",
-      stats: [
-        { value: "2000+", label: "Events Managed" },
-        { value: "220+", label: "Corporate Clients" },
-        { value: "100%", label: "Execution" },
-      ],
-      cta: "Plan Your Event",
-      detailedServices: [
-        "Weddings",
-        "Corporate Events & Product Launches",
-        "Concerts, Award Nights & Music Shows",
-        "Celebrity & Artist Management",
-        "Protocol Events & Carnivals",
-        "Sports Events & Marathons",
-        "Exhibitions & Trade Fairs",
-      ],
-    },
-    {
-      title: "LUXURY WEDDINGS",
-      subtitle: "TIMELESS CELEBRATIONS",
-      color: "bg-gradient-to-br from-pink-900/90 to-rose-950/90",
-      number: "02",
-      description:
-        "Turning your dream wedding into a reality. We specialize in breathtaking decor, seamless coordination, and creating memories that last a lifetime.",
-      image: WeddingSliderImg,
-      stats: [
-        { value: "500+", label: "Weddings" },
-        { value: "Luxury", label: "Decor" },
-        { value: "End-to-End", label: "Planning" },
-      ],
-      cta: "Plan Your Wedding",
-      detailedServices: [
-        "Destination Wedding Planning",
-        "Theme Decors & Floral Design",
-        "Catering & Hospitality",
-        "Photography & Cinematography",
-        "Mehendi, Sangeet & Reception",
-        "Guest Management",
-      ],
-    },
-    {
-      title: "DIGITAL MEDIA MARKETING",
-      subtitle: "DOMINATE THE DIGITAL SPACE",
-      color: "bg-gradient-to-br from-cyan-900/90 to-blue-950/90",
-      number: "03",
-      description:
-        "Innovative digital strategies to boost your online presence. From social media growth to performance marketing, we help you win the digital game.",
-      image: MarketingSliderImg,
-      stats: [
-        { value: "10M+", label: "Reach" },
-        { value: "300%", label: "Growth" },
-        { value: "Data", label: "Driven" },
-      ],
-      cta: "Go Digital",
-      detailedServices: [
-        "Social Media Management",
-        "Performance Marketing (Ads)",
-        "Search Engine Optimization",
-        "Content & Video Marketing",
-        "Influencer Marketing",
-        "Email & WhatsApp Marketing",
-      ],
-    },
-    {
-      title: "BRANDING SOLUTIONS",
-      subtitle: "CRAFTING UNIQUE IDENTITIES",
-      color: "bg-gradient-to-br from-amber-900/90 to-orange-950/90",
-      number: "04",
-      description:
-        "We create powerful brand identities that resonate with your audience. Our design-led approach ensures your brand stands out in a crowded market.",
-      image: BrandingSliderImg,
-      stats: [
-        { value: "200+", label: "Brands Built" },
-        { value: "360°", label: "Branding" },
-        { value: "Unique", label: "Design" },
-      ],
-      cta: "Build Your Brand",
-      detailedServices: [
-        "Logo & Visual Identity Design",
-        "Brand Strategy & Positioning",
-        "Packaging & Label Design",
-        "Corporate Stationery",
-        "Brand Guidelines",
-        "Rebranding Services",
-      ],
-    },
-    {
-      title: "STRATEGIC ADVERTISING",
-      subtitle: "MAXIMUM REACH & IMPACT",
-      color: "bg-gradient-to-br from-red-900/90 to-red-950/90",
-      number: "05",
-      description:
-        "High-impact advertising campaigns across all platforms. We ensure your message reaches the right audience through strategic media placement.",
-      image: AdvertisingBgImg,
-      stats: [
-        { value: "Wide", label: "Coverage" },
-        { value: "High", label: "ROI" },
-        { value: "Expert", label: "Buying" },
-      ],
-      cta: "Advertise Now",
-      detailedServices: [
-        "Outdoor Media (Billboards, Bus Ads)",
-        "Print Media Advertising",
-        "Radio & TV Commercials",
-        "Cinema Advertising",
-        "Transit & Airport Branding",
-        "Mall & BTL Activations",
-      ],
-    },
-  ];
-
-  const heroCategories = ["Events", "Weddings", "Digital Marketing"];
-
-  const heroData = {
-    Events: {
-      title: "EVENT MANAGEMENT",
-      desc: "Unforgettable experiences. From luxury weddings to high-impact corporate launches.",
-      bg: Eventmanagementhomeslider,
-      link: "/services/events"
-    },
-    Weddings: {
-      title: "LUXURY WEDDINGS",
-      desc: "Timeless Elegance for Your Special Day. Flawless execution and beautiful memories.",
-      bg: Luxeryweddinghomeslider,
-      link: "/services/wedding-planners"
-    },
-    "Digital Marketing": {
-      title: "DIGITAL MARKETING",
-      desc: "Driving Growth through Innovation. SEO, Social Media, and Performance Ads.",
-      bg: Digitalmarketinghomeslider,
-      link: "/digital-media-marketing"
-    }
-  };
-
   const [activeProcessIndex, setActiveProcessIndex] = useState(0);
 
+  // Auto-play interval for hero slider; restarts whenever the slide changes (manually or automatically)
   useEffect(() => {
-    setIsVisible(true);
     const heroInterval = setInterval(() => {
       setSelected((prev) => {
         const nextIndex = (heroCategories.indexOf(prev) + 1) % heroCategories.length;
         return heroCategories[nextIndex];
       });
-    }, 4000);
+    }, 5000);
 
+    return () => clearInterval(heroInterval);
+  }, [selected]);
+
+  useEffect(() => {
     const processInterval = setInterval(() => {
       setActiveProcessIndex((prev) => (prev + 1) % 4);
     }, 3500);
 
-    return () => {
-      clearInterval(heroInterval);
-      clearInterval(processInterval);
-    };
+    return () => clearInterval(processInterval);
   }, []);
 
   return (
     <>
-      <section className="relative w-full text-white h-[90vh] bg-black mt-10 overflow-hidden ">
+      {/* Slider */}
+      <section className="relative w-full text-white h-[75vh] md:h-[80vh] bg-black mt-10 overflow-hidden">
+
         {/* Background Image Layer */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
             src={heroData[selected].bg}
             alt={selected}
-            className="w-full h-full object-cover object-center opacity-50 scale-105 transition-all duration-1000 ease-in-out"
+            className="w-full h-full object-cover object-center opacity-40 scale-105 transition-all duration-1000 ease-in-out"
             key={selected}
           />
         </div>
 
-        {/* Content Container (Bottom Aligned) */}
-        <div className="relative z-10 w-full h-full max-w-6xl mx-auto px-6 pb-24 pt-12 flex flex-col items-center text-center justify-end">
+        {/* Dark gradient overlay to ensure text contrast and premium feel */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/85 z-10 pointer-events-none" />
 
-          {/* Main Hero Header */}
-          <div className="animate-fade-in-up">
-            <h1 className="font-extrabold text-white font-TuskerGrotesk uppercase tracking-wider leading-tight drop-shadow-md">
-              <span className="block">
-                Crafting Extraordinary 
-              </span>
-              <span className="block text-primary drop-shadow-[0_4px_20px_rgba(255,165,0,0.4)] mt-2">
-                Events & Creative Digital Success
-              </span>
-            </h1>
-            <p className="mt-4 text-white font-medium opacity-80 tracking-[0.2em] uppercase">
-              Since 2016
+        {/* Content */}
+        <div className="relative z-20 w-full h-full max-w-5xl mx-auto px-6 pb-24 md:pb-28 flex flex-col items-center justify-center text-center">
+
+          {/* Static Header Content */}
+          <span className="inline-block mt-10 text-primary font-bold tracking-[0.3em] uppercase text-[12px] md:text-[14px] mb-4">
+            SINCE 2016 | LEOR MEDIA
+          </span>
+
+          <h1 className="text-white font-TuskerGrotesk uppercase leading-none tracking-wide mb-4 max-w-3xl">
+            <span className="block text-[22px] md:text-[38px] lg:text-[48px] font-extrabold drop-shadow-md">
+              Crafting Extraordinary Events
+            </span>
+            <span className="block text-primary text-[28px] md:text-[44px] lg:text-[54px] font-black my-1.5 drop-shadow-lg">
+              &
+            </span>
+            <span className="block text-[22px] md:text-[38px] lg:text-[48px] font-extrabold text-primary drop-shadow-md">
+              Creative Digital Success
+            </span>
+          </h1>
+
+          {/* Dynamic Content (Animates on slide change) */}
+          <div key={selected} className="animate-fade-in-up flex flex-col items-center">
+            {/* Slide Description */}
+            <p className="text-white/90 font-medium tracking-wide text-[14px] md:text-[18px] leading-relaxed max-w-2xl mb-8 drop-shadow-md">
+              {heroData[selected].desc}
             </p>
+
+            {/* CTA Button */}
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to={heroData[selected].link}
+                className="inline-flex items-center px-8 py-3.5 bg-primary text-black font-extrabold rounded-full hover:bg-primary/95 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/20 tracking-wider text-[12px] md:text-[14px] uppercase group"
+              >
+                Explore {selected}
+                <FaArrowRight className="ml-2.5 text-[14px] transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </div>
           </div>
 
         </div>
+
+        {/* Slide Selector Tabs */}
+        <div className="absolute bottom-8 left-0 right-0 z-30 flex justify-center items-center space-x-4 px-4">
+          {heroCategories.map((cat) => {
+            const isActive = selected === cat;
+            return (
+              <button
+                key={cat}
+                onClick={() => setSelected(cat)}
+                title={cat}
+                className={`group relative p-4 rounded-full flex items-center justify-center transition-all duration-300 ${
+                  isActive
+                    ? "bg-primary text-black shadow-lg shadow-primary/30 scale-110"
+                    : "bg-black/45 hover:bg-black/60 text-white/80 hover:text-white border border-white/10 backdrop-blur-md hover:scale-105"
+                }`}
+              >
+                {cat === "Events" && <FaStar className="text-[18px] md:text-[20px]" />}
+                {cat === "Weddings" && <FaRing className="text-[18px] md:text-[20px]" />}
+                {cat === "Digital Marketing" && <FaBullhorn className="text-[18px] md:text-[20px]" />}
+              </button>
+            );
+          })}
+        </div>
       </section>
 
+      {/* Registered On Section */}
+      <section className="bg-white pt-6 pb-2">
+        <div className=" mx-auto px-4 md:px-8">
+          <div className="flex items-center justify-center gap-4 py-3">
+            <div className="h-px w-16 sm:w-32 bg-gradient-to-r from-transparent to-gray-300"></div>
+            <p className="text-gray-500 text-center text-[14px] font-bold uppercase tracking-[0.2em]">
+              Registered On
+            </p>
+            <div className="h-px w-16 sm:w-32 bg-gradient-to-l from-transparent to-gray-300"></div>
+          </div>
+          <div className="flex justify-center items-center gap-6 md:gap-12 mt-6 flex-wrap opacity-70 transition-opacity duration-300 hover:opacity-100">
+            {[FooterLogo1, FooterLogo2, FooterLogo3, FooterLogo4].map(
+              (logo, i) => (
+                <img
+                  key={i}
+                  src={logo}
+                  alt={`registered_logo_${i}`}
+                  className="h-10 md:h-14 hover:scale-105 transition-all duration-300 grayscale hover:grayscale-0 rounded-sm"
+                />
+              )
+            )}
+          </div>
+        </div>
+      </section>
 
- {/* Our Clients Section */}
+      {/* Our Clients Section */}
       <OurClientsComponent />
-    
 
 
-{/* Aboutus */}
+
+      {/* Aboutus */}
       <section id="about" className="py-16 md:py-24 bg-white text-black">
         <div className="container mx-auto px-4 md:px-8 lg:px-16">
           {/* Section Header */}
@@ -348,7 +385,7 @@ const HomePage = () => {
                 <h3 className="font-bold mb-8">
                   Creating Memories,
                 </h3>
-                 <span className="text-primary">Delivering Excellence.</span>
+                <span className="text-primary">Delivering Excellence.</span>
 
                 <p className="text-balck leading-relaxed mb-6">
                   Leor Media has been successfully organizing small to big scale weddings since 2016. We create the
@@ -368,7 +405,7 @@ const HomePage = () => {
 
           </div>
 
-       
+
         </div>
       </section>
 
@@ -379,8 +416,8 @@ const HomePage = () => {
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-16 md:mb-24 gap-8">
             <div className="max-w-xl">
-              <span className="text-white font-bold tracking-[0.2em] uppercase text-[12px] mb-4 block">Proven Experience</span>
-              <h2 className="font-extrabold font-TuskerGrotesk uppercase tracking-wider text-5xl md:text-6xl text-white leading-tight">
+              <span className="text-white font-bold tracking-[0.2em] uppercase text-[14px] mb-4 block">Proven Experience</span>
+              <h2 className="font-extrabold font-TuskerGrotesk uppercase tracking-wider text-[26px] md:text-[48px] text-white leading-tight">
                 Our Track Record
               </h2>
             </div>
@@ -399,12 +436,12 @@ const HomePage = () => {
               <div key={idx} className="group relative">
                 {/* Subtle hover background highlight */}
                 <div className="absolute -inset-4 bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
+
                 <div className="relative z-10 border-t-2 border-gray-800 group-hover:border-primary transition-colors duration-500 pt-6 md:pt-8">
-                  <div className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-3 font-TuskerGrotesk tracking-wide group-hover:text-primary transition-colors duration-500">
+                  <div className="text-[28px] md:text-[50px] lg:text-[72px] font-extrabold text-white mb-3 font-TuskerGrotesk tracking-wide group-hover:text-primary transition-colors duration-500">
                     {stat.value}
                   </div>
-                  <div className="text-xs md:text-sm text-white uppercase tracking-widest font-medium">
+                  <div className="text-[14px] text-white uppercase tracking-widest font-medium">
                     {stat.label}
                   </div>
                 </div>
@@ -419,7 +456,7 @@ const HomePage = () => {
       <GoogleMapReviews />
 
 
-     
+
 
       {/* Our Services Section Introduction */}
       <section className="bg-black text-white pt-24 pb-12 relative overflow-hidden">
@@ -428,7 +465,7 @@ const HomePage = () => {
         </div>
 
         <div className="container mx-auto px-4 text-center relative z-10">
-          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[12px] font-bold uppercase tracking-widest mb-4">
+          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[14px] font-bold uppercase tracking-widest mb-4">
             UNFORGETTABLE EXPERIENCES
           </span>
           <h2 className="font-extrabold mb-4 font-TuskerGrotesk tracking-wide">
@@ -462,7 +499,7 @@ const HomePage = () => {
                 <div>
                   {/* Title & Subtitle */}
                   <div className="mb-6 md:mb-8">
-                    <div className="text-white/80 text-[10px] md:text-[20px] font-semibold tracking-widest uppercase mb-2">
+                    <div className="text-white/80 text-[16px] md:text-[20px] font-semibold tracking-widest uppercase mb-2">
                       {sec.subtitle}
                     </div>
                     <h1 className="font-bold text-white leading-tight">
@@ -495,7 +532,7 @@ const HomePage = () => {
                           <div className="text-[24px] md:text-[30px] font-bold text-white">
                             {stat.value}
                           </div>
-                          <div className="text-[12px] md:text-[14px] text-white/70">
+                          <div className="text-[14px] text-white/70">
                             {stat.label}
                           </div>
                         </div>
@@ -631,8 +668,8 @@ const HomePage = () => {
             </div>
 
             {/* Right side: Form */}
-            <div className="lg:col-span-7 bg-white p-8 md:p-12 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100">
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="lg:col-span-7 bg-white p-6 md:p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <input
                   type="text"
                   name="honeypot"
@@ -642,45 +679,64 @@ const HomePage = () => {
                 />
 
                 <div className="grid md:grid-cols-2 gap-4">
-                  {["name", "email", "phone"].map((field, idx) => (
-                    <div key={idx}>
-                      <label className="block text-[14px] font-medium text-gray-700 mb-2 capitalize">
-                        {field}
-                      </label>
-                      <input
-                        type={
-                          field === "email"
-                            ? "email"
-                            : field === "phone"
-                              ? "tel"
-                              : "text"
-                        }
-                        name={field}
-                        placeholder={
-                          field === "name"
-                            ? "Your full name"
-                            : field === "email"
-                              ? "your.email@example.com"
-                              : "+91 00000 00000"
-                        }
-                        value={formData[field]}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
-                        required
-                      />
-                    </div>
-                  ))}
+                  {/* Name Input */}
+                  <div>
+                    <label className="block text-[13px] font-semibold text-gray-700 mb-1 capitalize">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Your full name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors text-[14px]"
+                      required
+                    />
+                  </div>
 
-                  {/* Subject Dropdown */}
-                  <div className="md:col-span-2">
-                    <label className="block text-[14px] font-medium text-gray-700 mb-2">
+                  {/* Email Input */}
+                  <div>
+                    <label className="block text-[13px] font-semibold text-gray-700 mb-1 capitalize">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="your.email@example.com"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors text-[14px]"
+                      required
+                    />
+                  </div>
+
+                  {/* Phone Input */}
+                  <div>
+                    <label className="block text-[13px] font-semibold text-gray-700 mb-1 capitalize">
+                      Phone
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="+91 00000 00000"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors text-[14px]"
+                      required
+                    />
+                  </div>
+
+                  {/* Subject Input */}
+                  <div>
+                    <label className="block text-[13px] font-semibold text-gray-700 mb-1">
                       Subject
                     </label>
                     <select
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors text-[14px]"
                       required
                     >
                       <option value="">Select a subject</option>
@@ -694,16 +750,16 @@ const HomePage = () => {
                 </div>
 
                 <div>
-                  <label className="block text-[14px] font-medium text-gray-700 mb-2">
+                  <label className="block text-[13px] font-semibold text-gray-700 mb-1">
                     Message
                   </label>
                   <textarea
                     name="message"
                     placeholder="Tell us about your project or inquiry..."
-                    rows="5"
+                    rows="3"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors resize-none"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors resize-none text-[14px]"
                     required
                   />
                 </div>
@@ -711,7 +767,7 @@ const HomePage = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${loading
+                  className={`w-full py-2.5 px-6 rounded-lg font-semibold transition-colors text-[14px] ${loading
                     ? "bg-gray-400 cursor-not-allowed text-gray-200"
                     : "bg-primary hover:bg-primary/90 text-white shadow-sm"
                     }`}
@@ -725,232 +781,232 @@ const HomePage = () => {
       </section>
 
 
-      
-         {/* CTA & Process Slider Section */}
-              <section id="about" className="py-16 md:py-24 bg-white text-black">
-          <div className="text-center mt-24 pt-16 border-t border-gray-100 max-w-4xl mx-auto">
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[12px] font-semibold uppercase tracking-widest mb-4">
-              Our Methodology
-            </span>
-            <h3 className="font-extrabold mb-12 font-TuskerGrotesk tracking-wide text-gray-900">
-              OUR PROFESSIONAL <span className="text-primary">WORK PROCESS</span>
-            </h3>
 
-            {/* Premium Stepper Headers */}
-            <div className="relative flex justify-between items-center mb-12 max-w-2xl mx-auto px-4">
-              {/* Stepper background line */}
-              <div className="absolute left-8 right-8 top-1/2 h-[2px] bg-gray-100 -translate-y-1/2 z-0">
+      {/* CTA & Process Slider Section */}
+      <section id="about" className="py-16 md:py-24 bg-white text-black">
+        <div className="text-center mt-24 pt-16 border-t border-gray-100 max-w-4xl mx-auto">
+          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[12px] font-semibold uppercase tracking-widest mb-4">
+            Our Methodology
+          </span>
+          <h3 className="font-extrabold mb-12 font-TuskerGrotesk tracking-wide text-gray-900">
+            OUR PROFESSIONAL <span className="text-primary">WORK PROCESS</span>
+          </h3>
+
+          {/* Premium Stepper Headers */}
+          <div className="relative flex justify-between items-center mb-12 max-w-2xl mx-auto px-4">
+            {/* Stepper background line */}
+            <div className="absolute left-8 right-8 top-1/2 h-[2px] bg-gray-100 -translate-y-1/2 z-0">
+              <div
+                className="h-full bg-primary transition-all duration-500 ease-out"
+                style={{ width: `${(activeProcessIndex / 3) * 100}%` }}
+              ></div>
+            </div>
+
+            {["Understand", "Plan", "Execution", "Delivery"].map((stepTitle, idx) => (
+              <button
+                key={idx}
+                onClick={() => setActiveProcessIndex(idx)}
+                className="relative z-10 flex flex-col items-center focus:outline-none group"
+              >
                 <div
-                  className="h-full bg-primary transition-all duration-500 ease-out"
-                  style={{ width: `${(activeProcessIndex / 3) * 100}%` }}
-                ></div>
-              </div>
-
-              {["Understand", "Plan", "Execution", "Delivery"].map((stepTitle, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setActiveProcessIndex(idx)}
-                  className="relative z-10 flex flex-col items-center focus:outline-none group"
+                  className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-[14px] border transition-all duration-500 shadow-md ${activeProcessIndex === idx
+                    ? "bg-primary text-white border-primary scale-110 shadow-primary/20"
+                    : "bg-white text-gray-400 border-gray-100 group-hover:border-primary/30 group-hover:text-primary"
+                    }`}
                 >
-                  <div
-                    className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-[14px] border transition-all duration-500 shadow-md ${activeProcessIndex === idx
-                      ? "bg-primary text-white border-primary scale-110 shadow-primary/20"
-                      : "bg-white text-gray-400 border-gray-100 group-hover:border-primary/30 group-hover:text-primary"
-                      }`}
-                  >
-                    0{idx + 1}
-                  </div>
-                  <span
-                    className={`absolute top-12 text-[12px] font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-500 ${activeProcessIndex === idx ? "text-primary opacity-100 translate-y-0" : "text-gray-400 opacity-60 group-hover:opacity-100"
-                      }`}
-                  >
-                    {stepTitle}
-                  </span>
-                </button>
-              ))}
-            </div>
-
-            {/* Slider Container */}
-            <div className="relative flex items-center justify-center px-4 md:px-12 mb-16">
-              {/* Left Arrow Button */}
-              <button
-                onClick={() => setActiveProcessIndex((prev) => (prev === 0 ? 3 : prev - 1))}
-                className="absolute left-0 md:left-4 z-20 w-12 h-12 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group"
-              >
-                <svg className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-
-              {/* Steps Card Slider Stage */}
-              <div className="w-full max-w-xl transition-all duration-500 transform">
-                {[
-                  {
-                    step: "01",
-                    title: "Understand",
-                    desc: "Requirement Analysis. We carefully analyze your goals, expectations, brand parameters, and constraints to establish a bulletproof strategic alignment.",
-                    color: "from-blue-500 to-indigo-600",
-                    shadow: "shadow-indigo-500/10 hover:shadow-indigo-500/20",
-                    icon: (
-                      <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                          <radialGradient id="3d-grad-1" cx="30%" cy="30%" r="70%">
-                            <stop offset="0%" stopColor="#818CF8" />
-                            <stop offset="60%" stopColor="#4F46E5" />
-                            <stop offset="100%" stopColor="#312E81" />
-                          </radialGradient>
-                          <filter id="3d-shadow-1" x="-10%" y="-10%" width="130%" height="130%">
-                            <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#4F46E5" floodOpacity="0.4" />
-                          </filter>
-                        </defs>
-                        <circle cx="32" cy="32" r="24" fill="url(#3d-grad-1)" filter="url(#3d-shadow-1)" />
-                        <circle cx="26" cy="22" r="10" fill="#ffffff" opacity="0.15" />
-                        <path d="M28 26C28 23.7909 29.7909 22 32 22C34.2091 22 36 23.7909 36 26C36 27.8244 34.7813 28.5 33.75 29.25C32.8438 29.9062 32 30.8125 32 32" stroke="white" strokeWidth="3" strokeLinecap="round" />
-                        <circle cx="32" cy="38" r="2" fill="white" />
-                      </svg>
-                    )
-                  },
-                  {
-                    step: "02",
-                    title: "Plan",
-                    desc: "Strategy & Design. Laying down creative pathways, robust budgets, wireframes, mood boards, and highly organized schedules to streamline execution.",
-                    color: "from-amber-400 to-orange-500",
-                    shadow: "shadow-orange-500/10 hover:shadow-orange-500/20",
-                    icon: (
-                      <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                          <radialGradient id="3d-grad-2" cx="30%" cy="30%" r="70%">
-                            <stop offset="0%" stopColor="#FBBF24" />
-                            <stop offset="60%" stopColor="#F97316" />
-                            <stop offset="100%" stopColor="#7C2D12" />
-                          </radialGradient>
-                          <filter id="3d-shadow-2" x="-10%" y="-10%" width="130%" height="130%">
-                            <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#F97316" floodOpacity="0.4" />
-                          </filter>
-                        </defs>
-                        <rect x="12" y="12" width="40" height="40" rx="10" fill="url(#3d-grad-2)" filter="url(#3d-shadow-2)" transform="rotate(-5 32 32)" />
-                        <circle cx="24" cy="22" r="8" fill="#ffffff" opacity="0.15" />
-                        <path d="M22 28L28 34L42 20" stroke="white" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M22 38H42" stroke="white" strokeWidth="3" strokeLinecap="round" opacity="0.7" />
-                      </svg>
-                    )
-                  },
-                  {
-                    step: "03",
-                    title: "Execution",
-                    desc: "Meticulous Implementation. Our cross-functional creative team goes all in, launching campaigns, coordinating high-end decoration, and monitoring execution dynamically.",
-                    color: "from-pink-500 to-rose-600",
-                    shadow: "shadow-rose-500/10 hover:shadow-rose-500/20",
-                    icon: (
-                      <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                          <radialGradient id="3d-grad-3" cx="30%" cy="30%" r="70%">
-                            <stop offset="0%" stopColor="#F472B6" />
-                            <stop offset="60%" stopColor="#E11D48" />
-                            <stop offset="100%" stopColor="#4C0519" />
-                          </radialGradient>
-                          <filter id="3d-shadow-3" x="-10%" y="-10%" width="130%" height="130%">
-                            <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#E11D48" floodOpacity="0.4" />
-                          </filter>
-                        </defs>
-                        <polygon points="32,8 52,44 12,44" fill="url(#3d-grad-3)" filter="url(#3d-shadow-3)" />
-                        <circle cx="32" cy="28" r="6" fill="#ffffff" opacity="0.2" />
-                        <path d="M32 20V34" stroke="white" strokeWidth="3.5" strokeLinecap="round" />
-                        <path d="M26 30H38" stroke="white" strokeWidth="3.5" strokeLinecap="round" />
-                      </svg>
-                    )
-                  },
-                  {
-                    step: "04",
-                    title: "Delivery",
-                    desc: "Final Result & Support. Launching your celebration or campaign flawlessly, measuring data impact, delivering assets, and offering long-term ongoing consultation.",
-                    color: "from-emerald-400 to-teal-600",
-                    shadow: "shadow-teal-500/10 hover:shadow-teal-500/20",
-                    icon: (
-                      <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                          <radialGradient id="3d-grad-4" cx="30%" cy="30%" r="70%">
-                            <stop offset="0%" stopColor="#34D399" />
-                            <stop offset="60%" stopColor="#0D9488" />
-                            <stop offset="100%" stopColor="#115E59" />
-                          </radialGradient>
-                          <filter id="3d-shadow-4" x="-10%" y="-10%" width="130%" height="130%">
-                            <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#0D9488" floodOpacity="0.4" />
-                          </filter>
-                        </defs>
-                        <circle cx="32" cy="32" r="22" fill="url(#3d-grad-4)" filter="url(#3d-shadow-4)" />
-                        <path d="M24 30L30 36L44 22" stroke="white" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M20 44H44" stroke="white" strokeWidth="3" strokeLinecap="round" opacity="0.6" />
-                      </svg>
-                    )
-                  }
-                ].map((item, idx) => {
-                  if (activeProcessIndex !== idx) return null;
-                  return (
-                    <div
-                      key={idx}
-                      className="w-full bg-white rounded-3xl p-8 md:p-12 border border-gray-100 shadow-[0_30px_70px_rgba(0,0,0,0.06)] transition-all duration-500 hover:scale-102 flex flex-col items-center text-center relative overflow-hidden animate-fade-in-up"
-                    >
-                      {/* Glowing decorative corner */}
-                      <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${item.color} opacity-[0.06] rounded-bl-full`}></div>
-
-                      {/* 3D Premium Icon */}
-                      <div className="mb-6 transform hover:scale-115 hover:rotate-3 transition-transform duration-500">
-                        {item.icon}
-                      </div>
-
-                      {/* Info */}
-                      <span className="text-[12px] font-extrabold uppercase tracking-widest text-primary mb-2">
-                        STAGE {item.step}
-                      </span>
-                      <h4 className="font-extrabold text-gray-900 mb-4 uppercase tracking-wider">
-                        {item.title}
-                      </h4>
-                      <p className="text-gray-600 leading-relaxed max-w-md mx-auto">
-                        {item.desc}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Right Arrow Button */}
-              <button
-                onClick={() => setActiveProcessIndex((prev) => (prev === 3 ? 0 : prev + 1))}
-                className="absolute right-0 md:right-4 z-20 w-12 h-12 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group"
-              >
-                <svg className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-
-            {/* Action buttons */}
-            <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <Link
-                to="/contactus"
-                className="inline-flex items-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/20"
-              >
-                Let's Create Something Amazing
-                <svg
-                  className="w-5 h-5 ml-3"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                  0{idx + 1}
+                </div>
+                <span
+                  className={`absolute top-12 text-[14px] font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-500 ${activeProcessIndex === idx ? "text-primary opacity-100 translate-y-0" : "text-gray-400 opacity-60 group-hover:opacity-100"
+                    }`}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  ></path>
-                </svg>
-              </Link>
-            
-            </div>
+                  {stepTitle}
+                </span>
+              </button>
+            ))}
           </div>
-</section>
+
+          {/* Slider Container */}
+          <div className="relative flex items-center justify-center px-4 md:px-12 mb-16">
+            {/* Left Arrow Button */}
+            <button
+              onClick={() => setActiveProcessIndex((prev) => (prev === 0 ? 3 : prev - 1))}
+              className="absolute left-0 md:left-4 z-20 w-12 h-12 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group"
+            >
+              <svg className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            {/* Steps Card Slider Stage */}
+            <div className="w-full max-w-xl transition-all duration-500 transform">
+              {[
+                {
+                  step: "01",
+                  title: "Understand",
+                  desc: "Requirement Analysis. We carefully analyze your goals, expectations, brand parameters, and constraints to establish a bulletproof strategic alignment.",
+                  color: "from-blue-500 to-indigo-600",
+                  shadow: "shadow-indigo-500/10 hover:shadow-indigo-500/20",
+                  icon: (
+                    <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <radialGradient id="3d-grad-1" cx="30%" cy="30%" r="70%">
+                          <stop offset="0%" stopColor="#818CF8" />
+                          <stop offset="60%" stopColor="#4F46E5" />
+                          <stop offset="100%" stopColor="#312E81" />
+                        </radialGradient>
+                        <filter id="3d-shadow-1" x="-10%" y="-10%" width="130%" height="130%">
+                          <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#4F46E5" floodOpacity="0.4" />
+                        </filter>
+                      </defs>
+                      <circle cx="32" cy="32" r="24" fill="url(#3d-grad-1)" filter="url(#3d-shadow-1)" />
+                      <circle cx="26" cy="22" r="10" fill="#ffffff" opacity="0.15" />
+                      <path d="M28 26C28 23.7909 29.7909 22 32 22C34.2091 22 36 23.7909 36 26C36 27.8244 34.7813 28.5 33.75 29.25C32.8438 29.9062 32 30.8125 32 32" stroke="white" strokeWidth="3" strokeLinecap="round" />
+                      <circle cx="32" cy="38" r="2" fill="white" />
+                    </svg>
+                  )
+                },
+                {
+                  step: "02",
+                  title: "Plan",
+                  desc: "Strategy & Design. Laying down creative pathways, robust budgets, wireframes, mood boards, and highly organized schedules to streamline execution.",
+                  color: "from-amber-400 to-orange-500",
+                  shadow: "shadow-orange-500/10 hover:shadow-orange-500/20",
+                  icon: (
+                    <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <radialGradient id="3d-grad-2" cx="30%" cy="30%" r="70%">
+                          <stop offset="0%" stopColor="#FBBF24" />
+                          <stop offset="60%" stopColor="#F97316" />
+                          <stop offset="100%" stopColor="#7C2D12" />
+                        </radialGradient>
+                        <filter id="3d-shadow-2" x="-10%" y="-10%" width="130%" height="130%">
+                          <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#F97316" floodOpacity="0.4" />
+                        </filter>
+                      </defs>
+                      <rect x="12" y="12" width="40" height="40" rx="10" fill="url(#3d-grad-2)" filter="url(#3d-shadow-2)" transform="rotate(-5 32 32)" />
+                      <circle cx="24" cy="22" r="8" fill="#ffffff" opacity="0.15" />
+                      <path d="M22 28L28 34L42 20" stroke="white" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M22 38H42" stroke="white" strokeWidth="3" strokeLinecap="round" opacity="0.7" />
+                    </svg>
+                  )
+                },
+                {
+                  step: "03",
+                  title: "Execution",
+                  desc: "Meticulous Implementation. Our cross-functional creative team goes all in, launching campaigns, coordinating high-end decoration, and monitoring execution dynamically.",
+                  color: "from-pink-500 to-rose-600",
+                  shadow: "shadow-rose-500/10 hover:shadow-rose-500/20",
+                  icon: (
+                    <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <radialGradient id="3d-grad-3" cx="30%" cy="30%" r="70%">
+                          <stop offset="0%" stopColor="#F472B6" />
+                          <stop offset="60%" stopColor="#E11D48" />
+                          <stop offset="100%" stopColor="#4C0519" />
+                        </radialGradient>
+                        <filter id="3d-shadow-3" x="-10%" y="-10%" width="130%" height="130%">
+                          <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#E11D48" floodOpacity="0.4" />
+                        </filter>
+                      </defs>
+                      <polygon points="32,8 52,44 12,44" fill="url(#3d-grad-3)" filter="url(#3d-shadow-3)" />
+                      <circle cx="32" cy="28" r="6" fill="#ffffff" opacity="0.2" />
+                      <path d="M32 20V34" stroke="white" strokeWidth="3.5" strokeLinecap="round" />
+                      <path d="M26 30H38" stroke="white" strokeWidth="3.5" strokeLinecap="round" />
+                    </svg>
+                  )
+                },
+                {
+                  step: "04",
+                  title: "Delivery",
+                  desc: "Final Result & Support. Launching your celebration or campaign flawlessly, measuring data impact, delivering assets, and offering long-term ongoing consultation.",
+                  color: "from-emerald-400 to-teal-600",
+                  shadow: "shadow-teal-500/10 hover:shadow-teal-500/20",
+                  icon: (
+                    <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <radialGradient id="3d-grad-4" cx="30%" cy="30%" r="70%">
+                          <stop offset="0%" stopColor="#34D399" />
+                          <stop offset="60%" stopColor="#0D9488" />
+                          <stop offset="100%" stopColor="#115E59" />
+                        </radialGradient>
+                        <filter id="3d-shadow-4" x="-10%" y="-10%" width="130%" height="130%">
+                          <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#0D9488" floodOpacity="0.4" />
+                        </filter>
+                      </defs>
+                      <circle cx="32" cy="32" r="22" fill="url(#3d-grad-4)" filter="url(#3d-shadow-4)" />
+                      <path d="M24 30L30 36L44 22" stroke="white" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M20 44H44" stroke="white" strokeWidth="3" strokeLinecap="round" opacity="0.6" />
+                    </svg>
+                  )
+                }
+              ].map((item, idx) => {
+                if (activeProcessIndex !== idx) return null;
+                return (
+                  <div
+                    key={idx}
+                    className="w-full bg-white rounded-3xl p-8 md:p-12 border border-gray-100 shadow-[0_30px_70px_rgba(0,0,0,0.06)] transition-all duration-500 hover:scale-102 flex flex-col items-center text-center relative overflow-hidden animate-fade-in-up"
+                  >
+                    {/* Glowing decorative corner */}
+                    <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${item.color} opacity-[0.06] rounded-bl-full`}></div>
+
+                    {/* 3D Premium Icon */}
+                    <div className="mb-6 transform hover:scale-115 hover:rotate-3 transition-transform duration-500">
+                      {item.icon}
+                    </div>
+
+                    {/* Info */}
+                    <span className="text-[14px] font-extrabold uppercase tracking-widest text-primary mb-2">
+                      STAGE {item.step}
+                    </span>
+                    <h4 className="font-extrabold text-gray-900 mb-4 uppercase tracking-wider">
+                      {item.title}
+                    </h4>
+                    <p className="text-gray-600 leading-relaxed max-w-md mx-auto">
+                      {item.desc}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Right Arrow Button */}
+            <button
+              onClick={() => setActiveProcessIndex((prev) => (prev === 3 ? 0 : prev + 1))}
+              className="absolute right-0 md:right-4 z-20 w-12 h-12 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group"
+            >
+              <svg className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Action buttons */}
+          <div className="flex flex-wrap justify-center gap-4 mt-8">
+            <Link
+              to="/contactus"
+              className="inline-flex items-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/20"
+            >
+              Let's Create Something Amazing
+              <svg
+                className="w-5 h-5 ml-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                ></path>
+              </svg>
+            </Link>
+
+          </div>
+        </div>
+      </section>
     </>
   );
 };

@@ -4,14 +4,10 @@ import footer_csd from "../../assets/LogoFooter.svg";
 
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPinterestP } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { FaWhatsapp } from "react-icons/fa";
+import { FooterLogo1, FooterLogo2, FooterLogo3, FooterLogo4 } from "../../assets/data/icon_data";
 
 import { GlobalData } from "../../assets/data/GlodalData";
 
-import FooterLogo1 from "./FooterLogo1.png";
-import FooterLogo2 from "./FooterLogo2.png";
-import FooterLogo3 from "./FooterLogo3.png";
-import FooterLogo4 from "./FooterLogo4.png";
 import ChatBot from "../ChatBot/ChatBot";
 
 const Footer = () => {
@@ -112,28 +108,9 @@ const Footer = () => {
               </div>
             </div>
 
+
+
            
-
-            {/* Divider */}
-            <div className="border-t border-gray-600 my-6" />
-
-            {/* Bottom Logos */}
-            <p className="text-secondary text-center py-2">
-              Registered on
-            </p>
-            <div className="flex justify-center items-center gap-4 flex-wrap ">
-              {[FooterLogo1, FooterLogo2, FooterLogo3, FooterLogo4].map(
-                (logo, i) => (
-                  <img
-                    key={i}
-                    src={logo}
-                    alt={`footer_logo_${i}`}
-                    className="h-10 sm:h-12 hover:animate-pulse rounded-sm"
-                  />
-                )
-              )}
-            </div>
-
             <div className="h-px my-8 border-0 bg-gray-600" />
             <p
               id="copyright"
@@ -142,8 +119,10 @@ const Footer = () => {
               © 2016-<span> {currentYear} </span>
               <span className="font-bold">leormedia.com.</span> All Rights
               Reserved.
-              <br />A Development & Designer Community ( #CSD )
+
+
             </p>
+            <span className=" text-[12px] justify-center flex text-secondary">A Development & Designer Community ( #CSD )</span>
             <div className="flex pt-4 justify-center text-secondary text-[12px] space-x-4">
               <a href="/Legal/privacy-policy">Privacy Policy</a>
               <a href="/Legal/terms-and-conditions">Terms & Conditions</a>

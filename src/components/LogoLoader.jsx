@@ -101,7 +101,7 @@ const LogoLoader = ({ isLoading }) => {
             alt="Leor Media Logo"
             className="w-[200px] h-[200px] drop-shadow-xl mx-auto"
           />
-          <p className="mt-1 text-gray-400 font-bold tracking-[0.3em] uppercase text-xs sm:text-sm text-center">
+          <p className="mt-1 text-gray-400 font-bold tracking-[0.3em] uppercase text-[14px] text-center">
             Since 2016
           </p>
         </div>

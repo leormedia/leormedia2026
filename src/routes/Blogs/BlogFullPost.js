@@ -1,96 +1,263 @@
-// FullBlog.js
-
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import seoData from "../../assets/data/seo.json";
+import { FiCalendar, FiArrowRight, FiCheckCircle, FiShare2 } from 'react-icons/fi';
 import axios from 'axios';
 
 function FullBlog() {
-  const [post, setPost] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [post, setPost] = useState({});
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
   const { slug } = useParams();
 
   useEffect(() => {
-    const fetchBlog = async () => {
+    const fetchPost = async () => {
       try {
         const response = await axios.get(`/api/blogs/${slug}`);
         setPost(response.data);
+        setError(null);
       } catch (err) {
-        setError({ message: 'Post not found or server error' });
+        console.error("Failed to load blog post data:", err);
+        setError({ message: 'Post not found' });
       } finally {
         setLoading(false);
       }
     };
-    fetchBlog();
+    fetchPost();
   }, [slug]);
 
   if (loading) {
-    return <div className="text-center py-20">Loading...</div>;
+    return (
+      <div className="min-h-[60vh] flex items-center justify-center bg-gray-50">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+      </div>
+    );
   }
 
   if (error) {
-    return <div className="text-center py-20 text-red-500">Error: {error.message}</div>;
+    return (
+      <div className="min-h-[60vh] flex items-center justify-center bg-gray-50">
+        <div className="text-center">
+          <h2 className="text-[26px] md:text-[48px] font-FKScreamerBold uppercase tracking-widest text-gray-900 mb-2">Post Not Found</h2>
+          <p className="text-gray-500 mb-6 text-[18px]">The article you're looking for doesn't exist or has been moved.</p>
+          <Link to="/blogs" className="px-8 py-3 bg-primary text-white rounded-full font-bold uppercase tracking-widest hover:bg-orange-600 transition-colors shadow-lg shadow-primary/30">
+            Back to Blog
+          </Link>
+        </div>
+      </div>
+    );
   }
 
   const renderContent = () => {
     if (!post || !post.content) {
       return { __html: '' };
     }
-    // No need to replace h3 if we style it properly via CSS
-    return { __html: post.content };
+  
+    const htmlContent = post.content;
+    // We remove the bold replacement to allow h3 tags to render properly via CSS
+    return { __html: htmlContent };
   };
+  
+  const seo = seoData.blogPost;
+  const dynamicTitle = seo.title.replace('{postTitle}', post.title || '');
+  const dynamicDescription = seo.description.replace('{postTitle}', post.title || '');
+  const dynamicCanonical = seo.canonical.replace('{postSlug}', slug);
+  const dynamicKeywords = seo.keywords.replace('{postTitle}', post.title || '');
+
+  // Format date nicely
+  const formattedDate = post.date ? new Date(post.date).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  }) : 'Recently Updated';
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <main className="mt-10 mb-20">
-        {/* Back Button */}
-        <Link
-          to="/blogs"
-          className="inline-flex items-center text-primary font-medium mb-8 hover:translate-x-[-4px] transition-transform"
-        >
-          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-          </svg>
-          Back to Blogs
-        </Link>
+    <div className="bg-gray-50 min-h-screen pb-20">
+      <Helmet>
+        <title>{dynamicTitle}</title>
+        <meta name="description" content={dynamicDescription} />
+        <meta name="keywords" content={dynamicKeywords} />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={dynamicTitle} />
+        <meta property="og:description" content={dynamicDescription} />
+        <meta property="og:image" content={post.feature_image || seo.ogImage} />
+        <meta property="og:url" content={dynamicCanonical} />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={dynamicTitle} />
+        <meta name="twitter:description" content={dynamicDescription} />
+        <meta name="twitter:image" content={post.feature_image || seo.ogImage} />
+        <link rel="canonical" href={dynamicCanonical} />
+      </Helmet>
 
-        {/* Hero Image */}
-        <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-12" style={{ height: "32rem" }}>
-          <img
-            src={post.feature_image}
-            alt={post.title}
-            className="absolute inset-0 w-full h-full object-cover"
+      {/* Hero Section */}
+      <div className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-slate-900 text-white">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={post.feature_image} 
+            alt={post.title} 
+            className="w-full h-full object-cover opacity-30 scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-          <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full">
-
-            <h1 className="font-extrabold text-white leading-tight">
-              {post.title}
-            </h1>
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent" />
         </div>
-
-        {/* Article Body */}
-        <div className="max-w-3xl mx-auto">
-          <div
-            className="blog-content prose-lg text-gray-800 leading-relaxed space-y-6"
-            dangerouslySetInnerHTML={renderContent()}
-          ></div>
-
-          <div className="mt-16 pt-8 border-t border-gray-200">
-            <h3 className="font-bold mb-4">Share this article</h3>
-            <div className="flex space-x-4">
-              {/* Simple share buttons placeholder */}
-              <button className="p-3 bg-gray-100 rounded-full hover:bg-primary hover:text-white transition-colors">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /></svg>
-              </button>
-              <button className="p-3 bg-gray-100 rounded-full hover:bg-primary hover:text-white transition-colors">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
-              </button>
+        
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-primary text-[14px] md:text-[14px] font-bold mb-6 backdrop-blur-sm uppercase tracking-widest">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            {post.category || 'Expert Insights'}
+          </div>
+          <h1 className="text-[26px] md:text-[48px] lg:text-[72px] font-FKScreamerBold uppercase tracking-widest mb-6 leading-[1.1] drop-shadow-lg">
+            {post.title}
+          </h1>
+          <div className="flex flex-wrap items-center justify-center gap-6 text-white/80 text-[10px] font-bold uppercase tracking-widest mt-8">
+            <div className="flex items-center gap-2">
+              <img src="https://cyberspacedigital.in/logo192.png" alt="Cyber Space Digital" className="w-10 h-10 shadow-primary/20" />
+              <span>Cyber Space Digital</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <FiCalendar className="text-primary text-[14px]" />
+              <span>{formattedDate}</span>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Main Content Area */}
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-20">
+        <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-6 md:p-12 border border-slate-100">
+          
+          {/* Article Body */}
+          <article className="prose-custom ">
+            <div dangerouslySetInnerHTML={renderContent()} />
+          </article>
+
+          {/* Tags / Keywords (if available) */}
+          {post.target_keywords && post.target_keywords.length > 0 && (
+            <div className="mt-12 pt-8 border-t border-slate-100 flex flex-wrap gap-2">
+              {post.target_keywords.map((keyword, idx) => (
+                <span key={idx} className="px-4 py-1.5 bg-primary/5 text-gray-700 text-[12px] font-bold uppercase tracking-wider rounded-full border border-primary/20">
+                  #{keyword}
+                </span>
+              ))}
+            </div>
+          )}
+
+          {/* Share Section */}
+          <div className="mt-10 flex items-center justify-between p-6 md:p-8 bg-gray-50 border border-gray-100 rounded-3xl">
+            <div>
+              <h4 className="font-FKScreamerBold text-[24px] uppercase tracking-widest text-gray-900 mb-1">Found this helpful?</h4>
+              <p className="text-[16px] text-gray-500 font-medium">Share this article with your network.</p>
+            </div>
+            <button className="flex items-center gap-2 px-6 py-3 bg-white text-gray-900 rounded-full font-bold shadow-sm border border-gray-200 hover:border-primary hover:text-primary transition-all active:scale-95 uppercase tracking-widest text-[14px]">
+              <FiShare2 />
+              Share Post
+            </button>
+          </div>
+        </div>
       </main>
+
+      {/* Compelling CTA Section */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-8">
+        <div className="bg-slate-900 rounded-[2.5rem] p-8 md:p-16 text-center relative overflow-hidden shadow-2xl">
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
+          
+          <div className="relative z-10 max-w-2xl mx-auto">
+            <div className="w-16 h-16 bg-primary/20 text-primary rounded-2xl flex items-center justify-center mx-auto mb-8 backdrop-blur-sm border border-primary/30">
+              <FiCheckCircle className="text-[30px]" />
+            </div>
+            
+            <h2 className="text-[26px] md:text-[48px] font-FKScreamerBold uppercase tracking-widest text-white mb-6 leading-tight">
+              Ready to Accelerate Your <span className="text-primary block md:inline">Digital Growth?</span>
+            </h2>
+            
+            <p className="text-white/80 text-[16px] md:text-[18px] mb-10 leading-relaxed max-w-xl mx-auto">
+              {post.call_to_action || "Stop struggling with low visibility. Partner with Cyber Space Digital to dominate search rankings, capture more leads, and scale your business effortlessly."}
+            </p>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link to="/contactus" className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-orange-600 text-white rounded-full font-bold text-[14px] md:text-[16px] shadow-[0_0_20px_rgba(255,165,0,0.4)] transition-all flex items-center justify-center gap-2 group uppercase tracking-widest">
+                Get a Free Audit
+                <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link to="/services" className="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-full font-bold text-[14px] md:text-[16px] backdrop-blur-sm border border-white/10 transition-all text-center uppercase tracking-widest">
+                Explore Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Custom Styles for rendering HTML content beautifully */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        .prose-custom {
+          color: #334155;
+          line-height: 1.8;
+          font-size: 16px;
+        }
+        .prose-custom p {
+          margin-bottom: 1.5em;
+        }
+        .prose-custom h2 {
+          font-size: 18px;
+          font-weight: 900;
+          color: #0f172a;
+          margin-top: 2em;
+          margin-bottom: 0.75em;
+          line-height: 1.2;
+          letter-spacing: -0.025em;
+        }
+        .prose-custom h3 {
+          font-size: 18px;
+          font-weight: 800;
+          color: #1e293b;
+          margin-top: 1.75em;
+          margin-bottom: 0.75em;
+          line-height: 1.3;
+        }
+        .prose-custom ul {
+          list-style-type: none;
+          padding-left: 0;
+          margin-bottom: 1.5em;
+        }
+        .prose-custom ul li {
+          position: relative;
+          padding-left: 1.75em;
+          margin-bottom: 0.75em;
+        }
+        .prose-custom ul li::before {
+          content: '→';
+          position: absolute;
+          left: 0;
+          color: var(--color-primary, #ff8c00); /* Adjusted to primary-like color */
+          font-weight: bold;
+        }
+        .prose-custom strong {
+          color: #0f172a;
+          font-weight: 800;
+        }
+        .prose-custom a {
+          color: var(--color-primary, #ff8c00);
+          text-decoration: underline;
+          text-decoration-thickness: 2px;
+          text-underline-offset: 4px;
+          font-weight: 700;
+          transition: opacity 0.2s;
+        }
+        .prose-custom a:hover {
+          opacity: 0.8;
+        }
+        .prose-custom blockquote {
+          border-left: 4px solid var(--color-primary, #ff8c00);
+          padding-left: 1.5em;
+          font-style: italic;
+          color: #475569;
+          background: #f8fafc;
+          padding: 1.5em;
+          border-radius: 0 1rem 1rem 0;
+          margin: 2em 0;
+        }
+      `}} />
     </div>
   );
 }
