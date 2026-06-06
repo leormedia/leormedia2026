@@ -14,10 +14,13 @@ import {
   FaStar,
   FaRing,
   FaBullhorn,
+  FaEye,
+  FaBullseye,
 } from "react-icons/fa";
 import { CONTACTUS_API } from "../hooks/Apis";
 import GoogleMapReviews from "../components/GoogleMapReviews/GoogleMapReviews"
 import { FooterLogo1, FooterLogo2, FooterLogo3, FooterLogo4 } from "../assets/data/icon_data";
+import { Calendar, Briefcase, PartyPopper, Smile } from 'lucide-react';
 
 // Import generated images
 import WeddingSliderImg from "../assets/Generated/wedding_slider.png";
@@ -274,21 +277,26 @@ const HomePage = () => {
         <div className="relative z-20 w-full h-full max-w-5xl mx-auto px-6 pb-24 md:pb-28 flex flex-col items-center justify-center text-center">
 
           {/* Static Header Content */}
-          <span className="inline-block mt-10 text-primary font-bold tracking-[0.3em] uppercase text-[12px] md:text-[14px] mb-4">
-            SINCE 2016 | LEOR MEDIA
-          </span>
+          
 
-          <h1 className="text-white font-TuskerGrotesk uppercase leading-none tracking-wide mb-4 max-w-3xl">
-            <span className="block text-[22px] md:text-[38px] lg:text-[48px] font-extrabold drop-shadow-md">
-              Crafting Extraordinary Events
+          <div className="flex flex-col items-center text-center leading-none text-white font-TuskerGrotesk uppercase tracking-wide mb-4">
+            <span className="block text-[24px] md:text-[36px] lg:text-[48px] font-extrabold drop-shadow-md">
+              Crafting Events
             </span>
-            <span className="block text-primary text-[28px] md:text-[44px] lg:text-[54px] font-black my-1.5 drop-shadow-lg">
+            
+            {/* Centerpiece ampersand - more compact */}
+            <span className="text-primary text-[40px] md:text-[60px] lg:text-[80px] font-black leading-none my-1 md:my-2 drop-shadow-lg">
               &
             </span>
-            <span className="block text-[22px] md:text-[38px] lg:text-[48px] font-extrabold text-primary drop-shadow-md">
-              Creative Digital Success
+            
+            <span className="block text-[24px] md:text-[36px] lg:text-[48px] font-extrabold text-primary drop-shadow-md mb-4">
+              Digital Success Stories
             </span>
-          </h1>
+
+            <span className="inline-block text-gray-300 font-bold tracking-[0.4em] uppercase text-[10px] md:text-[12px] lg:text-[14px] mt-2 mb-4 font-sans">
+              SINCE 2016 | LEOR MEDIA
+            </span>
+          </div>
 
           {/* Dynamic Content (Animates on slide change) */}
           <div key={selected} className="animate-fade-in-up flex flex-col items-center">
@@ -311,28 +319,7 @@ const HomePage = () => {
 
         </div>
 
-        {/* Slide Selector Tabs */}
-        <div className="absolute bottom-8 left-0 right-0 z-30 flex justify-center items-center space-x-4 px-4">
-          {heroCategories.map((cat) => {
-            const isActive = selected === cat;
-            return (
-              <button
-                key={cat}
-                onClick={() => setSelected(cat)}
-                title={cat}
-                className={`group relative p-4 rounded-full flex items-center justify-center transition-all duration-300 ${
-                  isActive
-                    ? "bg-primary text-black shadow-lg shadow-primary/30 scale-110"
-                    : "bg-black/45 hover:bg-black/60 text-white/80 hover:text-white border border-white/10 backdrop-blur-md hover:scale-105"
-                }`}
-              >
-                {cat === "Events" && <FaStar className="text-[18px] md:text-[20px]" />}
-                {cat === "Weddings" && <FaRing className="text-[18px] md:text-[20px]" />}
-                {cat === "Digital Marketing" && <FaBullhorn className="text-[18px] md:text-[20px]" />}
-              </button>
-            );
-          })}
-        </div>
+
       </section>
 
       {/* Registered On Section */}
@@ -366,90 +353,172 @@ const HomePage = () => {
 
 
       {/* Aboutus */}
-      <section id="about" className="py-16 md:py-24 bg-white text-black">
-        <div className="container mx-auto px-4 md:px-8 lg:px-16">
-          {/* Section Header */}
-          <div className="max-w-5xl mx-auto relative">
+      <section id="about" className="relative py-20 md:py-32 bg-slate-50 overflow-hidden text-black">
+        {/* Decorative Background Elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-primary/5 blur-[120px]"></div>
+          <div className="absolute top-[60%] -right-[10%] w-[40%] h-[60%] rounded-full bg-orange-500/5 blur-[120px]"></div>
+        </div>
+
+        <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10">
+          <div className="max-w-6xl mx-auto relative">
+            
+            {/* Header Content */}
+            <div className="text-center mb-16 relative z-10">
+              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[14px] font-bold uppercase tracking-widest mb-4">
+                Who We Are
+              </span>
+              <h2 className="font-extrabold font-TuskerGrotesk tracking-wide text-[32px] md:text-[48px] text-gray-900 leading-tight uppercase">
+                DRIVEN BY <span className="text-primary">PURPOSE</span>
+              </h2>
+            </div>
+
             {/* Background Watermark Logo */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.2] select-none z-0">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.12] select-none z-0">
               <img
                 src={LogoOnly}
                 alt="Logo Watermark"
-                className="w-[280px] md:w-[450px] lg:w-[500px] max-w-[85vw] h-auto object-contain"
+                className="w-[280px] md:w-[250px] max-w-[85vw] h-auto object-contain drop-shadow-xl"
               />
             </div>
 
-            {/* Left Column: Mission & Journey */}
-            <div className="mb-12 relative z-10">
-              <div className="mb-10 text-center">
-                <h3 className="font-bold mb-8">
-                  Creating Memories,
-                </h3>
-                <span className="text-primary">Delivering Excellence.</span>
+{/* Vision & Mission - Creative Edition */}
+<div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+  
+  {/* Vision Card */}
+  <div className="group relative bg-white/80 backdrop-blur-xl p-8 md:p-10 rounded-3xl shadow-xl border border-white/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-primary/10 overflow-hidden">
+    {/* Animated gradient orb */}
+    <div className="absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-br from-primary/30 via-primary/10 to-transparent rounded-full blur-3xl transition-transform duration-700 group-hover:scale-150 group-hover:rotate-12"></div>
+    <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-gradient-to-tr from-primary/20 to-transparent rounded-full blur-3xl transition-transform duration-700 group-hover:scale-150 group-hover:-rotate-12"></div>
+    
+    {/* Content */}
+    <div className="relative z-10 flex flex-col items-center text-center">
+      {/* Icon with rotating ring */}
+      <div className="relative mb-8">
+        <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary/30 to-primary/5 flex items-center justify-center border border-primary/40 group-hover:border-primary/80 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg backdrop-blur-sm">
+          <FaEye className="text-4xl md:text-5xl text-primary drop-shadow-md transition-transform duration-500 group-hover:scale-110" />
+        </div>
+      </div>
+      
+      <h3 className="font-extrabold mb-4 text-3xl md:text-4xl uppercase tracking-wider text-gray-900 font-TuskerGrotesk">
+        Our <span className="text-primary relative inline-block">
+          Vision
+          <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary/40 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+        </span>
+      </h3>
+      
+      <div className="h-0.5 w-12 bg-primary/50 rounded-full mb-6 group-hover:w-28 transition-all duration-500"></div>
+      
+      <p className="text-gray-700 leading-relaxed font-medium text-sm md:text-base max-w-sm mx-auto">
+        To be the premier choice for event management and digital marketing, recognized for our creative brilliance, flawless execution, and commitment to transforming visionary ideas into unforgettable experiences.
+      </p>
+      
+      {/* Decorative dot pattern */}
+      <div className="flex gap-1 mt-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        {[...Array(3)].map((_, i) => (
+          <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary/60"></div>
+        ))}
+      </div>
+    </div>
+  </div>
 
-                <p className="text-balck leading-relaxed mb-6">
-                  Leor Media has been successfully organizing small to big scale weddings since 2016. We create the
-                  perfect weddings for customers right from the planning to its execution. Our personalized wedding
-                  packages and creative works, add that glam to your wedding while keeping customers budget in
-                  mind.
-                </p>
-                <p className="text-black leading-relaxed">
-                  Our packages incorporate even minute details from venue selection, theme recommendation, menu options
-                  and to hospitality so that we can make worry-free big day. We believe making memories are the best gifts
-                  to any events for which Leor Media strives 100% to make them more beautiful.
-                </p>
-              </div>
-
-
-            </div>
+  {/* Mission Card */}
+  <div className="group relative bg-white/80 backdrop-blur-xl p-8 md:p-10 rounded-3xl shadow-xl border border-white/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-primary/10 overflow-hidden">
+    {/* Animated gradient orbs */}
+    <div className="absolute -top-20 -left-20 w-64 h-64 bg-gradient-to-bl from-primary/30 via-primary/10 to-transparent rounded-full blur-3xl transition-transform duration-700 group-hover:scale-150 group-hover:-rotate-12"></div>
+    <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-gradient-to-tr from-primary/20 to-transparent rounded-full blur-3xl transition-transform duration-700 group-hover:scale-150 group-hover:rotate-12"></div>
+    
+    <div className="relative z-10 flex flex-col items-center text-center">
+      {/* Icon with rotating ring */}
+      <div className="relative mb-8">
+        <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary/30 to-primary/5 flex items-center justify-center border border-primary/40 group-hover:border-primary/80 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-lg backdrop-blur-sm">
+          <FaBullseye className="text-4xl md:text-5xl text-primary drop-shadow-md transition-transform duration-500 group-hover:scale-110" />
+        </div>
+      </div>
+      
+      <h3 className="font-extrabold mb-4 text-3xl md:text-4xl uppercase tracking-wider text-gray-900 font-TuskerGrotesk">
+        Our <span className="text-primary relative inline-block">
+          Mission
+          <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary/40 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+        </span>
+      </h3>
+      
+      <div className="h-0.5 w-12 bg-primary/50 rounded-full mb-6 group-hover:w-28 transition-all duration-500"></div>
+      
+      <p className="text-gray-700 leading-relaxed font-medium text-sm md:text-base max-w-sm mx-auto">
+        To deliver exceptional, tailor-made solutions that exceed client expectations. We are dedicated to building lasting relationships through transparency, passion, and an unwavering focus on bringing every project to life with perfection.
+      </p>
+      
+      {/* Decorative dot pattern */}
+      <div className="flex gap-1 mt-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        {[...Array(3)].map((_, i) => (
+          <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary/60"></div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
 
           </div>
-
-
         </div>
       </section>
 
 
 
-      {/* Track Record Section */}
-      <section className="py-20 md:py-28 bg-[#f37a20] text-white overflow-hidden border-y border-gray-900">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-16 md:mb-24 gap-8">
-            <div className="max-w-xl">
-              <span className="text-white font-bold tracking-[0.2em] uppercase text-[14px] mb-4 block">Proven Experience</span>
-              <h2 className="font-extrabold font-TuskerGrotesk uppercase tracking-wider text-[26px] md:text-[48px] text-white leading-tight">
-                Our Track Record
-              </h2>
-            </div>
-            <p className="text-white font-light leading-relaxed max-w-md lg:text-right border-l lg:border-l-0 lg:border-r border-primary/30 pl-6 lg:pl-0 lg:pr-6">
-              A decade of excellence, hundreds of ambitious projects, and thousands of unforgettable memories crafted flawlessly.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            {[
-              { value: "10+", label: "Years Experience" },
-              { value: "600+", label: "Projects Delivered" },
-              { value: "2K+", label: "Events & Projects" },
-              { value: "100%", label: "Client Satisfaction" }
-            ].map((stat, idx) => (
-              <div key={idx} className="group relative">
-                {/* Subtle hover background highlight */}
-                <div className="absolute -inset-4 bg-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+{/* Track Record Section - Compact with Icons */}
+<section className="py-12 md:py-16 bg-[#f37a20] text-white overflow-hidden border-y border-gray-900">
+  <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
+    {/* Heading & description */}
+    <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12 md:mb-16 gap-6">
+      <div className="max-w-xl">
+        <span className="text-white font-bold tracking-[0.2em] uppercase text-xs mb-3 block">
+          Proven Experience
+        </span>
+        <h2 className="font-extrabold font-TuskerGrotesk uppercase tracking-wider text-2xl sm:text-3xl md:text-4xl text-white leading-tight">
+          Our Track Record
+        </h2>
+      </div>
+      <p className="text-white font-light text-sm sm:text-base leading-relaxed max-w-md lg:text-right border-l lg:border-l-0 lg:border-r border-white/30 pl-5 lg:pl-0 lg:pr-6">
+        A decade of excellence, hundreds of ambitious projects, and thousands of unforgettable memories crafted flawlessly.
+      </p>
+    </div>
 
-                <div className="relative z-10 border-t-2 border-gray-800 group-hover:border-primary transition-colors duration-500 pt-6 md:pt-8">
-                  <div className="text-[28px] md:text-[50px] lg:text-[72px] font-extrabold text-white mb-3 font-TuskerGrotesk tracking-wide group-hover:text-primary transition-colors duration-500">
-                    {stat.value}
-                  </div>
-                  <div className="text-[14px] text-white uppercase tracking-widest font-medium">
-                    {stat.label}
-                  </div>
-                </div>
+    {/* Stats grid with icons */}
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+      {[
+        { value: "10+", label: "Years Experience", icon: Calendar },
+        { value: "600+", label: "Projects Delivered", icon: Briefcase },
+        { value: "2K+", label: "Events & Projects", icon: PartyPopper },
+        { value: "100%", label: "Client Satisfaction", icon: Smile }
+      ].map((stat, idx) => (
+        <div key={idx} className="group relative">
+          {/* Hover background */}
+          <div className="absolute -inset-3 bg-white/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+          <div className="relative z-10 border-t border-gray-800 group-hover:border-primary transition-colors duration-500 pt-5 md:pt-6">
+            {/* Icon + number row */}
+            <div className="flex items-center gap-2 mb-2">
+              <stat.icon 
+                size={28} 
+                className="text-white/80 group-hover:text-white transition-colors duration-300 shrink-0"
+                strokeWidth={1.5}
+              />
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-TuskerGrotesk tracking-wide group-hover:text-primary transition-colors duration-500">
+                {stat.value}
               </div>
-            ))}
+            </div>
+            <div className="text-[11px] sm:text-xs text-white uppercase tracking-widest font-medium">
+              {stat.label}
+            </div>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
 
 

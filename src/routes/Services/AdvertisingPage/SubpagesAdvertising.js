@@ -76,19 +76,20 @@ const SubpagesAdvertising = ({ pageData, seoData }) => {
             <div className="absolute inset-0 bg-black/60 backdrop-blur-[1px]"></div>
           </div>
 
-          <div className="relative z-10 container mx-auto px-6 text-center text-white">
-            <div className="max-w-4xl mx-auto space-y-6 animate-fade-in-up">
-              <span className="inline-block px-4 py-1.5 bg-primary/20 backdrop-blur-md border border-primary/30 rounded-full text-primary  font-semibold tracking-wider uppercase">
+          <div className="relative z-10 container mx-auto px-4 md:px-6 text-center text-white">
+            <div className="max-w-4xl mx-auto space-y-4 md:space-y-6 animate-fade-in-up">
+              <span className="inline-block px-3 py-1 sm:px-4 sm:py-1.5 bg-primary/20 backdrop-blur-md border border-primary/30 rounded-full text-primary font-semibold tracking-wider uppercase text-[10px] sm:text-[12px]">
                 {data.categoryLabel ||"Advertising"}
               </span>
-              <h1 className="font-bold leading-tight">
+              <h1 className="font-extrabold font-TuskerGrotesk uppercase tracking-wide leading-tight text-[32px] sm:text-[40px] md:text-[56px] drop-shadow-md">
                 {data.hero?.title || data.title}
               </h1>
-              <p className="opacity-90 max-w-2xl mx-auto leading-relaxed">
+              <p className="opacity-90 max-w-2xl mx-auto leading-relaxed text-[14px] md:text-[16px]">
                 {data.hero?.subtitle || data.subtitle}
               </p>
 
-              <div className="flex flex-col md:flex-row items-center justify-center gap-4 pt-6">
+              {/* Buttons side-by-side on mobile */}
+              <div className="flex flex-row items-center justify-center gap-3 sm:gap-4 pt-4 md:pt-6 w-full max-w-[100vw] overflow-hidden px-2">
                 {(data.hero?.ctas || [
                   { text:"Get Free Consultation", link:"/contactus", primary: true },
                   { text:"Call Now", link: `tel:${GlobalData.company.companyPhone}`, primary: false }
@@ -97,12 +98,12 @@ const SubpagesAdvertising = ({ pageData, seoData }) => {
                     key={idx}
                     to={cta.link.startsWith('tel:') ? '#' : cta.link}
                     onClick={cta.link.startsWith('tel:') ? () => window.location.href = cta.link : undefined}
-                    className={`w-full md:w-auto px-8 py-4 rounded-full font-bold  transition-all transform hover:scale-105 flex items-center justify-center gap-2 ${cta.primary
+                    className={`flex-1 sm:flex-none text-center px-2 py-3 sm:px-8 sm:py-4 rounded-full font-bold transition-all transform hover:scale-105 flex items-center justify-center gap-1 sm:gap-2 text-[11px] sm:text-[14px] leading-tight ${cta.primary
                         ?"bg-primary text-white hover:bg-orange-600 shadow-lg shadow-primary/25"
                         :"bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20"
                       }`}
                   >
-                    {cta.text} {cta.primary && <FaArrowRight className="" />}
+                    <span className="truncate whitespace-normal">{cta.text}</span> {cta.primary && <FaArrowRight className="text-[10px] sm:text-[14px] flex-shrink-0" />}
                   </Link>
                 ))}
               </div>

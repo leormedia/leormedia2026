@@ -83,41 +83,44 @@ const SubpagesWeddingplanners = ({ pageData, seoData }) => {
             <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
           </div>
           
-          <div className="relative z-10 container mx-auto px-6 text-center text-white">
-            <div className="max-w-4xl mx-auto space-y-8 animate-fade-in-up">
-              <span className="inline-block px-4 py-2 bg-primary/20 backdrop-blur-md border border-primary/30 rounded-full text-primary  font-bold tracking-widest uppercase">
+          <div className="relative z-10 container mx-auto px-4 md:px-6 text-center text-white">
+            <div className="max-w-4xl mx-auto space-y-4 md:space-y-6 animate-fade-in-up">
+              <span className="inline-block px-3 py-1 sm:px-4 sm:py-1.5 bg-primary/20 backdrop-blur-md border border-primary/30 rounded-full text-primary font-semibold tracking-wider uppercase text-[10px] sm:text-[12px]">
                 Luxury Wedding Planners
               </span>
-              <h1 className="font-extrabold leading-tight text-white drop-shadow-2xl">
+              <h1 className="font-extrabold font-TuskerGrotesk uppercase tracking-wide leading-tight text-[32px] sm:text-[40px] md:text-[56px] drop-shadow-md">
                 {data.hero?.title || data.title}
               </h1>
-              <p className="opacity-90 max-w-3xl mx-auto leading-relaxed font-medium">
+              <p className="opacity-90 max-w-2xl mx-auto leading-relaxed text-[14px] md:text-[16px]">
                 {data.hero?.subtitle || data.subtitle}
               </p>
               
-              <div className="flex flex-wrap justify-center gap-4 py-4">
-                {data.hero?.highlights?.map((highlight, idx) => (
-                  <span key={idx} className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-white/20  font-semibold">
-                    <FaCheckCircle className="text-primary" /> {highlight}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
+              {/* Buttons side-by-side on mobile */}
+              <div className="flex flex-row items-center justify-center gap-3 sm:gap-4 pt-4 md:pt-6 w-full max-w-[100vw] overflow-hidden px-2">
                 {data.hero?.ctas?.map((cta, idx) => (
                   <Link
                     key={idx}
                     to={cta.link}
-                    className={`${
+                    className={`flex-1 sm:flex-none text-center px-2 py-3 sm:px-8 sm:py-4 rounded-full font-bold transition-all transform hover:scale-105 flex items-center justify-center gap-1 sm:gap-2 text-[11px] sm:text-[14px] leading-tight ${
                       cta.primary 
-                      ?"px-10 py-4 bg-primary text-white rounded-full font-bold  hover:bg-primary-dark transition-all transform hover:scale-105 shadow-xl shadow-primary/30"
-                      :"px-10 py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white rounded-full font-bold  hover:bg-white/20 transition-all transform hover:scale-105"
+                      ?"bg-primary text-white hover:bg-orange-600 shadow-lg shadow-primary/25"
+                      :"bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white/20"
                     }`}
                   >
-                    {cta.text}
+                    <span className="truncate whitespace-normal">{cta.text}</span>
                   </Link>
                 ))}
               </div>
+
+              {data.hero?.highlights && (
+                <div className="flex flex-wrap justify-center gap-6 pt-10 opacity-80">
+                  {data.hero.highlights.map((highlight, idx) => (
+                    <div key={idx} className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-white/20 font-semibold">
+                      <FaCheckCircle className="text-primary" /> {highlight}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
           

@@ -19,7 +19,7 @@ const LogoLoader = ({ isLoading }) => {
       // Sequence timing
       const timer1 = setTimeout(() => {
         setPhase("logo");
-      }, 2400); // After text animation finishes (2.4s)
+      }, 3400); // Increased time to allow all text lines to animate
       
       return () => {
         clearTimeout(timer1);
@@ -32,8 +32,9 @@ const LogoLoader = ({ isLoading }) => {
   if (!shouldRender) return null;
 
   // Split text into arrays of words and then letters for the stagger effect
-  const text1 = "Crafting Extraordinary Events &".split("");
+  const text1 = "Crafting Events".split("");
   const text2 = "Digital Success Stories".split("");
+  const text3 = "Since 2016".split("");
 
   return (
     <div
@@ -48,11 +49,12 @@ const LogoLoader = ({ isLoading }) => {
           phase === "text" ? "opacity-100 scale-100" : "opacity-0 scale-105 pointer-events-none"
         }`}
       >
-        <div className="text-center overflow-hidden mb-1 sm:mb-3">
-          <div className="flex uppercase flex-nowrap whitespace-nowrap justify-center font-playfair text-[3.2vw] sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-800 tracking-wide">
+        {/* Crafting Events */}
+        <div className="text-center overflow-hidden mb-0 sm:mb-1">
+          <div className="flex uppercase flex-nowrap whitespace-nowrap justify-center font-playfair text-[2.8vw] sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 tracking-wide">
             {text1.map((char, i) => (
               <span 
-                key={i} 
+                key={`t1-${i}`} 
                 className="inline-block opacity-0 animate-slide-up-char"
                 style={{ 
                   animationDelay: `${i * 35 + 200}ms`,
@@ -64,14 +66,48 @@ const LogoLoader = ({ isLoading }) => {
             ))}
           </div>
         </div>
-        <div className="text-center overflow-hidden pt-1">
-          <div className="flex flex-nowrap whitespace-nowrap justify-center font-playfair text-[7vw] sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary tracking-wide">
+
+        {/* Ampersand */}
+        <div className="text-center overflow-hidden my-1 sm:my-2">
+          <div className="flex flex-nowrap whitespace-nowrap justify-center font-playfair text-[6vw] sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary tracking-wide leading-none">
+            <span 
+              className="inline-block opacity-0 animate-slide-up-char drop-shadow-lg"
+              style={{ 
+                animationDelay: `${(text1.length * 35) + 300}ms`
+              }}
+            >
+              &
+            </span>
+          </div>
+        </div>
+
+        {/* Digital Success Stories */}
+        <div className="text-center overflow-hidden pt-0">
+          <div className="flex flex-nowrap whitespace-nowrap justify-center font-playfair text-[4vw] sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary tracking-wide">
             {text2.map((char, i) => (
               <span 
-                key={i} 
+                key={`t2-${i}`} 
                 className="inline-block opacity-0 animate-slide-up-char"
                 style={{ 
-                  animationDelay: `${(text1.length * 35) + (i * 45) + 300}ms`,
+                  animationDelay: `${(text1.length * 35) + 100 + (i * 45) + 400}ms`,
+                  marginRight: char === ' ' ? '0.3em' : '0'
+                }}
+              >
+                {char === ' ' ? '\u00A0' : char}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Since 2016 */}
+        <div className="text-center overflow-hidden mt-3 sm:mt-4">
+          <div className="flex flex-nowrap whitespace-nowrap justify-center text-gray-400 font-bold tracking-[0.3em] uppercase text-[10px] md:text-[12px] lg:text-[14px]">
+            {text3.map((char, i) => (
+              <span 
+                key={`t3-${i}`} 
+                className="inline-block opacity-0 animate-slide-up-char"
+                style={{ 
+                  animationDelay: `${(text1.length * 35) + 100 + (text2.length * 45) + (i * 35) + 600}ms`,
                   marginRight: char === ' ' ? '0.3em' : '0'
                 }}
               >
@@ -101,9 +137,6 @@ const LogoLoader = ({ isLoading }) => {
             alt="Leor Media Logo"
             className="w-[200px] h-[200px] drop-shadow-xl mx-auto"
           />
-          <p className="mt-1 text-gray-400 font-bold tracking-[0.3em] uppercase text-[14px] text-center">
-            Since 2016
-          </p>
         </div>
       </div>
       
