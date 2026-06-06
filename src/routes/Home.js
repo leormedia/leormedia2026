@@ -265,7 +265,7 @@ const HomePage = () => {
           <img
             src={heroData[selected].bg}
             alt={selected}
-            className="w-full h-full object-cover object-center opacity-40 scale-105 transition-all duration-1000 ease-in-out"
+            className="w-full h-full object-cover object-center opacity-70 scale-105 transition-all duration-1000 ease-in-out"
             key={selected}
           />
         </div>
@@ -277,19 +277,19 @@ const HomePage = () => {
         <div className="relative z-20 w-full h-full max-w-5xl mx-auto px-6 pb-24 md:pb-28 flex flex-col items-center justify-center text-center">
 
           {/* Static Header Content */}
-          
 
-          <div className="flex flex-col items-center text-center leading-none text-white font-TuskerGrotesk uppercase tracking-wide mb-4">
+
+          <div className="flex my-auto flex-col items-center text-center leading-none text-white font-TuskerGrotesk uppercase tracking-wide mb-4">
             <span className="block text-[24px] md:text-[36px] lg:text-[48px] font-extrabold drop-shadow-md">
-              Crafting Events
+              Crafting Extraordinary  Events
             </span>
-            
+
             {/* Centerpiece ampersand - more compact */}
-            <span className="text-primary text-[40px] md:text-[60px] lg:text-[80px] font-black leading-none my-1 md:my-2 drop-shadow-lg">
+            <span className="text-primary text-[24px] md:text-[36px] lg:text-[48px]  font-black leading-none my-1 md:my-2 drop-shadow-lg">
               &
             </span>
-            
-            <span className="block text-[24px] md:text-[36px] lg:text-[48px] font-extrabold text-primary drop-shadow-md mb-4">
+
+            <span className="block text-[24px] md:text-[36px] lg:text-[48px]  font-extrabold text-primary drop-shadow-md mb-4">
               Digital Success Stories
             </span>
 
@@ -362,7 +362,7 @@ const HomePage = () => {
 
         <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10">
           <div className="max-w-6xl mx-auto relative">
-            
+
             {/* Header Content */}
             <div className="text-center mb-16 relative z-10">
               <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[14px] font-bold uppercase tracking-widest mb-4">
@@ -382,84 +382,84 @@ const HomePage = () => {
               />
             </div>
 
-{/* Vision & Mission - Creative Edition */}
-<div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-  
-  {/* Vision Card */}
-  <div className="group relative bg-white/80 backdrop-blur-xl p-8 md:p-10 rounded-3xl shadow-xl border border-white/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-primary/10 overflow-hidden">
-    {/* Animated gradient orb */}
-    <div className="absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-br from-primary/30 via-primary/10 to-transparent rounded-full blur-3xl transition-transform duration-700 group-hover:scale-150 group-hover:rotate-12"></div>
-    <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-gradient-to-tr from-primary/20 to-transparent rounded-full blur-3xl transition-transform duration-700 group-hover:scale-150 group-hover:-rotate-12"></div>
-    
-    {/* Content */}
-    <div className="relative z-10 flex flex-col items-center text-center">
-      {/* Icon with rotating ring */}
-      <div className="relative mb-8">
-        <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary/30 to-primary/5 flex items-center justify-center border border-primary/40 group-hover:border-primary/80 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg backdrop-blur-sm">
-          <FaEye className="text-4xl md:text-5xl text-primary drop-shadow-md transition-transform duration-500 group-hover:scale-110" />
-        </div>
-      </div>
-      
-      <h3 className="font-extrabold mb-4 text-3xl md:text-4xl uppercase tracking-wider text-gray-900 font-TuskerGrotesk">
-        Our <span className="text-primary relative inline-block">
-          Vision
-          <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary/40 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
-        </span>
-      </h3>
-      
-      <div className="h-0.5 w-12 bg-primary/50 rounded-full mb-6 group-hover:w-28 transition-all duration-500"></div>
-      
-      <p className="text-gray-700 leading-relaxed font-medium text-sm md:text-base max-w-sm mx-auto">
-        To be the premier choice for event management and digital marketing, recognized for our creative brilliance, flawless execution, and commitment to transforming visionary ideas into unforgettable experiences.
-      </p>
-      
-      {/* Decorative dot pattern */}
-      <div className="flex gap-1 mt-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-        {[...Array(3)].map((_, i) => (
-          <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary/60"></div>
-        ))}
-      </div>
-    </div>
-  </div>
+            {/* Vision & Mission - Creative Edition */}
+            <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
 
-  {/* Mission Card */}
-  <div className="group relative bg-white/80 backdrop-blur-xl p-8 md:p-10 rounded-3xl shadow-xl border border-white/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-primary/10 overflow-hidden">
-    {/* Animated gradient orbs */}
-    <div className="absolute -top-20 -left-20 w-64 h-64 bg-gradient-to-bl from-primary/30 via-primary/10 to-transparent rounded-full blur-3xl transition-transform duration-700 group-hover:scale-150 group-hover:-rotate-12"></div>
-    <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-gradient-to-tr from-primary/20 to-transparent rounded-full blur-3xl transition-transform duration-700 group-hover:scale-150 group-hover:rotate-12"></div>
-    
-    <div className="relative z-10 flex flex-col items-center text-center">
-      {/* Icon with rotating ring */}
-      <div className="relative mb-8">
-        <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary/30 to-primary/5 flex items-center justify-center border border-primary/40 group-hover:border-primary/80 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-lg backdrop-blur-sm">
-          <FaBullseye className="text-4xl md:text-5xl text-primary drop-shadow-md transition-transform duration-500 group-hover:scale-110" />
-        </div>
-      </div>
-      
-      <h3 className="font-extrabold mb-4 text-3xl md:text-4xl uppercase tracking-wider text-gray-900 font-TuskerGrotesk">
-        Our <span className="text-primary relative inline-block">
-          Mission
-          <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary/40 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
-        </span>
-      </h3>
-      
-      <div className="h-0.5 w-12 bg-primary/50 rounded-full mb-6 group-hover:w-28 transition-all duration-500"></div>
-      
-      <p className="text-gray-700 leading-relaxed font-medium text-sm md:text-base max-w-sm mx-auto">
-        To deliver exceptional, tailor-made solutions that exceed client expectations. We are dedicated to building lasting relationships through transparency, passion, and an unwavering focus on bringing every project to life with perfection.
-      </p>
-      
-      {/* Decorative dot pattern */}
-      <div className="flex gap-1 mt-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-        {[...Array(3)].map((_, i) => (
-          <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary/60"></div>
-        ))}
-      </div>
-    </div>
-  </div>
-</div>
+              {/* Vision Card */}
+              <div className="group relative bg-white/80 backdrop-blur-xl p-8 md:p-10 rounded-3xl shadow-xl border border-white/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-primary/10 overflow-hidden">
+                {/* Animated gradient orb */}
+                <div className="absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-br from-primary/30 via-primary/10 to-transparent rounded-full blur-3xl transition-transform duration-700 group-hover:scale-150 group-hover:rotate-12"></div>
+                <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-gradient-to-tr from-primary/20 to-transparent rounded-full blur-3xl transition-transform duration-700 group-hover:scale-150 group-hover:-rotate-12"></div>
+
+                {/* Content */}
+                <div className="relative z-10 flex flex-col items-center text-center">
+                  {/* Icon with rotating ring */}
+                  <div className="relative mb-8">
+                    <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary/30 to-primary/5 flex items-center justify-center border border-primary/40 group-hover:border-primary/80 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg backdrop-blur-sm">
+                      <FaEye className="text-4xl md:text-5xl text-primary drop-shadow-md transition-transform duration-500 group-hover:scale-110" />
+                    </div>
+                  </div>
+
+                  <h3 className="font-extrabold mb-4 text-3xl md:text-4xl uppercase tracking-wider text-gray-900 font-TuskerGrotesk">
+                    Our <span className="text-primary relative inline-block">
+                      Vision
+                      <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary/40 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+                    </span>
+                  </h3>
+
+                  <div className="h-0.5 w-12 bg-primary/50 rounded-full mb-6 group-hover:w-28 transition-all duration-500"></div>
+
+                  <p className="text-gray-700 leading-relaxed font-medium text-sm md:text-base max-w-sm mx-auto">
+                    To be the premier choice for event management and digital marketing, recognized for our creative brilliance, flawless execution, and commitment to transforming visionary ideas into unforgettable experiences.
+                  </p>
+
+                  {/* Decorative dot pattern */}
+                  <div className="flex gap-1 mt-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    {[...Array(3)].map((_, i) => (
+                      <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary/60"></div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Mission Card */}
+              <div className="group relative bg-white/80 backdrop-blur-xl p-8 md:p-10 rounded-3xl shadow-xl border border-white/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-primary/10 overflow-hidden">
+                {/* Animated gradient orbs */}
+                <div className="absolute -top-20 -left-20 w-64 h-64 bg-gradient-to-bl from-primary/30 via-primary/10 to-transparent rounded-full blur-3xl transition-transform duration-700 group-hover:scale-150 group-hover:-rotate-12"></div>
+                <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-gradient-to-tr from-primary/20 to-transparent rounded-full blur-3xl transition-transform duration-700 group-hover:scale-150 group-hover:rotate-12"></div>
+
+                <div className="relative z-10 flex flex-col items-center text-center">
+                  {/* Icon with rotating ring */}
+                  <div className="relative mb-8">
+                    <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary/30 to-primary/5 flex items-center justify-center border border-primary/40 group-hover:border-primary/80 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-lg backdrop-blur-sm">
+                      <FaBullseye className="text-4xl md:text-5xl text-primary drop-shadow-md transition-transform duration-500 group-hover:scale-110" />
+                    </div>
+                  </div>
+
+                  <h3 className="font-extrabold mb-4 text-3xl md:text-4xl uppercase tracking-wider text-gray-900 font-TuskerGrotesk">
+                    Our <span className="text-primary relative inline-block">
+                      Mission
+                      <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary/40 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+                    </span>
+                  </h3>
+
+                  <div className="h-0.5 w-12 bg-primary/50 rounded-full mb-6 group-hover:w-28 transition-all duration-500"></div>
+
+                  <p className="text-gray-700 leading-relaxed font-medium text-sm md:text-base max-w-sm mx-auto">
+                    To deliver exceptional, tailor-made solutions that exceed client expectations. We are dedicated to building lasting relationships through transparency, passion, and an unwavering focus on bringing every project to life with perfection.
+                  </p>
+
+                  {/* Decorative dot pattern */}
+                  <div className="flex gap-1 mt-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    {[...Array(3)].map((_, i) => (
+                      <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary/60"></div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>
@@ -468,57 +468,57 @@ const HomePage = () => {
 
 
 
-{/* Track Record Section - Compact with Icons */}
-<section className="py-12 md:py-16 bg-[#f37a20] text-white overflow-hidden border-y border-gray-900">
-  <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
-    {/* Heading & description */}
-    <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12 md:mb-16 gap-6">
-      <div className="max-w-xl">
-        <span className="text-white font-bold tracking-[0.2em] uppercase text-xs mb-3 block">
-          Proven Experience
-        </span>
-        <h2 className="font-extrabold font-TuskerGrotesk uppercase tracking-wider text-2xl sm:text-3xl md:text-4xl text-white leading-tight">
-          Our Track Record
-        </h2>
-      </div>
-      <p className="text-white font-light text-sm sm:text-base leading-relaxed max-w-md lg:text-right border-l lg:border-l-0 lg:border-r border-white/30 pl-5 lg:pl-0 lg:pr-6">
-        A decade of excellence, hundreds of ambitious projects, and thousands of unforgettable memories crafted flawlessly.
-      </p>
-    </div>
+      {/* Track Record Section - Compact with Icons */}
+      <section className="py-12 md:py-16 bg-[#f37a20] text-white overflow-hidden border-y border-gray-900">
+        <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
+          {/* Heading & description */}
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12 md:mb-16 gap-6">
+            <div className="max-w-xl">
+              <span className="text-white font-bold tracking-[0.2em] uppercase text-xs mb-3 block">
+                Proven Experience
+              </span>
+              <h2 className="font-extrabold font-TuskerGrotesk uppercase tracking-wider text-2xl sm:text-3xl md:text-4xl text-white leading-tight">
+                Our Track Record
+              </h2>
+            </div>
+            <p className="text-white font-light text-sm sm:text-base leading-relaxed max-w-md lg:text-right border-l lg:border-l-0 lg:border-r border-white/30 pl-5 lg:pl-0 lg:pr-6">
+              A decade of excellence, hundreds of ambitious projects, and thousands of unforgettable memories crafted flawlessly.
+            </p>
+          </div>
 
-    {/* Stats grid with icons */}
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-      {[
-        { value: "10+", label: "Years Experience", icon: Calendar },
-        { value: "600+", label: "Projects Delivered", icon: Briefcase },
-        { value: "2K+", label: "Events & Projects", icon: PartyPopper },
-        { value: "100%", label: "Client Satisfaction", icon: Smile }
-      ].map((stat, idx) => (
-        <div key={idx} className="group relative">
-          {/* Hover background */}
-          <div className="absolute -inset-3 bg-white/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          {/* Stats grid with icons */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {[
+              { value: "10+", label: "Years Experience", icon: Calendar },
+              { value: "600+", label: "Projects Delivered", icon: Briefcase },
+              { value: "2K+", label: "Events & Projects", icon: PartyPopper },
+              { value: "100%", label: "Client Satisfaction", icon: Smile }
+            ].map((stat, idx) => (
+              <div key={idx} className="group relative">
+                {/* Hover background */}
+                <div className="absolute -inset-3 bg-white/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-          <div className="relative z-10 border-t border-gray-800 group-hover:border-primary transition-colors duration-500 pt-5 md:pt-6">
-            {/* Icon + number row */}
-            <div className="flex items-center gap-2 mb-2">
-              <stat.icon 
-                size={28} 
-                className="text-white/80 group-hover:text-white transition-colors duration-300 shrink-0"
-                strokeWidth={1.5}
-              />
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-TuskerGrotesk tracking-wide group-hover:text-primary transition-colors duration-500">
-                {stat.value}
+                <div className="relative z-10 border-t border-gray-800 group-hover:border-primary transition-colors duration-500 pt-5 md:pt-6">
+                  {/* Icon + number row */}
+                  <div className="flex items-center gap-2 mb-2">
+                    <stat.icon
+                      size={28}
+                      className="text-white/80 group-hover:text-white transition-colors duration-300 shrink-0"
+                      strokeWidth={1.5}
+                    />
+                    <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-TuskerGrotesk tracking-wide group-hover:text-primary transition-colors duration-500">
+                      {stat.value}
+                    </div>
+                  </div>
+                  <div className="text-[11px] sm:text-xs text-white uppercase tracking-widest font-medium">
+                    {stat.label}
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="text-[11px] sm:text-xs text-white uppercase tracking-widest font-medium">
-              {stat.label}
-            </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
 
 
