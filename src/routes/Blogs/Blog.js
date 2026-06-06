@@ -88,10 +88,10 @@ function BlogPage() {
           <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
           <div className="relative z-10 container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center mt-10">
-              <h1 className="text-[36px] md:text-[72px] fade-in-down font-normal text-white font-FKScreamerBold tracking-wider mb-6">
+              <h1 className="text-[28px] md:text-5xl lg:text-[52px] fade-in-down font-normal text-white font-FKScreamerBold tracking-wider mb-6">
                 BLOGS & RESEARCH
               </h1>
-              <p className="text-white/90 text-[14px] md:text-[18px] max-w-2xl mx-auto leading-relaxed">
+              <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
                 Research done for our project and Technologies we use for our community.
               </p>
             </div>
@@ -104,9 +104,9 @@ function BlogPage() {
             <span className="text-primary font-bold tracking-widest uppercase text-[14px] md:text-[14px]">
               FILTER BY TOPIC
             </span>
-            <h2 className="font-FKScreamerBold text-[30px] md:text-[60px] text-gray-900 mt-4 mb-6">
-              EXPLORE OUR INSIGHTS
-            </h2>
+              <h2 className="font-FKScreamerBold text-[26px] md:text-[38px] lg:text-5xl text-gray-900 mt-4 mb-6">
+                EXPLORE OUR INSIGHTS
+              </h2>
 
             {!loading && categories.length > 1 && (
               <div className="flex flex-wrap justify-center gap-2 mt-8">
@@ -162,10 +162,10 @@ function BlogPage() {
                       />
                     </div>
 
-                    <h4 className="text-[14px] font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                    <h4 className="text-lg md:text-xl lg:text-[22px] font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors line-clamp-2">
                       {post.title}
                     </h4>
-                    <p className="text-gray-500 text-[14px] leading-relaxed mb-6 flex-grow line-clamp-3">
+                    <p className="text-sm md:text-base text-gray-500 leading-relaxed mb-6 flex-grow line-clamp-3">
                       {limitContent(post.content)}
                     </p>
 
@@ -177,7 +177,7 @@ function BlogPage() {
                   </Link>
                 ))}
                 {filteredBlogs.length === 0 && !loading && (
-                  <div className="col-span-full text-center py-10 text-gray-500 text-[16px]">
+                  <div className="col-span-full text-center py-10 text-gray-500 text-sm md:text-base">
                     No blogs found in this category.
                   </div>
                 )}

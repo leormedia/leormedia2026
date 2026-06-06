@@ -287,20 +287,20 @@ const HomePage = () => {
 
 
           <div className="flex my-auto flex-col items-center text-center leading-none text-white font-TuskerGrotesk uppercase tracking-wide mb-4">
-            <span className="block text-[24px] md:text-[36px] lg:text-[48px] font-extrabold drop-shadow-md">
+            <span className="block text-[28px] md:text-5xl lg:text-[52px] font-extrabold drop-shadow-md">
               Crafting Extraordinary  Events
             </span>
 
             {/* Centerpiece ampersand - more compact */}
-            <span className="text-primary text-[24px] md:text-[36px] lg:text-[48px]  font-black leading-none my-1 md:my-2 drop-shadow-lg">
+            <span className="text-primary text-[28px] md:text-5xl lg:text-[52px] font-black leading-none my-1 md:my-2 drop-shadow-lg">
               &
             </span>
 
-            <span className="block text-[24px] md:text-[36px] lg:text-[48px]  font-extrabold text-primary drop-shadow-md mb-4">
+            <span className="block text-[28px] md:text-5xl lg:text-[52px] font-extrabold text-primary drop-shadow-md mb-4">
               Digital Success Stories
             </span>
 
-            <span className="inline-block text-gray-300 font-bold tracking-[0.4em] uppercase text-[10px] md:text-[12px] lg:text-[14px] mt-2 mb-4 font-sans">
+            <span className="inline-block text-gray-300 font-bold tracking-[0.4em] uppercase text-sm mt-2 mb-4 font-sans">
               SINCE 2016 | LEOR MEDIA
             </span>
           </div>
@@ -308,7 +308,7 @@ const HomePage = () => {
           {/* Dynamic Content (Animates on slide change) */}
           <div key={selected} className="animate-fade-in-up flex flex-col items-center">
             {/* Slide Description */}
-            <p className="text-white/90 font-medium tracking-wide text-[14px] md:text-[18px] leading-relaxed max-w-2xl mb-8 drop-shadow-md">
+            <p className="text-white/90 font-medium tracking-wide text-base md:text-lg leading-relaxed max-w-2xl mb-8 drop-shadow-md">
               {heroData[selected].desc}
             </p>
 
@@ -316,7 +316,7 @@ const HomePage = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to={heroData[selected].link}
-                className="inline-flex items-center px-8 py-3.5 bg-primary text-black font-extrabold rounded-full hover:bg-primary/95 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/20 tracking-wider text-[12px] md:text-[14px] uppercase group"
+                className="inline-flex items-center px-8 py-3.5 bg-primary text-black font-extrabold rounded-full hover:bg-primary/95 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/20 tracking-wider text-sm uppercase group"
               >
                 Explore {selected}
                 <FaArrowRight className="ml-2.5 text-[14px] transition-transform duration-300 group-hover:translate-x-1" />
@@ -334,7 +334,7 @@ const HomePage = () => {
         <div className=" mx-auto px-4 md:px-8">
           <div className="flex items-center justify-center gap-4 py-3">
             <div className="h-px w-16 sm:w-32 bg-gradient-to-r from-transparent to-gray-300"></div>
-            <p className="text-gray-500 text-center text-[14px] font-bold uppercase tracking-[0.2em]">
+            <p className="text-gray-500 text-center text-sm font-bold uppercase tracking-[0.2em]">
               Registered On
             </p>
             <div className="h-px w-16 sm:w-32 bg-gradient-to-l from-transparent to-gray-300"></div>
@@ -372,10 +372,10 @@ const HomePage = () => {
 
             {/* Header Content */}
             <div className="text-center mb-16 relative z-10">
-              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[14px] font-bold uppercase tracking-widest mb-4">
+              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-bold uppercase tracking-widest mb-4">
                 Who We Are
               </span>
-              <h2 className="font-extrabold font-TuskerGrotesk tracking-wide text-[32px] md:text-[48px] text-gray-900 leading-tight uppercase">
+              <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-extrabold font-TuskerGrotesk tracking-wide text-gray-900 leading-tight uppercase">
                 DRIVEN BY <span className="text-primary">PURPOSE</span>
               </h2>
             </div>
@@ -408,7 +408,7 @@ const HomePage = () => {
                     </div>
                   </div>
 
-                  <h3 className="font-extrabold mb-4 text-3xl md:text-4xl uppercase tracking-wider text-gray-900 font-TuskerGrotesk">
+                  <h3 className="text-2xl md:text-[26px] lg:text-3xl font-extrabold mb-4 uppercase tracking-wider text-gray-900 font-TuskerGrotesk">
                     Our <span className="text-primary relative inline-block">
                       Vision
                       <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary/40 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
@@ -417,7 +417,7 @@ const HomePage = () => {
 
                   <div className="h-0.5 w-12 bg-primary/50 rounded-full mb-6 group-hover:w-28 transition-all duration-500"></div>
 
-                  <p className="text-gray-700 leading-relaxed font-medium text-sm md:text-base max-w-sm mx-auto">
+                  <p className="text-sm md:text-base text-gray-700 leading-relaxed font-medium max-w-sm mx-auto">
                     To be the premier choice for event management and digital marketing, recognized for our creative brilliance, flawless execution, and commitment to transforming visionary ideas into unforgettable experiences.
                   </p>
 
@@ -445,7 +445,7 @@ const HomePage = () => {
                     </div>
                   </div>
 
-                  <h3 className="font-extrabold mb-4 text-3xl md:text-4xl uppercase tracking-wider text-gray-900 font-TuskerGrotesk">
+                  <h3 className="text-2xl md:text-[26px] lg:text-3xl font-extrabold mb-4 uppercase tracking-wider text-gray-900 font-TuskerGrotesk">
                     Our <span className="text-primary relative inline-block">
                       Mission
                       <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary/40 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
@@ -454,7 +454,7 @@ const HomePage = () => {
 
                   <div className="h-0.5 w-12 bg-primary/50 rounded-full mb-6 group-hover:w-28 transition-all duration-500"></div>
 
-                  <p className="text-gray-700 leading-relaxed font-medium text-sm md:text-base max-w-sm mx-auto">
+                  <p className="text-sm md:text-base text-gray-700 leading-relaxed font-medium max-w-sm mx-auto">
                     To deliver exceptional, tailor-made solutions that exceed client expectations. We are dedicated to building lasting relationships through transparency, passion, and an unwavering focus on bringing every project to life with perfection.
                   </p>
 
@@ -481,14 +481,14 @@ const HomePage = () => {
           {/* Heading & description */}
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12 md:mb-16 gap-6">
             <div className="max-w-xl">
-              <span className="text-white font-bold tracking-[0.2em] uppercase text-xs mb-3 block">
+              <span className="text-sm text-white font-bold tracking-[0.2em] uppercase mb-3 block">
                 Proven Experience
               </span>
-              <h2 className="font-extrabold font-TuskerGrotesk uppercase tracking-wider text-2xl sm:text-3xl md:text-4xl text-white leading-tight">
+              <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-extrabold font-TuskerGrotesk uppercase tracking-wider text-white leading-tight">
                 Our Track Record
               </h2>
             </div>
-            <p className="text-white font-light text-sm sm:text-base leading-relaxed max-w-md lg:text-right border-l lg:border-l-0 lg:border-r border-white/30 pl-5 lg:pl-0 lg:pr-6">
+            <p className="text-sm md:text-base text-white font-light leading-relaxed max-w-md lg:text-right border-l lg:border-l-0 lg:border-r border-white/30 pl-5 lg:pl-0 lg:pr-6">
               A decade of excellence, hundreds of ambitious projects, and thousands of unforgettable memories crafted flawlessly.
             </p>
           </div>
@@ -517,7 +517,7 @@ const HomePage = () => {
                       {stat.value}
                     </div>
                   </div>
-                  <div className="text-[11px] sm:text-xs text-white uppercase tracking-widest font-medium">
+                  <div className="text-sm text-white uppercase tracking-widest font-medium">
                     {stat.label}
                   </div>
                 </div>
@@ -535,10 +535,10 @@ const HomePage = () => {
       <section className="py-16 md:py-24 bg-slate-50 overflow-hidden border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 md:px-8 ">
           <div className="text-center mb-12 md:mb-16">
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[14px] font-bold uppercase tracking-widest mb-4">
+            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-bold uppercase tracking-widest mb-4">
               Our Gallery
             </span>
-            <h2 className="font-extrabold font-TuskerGrotesk tracking-wide text-[32px] md:text-[48px] text-gray-900 leading-tight uppercase">
+            <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-extrabold font-TuskerGrotesk tracking-wide text-gray-900 leading-tight uppercase">
               CAPTURING <span className="text-primary">MOMENTS</span>
             </h2>
           </div>
@@ -568,13 +568,13 @@ const HomePage = () => {
         </div>
 
         <div className="container mx-auto px-4 text-center relative z-10">
-          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[14px] font-bold uppercase tracking-widest mb-4">
+          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-bold uppercase tracking-widest mb-4">
             UNFORGETTABLE EXPERIENCES
           </span>
-          <h2 className="font-extrabold mb-4 font-TuskerGrotesk tracking-wide">
+          <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-extrabold mb-4 font-TuskerGrotesk tracking-wide">
             OUR <span className="text-primary">SERVICES</span>
           </h2>
-          <p className="text-gray-200 max-w-2xl mx-auto tracking-wide">
+          <p className="text-base md:text-lg text-gray-200 max-w-2xl mx-auto tracking-wide">
             What we provide at Leor Media to craft your memorable events and creative digital success stories.
           </p>
         </div>
@@ -602,16 +602,16 @@ const HomePage = () => {
                 <div>
                   {/* Title & Subtitle */}
                   <div className="mb-6 md:mb-8">
-                    <div className="text-white/80 text-[16px] md:text-[20px] font-semibold tracking-widest uppercase mb-2">
+                    <div className="text-base md:text-lg text-white/80 font-semibold tracking-widest uppercase mb-2">
                       {sec.subtitle}
                     </div>
-                    <h1 className="font-bold text-white leading-tight">
+                    <h1 className="text-[28px] md:text-5xl lg:text-[52px] font-bold text-white leading-tight">
                       {sec.title}
                     </h1>
                   </div>
 
                   {/* Description */}
-                  <p className="text-white/90 mb-6 md:mb-8 leading-relaxed max-w-lg">
+                  <p className="text-sm md:text-base text-white/90 mb-6 md:mb-8 leading-relaxed max-w-lg">
                     {sec.description}
                   </p>
 
@@ -619,7 +619,7 @@ const HomePage = () => {
                   {sec.detailedServices && (
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-8">
                       {sec.detailedServices.map((service, idx) => (
-                        <div key={idx} className="flex items-center text-white/80 text-[14px]">
+                        <div key={idx} className="flex items-center text-white/80 text-sm">
                           <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>
                           {service}
                         </div>
@@ -632,10 +632,10 @@ const HomePage = () => {
                     <div className="grid grid-cols-3 gap-4 mb-8">
                       {sec.stats.map((stat, idx) => (
                         <div key={idx} className="text-center">
-                          <div className="text-[24px] md:text-[30px] font-bold text-white">
+                          <div className="text-2xl md:text-[26px] lg:text-3xl font-bold text-white">
                             {stat.value}
                           </div>
-                          <div className="text-[14px] text-white/70">
+                          <div className="text-sm text-white/70">
                             {stat.label}
                           </div>
                         </div>
@@ -684,7 +684,7 @@ const HomePage = () => {
             {index === 0 && (
               <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 animate-bounce">
                 <div className="text-white text-center">
-                  <div className="text-[14px] mb-2 opacity-70">
+                  <div className="text-sm mb-2 opacity-70">
                     Scroll to explore
                   </div>
                   <div className="w-6 h-10 border-2 border-white/50 rounded-full mx-auto flex justify-center">
@@ -708,13 +708,13 @@ const HomePage = () => {
             {/* Left side: Text content & Contact Info */}
             <div className="lg:col-span-5 flex flex-col justify-between h-full space-y-8 lg:pr-6">
               <div>
-                <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[14px] font-semibold mb-4">
+                <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
                   LET'S TALK
                 </span>
-                <h2 className="font-bold text-gray-900 mb-4 leading-tight">
+                <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
                   Get in <span className="text-primary">Touch</span>
                 </h2>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed">
                   Have a project in mind or need expert advice? Let's discuss how we can bring your ideas to life.
                 </p>
               </div>
@@ -726,11 +726,11 @@ const HomePage = () => {
                   className="flex items-center p-4 bg-white rounded-2xl border border-gray-100 hover:border-primary hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 group"
                 >
                   <div className="p-3 rounded-full bg-primary/10 text-primary mr-4 group-hover:scale-110 transition-transform">
-                    <FaPhone className="text-[18px]" />
+                    <FaPhone className="text-lg" />
                   </div>
                   <div>
-                    <p className="text-gray-400 uppercase tracking-wider font-semibold">Call Us</p>
-                    <p className="font-bold text-gray-800">
+                    <p className="text-sm text-gray-400 uppercase tracking-wider font-semibold">Call Us</p>
+                    <p className="text-sm md:text-base font-bold text-gray-800">
                       {GlobalData.company.companyPhone}
                     </p>
                   </div>
@@ -741,11 +741,11 @@ const HomePage = () => {
                   className="flex items-center p-4 bg-white rounded-2xl border border-gray-100 hover:border-primary hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 group"
                 >
                   <div className="p-3 rounded-full bg-primary/10 text-primary mr-4 group-hover:scale-110 transition-transform">
-                    <FaEnvelope className="text-[18px]" />
+                    <FaEnvelope className="text-lg" />
                   </div>
                   <div>
-                    <p className="text-gray-400 uppercase tracking-wider font-semibold">Email Us</p>
-                    <p className="font-bold text-gray-800">
+                    <p className="text-sm text-gray-400 uppercase tracking-wider font-semibold">Email Us</p>
+                    <p className="text-sm md:text-base font-bold text-gray-800">
                       {GlobalData.company.companyEmail}
                     </p>
                   </div>
@@ -758,11 +758,11 @@ const HomePage = () => {
                   className="flex items-center p-4 bg-white rounded-2xl border border-gray-100 hover:border-primary hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 group"
                 >
                   <div className="p-3 rounded-full bg-[#128C7E]/10 text-[#128C7E] mr-4 group-hover:scale-110 transition-transform">
-                    <FaWhatsapp className="text-[18px]" />
+                    <FaWhatsapp className="text-lg" />
                   </div>
                   <div>
-                    <p className="text-gray-400 uppercase tracking-wider font-semibold">WhatsApp Us</p>
-                    <p className="font-bold text-gray-800">
+                    <p className="text-sm text-gray-400 uppercase tracking-wider font-semibold">WhatsApp Us</p>
+                    <p className="text-sm md:text-base font-bold text-gray-800">
                       Chat with our team
                     </p>
                   </div>
@@ -784,7 +784,7 @@ const HomePage = () => {
                 <div className="grid md:grid-cols-2 gap-4">
                   {/* Name Input */}
                   <div>
-                    <label className="block text-[13px] font-semibold text-gray-700 mb-1 capitalize">
+                    <label className="block text-sm font-semibold text-gray-700 mb-1 capitalize">
                       Name
                     </label>
                     <input
@@ -793,14 +793,14 @@ const HomePage = () => {
                       placeholder="Your full name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors text-[14px]"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors text-sm"
                       required
                     />
                   </div>
 
                   {/* Email Input */}
                   <div>
-                    <label className="block text-[13px] font-semibold text-gray-700 mb-1 capitalize">
+                    <label className="block text-sm font-semibold text-gray-700 mb-1 capitalize">
                       Email
                     </label>
                     <input
@@ -809,14 +809,14 @@ const HomePage = () => {
                       placeholder="your.email@example.com"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors text-[14px]"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors text-sm"
                       required
                     />
                   </div>
 
                   {/* Phone Input */}
                   <div>
-                    <label className="block text-[13px] font-semibold text-gray-700 mb-1 capitalize">
+                    <label className="block text-sm font-semibold text-gray-700 mb-1 capitalize">
                       Phone
                     </label>
                     <input
@@ -825,21 +825,21 @@ const HomePage = () => {
                       placeholder="+91 00000 00000"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors text-[14px]"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors text-sm"
                       required
                     />
                   </div>
 
                   {/* Subject Input */}
                   <div>
-                    <label className="block text-[13px] font-semibold text-gray-700 mb-1">
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">
                       Subject
                     </label>
                     <select
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors text-[14px]"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors text-sm"
                       required
                     >
                       <option value="">Select a subject</option>
@@ -853,7 +853,7 @@ const HomePage = () => {
                 </div>
 
                 <div>
-                  <label className="block text-[13px] font-semibold text-gray-700 mb-1">
+                  <label className="block text-sm font-semibold text-gray-700 mb-1">
                     Message
                   </label>
                   <textarea
@@ -862,7 +862,7 @@ const HomePage = () => {
                     rows="3"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors resize-none text-[14px]"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors resize-none text-sm"
                     required
                   />
                 </div>
@@ -870,7 +870,7 @@ const HomePage = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className={`w-full py-2.5 px-6 rounded-lg font-semibold transition-colors text-[14px] ${loading
+                  className={`w-full py-2.5 px-6 rounded-lg font-semibold transition-colors text-sm ${loading
                     ? "bg-gray-400 cursor-not-allowed text-gray-200"
                     : "bg-primary hover:bg-primary/90 text-white shadow-sm"
                     }`}
@@ -888,10 +888,10 @@ const HomePage = () => {
       {/* CTA & Process Slider Section */}
       <section id="about" className="py-16 md:py-24 bg-white text-black">
         <div className="text-center mt-24 pt-16 border-t border-gray-100 max-w-4xl mx-auto">
-          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[12px] font-semibold uppercase tracking-widest mb-4">
+          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold uppercase tracking-widest mb-4">
             Our Methodology
           </span>
-          <h3 className="font-extrabold mb-12 font-TuskerGrotesk tracking-wide text-gray-900">
+          <h3 className="text-[26px] md:text-[38px] lg:text-5xl font-extrabold mb-12 font-TuskerGrotesk tracking-wide text-gray-900">
             OUR PROFESSIONAL <span className="text-primary">WORK PROCESS</span>
           </h3>
 
@@ -912,7 +912,7 @@ const HomePage = () => {
                 className="relative z-10 flex flex-col items-center focus:outline-none group"
               >
                 <div
-                  className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-[14px] border transition-all duration-500 shadow-md ${activeProcessIndex === idx
+                  className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm border transition-all duration-500 shadow-md ${activeProcessIndex === idx
                     ? "bg-primary text-white border-primary scale-110 shadow-primary/20"
                     : "bg-white text-gray-400 border-gray-100 group-hover:border-primary/30 group-hover:text-primary"
                     }`}
@@ -920,7 +920,7 @@ const HomePage = () => {
                   0{idx + 1}
                 </div>
                 <span
-                  className={`absolute top-12 text-[14px] font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-500 ${activeProcessIndex === idx ? "text-primary opacity-100 translate-y-0" : "text-gray-400 opacity-60 group-hover:opacity-100"
+                  className={`absolute top-12 text-sm font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-500 ${activeProcessIndex === idx ? "text-primary opacity-100 translate-y-0" : "text-gray-400 opacity-60 group-hover:opacity-100"
                     }`}
                 >
                   {stepTitle}
@@ -1059,13 +1059,13 @@ const HomePage = () => {
                     </div>
 
                     {/* Info */}
-                    <span className="text-[14px] font-extrabold uppercase tracking-widest text-primary mb-2">
+                    <span className="text-sm font-extrabold uppercase tracking-widest text-primary mb-2">
                       STAGE {item.step}
                     </span>
-                    <h4 className="font-extrabold text-gray-900 mb-4 uppercase tracking-wider">
+                    <h4 className="text-lg md:text-xl lg:text-[22px] font-extrabold text-gray-900 mb-4 uppercase tracking-wider">
                       {item.title}
                     </h4>
-                    <p className="text-gray-600 leading-relaxed max-w-md mx-auto">
+                    <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-md mx-auto">
                       {item.desc}
                     </p>
                   </div>

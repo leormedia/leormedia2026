@@ -23,21 +23,15 @@ The color palette represents Energy (Primary) and Stability (Secondary).
 
 ## 2. Typography
 
-### Font Family
-- **Main Font**: `TuskerGrotesk` (Sans-serif)
-  - Used for headings and branding.
-  - Fallback: `sans-serif`.
-
-
 ### Standardized Font Sizes (Responsive Scaling)
 Use the following responsive font size scales to maintain a consistent visual hierarchy across devices:
 
 | Tag/Component | Mobile Size | Tablet Size | Desktop Size | Application (Suggested) |
 | :--- | :--- | :--- | :--- | :--- |
-| **H1 (Hero)** | 28px | 50px | 72px | Major Page Headings |
-| **H2 (Section)** | 26px | 48px | 48px | Primary Section Titles |
-| **H3 (Sub-section)** | 24px | 30px | 30px | Supporting Feature Headings |
-| **H4 (Cards)** | 20px | 20px | 20px | Component and Card Titles |
+| **H1 (Hero)** | 28px | 48px | 52px | Major Page Headings |
+| **H2 (Section)** | 26px | 38px | 48px | Primary Section Titles |
+| **H3 (Sub-section)** | 24px | 26px | 30px | Supporting Feature Headings |
+| **H4 (Cards)** | 18px | 20px | 22px | Component and Card Titles |
 | **H5 (Small)** | 16px | 18px | 18px | Small Emphasized Features |
 | **P (Lead)** | 16px | 18px | 18px | Introduction/Lead Paragraphs |
 | **P (Body)** | 14px | 16px | 16px | Standard Paragraph Text |

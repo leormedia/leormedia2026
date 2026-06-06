@@ -78,10 +78,10 @@ const SubpagesEvents = ({ pageData, seoData }) => {
               <span className="inline-block px-3 py-1 sm:px-4 sm:py-1.5 bg-primary/20 backdrop-blur-md border border-primary/30 rounded-full text-primary font-semibold tracking-wider uppercase text-[10px] sm:text-[12px]">
                 {data.categoryLabel || "Events"}
               </span>
-              <h1 className="font-extrabold font-TuskerGrotesk uppercase tracking-wide leading-tight text-[32px] sm:text-[40px] md:text-[56px] drop-shadow-md">
+              <h1 className="text-[28px] md:text-5xl lg:text-[52px] font-extrabold font-TuskerGrotesk uppercase tracking-wide leading-tight drop-shadow-md">
                 {data.hero?.title || data.title}
               </h1>
-              <p className="opacity-90 max-w-2xl mx-auto leading-relaxed text-[14px] md:text-[16px]">
+              <p className="text-base md:text-lg opacity-90 max-w-2xl mx-auto leading-relaxed">
                 {data.hero?.subtitle || data.subtitle}
               </p>
 
@@ -123,10 +123,10 @@ const SubpagesEvents = ({ pageData, seoData }) => {
           <section className="py-20 bg-gray-50 border-b border-gray-100">
             <div className="container mx-auto px-6">
               <div className="max-w-4xl mx-auto text-center space-y-8">
-                <h2 className="font-bold text-gray-900 leading-tight">
+                <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-bold text-gray-900 leading-tight">
                   {data.introduction.heading}
                 </h2>
-                <div className="space-y-6 text-gray-600 leading-relaxed  text-left">
+                <div className="space-y-6 text-sm md:text-base text-gray-600 leading-relaxed text-left">
                   {data.introduction.text && <p className="">{data.introduction.text}</p>}
                   {data.introduction.details && <p className="">{data.introduction.details}</p>}
                 </div>
@@ -139,7 +139,7 @@ const SubpagesEvents = ({ pageData, seoData }) => {
         {data.services && data.services.length > 0 && (
           <section className="py-24">
             <div className="container mx-auto px-6 text-center">
-              <h2 className="font-bold mb-16">{data.servicesTitle || "Our Services"}</h2>
+              <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-bold mb-16">{data.servicesTitle || "Our Services"}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-left"> {/* Changed text-center to text-left for better layout alignment */}
                 {data.services.map((service, index) => (
                   <div
@@ -155,11 +155,11 @@ const SubpagesEvents = ({ pageData, seoData }) => {
                           <FaCheckCircle />
                         )}
                       </div>
-                      <h5 className=" leading-tight">{service.title}</h5  >
+                      <h5 className="text-lg md:text-xl lg:text-[22px] font-bold leading-tight">{service.title}</h5>
                     </div>
 
                     {/* Description */}
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                       {service.description}
                     </p>
                   </div>
@@ -179,10 +179,10 @@ const SubpagesEvents = ({ pageData, seoData }) => {
 
           <div className="container mx-auto px-6 relative z-10 text-center text-white">
             <div className="max-w-4xl mx-auto space-y-8">
-              <h2 className="font-bold leading-tight">
+              <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-bold leading-tight">
                 {data.finalCTA?.title || "Ready to Host an Unforgettable Event?"}
               </h2>
-              <p className="opacity-90 max-w-2xl mx-auto">
+              <p className="text-base md:text-lg opacity-90 max-w-2xl mx-auto">
                 {data.finalCTA?.text || "Partner with Visakhapatnam's leading event management company to bring your vision to life."}
               </p>
 

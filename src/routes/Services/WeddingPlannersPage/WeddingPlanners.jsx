@@ -11,7 +11,8 @@ import {
   FaWhatsapp, 
   FaStar, 
   FaQuoteLeft,
-  FaPlayCircle
+  FaPlayCircle,
+  FaRocket
 } from"react-icons/fa";
 import {
   faRing,
@@ -60,10 +61,10 @@ const Counter = ({ end, label, icon }) => {
       <div className="text-yellow-400 mb-4">
         <FontAwesomeIcon icon={icon} />
       </div>
-      <div className="font-bold text-white mb-2 font-TuskerGrotesk">
+      <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2 font-TuskerGrotesk">
         {count}+
       </div>
-      <div className="font-medium text-white/80 uppercase tracking-widest text-center">
+      <div className="text-sm font-medium text-white/80 uppercase tracking-widest text-center">
         {label}
       </div>
     </div>
@@ -135,42 +136,45 @@ const WeddingPlannersPage = () => {
       </Helmet>
 
       {/* 1. HERO SECTION */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: `url("${WeddingPlannersCoverimage}")`,
-            backgroundSize:"cover",
-            backgroundPosition:"center",
-          }}
-        >
-          <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gray-900">
+        <div className="absolute top-0 left-0 w-full h-full opacity-40 z-0">
+          <img 
+            src={WeddingPlannersCoverimage} 
+            alt="Wedding Background" 
+            className="w-full h-full object-cover"
+          />
         </div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-black/50 to-transparent z-10"></div>
         
-        <div className="relative z-10 text-center px-4 max-w-4xl">
-          <span className="inline-block px-4 py-1.5 bg-yellow-400/20 text-yellow-400 rounded-full  font-semibold mb-6 animate-fade-in-up">
+        <div className="relative z-20 text-center text-white px-4 max-w-5xl">
+          <span className="text-sm inline-block px-4 py-1.5 bg-yellow-400/20 text-yellow-400 rounded-full font-semibold mb-6 animate-fade-in-up">
             PREMIUM WEDDING PLANNERS
           </span>
-          <h1 className="font-bold text-white mb-6 font-TuskerGrotesk tracking-tight leading-none animate-fade-in-up">
-            Crafting Dream Weddings <br /> <span className="text-yellow-400">into Reality</span>
+          <h1 className="text-[28px] md:text-5xl lg:text-[52px] font-bold text-white mb-6 font-TuskerGrotesk tracking-wider animate-fade-in-up uppercase">
+            Crafting Dream Weddings <br /> <span className="text-primary">into Reality</span>
           </h1>
-          <p className="text-white/90 mb-10 font-light tracking-wide animate-fade-in-up">
+          <p className="text-base md:text-lg text-white/90 mb-12 opacity-90 leading-relaxed max-w-3xl mx-auto">
             Luxury Wedding Planning • Destination Weddings • Decor • Entertainment
           </p>
           
-          <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up">
+          <div className="flex flex-wrap justify-center gap-6">
             <Link 
               to="/contactus" 
-              className="px-10 py-4 bg-primary text-white font-bold rounded-full hover:bg-white hover:text-primary transition-all duration-300 shadow-lg hover:shadow-primary/30"
+              className="button1 text-sm py-4 px-10"
             >
               Plan Your Wedding
             </Link>
             <a 
               href="#portfolio"
-              className="px-10 py-4 bg-white/10 text-white font-bold rounded-full backdrop-blur-md border border-white/30 hover:bg-white hover:text-black transition-all duration-300"
+              className="button2 text-sm py-4 px-10 border-white text-white hover:bg-white hover:text-black"
             >
               View Portfolio
             </a>
+          </div>
+          <div className="mt-12">
+             <Link to="/contactus" className="text-sm text-white/60 hover:text-primary transition-colors font-bold uppercase tracking-widest flex items-center justify-center gap-2">
+                Plan Your Big Day Today <FaRocket />
+             </Link>
           </div>
         </div>
       </section>
@@ -179,7 +183,7 @@ const WeddingPlannersPage = () => {
       <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-bold text-gray-900 mb-4 font-TuskerGrotesk uppercase">
+            <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-bold text-gray-900 mb-4 font-TuskerGrotesk uppercase">
               Our Premium Services
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
@@ -197,13 +201,13 @@ const WeddingPlannersPage = () => {
                   <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
                     <FontAwesomeIcon icon={service.icon} className="" />
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-3">
+                  <h3 className="text-2xl md:text-[26px] lg:text-3xl font-bold text-gray-900 mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                     {service.description}
                   </p>
-                  <div className="mt-6 flex items-center text-primary font-bold  opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="text-sm mt-6 flex items-center text-primary font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     LEARN MORE <FaArrowRight className="ml-2" />
                   </div>
                 </div>
@@ -229,10 +233,10 @@ const WeddingPlannersPage = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-bold text-white mb-4 font-TuskerGrotesk uppercase tracking-widest">
+            <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-bold text-white mb-4 font-TuskerGrotesk uppercase tracking-widest">
               Why Choose Us
             </h2>
-            <p className="text-white/70 max-w-2xl mx-auto">
+            <p className="text-sm md:text-base text-white/70 max-w-2xl mx-auto">
               A decade of crafting magical moments and turning visions into breathtaking celebrations.
             </p>
           </div>
@@ -252,23 +256,23 @@ const WeddingPlannersPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
             <div className="max-w-2xl">
-              <h2 className="font-bold text-gray-900 mb-4 font-TuskerGrotesk">
+              <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-bold text-gray-900 mb-4 font-TuskerGrotesk">
                 OUR GALLERY
               </h2>
-              <p className="text-gray-600">
+              <p className="text-sm md:text-base text-gray-600">
                 Explore our portfolio of luxury cinematic weddings and breathtaking decors.
               </p>
             </div>
             <div className="flex gap-4">
               <button 
                 onClick={() => setActiveTab("all")}
-                className={`px-6 py-2 rounded-full font-bold transition-all ${activeTab ==="all" ?"bg-primary text-white" :"bg-gray-100 text-gray-600 hover:bg-gray-200"}`}
+                className={`text-sm px-6 py-2 rounded-full font-bold transition-all ${activeTab ==="all" ?"bg-primary text-white" :"bg-gray-100 text-gray-600 hover:bg-gray-200"}`}
               >
                 All
               </button>
               <button 
                 onClick={() => setActiveTab("video")}
-                className={`px-6 py-2 rounded-full font-bold transition-all ${activeTab ==="video" ?"bg-primary text-white" :"bg-gray-100 text-gray-600 hover:bg-gray-200"}`}
+                className={`text-sm px-6 py-2 rounded-full font-bold transition-all ${activeTab ==="video" ?"bg-primary text-white" :"bg-gray-100 text-gray-600 hover:bg-gray-200"}`}
               >
                 Reels
               </button>
@@ -287,9 +291,9 @@ const WeddingPlannersPage = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                  {item.type ==="video" && <FaPlayCircle className="text-white  mb-4" />}
-                  <h3 className="font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-white/70">Luxury Cinematic Experience</p>
+                  {item.type ==="video" && <FaPlayCircle className="text-white mb-4" />}
+                  <h3 className="text-2xl md:text-[26px] lg:text-3xl font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-sm text-white/70">Luxury Cinematic Experience</p>
                 </div>
               </div>
             ))}
@@ -301,8 +305,8 @@ const WeddingPlannersPage = () => {
       <section className="py-24 px-4 bg-primary text-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <FaQuoteLeft className="text-white/20  mx-auto mb-6" />
-            <h2 className="font-bold mb-4 font-TuskerGrotesk uppercase tracking-tighter">
+            <FaQuoteLeft className="text-white/20 mx-auto mb-6" />
+            <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-bold mb-4 font-TuskerGrotesk uppercase tracking-tighter">
               Couple Testimonials
             </h2>
           </div>
@@ -319,9 +323,9 @@ const WeddingPlannersPage = () => {
                       <FaStar key={i} />
                     ))}
                   </div>
-                  <p className="italic mb-10 leading-relaxed font-light">"{testi.review}"
+                  <p className="text-sm md:text-base italic mb-10 leading-relaxed font-light">"{testi.review}"
                   </p>
-                  <h4 className="font-bold uppercase tracking-widest">
+                  <h4 className="text-lg md:text-xl lg:text-[22px] font-bold uppercase tracking-widest">
                     - {testi.name}
                   </h4>
                 </div>
@@ -334,19 +338,19 @@ const WeddingPlannersPage = () => {
       {/* CTA SECTION */}
       <section className="py-20 text-center bg-white px-4 border-t border-gray-100">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-bold text-gray-900 mb-8 font-TuskerGrotesk">
+          <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-bold text-gray-900 mb-8 font-TuskerGrotesk">
             READY TO PLAN YOUR <br /> <span className="text-primary">BIG DAY?</span>
           </h2>
           <div className="flex flex-wrap justify-center gap-6">
             <Link
               to="/contactus"
-              className="inline-flex items-center px-10 py-4 bg-primary text-white font-bold rounded-full hover:bg-gray-900 transition-all duration-300 shadow-xl"
+              className="text-sm inline-flex items-center px-10 py-4 bg-primary text-white font-bold rounded-full hover:bg-gray-900 transition-all duration-300 shadow-xl"
             >
               <FaPhone className="mr-3" /> Book Consultation
             </Link>
             <a
               href={GlobalData.company.companyWhatsapp}
-              className="inline-flex items-center px-10 py-4 bg-green-500 text-white font-bold rounded-full hover:bg-green-600 transition-all duration-300 shadow-xl"
+              className="text-sm inline-flex items-center px-10 py-4 bg-green-500 text-white font-bold rounded-full hover:bg-green-600 transition-all duration-300 shadow-xl"
             >
               <FaWhatsapp className="mr-3" /> WhatsApp Us
             </a>

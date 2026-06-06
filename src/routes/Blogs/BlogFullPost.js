@@ -39,8 +39,8 @@ function FullBlog() {
     return (
       <div className="min-h-[60vh] flex items-center justify-center bg-gray-50">
         <div className="text-center">
-          <h2 className="text-[26px] md:text-[48px] font-FKScreamerBold uppercase tracking-widest text-gray-900 mb-2">Post Not Found</h2>
-          <p className="text-gray-500 mb-6 text-[18px]">The article you're looking for doesn't exist or has been moved.</p>
+          <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-FKScreamerBold uppercase tracking-widest text-gray-900 mb-2">Post Not Found</h2>
+          <p className="text-gray-500 mb-6 text-base md:text-lg">The article you're looking for doesn't exist or has been moved.</p>
           <Link to="/blogs" className="px-8 py-3 bg-primary text-white rounded-full font-bold uppercase tracking-widest hover:bg-orange-600 transition-colors shadow-lg shadow-primary/30">
             Back to Blog
           </Link>
@@ -107,7 +107,7 @@ function FullBlog() {
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
             {post.category || 'Expert Insights'}
           </div>
-          <h1 className="text-[26px] md:text-[48px] lg:text-[72px] font-FKScreamerBold uppercase tracking-widest mb-6 leading-[1.1] drop-shadow-lg">
+          <h1 className="text-[28px] md:text-5xl lg:text-[52px] font-FKScreamerBold uppercase tracking-widest mb-6 leading-[1.1] drop-shadow-lg">
             {post.title}
           </h1>
           <div className="flex flex-wrap items-center justify-center gap-6 text-white/80 text-[10px] font-bold uppercase tracking-widest mt-8">
@@ -146,8 +146,8 @@ function FullBlog() {
           {/* Share Section */}
           <div className="mt-10 flex items-center justify-between p-6 md:p-8 bg-gray-50 border border-gray-100 rounded-3xl">
             <div>
-              <h4 className="font-FKScreamerBold text-[24px] uppercase tracking-widest text-gray-900 mb-1">Found this helpful?</h4>
-              <p className="text-[16px] text-gray-500 font-medium">Share this article with your network.</p>
+              <h4 className="font-FKScreamerBold text-2xl md:text-[26px] lg:text-3xl uppercase tracking-widest text-gray-900 mb-1">Found this helpful?</h4>
+              <p className="text-sm md:text-base text-gray-500 font-medium">Share this article with your network.</p>
             </div>
             <button className="flex items-center gap-2 px-6 py-3 bg-white text-gray-900 rounded-full font-bold shadow-sm border border-gray-200 hover:border-primary hover:text-primary transition-all active:scale-95 uppercase tracking-widest text-[14px]">
               <FiShare2 />
@@ -167,11 +167,11 @@ function FullBlog() {
               <FiCheckCircle className="text-[30px]" />
             </div>
             
-            <h2 className="text-[26px] md:text-[48px] font-FKScreamerBold uppercase tracking-widest text-white mb-6 leading-tight">
+            <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-FKScreamerBold uppercase tracking-widest text-white mb-6 leading-tight">
               Ready to Accelerate Your <span className="text-primary block md:inline">Digital Growth?</span>
             </h2>
             
-            <p className="text-white/80 text-[16px] md:text-[18px] mb-10 leading-relaxed max-w-xl mx-auto">
+            <p className="text-white/80 text-base md:text-lg mb-10 leading-relaxed max-w-xl mx-auto">
               {post.call_to_action || "Stop struggling with low visibility. Partner with Cyber Space Digital to dominate search rankings, capture more leads, and scale your business effortlessly."}
             </p>
             
@@ -199,7 +199,7 @@ function FullBlog() {
           margin-bottom: 1.5em;
         }
         .prose-custom h2 {
-          font-size: 18px;
+          font-size: 26px;
           font-weight: 900;
           color: #0f172a;
           margin-top: 2em;
@@ -207,13 +207,25 @@ function FullBlog() {
           line-height: 1.2;
           letter-spacing: -0.025em;
         }
+        @media (min-width: 768px) {
+          .prose-custom h2 { font-size: 38px; }
+        }
+        @media (min-width: 1024px) {
+          .prose-custom h2 { font-size: 48px; }
+        }
         .prose-custom h3 {
-          font-size: 18px;
+          font-size: 24px;
           font-weight: 800;
           color: #1e293b;
           margin-top: 1.75em;
           margin-bottom: 0.75em;
           line-height: 1.3;
+        }
+        @media (min-width: 768px) {
+          .prose-custom h3 { font-size: 26px; }
+        }
+        @media (min-width: 1024px) {
+          .prose-custom h3 { font-size: 30px; }
         }
         .prose-custom ul {
           list-style-type: none;

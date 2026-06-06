@@ -87,23 +87,23 @@ const BrandingServices = () => {
         </div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-black/50 to-transparent z-10"></div>
         <div className="relative z-20 text-center text-white px-4 max-w-5xl">
-          <h1 className="font-bold mb-6 font-TuskerGrotesk tracking-wider animate-fade-in-up uppercase">
+          <h1 className="text-[28px] md:text-5xl lg:text-[52px] font-bold mb-6 font-TuskerGrotesk tracking-wider animate-fade-in-up uppercase">
             Build a <span className="text-primary">Powerful Brand</span> <br />
             That People Remember
           </h1>
-          <p className="mb-12 opacity-90 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-base md:text-lg mb-12 opacity-90 leading-relaxed max-w-3xl mx-auto">
             Leor Media helps businesses create strong, professional, and memorable brands through creative design, strategy, and digital branding solutions.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link to="/contactus" className="button1  py-4 px-10">
+            <Link to="/contactus" className="button1 text-sm py-4 px-10">
               Start Your Brand Journey
             </Link>
-            <Link to="/contactus" className="button2  py-4 px-10 border-white text-white hover:bg-white hover:text-black">
+            <Link to="/contactus" className="button2 text-sm py-4 px-10 border-white text-white hover:bg-white hover:text-black">
               Get Free Consultation
             </Link>
           </div>
           <div className="mt-12">
-             <Link to="/contactus" className="text-white/60 hover:text-primary transition-colors font-bold  uppercase tracking-widest flex items-center justify-center gap-2">
+             <Link to="/contactus" className="text-sm text-white/60 hover:text-primary transition-colors font-bold uppercase tracking-widest flex items-center justify-center gap-2">
                 Build Your Brand Today <FaRocket />
              </Link>
           </div>
@@ -116,22 +116,22 @@ const BrandingServices = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <div className="absolute -top-10 -left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
-              <span className="text-primary font-bold tracking-[0.2em] uppercase  mb-4 block">THE POWER OF IDENTITY</span>
-              <h2 className="font-bold mb-8 text-gray-900 leading-tight">
+              <span className="text-sm text-primary font-bold tracking-[0.2em] uppercase mb-4 block">THE POWER OF IDENTITY</span>
+              <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-bold mb-8 text-gray-900 leading-tight">
                 Why Branding is Important <br />
                 <span className="text-primary">for Your Business</span>
               </h2>
-              <p className="text-gray-600 mb-8 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-600 mb-8 leading-relaxed">
                 Branding is more than just a logo. A strong brand creates trust, improves recognition, and helps customers remember your business. Good branding gives your company a professional identity and makes your business stand out from competitors.
               </p>
               <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-inner">
-                <p className="font-bold text-gray-900 mb-6 flex items-center gap-2 uppercase tracking-wider">
+                <p className="text-sm md:text-base font-bold text-gray-900 mb-6 flex items-center gap-2 uppercase tracking-wider">
                   With proper branding, businesses can:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {["Build customer trust","Increase brand awareness","Create a professional image","Attract more customers","Improve business growth","Build long-term customer loyalty"
                   ].map((item, i) => (
-                    <div key={i} className="flex items-center text-gray-700">
+                    <div key={i} className="flex items-center text-sm text-gray-700">
                       <FaCheckCircle className="text-primary mr-3 flex-shrink-0" />
                       <span className="">{item}</span>
                     </div>
@@ -155,8 +155,8 @@ const BrandingServices = () => {
       <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-primary font-bold tracking-[0.2em] uppercase  mb-4 block">OUR EXPERTISE</span>
-            <h2 className="font-bold mb-6 text-gray-900">Our Branding Services</h2>
+            <span className="text-sm text-primary font-bold tracking-[0.2em] uppercase mb-4 block">OUR EXPERTISE</span>
+            <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-bold mb-6 text-gray-900">Our Branding Services</h2>
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
           
@@ -166,11 +166,11 @@ const BrandingServices = () => {
                 key={index} 
                 className="group p-10 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
               >
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center  text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500">
                   {service.icon}
                 </div>
-                <h3 className="font-bold mb-4 text-gray-900">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="text-2xl md:text-[26px] lg:text-3xl font-bold mb-4 text-gray-900">{service.title}</h3>
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                   {service.desc}
                 </p>
               </div>
@@ -183,8 +183,8 @@ const BrandingServices = () => {
       <section className="py-24 px-4 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <span className="text-primary font-bold tracking-[0.2em] uppercase  mb-4 block">HOW WE WORK</span>
-            <h2 className="font-bold mb-6 text-gray-900">Our Branding Process</h2>
+            <span className="text-sm text-primary font-bold tracking-[0.2em] uppercase mb-4 block">HOW WE WORK</span>
+            <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-bold mb-6 text-gray-900">Our Branding Process</h2>
           </div>
           
           <div className="relative">
@@ -198,11 +198,11 @@ const BrandingServices = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 relative z-10">
               {processSteps.map((step, i) => (
                 <div key={i} className="flex flex-col items-center text-center group">
-                  <div className="w-20 h-20 rounded-full bg-white border-4 border-gray-50 shadow-lg flex items-center justify-center  text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 group-hover:scale-110">
+                  <div className="w-20 h-20 rounded-full bg-white border-4 border-gray-50 shadow-lg flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 group-hover:scale-110">
                     {step.icon}
                   </div>
-                  <h3 className="font-bold mb-3 text-gray-900 uppercase tracking-wide">{step.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{step.desc}</p>
+                  <h3 className="text-2xl md:text-[26px] lg:text-3xl font-bold mb-3 text-gray-900 uppercase tracking-wide">{step.title}</h3>
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">{step.desc}</p>
                 </div>
               ))}
             </div>
@@ -220,23 +220,23 @@ const BrandingServices = () => {
                     <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-black transition-all">
                       <FaUserCheck />
                     </div>
-                    <span className="font-medium text-gray-200">{item}</span>
+                    <span className="text-sm font-medium text-gray-200">{item}</span>
                  </div>
                ))}
              </div>
            </div>
            <div className="order-1 lg:order-2">
-              <span className="text-primary font-bold tracking-[0.2em] uppercase  mb-4 block">WHY US</span>
-              <h2 className="font-bold mb-8 leading-tight">
+              <span className="text-sm text-primary font-bold tracking-[0.2em] uppercase mb-4 block">WHY US</span>
+              <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-bold mb-8 leading-tight">
                 Why Choose <span className="text-primary">Leor Media</span> <br />
                 for Branding?
               </h2>
-              <p className="text-gray-400 mb-8 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-400 mb-8 leading-relaxed">
                 We don't just design; we define. Our team combined with modern strategies and high-quality standards makes us the trusted choice for businesses in Visakhapatnam.
               </p>
               <div className="flex items-center gap-6 p-8 bg-white/5 rounded-3xl border border-white/10">
-                 <div className="text-primary font-TuskerGrotesk">100%</div>
-                 <div className="text-gray-300 font-bold uppercase tracking-widest">Satisfaction <br /> Guarantee</div>
+                  <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary font-TuskerGrotesk">100%</div>
+                 <div className="text-sm text-gray-300 font-bold uppercase tracking-widest">Satisfaction <br /> Guarantee</div>
               </div>
            </div>
         </div>
@@ -246,21 +246,21 @@ const BrandingServices = () => {
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-primary font-bold tracking-[0.2em] uppercase  mb-4 block">OUR WORK</span>
-            <h2 className="font-bold mb-6 text-gray-900">Our Branding Works</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Explore some of our creative masterpieces across various branding domains.</p>
+            <span className="text-sm text-primary font-bold tracking-[0.2em] uppercase mb-4 block">OUR WORK</span>
+            <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-bold mb-6 text-gray-900">Our Branding Works</h2>
+            <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">Explore some of our creative masterpieces across various branding domains.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {portfolioCategories.map((cat, i) => (
               <div key={i} className="relative group overflow-hidden rounded-3xl bg-gray-100 aspect-video flex items-center justify-center shadow-sm">
                 <div className="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex flex-col items-center justify-center text-black p-6">
-                   <h3 className="font-bold mb-2 text-center">{cat}</h3>
-                   <Link to="/contactus" className="bg-black text-white px-6 py-2 rounded-full  font-bold mt-4 hover:scale-110 transition-transform">View Projects</Link>
+                   <h3 className="text-2xl md:text-[26px] lg:text-3xl font-bold mb-2 text-center">{cat}</h3>
+                   <Link to="/contactus" className="bg-black text-sm text-white px-6 py-2 rounded-full font-bold mt-4 hover:scale-110 transition-transform">View Projects</Link>
                 </div>
                 <div className="text-center p-6">
                   <div className="text-primary/30 mb-4 flex justify-center"><FaPalette /></div>
-                  <span className="font-bold text-gray-500">{cat}</span>
+                  <span className="text-sm font-bold text-gray-500">{cat}</span>
                 </div>
               </div>
             ))}
@@ -271,20 +271,20 @@ const BrandingServices = () => {
       {/* Section-7: Testimonials Section */}
       <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center">
-           <span className="text-primary font-bold tracking-[0.2em] uppercase  mb-4 block">FEEDBACK</span>
-           <h2 className="font-bold mb-16 text-gray-900">What Our Clients Say</h2>
+           <span className="text-sm text-primary font-bold tracking-[0.2em] uppercase mb-4 block">FEEDBACK</span>
+           <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-bold mb-16 text-gray-900">What Our Clients Say</h2>
            
            <div className="bg-white p-10 md:p-20 rounded-[4rem] shadow-xl relative">
               <FaQuoteLeft className="absolute top-10 left-10 text-primary/10" />
               <Slider {...reviewSettings}>
                  <div className="outline-none">
-                   <p className="text-gray-800 italic mb-10 leading-relaxed font-light">
+                   <p className="text-sm md:text-base text-gray-800 italic mb-10 leading-relaxed font-light">
                      “Leor Media transformed our business branding with creative designs and professional strategy. Highly recommended for branding services in Vizag.”
                    </p>
                    <div className="flex flex-col items-center">
-                      <div className="w-16 h-16 bg-primary rounded-full mb-4 flex items-center justify-center text-black font-bold  shadow-lg shadow-primary/20">S</div>
-                      <h4 className="font-bold text-gray-900 uppercase tracking-widest">Successful Business Client</h4>
-                      <p className="text-primary font-bold">Visakhapatnam, India</p>
+                      <div className="w-16 h-16 bg-primary rounded-full mb-4 flex items-center justify-center text-black font-bold shadow-lg shadow-primary/20">S</div>
+                      <h4 className="text-lg md:text-xl lg:text-[22px] font-bold text-gray-900 uppercase tracking-widest">Successful Business Client</h4>
+                      <p className="text-sm text-primary font-bold">Visakhapatnam, India</p>
                    </div>
                  </div>
               </Slider>
@@ -296,8 +296,8 @@ const BrandingServices = () => {
       <section className="py-24 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-primary font-bold tracking-[0.2em] uppercase  mb-4 block">QUESTIONS?</span>
-            <h2 className="font-bold mb-6 text-gray-900">Frequently Asked Questions</h2>
+            <span className="text-sm text-primary font-bold tracking-[0.2em] uppercase mb-4 block">QUESTIONS?</span>
+            <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-bold mb-6 text-gray-900">Frequently Asked Questions</h2>
           </div>
           
           <div className="space-y-4">
@@ -307,12 +307,12 @@ const BrandingServices = () => {
                   onClick={() => setActiveFaq(activeFaq === i ? null : i)}
                   className="w-full flex items-center justify-between p-6 text-left bg-white transition-colors hover:bg-gray-50"
                 >
-                  <span className="font-bold text-gray-900">{faq.q}</span>
+                  <span className="text-base md:text-lg font-bold text-gray-900">{faq.q}</span>
                   {activeFaq === i ? <FaChevronUp className="text-primary" /> : <FaChevronDown className="text-primary" />}
                 </button>
                 {activeFaq === i && (
                   <div className="p-6 bg-gray-50 border-t border-gray-100 animate-fade-in-up">
-                    <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+                    <p className="text-sm md:text-base text-gray-600 leading-relaxed">{faq.a}</p>
                   </div>
                 )}
               </div>
@@ -324,17 +324,17 @@ const BrandingServices = () => {
       {/* Section-9: CTA Section */}
       <section className="py-24 px-4 bg-primary">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="font-bold text-black mb-8 font-TuskerGrotesk tracking-widest uppercase">
+          <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-bold text-black mb-8 font-TuskerGrotesk tracking-widest uppercase">
             Ready to <span className="text-white">Build Your Brand?</span>
           </h2>
-          <p className="text-black/80 mb-12 max-w-2xl mx-auto font-medium">
+          <p className="text-base md:text-lg text-black/80 mb-12 max-w-2xl mx-auto font-medium">
             Create a strong and memorable business identity with professional branding services from Leor Media.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link to="/contactus" className="button1black  py-5 px-14 shadow-2xl">
+            <Link to="/contactus" className="button1black text-sm py-5 px-14 shadow-2xl">
               Contact Us
             </Link>
-            <Link to="/contactus" className="bg-white hover:bg-black hover:text-white text-black  py-5 px-14 font-bold rounded-full transition-all duration-300 shadow-xl">
+            <Link to="/contactus" className="bg-white hover:bg-black hover:text-white text-black text-sm py-5 px-14 font-bold rounded-full transition-all duration-300 shadow-xl">
               Start Branding Today
             </Link>
           </div>

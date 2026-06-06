@@ -13,7 +13,7 @@ const { title, description, keywords, canonical, ogImage } = seoData.faq;
 const FaqSection = ({ title, faqs, openIndex, toggle, offset }) => (
   <section className="py-8 px-4 max-w-4xl mx-auto">
     <div className="mb-8">
-      <p className="font-bold text-gray-900 border-l-4 border-blue-600 pl-4 py-2">
+      <p className="text-lg md:text-xl lg:text-[22px] font-bold text-gray-900 border-l-4 border-blue-600 pl-4 py-2">
         {title}
       </p>
     </div>
@@ -32,7 +32,7 @@ const FaqSection = ({ title, faqs, openIndex, toggle, offset }) => (
               onClick={() => toggle(currentIndex)}
               className="w-full flex items-center justify-between px-6 py-4 bg-white font-medium text-gray-900 hover:bg-gray-50 focus:outline-none transition-colors duration-200"
             >
-              <span className="text-left text-[16px] md:text-[18px] font-semibold pr-4">
+              <span className="text-left text-base md:text-lg font-semibold pr-4">
                 {faq.question}
               </span>
               <span
@@ -44,7 +44,7 @@ const FaqSection = ({ title, faqs, openIndex, toggle, offset }) => (
             </button>
             {isOpen && (
               <div className="px-6 py-5 bg-gray-50 text-gray-700 border-t border-gray-200">
-                <div className="text-[14px] md:text-[16px] leading-relaxed">{faq.answer}</div>
+                <div className="text-sm md:text-base leading-relaxed">{faq.answer}</div>
               </div>
             )}
           </div>
@@ -207,10 +207,10 @@ function Faqs() {
 
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <h1 className="font-bold text-gray-900 mb-4">
+          <h1 className="text-[28px] md:text-5xl lg:text-[52px] font-bold text-gray-900 mb-4">
             Frequently Asked Questions
           </h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             Find answers to common questions about our services and solutions
           </p>
         </div>
@@ -226,7 +226,7 @@ function Faqs() {
               value={searchQuery}
               onChange={handleSearch}
               placeholder="Search for questions or answers..."
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none transition-all duration-200"
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none transition-all duration-200 text-sm"
             />
             {searchQuery && (
               <button
@@ -241,7 +241,7 @@ function Faqs() {
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setActiveSection("all")}
-              className={`px-4 py-2 rounded-full text-[14px] font-medium transition-colors ${activeSection === "all"
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${activeSection === "all"
                 ? "bg-blue-600 text-white"
                 : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
@@ -252,7 +252,7 @@ function Faqs() {
               <button
                 key={section.id}
                 onClick={() => setActiveSection(section.id)}
-                className={`px-4 py-2 rounded-full text-[14px] font-medium transition-colors ${activeSection === section.id
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${activeSection === section.id
                   ? "bg-blue-600 text-white"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   }`}
@@ -265,7 +265,7 @@ function Faqs() {
           {/* Search Results Info */}
           {searchQuery && (
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-              <p className="text-blue-800">
+              <p className="text-sm md:text-base text-blue-800">
                 Found <span className="font-bold">{filteredFaqs.length}</span>{" "}
                 result{filteredFaqs.length !== 1 ? "s" : ""} for "
                 <span className="font-bold">{searchQuery}</span>"
@@ -290,7 +290,7 @@ function Faqs() {
               Object.entries(groupedFilteredFaqs).map(([sectionId, sectionData]) => (
                 <section key={sectionId} className="py-8 px-4 max-w-4xl mx-auto">
                   <div className="mb-8">
-                    <p className="font-bold text-gray-900 border-l-4 border-blue-600 pl-4 py-2">
+                    <p className="text-lg md:text-xl lg:text-[22px] font-bold text-gray-900 border-l-4 border-blue-600 pl-4 py-2">
                       {sectionData.title}
                     </p>
                   </div>
@@ -308,7 +308,7 @@ function Faqs() {
                             onClick={() => toggle(faq.globalIndex)}
                             className="w-full flex items-center justify-between px-6 py-4 bg-white font-medium text-gray-900 hover:bg-gray-50 focus:outline-none transition-colors duration-200"
                           >
-                            <span className="text-left text-[16px] md:text-[18px] font-semibold pr-4">
+                            <span className="text-left text-base md:text-lg font-semibold pr-4">
                               {faq.question}
                             </span>
                             <span
@@ -320,7 +320,7 @@ function Faqs() {
                           </button>
                           {isOpen && (
                             <div className="px-6 py-5 bg-gray-50 text-gray-700 border-t border-gray-200">
-                              <div className="text-[14px] md:text-[16px] leading-relaxed">{faq.answer}</div>
+                              <div className="text-sm md:text-base leading-relaxed">{faq.answer}</div>
                             </div>
                           )}
                         </div>
@@ -331,7 +331,7 @@ function Faqs() {
               ))
             ) : (
               <div className="text-center py-12">
-                <p className="text-gray-500">
+                <p className="text-sm md:text-base text-gray-500">
                   No results found for "{searchQuery}"
                 </p>
                 <button
