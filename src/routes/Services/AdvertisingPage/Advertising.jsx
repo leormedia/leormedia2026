@@ -34,40 +34,34 @@ const Advertising = () => {
       </Helmet>
 
       <main className="space-y-8 my-6">
-        {/* Hero Section */}
-          {/* Section-1: Hero Section */}
-              <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gray-900">
-                <div className="absolute top-0 left-0 w-full h-full opacity-40 z-0">
-                  <img 
-                    src={AdvertisingCompany.coverimage} 
-                    alt="Branding Background" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-black/50 to-transparent z-10"></div>
-                <div className="relative z-20 text-center text-white px-4 max-w-5xl">
-                  <h1 className="text-[28px] md:text-5xl lg:text-[52px] font-bold mb-6 font-TuskerGrotesk tracking-wider animate-fade-in-up uppercase">
-                    Advertisement Services in Visakhapatnam | Leor Media
-                  </h1>
-                  <p className="text-base md:text-lg mb-12 opacity-90 leading-relaxed max-w-3xl mx-auto">
-                    Leor Media offers comprehensive ATL, BTL, and Digital advertising solutions to help your brand reach the right audience across all channels.  </p>
-                  <div className="flex flex-wrap justify-center gap-6">
-                    <Link to="/contactus" className="button1 text-sm py-4 px-10">
-                      Start Your Brand Journey
-                    </Link>
-                    <Link to="/contactus" className="button2 text-sm py-4 px-10 border-white text-white hover:bg-white hover:text-black">
-                      Get Free Consultation
-                    </Link>
-                  </div>
-                  <div className="mt-12">
-                     <Link to="/contactus" className="text-sm text-white/60 hover:text-primary transition-colors font-bold uppercase tracking-widest flex items-center justify-center gap-2">
-                        Build Your Brand Today <FaRocket />
-                     </Link>
-                  </div>
-                </div>
-              </section>
+        {/* Section-1: Hero Section */}
+        <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-gray-900 mt-14">
+          <div className="absolute top-0 left-0 w-full h-full opacity-40 z-0">
+            <img 
+              src={AdvertisingCompany.coverimage} 
+              alt="Advertising Background" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-black/50 to-transparent z-10"></div>
+          <div className="relative z-20 text-center text-white px-4 max-w-5xl">
+            <h1 className="text-[18px] md:text-5xl lg:text-[52px] font-bold mb-6 font-TuskerGrotesk tracking-wider animate-fade-in-up uppercase">
+              Advertisement Services in Visakhapatnam | Leor Media
+            </h1>
+            <p className="text-[12px] md:text-lg mb-12 opacity-90 leading-relaxed max-w-3xl mx-auto">
+              Leor Media offers comprehensive ATL, BTL, and Digital advertising solutions to help your brand reach the right audience across all channels.
+            </p>
+            <div className="flex flex-wrap justify-center gap-6">
+              <Link to="/contactus" className="button1 text-sm py-4 px-10">
+                Start Your Brand Journey
+              </Link>
+              <Link to="/contactus" className="button2 text-sm py-4 px-10 border-white text-white hover:bg-white hover:text-black">
+                Get Free Consultation
+              </Link>
+            </div>
+          </div>
+        </section>
 
-        {/* Services Section */}
         <section className="px-4">
           <div className="text-center mb-8">
             <p className="text-sm text-gray-600 mb-2">

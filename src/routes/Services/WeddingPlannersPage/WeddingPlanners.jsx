@@ -136,7 +136,7 @@ const WeddingPlannersPage = () => {
       </Helmet>
 
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gray-900">
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-gray-900 mt-14">
         <div className="absolute top-0 left-0 w-full h-full opacity-40 z-0">
           <img 
             src={WeddingPlannersCoverimage} 
@@ -150,10 +150,10 @@ const WeddingPlannersPage = () => {
           <span className="text-sm inline-block px-4 py-1.5 bg-yellow-400/20 text-yellow-400 rounded-full font-semibold mb-6 animate-fade-in-up">
             PREMIUM WEDDING PLANNERS
           </span>
-          <h1 className="text-[28px] md:text-5xl lg:text-[52px] font-bold text-white mb-6 font-TuskerGrotesk tracking-wider animate-fade-in-up uppercase">
+          <h1 className="text-[18px] md:text-5xl lg:text-[52px] font-bold text-white mb-6 font-TuskerGrotesk tracking-wider animate-fade-in-up uppercase">
             Crafting Dream Weddings <br /> <span className="text-primary">into Reality</span>
           </h1>
-          <p className="text-base md:text-lg text-white/90 mb-12 opacity-90 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-[12px] md:text-lg text-white/90 mb-12 opacity-90 leading-relaxed max-w-3xl mx-auto">
             Luxury Wedding Planning • Destination Weddings • Decor • Entertainment
           </p>
           
@@ -171,15 +171,9 @@ const WeddingPlannersPage = () => {
               View Portfolio
             </a>
           </div>
-          <div className="mt-12">
-             <Link to="/contactus" className="text-sm text-white/60 hover:text-primary transition-colors font-bold uppercase tracking-widest flex items-center justify-center gap-2">
-                Plan Your Big Day Today <FaRocket />
-             </Link>
-          </div>
         </div>
       </section>
 
-      {/* 2. QUICK SERVICES SECTION */}
       <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">

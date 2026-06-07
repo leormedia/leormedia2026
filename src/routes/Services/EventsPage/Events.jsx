@@ -35,7 +35,7 @@ const Events = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gray-900">
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-gray-900 mt-14">
         <div className="absolute top-0 left-0 w-full h-full opacity-40 z-0">
           <img 
             src={EventsCompany.coverimage} 
@@ -45,11 +45,11 @@ const Events = () => {
         </div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-black/50 to-transparent z-10"></div>
         <div className="relative z-20 text-center text-white px-4 max-w-5xl">
-          <h1 className="text-[28px] md:text-5xl lg:text-[52px] font-bold mb-6 font-TuskerGrotesk tracking-wider animate-fade-in-up uppercase">
+          <h1 className="text-[18px] md:text-5xl lg:text-[52px] font-bold mb-6 font-TuskerGrotesk tracking-wider animate-fade-in-up uppercase">
             Creating <span className="text-primary">Unforgettable</span> <br />
             Moments
           </h1>
-          <p className="text-base md:text-lg mb-12 opacity-90 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-[12px] md:text-lg mb-12 opacity-90 leading-relaxed max-w-3xl mx-auto">
             From intimate celebrations to grand corporate galas, we bring your vision to life with passion and precision.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
@@ -60,11 +60,7 @@ const Events = () => {
               View Gallery
             </Link>
           </div>
-          <div className="mt-12">
-             <Link to="/contactus" className="text-sm text-white/60 hover:text-primary transition-colors font-bold uppercase tracking-widest flex items-center justify-center gap-2">
-                Plan Your Event Today <FaRocket />
-             </Link>
-          </div>
+         
         </div>
       </section>
 

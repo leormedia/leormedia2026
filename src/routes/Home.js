@@ -1,10 +1,9 @@
-
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Eventmanagementhomeslider,
   Digitalmarketinghomeslider,
-  Luxeryweddinghomeslider
+  Luxeryweddinghomeslider,
 } from "../assets/data/Imagedata";
 import {
   FaEnvelope,
@@ -18,9 +17,14 @@ import {
   FaBullseye,
 } from "react-icons/fa";
 import { CONTACTUS_API } from "../hooks/Apis";
-import GoogleMapReviews from "../components/GoogleMapReviews/GoogleMapReviews"
-import { FooterLogo1, FooterLogo2, FooterLogo3, FooterLogo4 } from "../assets/data/icon_data";
-import { Calendar, Briefcase, PartyPopper, Smile } from 'lucide-react';
+import GoogleMapReviews from "../components/GoogleMapReviews/GoogleMapReviews";
+import {
+  FooterLogo1,
+  FooterLogo2,
+  FooterLogo3,
+  FooterLogo4,
+} from "../assets/data/icon_data";
+import { Calendar, Briefcase, PartyPopper, Smile, User, Mail, PhoneCall, BookOpen, MessageSquare, Send } from "lucide-react";
 
 // Import generated images
 import WeddingSliderImg from "../assets/Generated/wedding_slider.png";
@@ -32,11 +36,14 @@ import LogoOnly from "../assets/LogoOnly.svg";
 import { GlobalData } from "../assets/data/GlodalData";
 
 // Dynamically import all images from the gallery directory
-const importAll = (r) => r.keys().map((item) => {
-  const module = r(item);
-  return module.default || module;
-});
-const galleryImages = importAll(require.context('../assets/gallery', false, /\.(png|jpe?g|svg|webp|avif)$/));
+const importAll = (r) =>
+  r.keys().map((item) => {
+    const module = r(item);
+    return module.default || module;
+  });
+const galleryImages = importAll(
+  require.context("../assets/gallery", false, /\.(png|jpe?g|svg|webp|avif)$/),
+);
 
 // Static configuration data moved outside component to optimize React renders
 const subjectOptions = [
@@ -56,20 +63,20 @@ const heroData = {
     title: "EVENT MANAGEMENT",
     desc: "Unforgettable experiences. From luxury weddings to high-impact corporate launches.",
     bg: Eventmanagementhomeslider,
-    link: "/services/events"
+    link: "/services/events",
   },
   Weddings: {
     title: "LUXURY WEDDINGS",
     desc: "Timeless Elegance for Your Special Day. Flawless execution and beautiful memories.",
     bg: Luxeryweddinghomeslider,
-    link: "/services/wedding-planners"
+    link: "/services/wedding-planners",
   },
   "Digital Marketing": {
     title: "DIGITAL MARKETING",
     desc: "Driving Growth through Innovation. SEO, Social Media, and Performance Ads.",
     bg: Digitalmarketinghomeslider,
-    link: "/services/digital-media-marketing"
-  }
+    link: "/services/digital-media-marketing",
+  },
 };
 
 const sections = [
@@ -246,7 +253,8 @@ const HomePage = () => {
   useEffect(() => {
     const heroInterval = setInterval(() => {
       setSelected((prev) => {
-        const nextIndex = (heroCategories.indexOf(prev) + 1) % heroCategories.length;
+        const nextIndex =
+          (heroCategories.indexOf(prev) + 1) % heroCategories.length;
         return heroCategories[nextIndex];
       });
     }, 5000);
@@ -265,8 +273,7 @@ const HomePage = () => {
   return (
     <>
       {/* Slider */}
-      <section className="relative w-full text-white h-[75vh] md:h-[80vh] bg-black mt-10 overflow-hidden">
-
+      <section className="relative w-full text-white h-[80vh] bg-black mt-10 overflow-hidden  ">
         {/* Background Image Layer */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
@@ -281,14 +288,12 @@ const HomePage = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/85 z-10 pointer-events-none" />
 
         {/* Content */}
-        <div className="relative z-20 w-full h-full max-w-5xl mx-auto px-6 pb-24 md:pb-28 flex flex-col items-center justify-center text-center">
-
+        <div className="relative z-20 w-full h-full max-w-5xl mx-auto px-6 pb-24 md:pb-28 flex flex-col items-center justify-center text-center pt-28">
           {/* Static Header Content */}
 
-
-          <div className="flex my-auto flex-col items-center text-center leading-none text-white font-TuskerGrotesk uppercase tracking-wide mb-4">
-            <span className="block text-[28px] md:text-5xl lg:text-[52px] font-extrabold drop-shadow-md">
-              Crafting Extraordinary  Events
+          <div className="flex my-auto flex-col items-center text-center leading-none text-white uppercase tracking-wide mb-4">
+            <span className="block text-[16px] md:text-[38px] lg:text-[48px] font-extrabold drop-shadow-md">
+              Crafting Extraordinary Events
             </span>
 
             {/* Centerpiece ampersand - more compact */}
@@ -296,19 +301,22 @@ const HomePage = () => {
               &
             </span>
 
-            <span className="block text-[28px] md:text-5xl lg:text-[52px] font-extrabold text-primary drop-shadow-md mb-4">
+            <span className="blocktext-[16px] md:text-[38px] lg:text-[48px] font-extrabold text-primary drop-shadow-md mb-4">
               Digital Success Stories
             </span>
 
-            <span className="inline-block text-gray-300 font-bold tracking-[0.4em] uppercase text-sm mt-2 mb-4 font-sans">
+            <span className="inline-block text-gray-300 font-bold  uppercase text-[12px]  mt-2 mb-4 font-sans">
               SINCE 2016 | LEOR MEDIA
             </span>
           </div>
 
           {/* Dynamic Content (Animates on slide change) */}
-          <div key={selected} className="animate-fade-in-up flex flex-col items-center">
+          <div
+            key={selected}
+            className="animate-fade-in-up flex flex-col items-center"
+          >
             {/* Slide Description */}
-            <p className="text-white/90 font-medium tracking-wide text-base md:text-lg leading-relaxed max-w-2xl mb-8 drop-shadow-md">
+            <p className="text-white font-medium text-base text-[10px] md:text-[18px] lg:text-[18px] leading-relaxed  mb-8 drop-shadow-md">
               {heroData[selected].desc}
             </p>
 
@@ -323,10 +331,7 @@ const HomePage = () => {
               </Link>
             </div>
           </div>
-
         </div>
-
-
       </section>
 
       {/* Registered On Section */}
@@ -348,7 +353,7 @@ const HomePage = () => {
                   alt={`registered_logo_${i}`}
                   className="h-10 md:h-14 hover:scale-105 transition-all duration-300 grayscale hover:grayscale-0 rounded-sm"
                 />
-              )
+              ),
             )}
           </div>
         </div>
@@ -357,10 +362,11 @@ const HomePage = () => {
       {/* Our Clients Section */}
       <OurClientsComponent />
 
-
-
       {/* Aboutus */}
-      <section id="about" className="relative py-20 md:py-32 bg-slate-50 overflow-hidden text-black">
+      <section
+        id="about"
+        className="relative py-20 md:py-32 bg-slate-50 overflow-hidden text-black"
+      >
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-primary/5 blur-[120px]"></div>
@@ -369,7 +375,6 @@ const HomePage = () => {
 
         <div className="container mx-auto px-4 md:px-8 lg:px-16 relative z-10">
           <div className="max-w-6xl mx-auto relative">
-
             {/* Header Content */}
             <div className="text-center mb-16 relative z-10">
               <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-bold uppercase tracking-widest mb-4">
@@ -391,7 +396,6 @@ const HomePage = () => {
 
             {/* Vision & Mission - Creative Edition */}
             <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-
               {/* Vision Card */}
               <div className="group relative bg-white/80 backdrop-blur-xl p-8 md:p-10 rounded-3xl shadow-xl border border-white/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-primary/10 overflow-hidden">
                 {/* Animated gradient orb */}
@@ -409,7 +413,8 @@ const HomePage = () => {
                   </div>
 
                   <h3 className="text-2xl md:text-[26px] lg:text-3xl font-extrabold mb-4 uppercase tracking-wider text-gray-900 font-TuskerGrotesk">
-                    Our <span className="text-primary relative inline-block">
+                    Our{" "}
+                    <span className="text-primary relative inline-block">
                       Vision
                       <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary/40 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
                     </span>
@@ -418,13 +423,19 @@ const HomePage = () => {
                   <div className="h-0.5 w-12 bg-primary/50 rounded-full mb-6 group-hover:w-28 transition-all duration-500"></div>
 
                   <p className="text-sm md:text-base text-gray-700 leading-relaxed font-medium max-w-sm mx-auto">
-                    To be the premier choice for event management and digital marketing, recognized for our creative brilliance, flawless execution, and commitment to transforming visionary ideas into unforgettable experiences.
+                    To be the premier choice for event management and digital
+                    marketing, recognized for our creative brilliance, flawless
+                    execution, and commitment to transforming visionary ideas
+                    into unforgettable experiences.
                   </p>
 
                   {/* Decorative dot pattern */}
                   <div className="flex gap-1 mt-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     {[...Array(3)].map((_, i) => (
-                      <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary/60"></div>
+                      <div
+                        key={i}
+                        className="w-1.5 h-1.5 rounded-full bg-primary/60"
+                      ></div>
                     ))}
                   </div>
                 </div>
@@ -446,7 +457,8 @@ const HomePage = () => {
                   </div>
 
                   <h3 className="text-2xl md:text-[26px] lg:text-3xl font-extrabold mb-4 uppercase tracking-wider text-gray-900 font-TuskerGrotesk">
-                    Our <span className="text-primary relative inline-block">
+                    Our{" "}
+                    <span className="text-primary relative inline-block">
                       Mission
                       <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary/40 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
                     </span>
@@ -455,25 +467,28 @@ const HomePage = () => {
                   <div className="h-0.5 w-12 bg-primary/50 rounded-full mb-6 group-hover:w-28 transition-all duration-500"></div>
 
                   <p className="text-sm md:text-base text-gray-700 leading-relaxed font-medium max-w-sm mx-auto">
-                    To deliver exceptional, tailor-made solutions that exceed client expectations. We are dedicated to building lasting relationships through transparency, passion, and an unwavering focus on bringing every project to life with perfection.
+                    To deliver exceptional, tailor-made solutions that exceed
+                    client expectations. We are dedicated to building lasting
+                    relationships through transparency, passion, and an
+                    unwavering focus on bringing every project to life with
+                    perfection.
                   </p>
 
                   {/* Decorative dot pattern */}
                   <div className="flex gap-1 mt-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     {[...Array(3)].map((_, i) => (
-                      <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary/60"></div>
+                      <div
+                        key={i}
+                        className="w-1.5 h-1.5 rounded-full bg-primary/60"
+                      ></div>
                     ))}
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
-
-
-
 
       {/* Track Record Section - Compact with Icons */}
       <section className="py-12 md:py-16 bg-[#f37a20] text-white overflow-hidden border-y border-gray-900">
@@ -489,7 +504,8 @@ const HomePage = () => {
               </h2>
             </div>
             <p className="text-sm md:text-base text-white font-light leading-relaxed max-w-md lg:text-right border-l lg:border-l-0 lg:border-r border-white/30 pl-5 lg:pl-0 lg:pr-6">
-              A decade of excellence, hundreds of ambitious projects, and thousands of unforgettable memories crafted flawlessly.
+              A decade of excellence, hundreds of ambitious projects, and
+              thousands of unforgettable memories crafted flawlessly.
             </p>
           </div>
 
@@ -499,7 +515,7 @@ const HomePage = () => {
               { value: "10+", label: "Years Experience", icon: Calendar },
               { value: "600+", label: "Projects Delivered", icon: Briefcase },
               { value: "2K+", label: "Events & Projects", icon: PartyPopper },
-              { value: "100%", label: "Client Satisfaction", icon: Smile }
+              { value: "100%", label: "Client Satisfaction", icon: Smile },
             ].map((stat, idx) => (
               <div key={idx} className="group relative">
                 {/* Hover background */}
@@ -527,8 +543,6 @@ const HomePage = () => {
         </div>
       </section>
 
-
-
       <GoogleMapReviews />
 
       {/* Gallery Section */}
@@ -542,41 +556,21 @@ const HomePage = () => {
               CAPTURING <span className="text-primary">MOMENTS</span>
             </h2>
           </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {galleryImages.map((imgSrc, index) => (
-              <div key={index} className="group relative aspect-square overflow-hidden rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer bg-white">
-                <img 
-                  src={imgSrc} 
-                  alt={`Gallery Event ${index + 1}`} 
+              <div
+                key={index}
+                className="group relative aspect-square overflow-hidden rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer bg-white"
+              >
+                <img
+                  src={imgSrc}
+                  alt={`Gallery Event ${index + 1}`}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
-               
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-
-
-
-      {/* Our Services Section Introduction */}
-      <section className="bg-black text-white pt-24 pb-12 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full opacity-[0.02] pointer-events-none">
-          <div className="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-primary blur-3xl"></div>
-        </div>
-
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-bold uppercase tracking-widest mb-4">
-            UNFORGETTABLE EXPERIENCES
-          </span>
-          <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-extrabold mb-4 font-TuskerGrotesk tracking-wide">
-            OUR <span className="text-primary">SERVICES</span>
-          </h2>
-          <p className="text-base md:text-lg text-gray-200 max-w-2xl mx-auto tracking-wide">
-            What we provide at Leor Media to craft your memorable events and creative digital success stories.
-          </p>
         </div>
       </section>
 
@@ -619,7 +613,10 @@ const HomePage = () => {
                   {sec.detailedServices && (
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-8">
                       {sec.detailedServices.map((service, idx) => (
-                        <div key={idx} className="flex items-center text-white/80 text-sm">
+                        <div
+                          key={idx}
+                          className="flex items-center text-white/80 text-sm"
+                        >
                           <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>
                           {service}
                         </div>
@@ -671,8 +668,9 @@ const HomePage = () => {
                     {sections.map((_, i) => (
                       <div
                         key={i}
-                        className={`w-2 h-2 rounded-full transition-all duration-300 ${i === index ? "bg-white w-8" : "bg-white/30"
-                          }`}
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                          i === index ? "bg-white w-8" : "bg-white/30"
+                        }`}
                       />
                     ))}
                   </div>
@@ -715,7 +713,8 @@ const HomePage = () => {
                   Get in <span className="text-primary">Touch</span>
                 </h2>
                 <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                  Have a project in mind or need expert advice? Let's discuss how we can bring your ideas to life.
+                  Have a project in mind or need expert advice? Let's discuss
+                  how we can bring your ideas to life.
                 </p>
               </div>
 
@@ -729,7 +728,9 @@ const HomePage = () => {
                     <FaPhone className="text-lg" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400 uppercase tracking-wider font-semibold">Call Us</p>
+                    <p className="text-sm text-gray-400 uppercase tracking-wider font-semibold">
+                      Call Us
+                    </p>
                     <p className="text-sm md:text-base font-bold text-gray-800">
                       {GlobalData.company.companyPhone}
                     </p>
@@ -744,7 +745,9 @@ const HomePage = () => {
                     <FaEnvelope className="text-lg" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400 uppercase tracking-wider font-semibold">Email Us</p>
+                    <p className="text-sm text-gray-400 uppercase tracking-wider font-semibold">
+                      Email Us
+                    </p>
                     <p className="text-sm md:text-base font-bold text-gray-800">
                       {GlobalData.company.companyEmail}
                     </p>
@@ -761,7 +764,9 @@ const HomePage = () => {
                     <FaWhatsapp className="text-lg" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400 uppercase tracking-wider font-semibold">WhatsApp Us</p>
+                    <p className="text-sm text-gray-400 uppercase tracking-wider font-semibold">
+                      WhatsApp Us
+                    </p>
                     <p className="text-sm md:text-base font-bold text-gray-800">
                       Chat with our team
                     </p>
@@ -771,7 +776,10 @@ const HomePage = () => {
             </div>
 
             {/* Right side: Form */}
-            <div className="lg:col-span-7 bg-white p-6 md:p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100">
+            <div className="lg:col-span-7 bg-white p-6 md:p-8 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-slate-100 relative overflow-hidden group">
+              {/* Subtle top primary gradient border line */}
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary/60 via-primary to-orange-500/80"></div>
+
               <form onSubmit={handleSubmit} className="space-y-4">
                 <input
                   type="text"
@@ -781,109 +789,128 @@ const HomePage = () => {
                   className="hidden"
                 />
 
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Name Input */}
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1 capitalize">
-                      Name
-                    </label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+                      <User className="h-4 w-4" />
+                    </div>
                     <input
                       type="text"
                       name="name"
-                      placeholder="Your full name"
+                      placeholder="Your Name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors text-sm"
+                      className="w-full pl-10 pr-4 py-3 bg-slate-50/50 hover:bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all duration-300 text-sm placeholder-gray-400 text-gray-800"
                       required
                     />
                   </div>
 
                   {/* Email Input */}
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1 capitalize">
-                      Email
-                    </label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+                      <Mail className="h-4 w-4" />
+                    </div>
                     <input
                       type="email"
                       name="email"
-                      placeholder="your.email@example.com"
+                      placeholder="Email Address"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors text-sm"
+                      className="w-full pl-10 pr-4 py-3 bg-slate-50/50 hover:bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all duration-300 text-sm placeholder-gray-400 text-gray-800"
                       required
                     />
                   </div>
 
                   {/* Phone Input */}
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1 capitalize">
-                      Phone
-                    </label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+                      <PhoneCall className="h-4 w-4" />
+                    </div>
                     <input
                       type="tel"
                       name="phone"
-                      placeholder="+91 00000 00000"
+                      placeholder="Phone Number"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors text-sm"
+                      className="w-full pl-10 pr-4 py-3 bg-slate-50/50 hover:bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all duration-300 text-sm placeholder-gray-400 text-gray-800"
                       required
                     />
                   </div>
 
                   {/* Subject Input */}
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1">
-                      Subject
-                    </label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+                      <BookOpen className="h-4 w-4" />
+                    </div>
                     <select
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors text-sm"
+                      className="w-full pl-10 pr-10 py-3 bg-slate-50/50 hover:bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all duration-300 text-sm text-gray-800 appearance-none"
                       required
                     >
-                      <option value="">Select a subject</option>
+                      <option value="" className="text-gray-400">
+                        Select Subject
+                      </option>
                       {subjectOptions.map((option, index) => (
                         <option key={index} value={option}>
                           {option}
                         </option>
                       ))}
                     </select>
+                    <div className="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-gray-400">
+                      <svg
+                        className="h-4 w-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-1">
-                    Message
-                  </label>
+                {/* Message Input */}
+                <div className="relative">
+                  <div className="absolute top-3.5 left-3.5 pointer-events-none text-gray-400">
+                    <MessageSquare className="h-4 w-4" />
+                  </div>
                   <textarea
                     name="message"
                     placeholder="Tell us about your project or inquiry..."
                     rows="3"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors resize-none text-sm"
+                    className="w-full pl-10 pr-4 py-3 bg-slate-50/50 hover:bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all duration-300 text-sm placeholder-gray-400 text-gray-800 resize-none"
                     required
                   />
                 </div>
 
+                {/* Submit Button */}
                 <button
                   type="submit"
                   disabled={loading}
-                  className={`w-full py-2.5 px-6 rounded-lg font-semibold transition-colors text-sm ${loading
-                    ? "bg-gray-400 cursor-not-allowed text-gray-200"
-                    : "bg-primary hover:bg-primary/90 text-white shadow-sm"
-                    }`}
+                  className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-300 text-sm flex items-center justify-center space-x-2 shadow-md ${
+                    loading
+                      ? "bg-slate-300 cursor-not-allowed text-slate-500 shadow-none"
+                      : "bg-primary hover:bg-primary/95 text-white hover:shadow-lg hover:shadow-primary/25 active:scale-[0.98]"
+                  }`}
                 >
-                  {loading ? "Sending Message..." : "Send Message"}
+                  <span>{loading ? "Sending Message..." : "Send Message"}</span>
+                  {!loading && <Send className="h-4 w-4" />}
                 </button>
               </form>
             </div>
           </div>
         </div>
       </section>
-
-
 
       {/* CTA & Process Slider Section */}
       <section id="about" className="py-16 md:py-24 bg-white text-black">
@@ -905,39 +932,57 @@ const HomePage = () => {
               ></div>
             </div>
 
-            {["Understand", "Plan", "Execution", "Delivery"].map((stepTitle, idx) => (
-              <button
-                key={idx}
-                onClick={() => setActiveProcessIndex(idx)}
-                className="relative z-10 flex flex-col items-center focus:outline-none group"
-              >
-                <div
-                  className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm border transition-all duration-500 shadow-md ${activeProcessIndex === idx
-                    ? "bg-primary text-white border-primary scale-110 shadow-primary/20"
-                    : "bg-white text-gray-400 border-gray-100 group-hover:border-primary/30 group-hover:text-primary"
-                    }`}
+            {["Understand", "Plan", "Execution", "Delivery"].map(
+              (stepTitle, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setActiveProcessIndex(idx)}
+                  className="relative z-10 flex flex-col items-center focus:outline-none group"
                 >
-                  0{idx + 1}
-                </div>
-                <span
-                  className={`absolute top-12 text-sm font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-500 ${activeProcessIndex === idx ? "text-primary opacity-100 translate-y-0" : "text-gray-400 opacity-60 group-hover:opacity-100"
+                  <div
+                    className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm border transition-all duration-500 shadow-md ${
+                      activeProcessIndex === idx
+                        ? "bg-primary text-white border-primary scale-110 shadow-primary/20"
+                        : "bg-white text-gray-400 border-gray-100 group-hover:border-primary/30 group-hover:text-primary"
                     }`}
-                >
-                  {stepTitle}
-                </span>
-              </button>
-            ))}
+                  >
+                    0{idx + 1}
+                  </div>
+                  <span
+                    className={`absolute top-12 text-sm font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-500 ${
+                      activeProcessIndex === idx
+                        ? "text-primary opacity-100 translate-y-0"
+                        : "text-gray-400 opacity-60 group-hover:opacity-100"
+                    }`}
+                  >
+                    {stepTitle}
+                  </span>
+                </button>
+              ),
+            )}
           </div>
 
           {/* Slider Container */}
           <div className="relative flex items-center justify-center px-4 md:px-12 mb-16">
             {/* Left Arrow Button */}
             <button
-              onClick={() => setActiveProcessIndex((prev) => (prev === 0 ? 3 : prev - 1))}
+              onClick={() =>
+                setActiveProcessIndex((prev) => (prev === 0 ? 3 : prev - 1))
+              }
               className="absolute left-0 md:left-4 z-20 w-12 h-12 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group"
             >
-              <svg className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
+              <svg
+                className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2.5"
+                  d="M15 19l-7-7 7-7"
+                />
               </svg>
             </button>
 
@@ -951,23 +996,62 @@ const HomePage = () => {
                   color: "from-blue-500 to-indigo-600",
                   shadow: "shadow-indigo-500/10 hover:shadow-indigo-500/20",
                   icon: (
-                    <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg
+                      className="w-16 h-16"
+                      viewBox="0 0 64 64"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
                       <defs>
-                        <radialGradient id="3d-grad-1" cx="30%" cy="30%" r="70%">
+                        <radialGradient
+                          id="3d-grad-1"
+                          cx="30%"
+                          cy="30%"
+                          r="70%"
+                        >
                           <stop offset="0%" stopColor="#818CF8" />
                           <stop offset="60%" stopColor="#4F46E5" />
                           <stop offset="100%" stopColor="#312E81" />
                         </radialGradient>
-                        <filter id="3d-shadow-1" x="-10%" y="-10%" width="130%" height="130%">
-                          <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#4F46E5" floodOpacity="0.4" />
+                        <filter
+                          id="3d-shadow-1"
+                          x="-10%"
+                          y="-10%"
+                          width="130%"
+                          height="130%"
+                        >
+                          <feDropShadow
+                            dx="2"
+                            dy="6"
+                            stdDeviation="4"
+                            floodColor="#4F46E5"
+                            floodOpacity="0.4"
+                          />
                         </filter>
                       </defs>
-                      <circle cx="32" cy="32" r="24" fill="url(#3d-grad-1)" filter="url(#3d-shadow-1)" />
-                      <circle cx="26" cy="22" r="10" fill="#ffffff" opacity="0.15" />
-                      <path d="M28 26C28 23.7909 29.7909 22 32 22C34.2091 22 36 23.7909 36 26C36 27.8244 34.7813 28.5 33.75 29.25C32.8438 29.9062 32 30.8125 32 32" stroke="white" strokeWidth="3" strokeLinecap="round" />
+                      <circle
+                        cx="32"
+                        cy="32"
+                        r="24"
+                        fill="url(#3d-grad-1)"
+                        filter="url(#3d-shadow-1)"
+                      />
+                      <circle
+                        cx="26"
+                        cy="22"
+                        r="10"
+                        fill="#ffffff"
+                        opacity="0.15"
+                      />
+                      <path
+                        d="M28 26C28 23.7909 29.7909 22 32 22C34.2091 22 36 23.7909 36 26C36 27.8244 34.7813 28.5 33.75 29.25C32.8438 29.9062 32 30.8125 32 32"
+                        stroke="white"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                      />
                       <circle cx="32" cy="38" r="2" fill="white" />
                     </svg>
-                  )
+                  ),
                 },
                 {
                   step: "02",
@@ -976,23 +1060,72 @@ const HomePage = () => {
                   color: "from-amber-400 to-orange-500",
                   shadow: "shadow-orange-500/10 hover:shadow-orange-500/20",
                   icon: (
-                    <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg
+                      className="w-16 h-16"
+                      viewBox="0 0 64 64"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
                       <defs>
-                        <radialGradient id="3d-grad-2" cx="30%" cy="30%" r="70%">
+                        <radialGradient
+                          id="3d-grad-2"
+                          cx="30%"
+                          cy="30%"
+                          r="70%"
+                        >
                           <stop offset="0%" stopColor="#FBBF24" />
                           <stop offset="60%" stopColor="#F97316" />
                           <stop offset="100%" stopColor="#7C2D12" />
                         </radialGradient>
-                        <filter id="3d-shadow-2" x="-10%" y="-10%" width="130%" height="130%">
-                          <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#F97316" floodOpacity="0.4" />
+                        <filter
+                          id="3d-shadow-2"
+                          x="-10%"
+                          y="-10%"
+                          width="130%"
+                          height="130%"
+                        >
+                          <feDropShadow
+                            dx="2"
+                            dy="6"
+                            stdDeviation="4"
+                            floodColor="#F97316"
+                            floodOpacity="0.4"
+                          />
                         </filter>
                       </defs>
-                      <rect x="12" y="12" width="40" height="40" rx="10" fill="url(#3d-grad-2)" filter="url(#3d-shadow-2)" transform="rotate(-5 32 32)" />
-                      <circle cx="24" cy="22" r="8" fill="#ffffff" opacity="0.15" />
-                      <path d="M22 28L28 34L42 20" stroke="white" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M22 38H42" stroke="white" strokeWidth="3" strokeLinecap="round" opacity="0.7" />
+                      <rect
+                        x="12"
+                        y="12"
+                        width="40"
+                        height="40"
+                        rx="10"
+                        fill="url(#3d-grad-2)"
+                        filter="url(#3d-shadow-2)"
+                        transform="rotate(-5 32 32)"
+                      />
+                      <circle
+                        cx="24"
+                        cy="22"
+                        r="8"
+                        fill="#ffffff"
+                        opacity="0.15"
+                      />
+                      <path
+                        d="M22 28L28 34L42 20"
+                        stroke="white"
+                        strokeWidth="3.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M22 38H42"
+                        stroke="white"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        opacity="0.7"
+                      />
                     </svg>
-                  )
+                  ),
                 },
                 {
                   step: "03",
@@ -1001,23 +1134,65 @@ const HomePage = () => {
                   color: "from-pink-500 to-rose-600",
                   shadow: "shadow-rose-500/10 hover:shadow-rose-500/20",
                   icon: (
-                    <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg
+                      className="w-16 h-16"
+                      viewBox="0 0 64 64"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
                       <defs>
-                        <radialGradient id="3d-grad-3" cx="30%" cy="30%" r="70%">
+                        <radialGradient
+                          id="3d-grad-3"
+                          cx="30%"
+                          cy="30%"
+                          r="70%"
+                        >
                           <stop offset="0%" stopColor="#F472B6" />
                           <stop offset="60%" stopColor="#E11D48" />
                           <stop offset="100%" stopColor="#4C0519" />
                         </radialGradient>
-                        <filter id="3d-shadow-3" x="-10%" y="-10%" width="130%" height="130%">
-                          <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#E11D48" floodOpacity="0.4" />
+                        <filter
+                          id="3d-shadow-3"
+                          x="-10%"
+                          y="-10%"
+                          width="130%"
+                          height="130%"
+                        >
+                          <feDropShadow
+                            dx="2"
+                            dy="6"
+                            stdDeviation="4"
+                            floodColor="#E11D48"
+                            floodOpacity="0.4"
+                          />
                         </filter>
                       </defs>
-                      <polygon points="32,8 52,44 12,44" fill="url(#3d-grad-3)" filter="url(#3d-shadow-3)" />
-                      <circle cx="32" cy="28" r="6" fill="#ffffff" opacity="0.2" />
-                      <path d="M32 20V34" stroke="white" strokeWidth="3.5" strokeLinecap="round" />
-                      <path d="M26 30H38" stroke="white" strokeWidth="3.5" strokeLinecap="round" />
+                      <polygon
+                        points="32,8 52,44 12,44"
+                        fill="url(#3d-grad-3)"
+                        filter="url(#3d-shadow-3)"
+                      />
+                      <circle
+                        cx="32"
+                        cy="28"
+                        r="6"
+                        fill="#ffffff"
+                        opacity="0.2"
+                      />
+                      <path
+                        d="M32 20V34"
+                        stroke="white"
+                        strokeWidth="3.5"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M26 30H38"
+                        stroke="white"
+                        strokeWidth="3.5"
+                        strokeLinecap="round"
+                      />
                     </svg>
-                  )
+                  ),
                 },
                 {
                   step: "04",
@@ -1026,23 +1201,63 @@ const HomePage = () => {
                   color: "from-emerald-400 to-teal-600",
                   shadow: "shadow-teal-500/10 hover:shadow-teal-500/20",
                   icon: (
-                    <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg
+                      className="w-16 h-16"
+                      viewBox="0 0 64 64"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
                       <defs>
-                        <radialGradient id="3d-grad-4" cx="30%" cy="30%" r="70%">
+                        <radialGradient
+                          id="3d-grad-4"
+                          cx="30%"
+                          cy="30%"
+                          r="70%"
+                        >
                           <stop offset="0%" stopColor="#34D399" />
                           <stop offset="60%" stopColor="#0D9488" />
                           <stop offset="100%" stopColor="#115E59" />
                         </radialGradient>
-                        <filter id="3d-shadow-4" x="-10%" y="-10%" width="130%" height="130%">
-                          <feDropShadow dx="2" dy="6" stdDeviation="4" floodColor="#0D9488" floodOpacity="0.4" />
+                        <filter
+                          id="3d-shadow-4"
+                          x="-10%"
+                          y="-10%"
+                          width="130%"
+                          height="130%"
+                        >
+                          <feDropShadow
+                            dx="2"
+                            dy="6"
+                            stdDeviation="4"
+                            floodColor="#0D9488"
+                            floodOpacity="0.4"
+                          />
                         </filter>
                       </defs>
-                      <circle cx="32" cy="32" r="22" fill="url(#3d-grad-4)" filter="url(#3d-shadow-4)" />
-                      <path d="M24 30L30 36L44 22" stroke="white" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M20 44H44" stroke="white" strokeWidth="3" strokeLinecap="round" opacity="0.6" />
+                      <circle
+                        cx="32"
+                        cy="32"
+                        r="22"
+                        fill="url(#3d-grad-4)"
+                        filter="url(#3d-shadow-4)"
+                      />
+                      <path
+                        d="M24 30L30 36L44 22"
+                        stroke="white"
+                        strokeWidth="4.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M20 44H44"
+                        stroke="white"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        opacity="0.6"
+                      />
                     </svg>
-                  )
-                }
+                  ),
+                },
               ].map((item, idx) => {
                 if (activeProcessIndex !== idx) return null;
                 return (
@@ -1051,7 +1266,9 @@ const HomePage = () => {
                     className="w-full bg-white rounded-3xl p-8 md:p-12 border border-gray-100 shadow-[0_30px_70px_rgba(0,0,0,0.06)] transition-all duration-500 hover:scale-102 flex flex-col items-center text-center relative overflow-hidden animate-fade-in-up"
                   >
                     {/* Glowing decorative corner */}
-                    <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${item.color} opacity-[0.06] rounded-bl-full`}></div>
+                    <div
+                      className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${item.color} opacity-[0.06] rounded-bl-full`}
+                    ></div>
 
                     {/* 3D Premium Icon */}
                     <div className="mb-6 transform hover:scale-115 hover:rotate-3 transition-transform duration-500">
@@ -1075,11 +1292,23 @@ const HomePage = () => {
 
             {/* Right Arrow Button */}
             <button
-              onClick={() => setActiveProcessIndex((prev) => (prev === 3 ? 0 : prev + 1))}
+              onClick={() =>
+                setActiveProcessIndex((prev) => (prev === 3 ? 0 : prev + 1))
+              }
               className="absolute right-0 md:right-4 z-20 w-12 h-12 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group"
             >
-              <svg className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
+              <svg
+                className="w-5 h-5 text-gray-600 group-hover:text-white transition-colors"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2.5"
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </button>
           </div>
@@ -1106,7 +1335,6 @@ const HomePage = () => {
                 ></path>
               </svg>
             </Link>
-
           </div>
         </div>
       </section>

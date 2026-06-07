@@ -265,6 +265,202 @@ body {
     opacity: 1;
   }
 }
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* For IE and Edge */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Define the animation keyframes */
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0); /* Start and end position: no vertical movement */
+  }
+  50% {
+    transform: translateY(-50px); /* Middle position: move up 10 pixels */
+  }
+}
+/* Apply the animation to the element */
+.upanddown {
+  animation: moveUpDown 1s ease-in-out infinite; /* 2s duration, ease-in-out timing, infinite loop */
+}
+
+
+
+.button1 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* same as gap-2 */
+  padding: 0.5rem 1.5rem; /* py-2 px-6 */
+  border-radius: 9999px; /* rounded-full */
+  background-color: #FFB624; /* bg-secondary */
+  color: #000; /* text-black */
+  font-weight: 500; /* font-medium */
+  text-decoration: none;
+  transition: all 0.3s ease; /* transition duration-300 */
+}
+
+.button1:hover {
+  background-color: #FFB624; /* hover:bg-secondary-100 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* hover:shadow-md */
+  transform: scale(1.05); /* hover:scale-105 */
+}
+
+
+.button1black {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* same as gap-2 */
+  padding: 0.5rem 1.5rem; /* py-2 px-6 */
+  border-radius: 9999px; /* rounded-full */
+  background-color: #000000; /* bg-secondary */
+  color: #FFB624; /* text-black */
+  font-weight: 500; /* font-medium */
+  text-decoration: none;
+  transition: all 0.3s ease; /* transition duration-300 */
+}
+
+.button1black:hover {
+  background-color: #ffffff; /* hover:bg-secondary-100 */
+   color: #000000; /* text-black */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* hover:shadow-md */
+  transform: scale(1.05); /* hover:scale-105 */
+}
+
+
+
+.button2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* gap-2 */
+  padding: 0.5rem 1.5rem; /* py-2 px-6 */
+  border-radius: 9999px; /* rounded-full */
+  border: 1px solid #FFB624; /* border-secondary */
+  color: #FFB624; /* text-secondary */
+  font-weight: 500; /* font-medium */
+  text-decoration: none;
+  transition: all 0.3s ease; /* transition duration-300 */
+}
+
+.button2:hover {
+  background-color: #ffffff; /* hover:bg-secondary-100 */
+  color: #000; /* hover:text-black */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* hover:shadow-md */
+  transform: scale(1.05); /* hover:scale-105 */
+}
+
+
+
+
+
+.logo-path {
+  opacity:0;
+  transform: translateY(400px);
+  animation: fadeInUpBounce 0.2s forwards;
+  animation-timing-function: ease-out;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUpBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(400px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-20px); /* move a bit above */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* settle at original */
+  }
+}
+
+/* Group animation: slide down */
+.logo-wrapper {
+  animation: logoSlideDown 0.3s forwards;
+  animation-delay: 1.5s; /* starts after logo bounce finishes */
+}
+
+@keyframes logoSlideDown {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 1; /* optional: fade out while sliding */
+  }
+}
+
+
+/*Scroll Navbar*/
+.animate-scroll {
+  display: inline-block;
+  animation: scrollText 30s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Blog Content Typography */
+.blog-content h1 {
+  @apply text-3xl font-extrabold mb-6 text-gray-900;
+}
+.blog-content h2 {
+  @apply text-2xl font-bold mt-10 mb-4 text-gray-900 border-l-4 border-primary pl-4;
+}
+.blog-content h3 {
+  @apply text-xl font-semibold mt-8 mb-3 text-gray-800;
+}
+.blog-content p {
+  @apply mb-5 text-gray-700 leading-relaxed;
+}
+.blog-content ul {
+  @apply list-disc list-inside mb-6 space-y-2 text-gray-700;
+}
+.blog-content ol {
+  @apply list-decimal list-inside mb-6 space-y-2 text-gray-700;
+}
+.blog-content strong {
+  @apply font-bold text-gray-900;
+}
+.blog-content a {
+  @apply text-primary hover:underline font-medium;
+}
+
+@keyframes slideUpChar {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .animate-slide-up-char {
   animation: slideUpChar 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -279,4 +475,12 @@ body {
 }
 .animate-wipe-right {
   animation: wipeRight 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+/* Glassmorphism for Navbar Dropdown (Light Theme) */
+.dropdown-blur-light {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(25px) !important;
+  -webkit-backdrop-filter: blur(25px) !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
 }

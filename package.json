@@ -86,6 +86,7 @@
       "/auth/leads",
       "/auth/login",
       "/blogs",
+      "/blogs/%7BpostSlug%7D",
       "/contactus",
       "/frequently-asked-questions",
       "/get-quotation",

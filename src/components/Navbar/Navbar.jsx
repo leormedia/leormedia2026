@@ -1,4 +1,6 @@
 import { useEffect, useState, memo } from "react";
+import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   DigitalmarketingIcon,
@@ -34,7 +36,12 @@ import {
 import NavbarLogo from "../../assets/LeormediaLogo.svg";
 import { EventHeroCover } from "../../assets/data/Imagedata";
 import { GlobalData } from "../../assets/data/GlodalData";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPinterestP } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPinterestP,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 function classNames(...classes) {
@@ -44,121 +51,106 @@ function classNames(...classes) {
 // Reusable DropdownMenu component
 const DropdownMenu = memo(
   ({ isOpen, links, imageSrc, onMouseEnter, onMouseLeave, closeAllMenus }) => {
-    if (!isOpen) return null;
-
     const isCategorized = links.length > 0 && links[0].category;
 
     return (
-      <div
-        className="origin-top-right fixed mt-2 right-0 w-screen rounded-md bg-white divide-y divide-gray-200 z-50 shadow-2xl overflow-y-auto max-h-[85vh]"
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-      >
-        <div className="flex container mx-auto">
-          {isCategorized ? (
-            <div className="flex flex-wrap w-full p-6 gap-y-8">
-              {links.map((category, catIdx) => (
-                <div
-                  key={catIdx}
-                  className="w-1/5 min-w-[200px] px-4 border-r border-gray-100 last:border-0"
-                >
-                  <h8 className="text-yellow-600 font-bold uppercase tracking-widest border-b border-yellow-500/20 pb-2 mb-4">
-                    {category.category}
-                  </h8>
-                  <div className="space-y-1">
-                    {category.links.map((link) => (
-                      <a
-                        href={link.path}
-                        key={link.path}
-                        onClick={closeAllMenus}
-                      >
-                        <div className="flex items-center gap-3 p-2 hover:bg-yellow-50 rounded-lg transition-all group">
-                          <FontAwesomeIcon
-                            icon={link.icon}
-                            className="text-gray-400 group-hover:text-yellow-500 text-xs w-4"
-                          />
-                          <span className="text-[12px] text-gray-700 group-hover:text-gray-900 font-medium">
-                            {link.title}
-                          </span>
-                        </div>
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="flex w-full">
-              {(() => {
-                const numColumns = Math.min(
-                  links.length > 15
-                    ? 5
-                    : links.length > 10
-                      ? 4
-                      : links.length > 5
-                        ? 3
-                        : 2,
-                  5,
-                );
-                const linksPerColumn = Math.ceil(links.length / numColumns);
-                const columns = Array.from({ length: numColumns }, (_, i) =>
-                  links.slice(i * linksPerColumn, (i + 1) * linksPerColumn),
-                );
-
-                return columns.map((columnLinks, colIndex) => (
-                  <div key={colIndex} className={`w-1/${numColumns} p-6`}>
-                    {columnLinks.map((link) => (
-                      <a
-                        href={link.path}
-                        key={link.path}
-                        onClick={closeAllMenus}
-                      >
-                        <div className="block px-4 py-3 text-[13px] text-gray-700 hover:bg-yellow-500/10 hover:text-yellow-400 transition-colors duration-200 rounded-lg mb-1">
-                          <div className="flex items-start">
-                            <FontAwesomeIcon
-                              className="mt-1 mr-3 text-lg"
-                              icon={link.icon}
-                            />
-                            <div>
-                              <span className="font-semibold block mb-0.5">
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -15, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -10, scale: 0.98 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="origin-top fixed mt-2 right-0 w-screen rounded-md divide-y divide-gray-200 z-50 shadow-2xl overflow-y-auto max-h-[85vh] bg-white border border-gray-100"
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+          >
+            <div className="flex container mx-auto">
+              {isCategorized ? (
+                <div className="flex flex-wrap w-full p-6 gap-y-8">
+                  {links.map((category, catIdx) => (
+                    <div
+                      key={catIdx}
+                      className="w-1/5 min-w-[200px] px-4 border-r border-gray-100 last:border-0"
+                    >
+                      <h8 className="text-yellow-600 font-bold uppercase tracking-widest border-b border-yellow-500/20 pb-2 mb-4">
+                        {category.category}
+                      </h8>
+                      <div className="space-y-1">
+                        {category.links.map((link) => (
+                          <a
+                            href={link.path}
+                            key={link.path}
+                            onClick={closeAllMenus}
+                          >
+                            <div className="flex items-center gap-3 p-2 hover:bg-yellow-50 rounded-lg transition-all group">
+                              <FontAwesomeIcon
+                                icon={link.icon}
+                                className="text-gray-400 group-hover:text-yellow-500 text-xs w-4"
+                              />
+                              <span className="text-[12px] text-gray-700 group-hover:text-gray-900 font-medium">
                                 {link.title}
                               </span>
-                              <p className="text-gray-500 leading-tight">
-                                {link.description}
-                              </p>
                             </div>
-                          </div>
-                        </div>
-                      </a>
-                    ))}
-                  </div>
-                ));
-              })()}
-            </div>
-          )}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="flex w-full">
+                  {(() => {
+                    const numColumns = Math.min(
+                      links.length > 15
+                        ? 5
+                        : links.length > 10
+                          ? 4
+                          : links.length > 5
+                            ? 3
+                            : 2,
+                      5,
+                    );
+                    const linksPerColumn = Math.ceil(links.length / numColumns);
+                    const columns = Array.from({ length: numColumns }, (_, i) =>
+                      links.slice(i * linksPerColumn, (i + 1) * linksPerColumn),
+                    );
 
-          {imageSrc && !isCategorized && (
-            <div className="w-1/3 p-6 flex flex-col justify-center items-center bg-gray-50">
-              <img
-                className="w-full max-w-sm object-contain mb-4"
-                src={imageSrc}
-                alt="Service Image"
-              />
-              <div className="text-center">
-                <a href="/services" className="inline-block">
-                  <h2 className="text-gray-900 hover:text-yellow-400 cursor-pointer font-bold flex items-center gap-2 transition-colors">
-                    Explore All Services{" "}
-                    <span className="text-yellow-500">➤</span>
-                  </h2>
-                </a>
-                <p className="text-gray-600 mt-2">
-                  Discover our comprehensive suite of digital solutions.
-                </p>
-              </div>
+                    return columns.map((columnLinks, colIndex) => (
+                      <div key={colIndex} className={`w-1/${numColumns} p-6`}>
+                        {columnLinks.map((link) => (
+                          <a
+                            href={link.path}
+                            key={link.path}
+                            onClick={closeAllMenus}
+                          >
+                            <div className="block px-4 py-3 text-[13px] text-gray-700 hover:bg-yellow-500/10 hover:text-yellow-400 transition-colors duration-200 rounded-lg mb-1">
+                              <div className="flex items-start">
+                                <FontAwesomeIcon
+                                  className="mt-1 mr-3 text-lg"
+                                  icon={link.icon}
+                                />
+                                <div>
+                                  <span className="font-semibold block mb-0.5">
+                                    {link.title}
+                                  </span>
+                                  <p className="text-[11px] text-gray-500 leading-tight">
+                                    {link.description}
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    ));
+                  })()}
+                </div>
+              )}
             </div>
-          )}
-        </div>
-      </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     );
   },
 );
@@ -300,7 +292,6 @@ const Navbar = () => {
       icon: faBullhorn,
     },
 
-
     {
       key: "blogs",
       title: "Blogs",
@@ -333,7 +324,6 @@ const Navbar = () => {
       imageSrc: null,
       icon: faFileInvoiceDollar,
     },
-
   ];
 
   const toggleMobileSubmenu = (key) => {
@@ -350,8 +340,9 @@ const Navbar = () => {
 
   return (
     <section
-      className={`origin-top-right fixed w-full top-0 z-50 shadow-md backdrop-blur-sm transition-colors duration-500 ${scrolled ? "bg-white/95" : "bg-white"
-        }`}
+      className={`origin-top-right fixed w-full top-0 z-50 shadow-md backdrop-blur-sm transition-colors duration-500 ${
+        scrolled ? "bg-white/95" : "bg-white"
+      }`}
     >
       {/* Top Contact Bar */}
       <div className="bg-primary-100 py-2 px-4 text-[14px] text-white flex justify-between items-center border-b border-gray-900 overflow-hidden relative z-50">
@@ -361,21 +352,25 @@ const Navbar = () => {
             className="text-[12px] sm:text-[14px] flex items-center gap-2 hover:text-yellow-500 transition-colors"
           >
             <FontAwesomeIcon icon={faPhone} className="text-[12px]" />
-            <span className="hidden sm:inline">{GlobalData.company.companyPhone}</span>
+            <span className="hidden sm:inline">
+              {GlobalData.company.companyPhone}
+            </span>
           </a>
           <a
             href={`mailto:${GlobalData.company.companyEmail}`}
             className="text-[12px] sm:text-[14px] flex items-center gap-2 hover:text-yellow-500 transition-colors"
           >
             <FontAwesomeIcon icon={faEnvelope} className="text-[14px]" />
-            <span className="hidden sm:inline">{GlobalData.company.companyEmail}</span>
+            <span className="hidden sm:inline">
+              {GlobalData.company.companyEmail}
+            </span>
           </a>
         </div>
 
         <div className="relative flex-1 overflow-hidden min-h-[20px] mx-4 hidden lg:block">
           <div className="animate-scroll whitespace-nowrap text-xs sm:text-sm">
-            Crafting Extraordinary Events & Creative
-            Digital Success Stories in 2026
+            Crafting Extraordinary Events & Creative Digital Success Stories in
+            2026
           </div>
         </div>
 
@@ -421,7 +416,6 @@ const Navbar = () => {
             >
               <FaPinterestP className="text-[14px]" />
             </a>
-
           </div>
         </div>
       </div>
@@ -452,11 +446,11 @@ const Navbar = () => {
               >
                 <a
                   href={menu.href}
-                  className="inline-flex flex-col font-normal antialiased justify-center items-center gap-1 w-full rounded-md px-3 py-1 text-[11px] text-gray-800 hover:text-yellow-500 cursor-pointer transition-colors group"
+                  className="inline-flex flex-col font-normal antialiased justify-center items-center gap-0 w-full rounded-md px-3 py-1 text-[11px] text-gray-800 hover:text-yellow-500 cursor-pointer transition-colors group"
                 >
                   <FontAwesomeIcon
                     icon={menu.icon}
-                    className="text-lg mb-0.5 text-gray-500 group-hover:text-yellow-500 transition-colors"
+                    className="text-lg mb-1 text-gray-500 group-hover:scale-110 group-hover:text-yellow-500 transition-all duration-200"
                   />
                   <div className="flex items-center">
                     <span className="font-semibold">{menu.title}</span>
@@ -465,7 +459,7 @@ const Navbar = () => {
                     {menu.links.length > 0 && (
                       <FontAwesomeIcon
                         icon={openMenus[menu.key] ? faChevronUp : faChevronDown}
-                        className="text-[9px] ml-1 transition-transform duration-200"
+                        className="text-[8px] ml-1 transition-transform duration-200"
                       />
                     )}
                   </div>
@@ -499,14 +493,14 @@ const Navbar = () => {
                 />
               </button>
             </li>
-
           </ul>
         </div>
       </div>
 
       <div
-        className={`fixed inset-0 bg-white z-[60] flex flex-col transition-transform duration-500 ease-in-out lg:hidden h-screen ${isOpen ? "translate-y-0" : "-translate-y-full"
-          }`}
+        className={`fixed inset-0 bg-white z-[60] flex flex-col transition-transform duration-500 ease-in-out lg:hidden h-screen ${
+          isOpen ? "translate-y-0" : "-translate-y-full"
+        }`}
       >
         {/* Mobile Menu Header (Sticky) */}
         <div className="flex-none flex justify-between items-center p-4 border-b border-gray-200 bg-white/95 backdrop-blur-md">
@@ -544,16 +538,18 @@ const Navbar = () => {
                             ? faChevronUp
                             : faChevronDown
                         }
-                        className={`text-sm text-gray-500 transition-transform duration-300 ${openMobileSubmenus[menu.key] ? "rotate-180" : ""
-                          }`}
+                        className={`text-sm text-gray-500 transition-transform duration-300 ${
+                          openMobileSubmenus[menu.key] ? "rotate-180" : ""
+                        }`}
                       />
                     </button>
 
                     <div
-                      className={`overflow-hidden transition-all duration-300 ease-in-out ${openMobileSubmenus[menu.key]
-                        ? "max-h-[1000px] opacity-100 mb-4"
-                        : "max-h-0 opacity-0"
-                        }`}
+                      className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                        openMobileSubmenus[menu.key]
+                          ? "max-h-[1000px] opacity-100 mb-4"
+                          : "max-h-0 opacity-0"
+                      }`}
                     >
                       <div className="ml-8 border-l border-gray-200 pl-4">
                         {menu.links[0]?.category ? (
@@ -568,37 +564,54 @@ const Navbar = () => {
                                     key={idx}
                                     href={sub.path}
                                     onClick={handleLinkClick}
-                                    className="flex items-center gap-3 py-1 group"
+                                    className="flex items-start gap-3 py-3 text-[14px] text-gray-600 hover:text-black hover:translate-x-1 transition-all group"
                                   >
-                                    <FontAwesomeIcon
-                                      icon={sub.icon}
-                                      className="text-gray-400 group-hover:text-yellow-500 text-xs w-4"
-                                    />
-                                    <span className="text-sm text-gray-700 group-hover:text-black">
-                                      {sub.title}
-                                    </span>
+                                    <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-gray-500 group-hover:text-yellow-500 group-hover:bg-yellow-500/10 transition-all shrink-0">
+                                      <FontAwesomeIcon
+                                        icon={sub.icon}
+                                        className="text-[12px]"
+                                      />
+                                    </div>
+                                    <div className="flex flex-col">
+                                      <span className="block font-medium text-[13px]">
+                                        {sub.title}
+                                      </span>
+                                      {sub.description && (
+                                        <span className="text-[10px] text-gray-500 line-clamp-1 leading-tight mt-0.5">
+                                          {sub.description}
+                                        </span>
+                                      )}
+                                    </div>
                                   </a>
                                 ))}
                               </div>
                             </div>
                           ))
                         ) : (
-                          <div className="grid grid-cols-1 gap-2">
+                          <div className="grid grid-cols-1 gap-1">
                             {menu.links.map((sub, idx) => (
                               <a
                                 key={idx}
                                 href={sub.path}
                                 onClick={handleLinkClick}
-                                className="block py-2 text-sm text-gray-600 hover:text-black hover:translate-x-1 transition-all"
+                                className="flex items-start gap-3 py-3 text-[14px] text-gray-600 hover:text-black hover:translate-x-1 transition-all group"
                               >
-                                <span className="block font-medium">
-                                  {sub.title}
-                                </span>
-                                {sub.description && (
-                                  <span className="text-[10px] text-gray-600 line-clamp-1">
-                                    {sub.description}
+                                <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-gray-500 group-hover:text-yellow-500 group-hover:bg-yellow-500/10 transition-all shrink-0">
+                                  <FontAwesomeIcon
+                                    icon={sub.icon}
+                                    className="text-[12px]"
+                                  />
+                                </div>
+                                <div className="flex flex-col">
+                                  <span className="block font-medium text-[13px]">
+                                    {sub.title}
                                   </span>
-                                )}
+                                  {sub.description && (
+                                    <span className="text-[10px] text-gray-500 line-clamp-1 leading-tight mt-0.5">
+                                      {sub.description}
+                                    </span>
+                                  )}
+                                </div>
                               </a>
                             ))}
                           </div>
@@ -696,7 +709,6 @@ const Navbar = () => {
               >
                 <FaPinterestP />
               </a>
-
             </div>
           </div>
         </div>
