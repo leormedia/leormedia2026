@@ -1,21 +1,23 @@
-// New Premium Service Images
-import DestinationWeddingImg from"./WeddingPlannersImages/destination-wedding.png";
-import RingCeremonyImg from"./WeddingPlannersImages/ring-ceremony.png";
-import ReceptionsImg from"./WeddingPlannersImages/receptions.png";
-import MehendiImg from"./WeddingPlannersImages/mehendi.png";
-import SangeetImg from"./WeddingPlannersImages/sangeet.png";
-import EntertainmentImg from"./WeddingPlannersImages/entertainment.png";
-import HospitalityImg from"./WeddingPlannersImages/hospitality.png";
-import GuestManagementImg from"./WeddingPlannersImages/guest-management.png";
-import PhotographyImg from"./WeddingPlannersImages/photography.png";
-import ThemeDecorImg from"./WeddingPlannersImages/theme-decor.png";
-import BirthdayPartiesImg from"./WeddingPlannersImages/birthday-parties.png";
-import PersonalCelebrationsImg from"./WeddingPlannersImages/personal-celebrations.png";
-import CulturalEventsImg from"./WeddingPlannersImages/cultural-events.png";
-import CorporateEventsImg from"./WeddingPlannersImages/corporate-events.png";
-import ProductLaunchesImg from"./WeddingPlannersImages/product-launches.png";
-import ConcertAndGigsImg from"./WeddingPlannersImages/concert-and-gigs.png";
-import FashionShowsImg from"./WeddingPlannersImages/fashion-shows.png";
+import {
+  DestinationWeddingImg,
+  RingCeremonyImg,
+  ReceptionsImg,
+  MehendiImg,
+  SangeetImg,
+  EntertainmentImg,
+  HospitalityImg,
+  GuestManagementImg,
+  PhotographyImg,
+  ThemeDecorImg,
+  BirthdayPartiesImg,
+  PersonalCelebrationsImg,
+  WPCulturalEventsImg as CulturalEventsImg,
+  WPCorporateEventsImg as CorporateEventsImg,
+  ProductLaunchesImg,
+  ConcertAndGigsImg,
+  WPFashionShowsImg as FashionShowsImg,
+} from "../../../assets/data/Imagedata";
+
 import {
   faGlobe,
   faPalette,
@@ -37,7 +39,7 @@ import {
   faBullseye,
   faSmile,
   faScroll,
-} from"@fortawesome/free-solid-svg-icons";
+} from "../../../assets/data/icon_data";
 
 // Wedding Planners Main Category Data
 

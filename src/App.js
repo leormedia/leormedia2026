@@ -1,5 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import React, { useState, useEffect, lazy, Suspense } from "react";
+import { AnimatePresence } from "framer-motion";
+import PageTransition from "./components/PageTransition";
 import LogoLoader from "./components/LogoLoader";
 import seoData from "./assets/data/seo.json";
 
@@ -143,19 +145,17 @@ const routes = [
 
 export function App() {
   const location = useLocation();
-  const [isLoading, setIsLoading] = useState(location.pathname === "/");
+  const [isLoading, setIsLoading] = useState(() => !sessionStorage.getItem("hasVisited"));
 
   useEffect(() => {
-    if (location.pathname === "/") {
-      setIsLoading(true);
+    if (isLoading) {
       const timer = setTimeout(() => {
         setIsLoading(false);
+        sessionStorage.setItem("hasVisited", "true");
       }, 4500); // Wait for text animation and logo reveal
       return () => clearTimeout(timer);
-    } else {
-      setIsLoading(false);
     }
-  }, [location.pathname]);
+  }, [isLoading]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -177,11 +177,23 @@ export function App() {
               isAuthRoute ? "mt-14 md:ml-64" : "mt-0"
             }`}
           >
-            <Routes location={location} key={location.pathname}>
-              {routes.map((route, index) => (
-                <Route key={index} path={route.path} element={route.element} />
-              ))}
-            </Routes>
+            <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
+              <Routes location={location} key={location.pathname}>
+                {routes.map((route, index) => (
+                  <Route 
+                    key={index} 
+                    path={route.path} 
+                    element={
+                      <PageTransition>
+                        <Suspense fallback={<div className="fixed inset-0 bg-white z-[99]" />}>
+                          {route.element}
+                        </Suspense>
+                      </PageTransition>
+                    } 
+                  />
+                ))}
+              </Routes>
+            </AnimatePresence>
 
             {!isAuthRoute && location.pathname !== "/auth/login" && <Footer />}
           </div>

@@ -34,6 +34,7 @@ import {
   faFileInvoiceDollar,
 } from "@fortawesome/free-solid-svg-icons";
 import NavbarLogo from "../../assets/LeormediaLogo.svg";
+import LogoFooter from "../../assets/LogoFooter.svg";
 import { EventHeroCover } from "../../assets/data/Imagedata";
 import { GlobalData } from "../../assets/data/GlodalData";
 import {
@@ -167,10 +168,31 @@ const Navbar = () => {
     more: false,
     mobileMenu: false,
   });
-  const [isOpen, setIsOpen] = useState(false); // For mobile menu
+  const [isOpen, setIsOpen] = useState(false); // For mobile menu (overall trigger)
+  const [showMobileDrawer, setShowMobileDrawer] = useState(false); // Controls the actual drawer slide
+  const [logoSplashState, setLogoSplashState] = useState("hidden"); // "hidden", "entering", "exiting"
   const [openMobileSubmenus, setOpenMobileSubmenus] = useState({});
   const [closeTimeouts, setCloseTimeouts] = useState({}); // Per-menu timeouts
   const [isLargeScreen, setIsLargeScreen] = useState(false); // Detect lg screens
+
+  // Coordinate the logo splash -> drawer sequence
+  useEffect(() => {
+    let t1, t2;
+    if (isOpen) {
+      setLogoSplashState("entering");
+      // Logo goes away after 600ms
+      t1 = setTimeout(() => setLogoSplashState("exiting"), 600);
+      // Drawer slides up after 900ms
+      t2 = setTimeout(() => setShowMobileDrawer(true), 900);
+    } else {
+      setShowMobileDrawer(false);
+      setLogoSplashState("hidden");
+    }
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
+  }, [isOpen]);
 
   const closeAllMenus = () => {
     setOpenMenus({
@@ -339,11 +361,12 @@ const Navbar = () => {
   };
 
   return (
-    <section
-      className={`origin-top-right fixed w-full top-0 z-50 shadow-md backdrop-blur-sm transition-colors duration-500 ${
-        scrolled ? "bg-white/95" : "bg-white"
-      }`}
-    >
+    <>
+      <section
+        className={`origin-top-right fixed w-full top-0 z-50 shadow-md backdrop-blur-sm transition-colors duration-500 ${
+          scrolled ? "bg-white/95" : "bg-white"
+        }`}
+      >
       {/* Top Contact Bar */}
       <div className="bg-primary-100 py-2 px-4 text-[14px] text-white flex justify-between items-center border-b border-gray-900 overflow-hidden relative z-50">
         <div className="flex items-center gap-4">
@@ -496,16 +519,39 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
+    </section>
 
+      {/* Dark backdrop overlay when mobile menu is open */}
       <div
-        className={`fixed inset-0 bg-white z-[60] flex flex-col transition-transform duration-500 ease-in-out lg:hidden h-screen ${
-          isOpen ? "translate-y-0" : "-translate-y-full"
+        className={`fixed inset-0 bg-black/60 z-[55] lg:hidden transition-opacity duration-500 ease-in-out ${
+          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setIsOpen(false)}
+      />
+
+      {/* Logo Splash Animation */}
+      <div
+        className={`fixed inset-0 z-[58] flex items-center justify-center pointer-events-none lg:hidden transition-all duration-500 ease-in-out ${
+          logoSplashState === "hidden"
+            ? "opacity-0 translate-y-full"
+            : logoSplashState === "entering"
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-full"
+        }`}
+      >
+        <img src={LogoFooter} alt="Logo Splash" className="w-24 h-auto sm:w-32 drop-shadow-xl animate-pulse" />
+      </div>
+
+      {/* Mobile Bottom Drawer */}
+      <div
+        className={`fixed inset-x-0 bottom-0 bg-white z-[60] flex flex-col transition-transform duration-500 ease-in-out lg:hidden h-[85vh] rounded-t-3xl ${
+          showMobileDrawer ? "translate-y-0" : "translate-y-full"
         }`}
       >
         {/* Mobile Menu Header (Sticky) */}
-        <div className="flex-none flex justify-between items-center p-4 border-b border-gray-200 bg-white/95 backdrop-blur-md">
+        <div className="flex-none flex justify-between items-center p-4 border-b border-gray-100 bg-white relative z-10 rounded-t-3xl">
           <a href="/" onClick={handleLinkClick}>
-            <img className="h-10 w-auto" src={NavbarLogo} alt="csd_logo" />
+            <img className="h-10 w-auto" src={NavbarLogo} alt="leormedia_logo" />
           </a>
           <button
             onClick={() => setIsOpen(false)}
@@ -516,7 +562,7 @@ const Navbar = () => {
         </div>
 
         {/* Scrollable Content Area */}
-        <div className="flex-1 overflow-y-auto overflow-x-hidden p-4 pb-20">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden p-4 pb-20 bg-white">
           <div className="flex flex-col">
             {menuConfigs.map((menu, i) => (
               <div key={i} className="border-b border-gray-200 last:border-b-0">
@@ -713,7 +759,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 

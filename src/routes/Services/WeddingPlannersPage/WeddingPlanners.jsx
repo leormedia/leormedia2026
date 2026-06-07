@@ -1,7 +1,7 @@
 import { useEffect, useState } from"react";
 import { Link } from"react-router-dom";
 import { FontAwesomeIcon } from"@fortawesome/react-fontawesome";
-import { WeddingPlannersCoverimage, WeddingCoverImage } from"../../../assets/data/Imagedata";
+import { WeddingPlannersCoverimage } from"../../../assets/data/Imagedata";
 import { GlobalData } from"../../../assets/data/GlodalData";
 import seoData from"../../../assets/data/seo.json";
 import { Helmet } from"react-helmet-async";
@@ -31,6 +31,16 @@ import {
 import Slider from"react-slick";
 import"slick-carousel/slick/slick.css";
 import"slick-carousel/slick/slick-theme.css";
+
+// Dynamically import all images from the gallery directory
+const importAll = (r) =>
+  r.keys().map((item) => {
+    const module = r(item);
+    return module.default || module;
+  });
+const galleryImages = importAll(
+  require.context("../../../assets/gallery", false, /\.(png|jpe?g|svg|webp|avif)$/),
+);
 
 const { title, description, keywords, canonical, ogImage } = seoData.weddingPlanners;
 
@@ -72,8 +82,6 @@ const Counter = ({ end, label, icon }) => {
 };
 
 const WeddingPlannersPage = () => {
-  const [activeTab, setActiveTab] = useState("all");
-
   const services = [
     { icon: faRing, title:"Engagement Planning", description:"Beginning your forever with a perfect ring ceremony." },
     { icon: faPalette, title:"Mehendi", description:"Traditional henna artistry with modern celebration vibes." },
@@ -84,15 +92,6 @@ const WeddingPlannersPage = () => {
     { icon: faCamera, title:"Photography", description:"Cinematic memories captured by expert lensmen." },
     { icon: faMasksTheater, title:"Entertainment", description:"Artist management and celebrity performances." },
     { icon: faUserFriends, title:"Guest Management", description:"End-to-end hospitality for your loved ones." },
-  ];
-
-  const portfolioItems = [
-    { id: 1, type:"image", src:"https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80", title:"Royal Palace Wedding" },
-    { id: 2, type:"video", src:"https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&auto=format&fit=crop&q=80", title:"Beachside Vows" },
-    { id: 3, type:"image", src:"https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=800&auto=format&fit=crop&q=80", title:"Floral Extravaganza" },
-    { id: 4, type:"image", src:"https://images.unsplash.com/photo-1465495910483-0d554a3666b6?w=800&auto=format&fit=crop&q=80", title:"Traditional Heritage" },
-    { id: 5, type:"video", src:"https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=800&auto=format&fit=crop&q=80", title:"Celebrity Gala" },
-    { id: 6, type:"image", src:"https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&auto=format&fit=crop&q=80", title:"Elegant Reception" },
   ];
 
   const testimonials = [
@@ -216,7 +215,7 @@ const WeddingPlannersPage = () => {
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `url("${WeddingCoverImage}")`,
+            backgroundImage: `url("${WeddingPlannersCoverimage}")`,
             backgroundSize:"cover",
             backgroundPosition:"center",
             backgroundAttachment:"fixed"
@@ -245,50 +244,29 @@ const WeddingPlannersPage = () => {
         </div>
       </section>
 
-      {/* 4. WEDDING GALLERY / PORTFOLIO */}
-      <section id="portfolio" className="py-24 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
-            <div className="max-w-2xl">
-              <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-bold text-gray-900 mb-4 font-TuskerGrotesk">
-                OUR GALLERY
-              </h2>
-              <p className="text-sm md:text-base text-gray-600">
-                Explore our portfolio of luxury cinematic weddings and breathtaking decors.
-              </p>
-            </div>
-            <div className="flex gap-4">
-              <button 
-                onClick={() => setActiveTab("all")}
-                className={`text-sm px-6 py-2 rounded-full font-bold transition-all ${activeTab ==="all" ?"bg-primary text-white" :"bg-gray-100 text-gray-600 hover:bg-gray-200"}`}
-              >
-                All
-              </button>
-              <button 
-                onClick={() => setActiveTab("video")}
-                className={`text-sm px-6 py-2 rounded-full font-bold transition-all ${activeTab ==="video" ?"bg-primary text-white" :"bg-gray-100 text-gray-600 hover:bg-gray-200"}`}
-              >
-                Reels
-              </button>
-            </div>
+      {/* 4. WEDDING GALLERY */}
+      <section id="portfolio" className="py-16 md:py-24 bg-slate-50 overflow-hidden border-y border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 ">
+          <div className="text-center mb-12 md:mb-16">
+            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-bold uppercase tracking-widest mb-4">
+              Our Gallery
+            </span>
+            <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-extrabold font-TuskerGrotesk tracking-wide text-gray-900 leading-tight uppercase">
+              CAPTURING <span className="text-primary">MOMENTS</span>
+            </h2>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {portfolioItems.filter(item => activeTab ==="all" || item.type === activeTab).map((item) => (
-              <div 
-                key={item.id}
-                className="group relative aspect-[4/5] overflow-hidden rounded-3xl cursor-pointer"
+
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            {galleryImages.map((imgSrc, index) => (
+              <div
+                key={index}
+                className="group relative aspect-square overflow-hidden rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer bg-white"
               >
-                <img 
-                  src={item.src} 
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                <img
+                  src={imgSrc}
+                  alt={`Wedding Gallery Event ${index + 1}`}
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                  {item.type ==="video" && <FaPlayCircle className="text-white mb-4" />}
-                  <h3 className="text-2xl md:text-[26px] lg:text-3xl font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-sm text-white/70">Luxury Cinematic Experience</p>
-                </div>
               </div>
             ))}
           </div>

@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import { FaArrowRight, FaArrowLeft, FaCheck, FaCalendarAlt, FaMapMarkerAlt, FaUsers, FaUser, FaPhone, FaEnvelope } from "react-icons/fa";
 import { CONTACTUS_API } from "../hooks/Apis";
-import { EventHeroCover, WeddingCoverImage, ServicesCoverImage, ContactUsCover } from "../assets/data/Imagedata";
+import { EventHeroCover, WeddingPlannersCoverimage, ServicesCoverImage, ContactUsCover } from "../assets/data/Imagedata";
 
 const GetQuotation = () => {
   const navigate = useNavigate();
@@ -69,7 +69,7 @@ const GetQuotation = () => {
     },
     {
       id: "event-details",
-      image: WeddingCoverImage,
+      image: WeddingPlannersCoverimage,
       question: "Tell us more about the event.",
       subtitle: "This helps us check availability and prepare a better estimate.",
       component: (

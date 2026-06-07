@@ -1,10 +1,13 @@
-import { AdvertisitngCoverImage } from"../../../assets/data/Imagedata";
-import AtlOohImg from"./AdvertisingImages/atl_ooh.png";
-import TransitMediaImg from"./AdvertisingImages/transit_media.png";
-import StrategicFormatImg from"./AdvertisingImages/strategic_format.png";
-import PrintMediaImg from"./AdvertisingImages/print_media.png";
-import ElectronicMediaImg from"./AdvertisingImages/electronic_media.png";
-import BtlAdvertisingImg from"./AdvertisingImages/btl_advertising.png";
+import {
+  AdvertisitngCoverImage,
+  AtlOohImg,
+  TransitMediaImg,
+  StrategicFormatImg,
+  PrintMediaImg,
+  ElectronicMediaImg,
+  BtlAdvertisingImg,
+} from "../../../assets/data/Imagedata";
+
 import {
   faAd,
   faBuilding,
@@ -34,7 +37,7 @@ import {
   faGlobe,
   faPhone,
   faMapMarkerAlt,
-} from"@fortawesome/free-solid-svg-icons";
+} from "../../../assets/data/icon_data";
 
 // Advertisement Page Data
 export const AdvertisingCompany = {

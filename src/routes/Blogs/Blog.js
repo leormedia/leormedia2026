@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import BlogCoverimage from '../../assets/CoverImages/BlogCover.webp';
+import { BlogCoverimage } from '../../assets/data/Imagedata';
 import seoData from "../../assets/data/seo.json";
 import axios from 'axios';
 import { FaArrowRight } from "react-icons/fa";

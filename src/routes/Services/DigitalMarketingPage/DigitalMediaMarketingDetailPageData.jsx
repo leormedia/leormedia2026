@@ -1,21 +1,24 @@
-import { DigitalMarketingCoverImage } from"../../../assets/data/Imagedata";
-import DigitalMarketingImg from"./DigitalMediaMarketingimages/digital_marketing.png";
-import DigitalStrategyImg from"./DigitalMediaMarketingimages/digital_strategy.png";
-import MediaBuyingImg from"./DigitalMediaMarketingimages/media_buying.png";
-import OnlinePrImg from"./DigitalMediaMarketingimages/online_pr.png";
-import SocialCampaignImg from"./DigitalMediaMarketingimages/social_campaign.png";
-import SEOImg from"./DigitalMediaMarketingimages/seo.png";
-import AffiliateImg from"./DigitalMediaMarketingimages/affiliate.png";
-import InfluenceImg from"./DigitalMediaMarketingimages/influence.png";
-import PPCImg from"./DigitalMediaMarketingimages/ppc.png";
-import ContentMarketingImg from"./DigitalMediaMarketingimages/content_marketing.png";
-import SocialManagementImg from"./DigitalMediaMarketingimages/social_management.png";
-import CreativeMediaImg from"./DigitalMediaMarketingimages/creative_media.png";
-import TvcMakingImg from"./DigitalMediaMarketingimages/tvc_making.png";
-import DigitalCommercialsImg from"./DigitalMediaMarketingimages/digital_commercials.png";
-import WebCommercialsImg from"./DigitalMediaMarketingimages/web_commercials.png";
-import ExplanatoryVideosImg from"./DigitalMediaMarketingimages/explanatory_videos.png";
-import CompanyProfileImg from"./DigitalMediaMarketingimages/company_profile.png";
+import {
+  DigitalMarketingCoverImage,
+  DigitalMarketingImg,
+  DigitalStrategyImg,
+  MediaBuyingImg,
+  OnlinePrImg,
+  SocialCampaignImg,
+  SEOImg,
+  AffiliateImg,
+  InfluenceImg,
+  PPCImg,
+  ContentMarketingImg,
+  SocialManagementImg,
+  CreativeMediaImg,
+  TvcMakingImg,
+  DigitalCommercialsImg,
+  WebCommercialsImg,
+  ExplanatoryVideosImg,
+  CompanyProfileImg,
+} from "../../../assets/data/Imagedata";
+
 import {
   faBullhorn,
   faLightbulb,
@@ -44,7 +47,7 @@ import {
   faRocket,
   faChartLine,
   faAward,
-} from"@fortawesome/free-solid-svg-icons";
+} from "../../../assets/data/icon_data";
 
 // Category Overview
 export const DigitalMarketingCompany = {

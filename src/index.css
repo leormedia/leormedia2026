@@ -484,3 +484,41 @@ body {
   -webkit-backdrop-filter: blur(25px) !important;
   border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
 }
+
+/* Page Transition Sweeping Overlay */
+.slide-in,
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #111111;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.wave-top {
+  position: absolute;
+  top: -319px;
+  left: 0;
+  width: 100vw;
+  height: 320px;
+  fill: #111111;
+  preserveAspectRatio: none;
+}
+
+.wave-bottom {
+  position: absolute;
+  bottom: -319px;
+  left: 0;
+  width: 100vw;
+  height: 320px;
+  fill: #111111;
+  transform: scaleY(-1);
+  preserveAspectRatio: none;
+}
+
+.page-transition-content {
+  width: 100%;
+}
