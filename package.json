@@ -37,6 +37,7 @@
     "postinstall": "npm run build",
     "prebuild": "node generateBuildFiles.js",
     "build": "react-scripts build",
+    "postbuild": "react-snap",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "node server.js",
@@ -68,7 +69,8 @@
     "brotli-webpack-plugin": "^1.1.0",
     "compression-webpack-plugin": "^11.1.0",
     "eslint-config-react-app": "^7.0.1",
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "react-snap": "^1.23.0"
   },
   "reactSnap": {
     "include": [

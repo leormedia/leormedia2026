@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO/SEO";
 import {
   Eventmanagementhomeslider,
   Digitalmarketinghomeslider,
@@ -10,9 +11,6 @@ import {
   FaPhone,
   FaWhatsapp,
   FaArrowRight,
-  FaStar,
-  FaRing,
-  FaBullhorn,
   FaEye,
   FaBullseye,
 } from "react-icons/fa";
@@ -272,6 +270,24 @@ const HomePage = () => {
 
   return (
     <>
+      <SEO 
+        title="Best Event Management & Digital Marketing Agency" 
+        description="Leor Media is a premier agency specializing in luxury weddings, corporate events, and data-driven digital marketing solutions."
+        keywords="event management, luxury weddings, digital marketing agency, branding solutions"
+        url="/"
+        schemaMarkup={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Leor Media",
+          "url": "https://leormedia.com",
+          "logo": "https://leormedia.com/logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-9999999999",
+            "contactType": "customer service"
+          }
+        }}
+      />
       {/* Slider */}
       <section className="relative w-full text-white h-[80vh] bg-black mt-10 overflow-hidden  ">
         {/* Background Image Layer */}

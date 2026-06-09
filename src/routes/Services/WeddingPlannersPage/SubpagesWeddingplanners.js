@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from"react";
 import { Link, useParams } from"react-router-dom";
-import { Helmet } from"react-helmet-async";
+import SEO from "../../../components/SEO/SEO";
 import {
   FaChevronRight,
   FaPhone,
@@ -25,6 +25,8 @@ const LazyImage = ({ src, alt, className, ...props }) => {
         src={src}
         alt={alt}
         loading="lazy"
+        width="800"
+        height="800"
         onLoad={() => setLoaded(true)}
         className={`w-full h-full object-cover transition-opacity duration-500 ${
           loaded ?"opacity-100" :"opacity-0"
@@ -61,15 +63,13 @@ const SubpagesWeddingplanners = ({ pageData, seoData }) => {
 
   return (
     <div className="bg-white">
-      <Helmet>
-        <title>{seo.title || (data.hero?.title || data.title)}</title>
-        <meta name="description" content={seo.description || (data.hero?.subtitle || data.subtitle)} />
-        <meta name="keywords" content={seo.keywords} />
-        <meta property="og:title" content={seo.title || (data.hero?.title || data.title)} />
-        <meta property="og:description" content={seo.description || (data.hero?.subtitle || data.subtitle)} />
-        <meta property="og:image" content={seo.ogImage || (data.coverimage || data.hero?.image)} />
-        <link rel="canonical" href={seo.canonical} />
-      </Helmet>
+      <SEO 
+        title={seo.title || (data.hero?.title || data.title)}
+        description={seo.description || (data.hero?.subtitle || data.subtitle)}
+        keywords={seo.keywords}
+        image={seo.ogImage || (data.coverimage || data.hero?.image)}
+        url={seo.canonical}
+      />
 
       <main className="overflow-hidden">
         {/* 1. Hero Section */}

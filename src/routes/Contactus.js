@@ -9,7 +9,7 @@ import {
 import { HiOutlineMail } from "react-icons/hi";
 import React, { useState, useMemo } from "react";
 import { GlobalData } from "../assets/data/GlodalData";
-import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO/SEO";
 import seoData from "../assets/data/seo.json";
 import { Link } from "react-router-dom";
 import { User, Mail, PhoneCall, BookOpen, MessageSquare, Send } from "lucide-react";
@@ -171,17 +171,13 @@ const ContactForm = () => {
 
   return (
     <div className="min-h-screen bg-white my-6 mt-28">
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href={canonical} />
-      </Helmet>
+      <SEO 
+        title={title}
+        description={description}
+        keywords={keywords}
+        image={ogImage}
+        url={canonical}
+      />
 
       {/* Hero Section */}
       <section

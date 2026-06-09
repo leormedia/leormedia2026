@@ -171,7 +171,7 @@ export function App() {
         {isAuthRoute && <AdminNavbar />}
         {!isAuthRoute && location.pathname !== "/auth/login" && <Navbar />}
 
-        <div className="flex flex-1">
+        <main className="flex flex-1">
           <div
             className={`flex-1 min-w-0 transition-all duration-300 ${
               isAuthRoute ? "mt-14 md:ml-64" : "mt-0"
@@ -197,7 +197,7 @@ export function App() {
 
             {!isAuthRoute && location.pathname !== "/auth/login" && <Footer />}
           </div>
-        </div>
+        </main>
       </Suspense>
     </>
   );

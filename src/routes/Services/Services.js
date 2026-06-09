@@ -15,7 +15,7 @@ import { ServicesCoverImage } from"../../assets/data/Imagedata";
 
 import { GlobalData } from"../../assets/data/GlodalData";
 import seoData from"../../assets/data/seo.json";
-import { Helmet } from"react-helmet-async";
+import SEO from"../../components/SEO/SEO";
 
 
 const { title, description, keywords, canonical, ogImage } = seoData.services;
@@ -23,31 +23,24 @@ const Services = () => {
   return (
     <div className="services">
 
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Leor Media" />
-        <meta name="language" content="en" />
-        <meta name="distribution" content="global" />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:type" content="website" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-
-        {/* Canonical Link */}
-        <link rel="canonical" href={canonical} />
-      </Helmet>
+      <SEO 
+        title={title}
+        description={description}
+        keywords={keywords}
+        image={ogImage}
+        url={canonical}
+        schemaMarkup={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Leor Media Services",
+          "provider": {
+            "@type": "Organization",
+            "name": "Leor Media",
+            "url": "https://leormedia.com"
+          },
+          "description": description
+        }}
+      />
       <main>
         {/* Title Card */}
         <section
@@ -131,8 +124,10 @@ const Services = () => {
                     <img
                       src={service.icon}
                       className="w-16 h-16 ml-auto mx-auto justify-center" // Set width and height to 30px (8 * 4 = 32px, close to 30px)
-                      alt="illustration"
+                      alt={`${service.title} service illustration`}
                       loading="lazy"
+                      width="64"
+                      height="64"
                     />
                     <p className="text-lg md:text-xl lg:text-[22px] font-medium text-black">
                       {service.title}

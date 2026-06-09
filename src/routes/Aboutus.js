@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO/SEO";
 import { 
   aboutcover, 
   CEO_OriginalImage, 
@@ -19,16 +19,13 @@ const Aboutus = () => {
 
   return (
     <div className="bg-white overflow-hidden">
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonical} />
-        <link rel="canonical" href={canonical} />
-      </Helmet>
+      <SEO 
+        title={title}
+        description={description}
+        keywords={keywords}
+        image={ogImage}
+        url={canonical}
+      />
 
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center text-white">

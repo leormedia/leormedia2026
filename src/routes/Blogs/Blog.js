@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../../components/SEO/SEO';
 import { Link } from 'react-router-dom';
 import { BlogCoverimage } from '../../assets/data/Imagedata';
 import seoData from "../../assets/data/seo.json";
@@ -55,25 +55,13 @@ function BlogPage() {
 
   return (
     <div className="blogs-page">
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Cyber Space Digital" />
-        <meta name="language" content="en" />
-        <meta name="distribution" content="global" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        <link rel="canonical" href={canonical} />
-      </Helmet>
+      <SEO 
+        title={title}
+        description={description}
+        keywords={keywords}
+        image={ogImage}
+        url={canonical}
+      />
 
       <main>
         {/* Hero Section */}

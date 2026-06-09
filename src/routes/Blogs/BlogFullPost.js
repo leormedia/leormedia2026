@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../../components/SEO/SEO';
 import seoData from "../../assets/data/seo.json";
 import { FiCalendar, FiArrowRight, FiCheckCircle, FiShare2 } from 'react-icons/fi';
 import axios from 'axios';
@@ -80,22 +80,34 @@ function FullBlog() {
 
   return (
     <div className="bg-gray-50 min-h-screen pb-20">
-      <Helmet>
-        <title>{dynamicTitle}</title>
-        <meta name="description" content={dynamicDescription} />
-        <meta name="keywords" content={dynamicKeywords} />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content={dynamicTitle} />
-        <meta property="og:description" content={dynamicDescription} />
-        <meta property="og:image" content={post.feature_image || seo.ogImage} />
-        <meta property="og:url" content={dynamicCanonical} />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={dynamicTitle} />
-        <meta name="twitter:description" content={dynamicDescription} />
-        <meta name="twitter:image" content={post.feature_image || seo.ogImage} />
-        <link rel="canonical" href={dynamicCanonical} />
-      </Helmet>
+      <SEO 
+        title={dynamicTitle}
+        description={dynamicDescription}
+        keywords={dynamicKeywords}
+        image={post.feature_image || seo.ogImage}
+        url={dynamicCanonical}
+        type="article"
+        schemaMarkup={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": dynamicTitle,
+          "image": post.feature_image || seo.ogImage,
+          "datePublished": post.date,
+          "author": {
+            "@type": "Organization",
+            "name": "Leor Media"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Leor Media",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://leormedia.com/logo.png"
+            }
+          },
+          "description": dynamicDescription
+        }}
+      />
 
       {/* Hero Section */}
       <div className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-slate-900 text-white">
