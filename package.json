@@ -37,7 +37,7 @@
     "postinstall": "npm run build",
     "prebuild": "node generateBuildFiles.js",
     "build": "react-scripts build",
-    "postbuild": "react-snap",
+    "postbuild": "echo 'Build complete - react-snap skipped'",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "node server.js",
