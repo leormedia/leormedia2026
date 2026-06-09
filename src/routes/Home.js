@@ -292,18 +292,20 @@ const HomePage = () => {
           {/* Static Header Content */}
 
           <div className="flex my-auto flex-col items-center text-center leading-none text-white uppercase tracking-wide mb-4">
-            <span className="block text-[16px] md:text-[38px] lg:text-[48px] font-extrabold drop-shadow-md">
-              Crafting Extraordinary Events
-            </span>
+            <h1 className="flex flex-col items-center">
+              <span className="block text-[16px] md:text-[38px] lg:text-[48px] font-extrabold drop-shadow-md">
+                Crafting Extraordinary Events
+              </span>
 
-            {/* Centerpiece ampersand - more compact */}
-            <span className="text-primary text-[28px] md:text-5xl lg:text-[52px] font-black leading-none my-1 md:my-2 drop-shadow-lg">
-              &
-            </span>
+              {/* Centerpiece ampersand - more compact */}
+              <span className="text-primary text-[28px] md:text-5xl lg:text-[52px] font-black leading-none my-1 md:my-2 drop-shadow-lg">
+                &
+              </span>
 
-            <span className="blocktext-[16px] md:text-[38px] lg:text-[48px] font-extrabold text-primary drop-shadow-md mb-4">
-              Digital Success Stories
-            </span>
+              <span className="block text-[16px] md:text-[38px] lg:text-[48px] font-extrabold text-primary drop-shadow-md mb-4">
+                Digital Success Stories
+              </span>
+            </h1>
 
             <span className="inline-block text-gray-300 font-bold  uppercase text-[12px]  mt-2 mb-4 font-sans">
               SINCE 2016 | LEOR MEDIA
@@ -599,9 +601,9 @@ const HomePage = () => {
                     <div className="text-base md:text-lg text-white/80 font-semibold tracking-widest uppercase mb-2">
                       {sec.subtitle}
                     </div>
-                    <h1 className="text-[28px] md:text-5xl lg:text-[52px] font-bold text-white leading-tight">
+                    <h2 className="text-[28px] md:text-5xl lg:text-[52px] font-bold text-white leading-tight">
                       {sec.title}
-                    </h1>
+                    </h2>
                   </div>
 
                   {/* Description */}
