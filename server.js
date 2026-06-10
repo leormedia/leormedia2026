@@ -4,7 +4,7 @@ const path = require('path');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 const mysql = require('mysql2/promise');
-
+const { GoogleAuth } = require('google-auth-library');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -94,6 +94,32 @@ const initDb = async () => {
 initDb();
 
 // API Routes
+const GA_PROPERTY_ID = '534850911';
+const GA_KEY_FILE = path.join(__dirname, 'utils/csdwebsites-e0de9d3b9b22.json');
+
+const gaAuth = new GoogleAuth({
+    keyFile: GA_KEY_FILE,
+    scopes: ['https://www.googleapis.com/auth/analytics.readonly'],
+});
+
+async function gaRunReport(client, body) {
+    const res = await client.request({
+        url: `https://analyticsdata.googleapis.com/v1beta/properties/${GA_PROPERTY_ID}:runReport`,
+        method: 'POST',
+        data: body
+    });
+    return res.data;
+}
+
+async function gaRunRealtime(client, body) {
+    const res = await client.request({
+        url: `https://analyticsdata.googleapis.com/v1beta/properties/${GA_PROPERTY_ID}:runRealtimeReport`,
+        method: 'POST',
+        data: body
+    });
+    return res.data;
+}
+
 app.get('/api/status', (req, res) => {
     res.json({ status: 'success', message: 'Node.js API is running' });
 });
@@ -197,6 +223,188 @@ app.post('/api/contact', async (req, res) => {
 });
 
 // --- ADMIN DASHBOARD APIs ---
+
+// Google Analytics Dashboard API
+app.get('/api/ga/dashboard', async (req, res) => {
+    try {
+        const client = await gaAuth.getClient();
+
+        const [
+            kpi, users28, usersComparison, topPages, landingPages,
+            topCountries, topRegions, topCities, countryRegion, regionCity,
+            devices, traffic, events, conversions, ecom, demographics,
+            hourly, realtime, realtimeOverview, searchQueries
+        ] = await Promise.all([
+            // 1) Overview KPIs (30 days)
+            gaRunReport(client, {
+                dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
+                metrics: [
+                    { name: "activeUsers" }, { name: "newUsers" }, { name: "sessions" },
+                    { name: "engagedSessions" }, { name: "averageSessionDuration" },
+                    { name: "screenPageViews" }, { name: "bounceRate" }, { name: "engagementRate" },
+                    { name: "totalRevenue" }, { name: "conversions" }
+                ]
+            }),
+            // 2) Users last 28 days
+            gaRunReport(client, {
+                dateRanges: [{ startDate: "28daysAgo", endDate: "today" }],
+                dimensions: [{ name: "date" }],
+                metrics: [{ name: "activeUsers" }, { name: "newUsers" }, { name: "sessions" }],
+                limit: 100
+            }),
+            // 3) Users comparison
+            gaRunReport(client, {
+                dateRanges: [
+                    { startDate: "30daysAgo", endDate: "today" },
+                    { startDate: "60daysAgo", endDate: "31daysAgo" }
+                ],
+                metrics: [{ name: "activeUsers" }, { name: "sessions" }, { name: "screenPageViews" }]
+            }),
+            // 4) Top pages
+            gaRunReport(client, {
+                dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
+                dimensions: [{ name: "pagePath" }, { name: "pageTitle" }],
+                metrics: [
+                    { name: "screenPageViews" }, { name: "averageSessionDuration" },
+                    { name: "bounceRate" }, { name: "engagedSessions" }
+                ],
+                limit: 20
+            }),
+            // 5) Landing pages
+            gaRunReport(client, {
+                dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
+                dimensions: [{ name: "landingPage" }],
+                metrics: [
+                    { name: "sessions" }, { name: "screenPageViews" },
+                    { name: "bounceRate" }, { name: "averageSessionDuration" }
+                ],
+                limit: 15
+            }),
+            // 6) Top countries
+            gaRunReport(client, {
+                dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
+                dimensions: [{ name: "country" }],
+                metrics: [{ name: "activeUsers" }, { name: "sessions" }, { name: "newUsers" }, { name: "engagedSessions" }],
+                limit: 20
+            }),
+            // 6b) Top regions
+            gaRunReport(client, {
+                dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
+                dimensions: [{ name: "region" }],
+                metrics: [{ name: "activeUsers" }, { name: "sessions" }, { name: "newUsers" }],
+                limit: 20
+            }),
+            // 6c) Top cities
+            gaRunReport(client, {
+                dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
+                dimensions: [{ name: "city" }],
+                metrics: [{ name: "activeUsers" }, { name: "sessions" }, { name: "newUsers" }],
+                limit: 25
+            }),
+            // 6d) Country + Region drilldown
+            gaRunReport(client, {
+                dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
+                dimensions: [{ name: "country" }, { name: "region" }],
+                metrics: [{ name: "activeUsers" }, { name: "sessions" }],
+                limit: 50
+            }),
+            // 6e) Region + City drilldown
+            gaRunReport(client, {
+                dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
+                dimensions: [{ name: "region" }, { name: "city" }],
+                metrics: [{ name: "activeUsers" }, { name: "sessions" }],
+                limit: 50
+            }),
+            // 7) Device categories
+            gaRunReport(client, {
+                dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
+                dimensions: [{ name: "deviceCategory" }],
+                metrics: [{ name: "activeUsers" }, { name: "sessions" }, { name: "conversions" }],
+                limit: 10
+            }),
+            // 8) Traffic sources
+            gaRunReport(client, {
+                dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
+                dimensions: [
+                    { name: "sessionDefaultChannelGroup" },
+                    { name: "source" },
+                    { name: "medium" }
+                ],
+                metrics: [
+                    { name: "sessions" }, { name: "activeUsers" },
+                    { name: "engagedSessions" }, { name: "conversions" }
+                ],
+                limit: 20
+            }),
+            // 9) Events
+            gaRunReport(client, {
+                dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
+                dimensions: [{ name: "eventName" }],
+                metrics: [{ name: "eventCount" }, { name: "activeUsers" }, { name: "eventCountPerUser" }],
+                limit: 50
+            }),
+            // 10) Conversions
+            gaRunReport(client, {
+                dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
+                dimensions: [{ name: "eventName" }],
+                metrics: [{ name: "conversions" }],
+                limit: 50
+            }),
+            // 11) Ecommerce
+            gaRunReport(client, {
+                dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
+                dimensions: [{ name: "eventName" }],
+                metrics: [
+                    { name: "purchaseRevenue" }, { name: "ecommercePurchases" },
+                    { name: "totalRevenue" }
+                ],
+                limit: 50
+            }),
+            // 12) Demographics
+            gaRunReport(client, {
+                dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
+                dimensions: [{ name: "userAgeBracket" }, { name: "userGender" }],
+                metrics: [{ name: "activeUsers" }],
+                limit: 50
+            }),
+            // 13) Hourly
+            gaRunReport(client, {
+                dateRanges: [{ startDate: "7daysAgo", endDate: "today" }],
+                dimensions: [{ name: "hour" }],
+                metrics: [{ name: "sessions" }],
+                limit: 24
+            }),
+            // 14) Realtime
+            gaRunRealtime(client, {
+                dimensions: [{ name: "unifiedScreenName" }],
+                metrics: [{ name: "activeUsers" }, { name: "screenPageViews" }],
+                limit: 25
+            }),
+            // 15) Realtime overview
+            gaRunRealtime(client, {
+                metrics: [
+                    { name: "activeUsers" }, { name: "screenPageViews" }, { name: "conversions" }
+                ]
+            }),
+            // 16) Search Queries (Mocked to avoid incompatibility if Search Console is unlinked)
+            Promise.resolve({ rows: [] })
+        ]);
+
+        const output = {
+            kpi, users28days: users28, usersComparison, topPages, landingPages,
+            topCountries, topRegions, topCities, countryRegion, regionCity,
+            devices, traffic, events, conversions, ecommerce: ecom,
+            demographics, hourly, realtime, realtimeOverview, searchQueries,
+            fetchedAt: new Date().toISOString()
+        };
+
+        res.json(output);
+
+    } catch (error) {
+        console.error("Error fetching GA Data:", error.message);
+        res.status(500).json({ error: error.message });
+    }
+});
 
 // Admin Login
 app.post('/api/auth/login', async (req, res) => {
