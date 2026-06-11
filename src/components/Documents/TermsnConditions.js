@@ -57,8 +57,8 @@ const TermsnConditions = () => {
         </p>
         <p className="mb-4">
           If you do not agree with (or cannot comply with) these Agreements, please contact us by emailing at{" "}
-          <a href="mailto:mail@leormedia.com" className="text-primary hover:underline font-semibold">
-            mail@leormedia.com
+          <a href="mailto:leormedia@gmail.com" className="text-primary hover:underline font-semibold">
+            leormedia@gmail.com
           </a>{" "}
           so we can find a solution.
         </p>
@@ -123,8 +123,8 @@ const TermsnConditions = () => {
         <h2 className="font-bold text-xl mt-8 mb-2">9. CONTACT US</h2>
         <p className="mb-6">
           Please send your feedback, comments, or requests for technical support by email to:{" "}
-          <a href="mailto:mail@leormedia.com" className="text-primary hover:underline font-semibold">
-            mail@leormedia.com
+          <a href="mailto:leormedia@gmail.com" className="text-primary hover:underline font-semibold">
+            leormedia@gmail.com
           </a>
           .
         </p>

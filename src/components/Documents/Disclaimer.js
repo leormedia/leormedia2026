@@ -110,8 +110,8 @@ const Disclaimer = () => {
         <h2 className="font-bold text-xl mt-8 mb-2">8. CONTACT US</h2>
         <p className="mb-6">
           Should you have any feedback, comments, requests for support, or other inquiries, please contact us by email:{" "}
-          <a href="mailto:mail@leormedia.com" className="text-primary hover:underline font-semibold">
-            mail@leormedia.com
+          <a href="mailto:leormedia@gmail.com" className="text-primary hover:underline font-semibold">
+            leormedia@gmail.com
           </a>
           .
         </p>

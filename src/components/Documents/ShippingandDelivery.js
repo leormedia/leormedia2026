@@ -101,8 +101,8 @@ const ShippingandDelivery = () => {
         <h2 className="font-bold text-xl mt-8 mb-2">4. CONTACT US</h2>
         <p className="mb-6">
           If you have questions about order delivery or shipments, please contact our logistics team at:{" "}
-          <a href="mailto:mail@leormedia.com" className="text-primary hover:underline font-semibold">
-            mail@leormedia.com
+          <a href="mailto:leormedia@gmail.com" className="text-primary hover:underline font-semibold">
+            leormedia@gmail.com
           </a>
           .
         </p>

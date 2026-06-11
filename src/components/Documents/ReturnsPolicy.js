@@ -100,8 +100,8 @@ const ReturnsPolicy = () => {
         <h2 className="font-bold text-xl mt-8 mb-2">5. CONTACT US</h2>
         <p className="mb-6">
           If you have questions about cancellations or refunds, please reach out to us at:{" "}
-          <a href="mailto:mail@leormedia.com" className="text-primary hover:underline font-semibold">
-            mail@leormedia.com
+          <a href="mailto:leormedia@gmail.com" className="text-primary hover:underline font-semibold">
+            leormedia@gmail.com
           </a>
           .
         </p>
