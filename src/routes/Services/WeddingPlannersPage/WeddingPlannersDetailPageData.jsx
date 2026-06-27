@@ -51,7 +51,7 @@ export const WeddingPlannersPageData = {
   coverImage: { src: DestinationWeddingImg, style: { backgroundSize:"cover", backgroundPosition:"center" } },
   section2: {
     tagline:"Your Dream, Our Design",
-    heading:"Professional Wedding Planning & Management",
+    heading:"Wedding Planning & Management",
     description:"Leor Media is dedicated to making your special day perfect. We specialize in destination weddings, traditional ceremonies, and grand receptions with a focus on elegance and flawlessness."
   },
   services: [
@@ -61,7 +61,7 @@ export const WeddingPlannersPageData = {
     { icon: faPalette, title:"Mehendi", description:"Creative and traditional Mehendi ceremonies.", link:"/services/wedding-planners/mehendi" },
     { icon: faMusic, title:"Sangeet", description:"High-energy Sangeet and cocktail nights.", link:"/services/wedding-planners/sangeet" },
     { icon: faUsers, title:"Entertainment", description:"Live artists, DJs, and celebrity bookings.", link:"/services/wedding-planners/entertainment-and-artists" },
-    { icon: faUtensils, title:"Hospitality", description:"Professional guest management and hospitality.", link:"/services/wedding-planners/hospitality" },
+    { icon: faUtensils, title:"Hospitality", description:"guest management and hospitality.", link:"/services/wedding-planners/hospitality" },
     { icon: faUsers, title:"Guest Management", description:"End-to-end guest logistics and coordination.", link:"/services/wedding-planners/guest-management" },
     { icon: faCamera, title:"Photography", description:"Cinematic and candid wedding photography.", link:"/services/wedding-planners/photography-and-videography" },
     { icon: faPalette, title:"Theme Decors", description:"Stunning theme-based wedding decorations.", link:"/services/wedding-planners/theme-decors" },
@@ -91,7 +91,7 @@ export const CulturalEventsData = {
     { title:"Stage Production", description:"Grand traditional and modern stage setups.", icon: faBuilding },
     { title:"Crowd Management", description:"Ensuring safety and flow for large audiences.", icon: faUsers },
     { title:"Artist Booking", description:"Folk, classical, and contemporary performers.", icon: faMusic },
-    { title:"Sound & Light", description:"Professional concert-grade technical setups.", icon: faBullhorn },
+    { title:"Sound & Light", description:"concert-grade technical setups.", icon: faBullhorn },
     { title:"Permissions", description:"Managing government and local authority approvals.", icon: faCheckCircle },
     { title:"Branding & Promo", description:"Promotion and visibility for cultural sponsors.", icon: faBullseye },
   ],
@@ -139,11 +139,11 @@ export const CorporateEventsData = {
   SeoName: { seotitle:"corporate-events" },
   coverimage: CorporateEventsImg,
   title:"Corporate Event Management by Leor Media",
-  subtitle:"Professional excellence for your business events. We handle conferences, award nights, and summits.",
+  subtitle:"excellence for your business events. We handle conferences, award nights, and summits.",
   hero: {
     title:"Corporate Event Management Services in Vizag by Leor Media",
     subtitle:"Looking for the best corporate event management company in Vizag to organize professional, impactful, and memorable business events? Leor Media is one of the leading event management companies in Vizag specializing in corporate event planning, annual meetings, conferences, and premium brand experiences.",
-    highlights: ["Strategic Planning","Professional Coordination","Impactful Execution"],
+    highlights: ["Strategic Planning","Coordination","Impactful Execution"],
     ctas: [
       { text:"Book Consultation", link:"/contactus", primary: true },
       { text:"Call Now", link:"tel:+919666643456", primary: false }
@@ -151,19 +151,19 @@ export const CorporateEventsData = {
   },
   introduction: {
     heading:"Best Corporate Event Organizers in Vizag",
-    text:"Corporate events require strategic planning, professional coordination, and flawless execution. Our corporate event experts carefully manage every detail to create engaging and successful business events.",
+    text:"Corporate events require strategic planning, coordination, and flawless execution. Our corporate event experts carefully manage every detail to create engaging and successful business events.",
     details:"We specialize in corporate annual days, conferences, award functions, and product launches with a focus on brand image and excellence."
   },
   services: [
     { title:"Annual Day Events", description:"Grand annual day celebrations and milestones.", icon: faBuilding },
-    { title:"Award Ceremonies", description:"Professional employee award nights and recognition.", icon: faAward },
+    { title:"Award Ceremonies", description:"employee award nights and recognition.", icon: faAward },
     { title:"Stage & Production", description:"Premium stage, LED walls, and AV setups.", icon: faBullhorn },
     { title:"Entertainment", description:"Corporate entertainment shows and celebrity performers.", icon: faMusic },
     { title:"Hospitality", description:"Expert guest hospitality and delegate management.", icon: faUsers },
     { title:"Branding", description:"Complete event branding and backdrop setups.", icon: faBullseye },
   ],
   whyChoose: [
-    { title:"Professional Execution", description:"Flawless management of complex corporate events.", icon: faCheckCircle },
+    { title:"Execution", description:"Flawless management of complex corporate events.", icon: faCheckCircle },
     { title:"Creative Concepts", description:"Impactful event strategies and branding ideas.", icon: faPalette },
     { title:"Production Quality", description:"Premium stage, sound, and lighting production.", icon: faBuilding },
   ],
@@ -175,7 +175,7 @@ export const CorporateEventsData = {
   ],
   packages: [
     { title:"Essential", price:"₹1L+", features: ["Basic Setup","Standard AV","Coordination"], highlighted: false },
-    { title:"Professional", price:"₹5L+", features: ["Grand Stage","LED Screens","Professional MC"], highlighted: true },
+    { title:"Professional", price:"₹5L+", features: ["Grand Stage","LED Screens","MC"], highlighted: true },
     { title:"Elite", price:"Custom", features: ["Mega Production","Celebrity Guests","National PR"], highlighted: false },
   ],
   process: [
@@ -208,7 +208,7 @@ export const FashionShowsData = {
   SeoName: { seotitle:"fashion-shows" },
   coverimage: FashionShowsImg,
   title:"High-Fashion Shows by Leor Media",
-  subtitle:"Glamour, style, and professional ramp walk productions for designers and brands.",
+  subtitle:"Glamour, style, and ramp walk productions for designers and brands.",
   hero: {
     title:"Fashion Show Event Management in Vizag by Leor Media",
     subtitle:"Looking for the best fashion show organizers in Vizag to produce a high-glitz, stylish, and professionally managed runway event? Leor Media specializes in fashion show production, designer showcases, bridal expos, and luxury lifestyle events.",
@@ -220,20 +220,20 @@ export const FashionShowsData = {
   },
   introduction: {
     heading:"Glamorous Fashion Shows",
-    text:"Runway excellence is our specialty. We produce high-glitz fashion events with professional models, designers, and stunning stage setups that capture the essence of style.",
+    text:"Runway excellence is our specialty. We produce high-glitz fashion events with models, designers, and stunning stage setups that capture the essence of style.",
     details:"We handle everything from ramp fabrication and lighting to model coordination and designer management."
   },
   services: [
     { title:"Ramp Fabrication", description:"Customized fashion runways and stage designs.", icon: faBuilding },
-    { title:"Model Coordination", description:"Managing professional models and makeup artists.", icon: faUsers },
+    { title:"Model Coordination", description:"Managing models and makeup artists.", icon: faUsers },
     { title:"Designer Showcases", description:"Coordinating with fashion designers for collection reveals.", icon: faPalette },
     { title:"Stage & Lighting", description:"High-glamour lighting and sound production.", icon: faBullhorn },
-    { title:"Choreography", description:"Professional ramp-walk training and show direction.", icon: faMusic },
+    { title:"Choreography", description:"ramp-walk training and show direction.", icon: faMusic },
     { title:"PR & Media", description:"Managing media coverage and fashion influencers.", icon: faGlobe },
   ],
   whyChoose: [
     { title:"Stylish Concepts", description:"Unique and creative fashion show themes.", icon: faPalette },
-    { title:"Professional Models", description:"Direct access to top-tier fashion talent.", icon: faUsers },
+    { title:"Models", description:"Direct access to top-tier fashion talent.", icon: faUsers },
     { title:"Premium Production", description:"World-class ramp, sound, and lighting quality.", icon: faBuilding },
   ],
   gallery: [
@@ -258,7 +258,7 @@ export const FashionShowsData = {
   ],
   faqs: [
     { question:"Do you organize fashion shows in Vizag?", answer:"Yes, we specialize in fashion shows, designer showcases, and lifestyle events." },
-    { question:"Can you provide models and makeup artists?", answer:"Absolutely. We provide professional models, choreographers, and makeup teams." },
+    { question:"Can you provide models and makeup artists?", answer:"Absolutely. We provide models, choreographers, and makeup teams." },
     { question:"Do you handle ramp fabrication?", answer:"Yes, we design and build customized ramps and stage setups for fashion shows." },
     { question:"Do you offer affordable packages?", answer:"Yes, we provide flexible packages for designers and fashion brands." },
   ],
@@ -298,11 +298,11 @@ export const DestinationWeddingData = {
     { title: "Luxury Wedding Décor & Design", description: "Transform your wedding venue with breathtaking floral arrangements, elegant mandaps, customized themes, designer stages, ambient lighting, and stunning décor concepts that create unforgettable visual experiences.", icon: faPalette },
     { title: "Guest Hospitality & Travel Management", description: "We coordinate guest accommodations, transportation, airport transfers, welcome kits, hospitality services, and travel logistics to ensure a comfortable and enjoyable experience for every guest.", icon: faBriefcase },
     { title: "Wedding Entertainment & Celebrations", description: "From sangeet nights and cocktail parties to live music, celebrity performances, DJs, cultural programs, and grand receptions, we curate unforgettable entertainment experiences.", icon: faSmile },
-    { title: "Photography & Cinematic Videography", description: "Capture every precious moment with professional wedding photography, cinematic films, drone coverage, pre-wedding shoots, and luxury wedding storytelling services.", icon: faCamera },
+    { title: "Photography & Cinematic Videography", description: "Capture every precious moment with wedding photography, cinematic films, drone coverage, pre-wedding shoots, and luxury wedding storytelling services.", icon: faCamera },
     { title: "Catering & Wedding Experiences", description: "We arrange exceptional catering services, customized menus, themed dining experiences, and premium hospitality that delight guests throughout the wedding celebrations.", icon: faUtensils }
   ],
   whyChoose: [
-    { title: "Professional Destination Wedding Planners", description: "", icon: faUserTie },
+    { title: "Destination Wedding Planners", description: "", icon: faUserTie },
     { title: "Luxury Wedding Planning Expertise", description: "", icon: faCheckCircle },
     { title: "Customized Wedding Experiences", description: "", icon: faCheckCircle },
     { title: "Premium Venue & Resort Coordination", description: "", icon: faBriefcase },
@@ -351,7 +351,7 @@ export const RingCeremonyData = {
   title: "Ring Ceremony Planning Services - Leor Media",
   subtitle: "Creating elegant engagement celebrations with stunning décor, personalized planning, unforgettable entertainment, and seamless event execution.",
   hero: {
-    title: "Professional Ring Ceremony Planning Services",
+    title: "Ring Ceremony Planning Services",
     subtitle: "Creating elegant engagement celebrations with stunning décor, personalized planning, unforgettable entertainment, and seamless event execution.",
     highlights: ["Premium Services","Expert Planners","Flawless Execution"],
     ctas: [
@@ -362,7 +362,7 @@ export const RingCeremonyData = {
   introduction: {
     heading: "Celebrating the Beginning of a Beautiful Journey",
     text: "A ring ceremony is one of the most cherished milestones in a couple's journey toward marriage. It is a special occasion where two families come together to celebrate love, commitment, and the promise of a wonderful future. Every ring ceremony deserves elegance, joy, and flawless execution to create memories that last a lifetime.",
-    details: "At Leor Media, we specialize in professional ring ceremony planning and management services, transforming engagement celebrations into unforgettable experiences. From intimate family gatherings to grand engagement events, we handle every detail with creativity, precision, and care."
+    details: "At Leor Media, we specialize in ring ceremony planning and management services, transforming engagement celebrations into unforgettable experiences. From intimate family gatherings to grand engagement events, we handle every detail with creativity, precision, and care."
   },
   services: [
     { title: "Personalized Event Planning", description: "Every couple has a unique love story. Our team works closely with you to understand your vision, preferences, traditions, and expectations to create a truly personalized ring ceremony experience.", icon: faCheckCircle },
@@ -370,17 +370,17 @@ export const RingCeremonyData = {
     { title: "Theme-Based Ring Ceremonies", description: "Whether you prefer a traditional, modern, royal, floral, luxury, or destination-inspired engagement celebration, we design unique themes that reflect your personality and style.", icon: faScroll },
     { title: "Entertainment & Live Performances", description: "Enhance the celebration with live music, DJs, dance performances, celebrity appearances, cultural programs, emcee services, and entertainment experiences that keep guests engaged.", icon: faMusic },
     { title: "Guest Management & Hospitality", description: "From invitation coordination and guest assistance to seating arrangements, welcome services, catering support, and hospitality management, we ensure a smooth experience for every guest.", icon: faBriefcase },
-    { title: "Photography & Cinematic Videography", description: "Capture every precious moment with professional photography, candid shoots, cinematic videography, drone coverage, and engagement highlight films.", icon: faCamera },
+    { title: "Photography & Cinematic Videography", description: "Capture every precious moment with photography, candid shoots, cinematic videography, drone coverage, and engagement highlight films.", icon: faCamera },
     { title: "Catering & Celebration Experiences", description: "Delight your guests with exceptional catering services, customized menus, dessert counters, live food stations, and premium dining experiences.", icon: faUtensils }
   ],
   whyChoose: [
-    { title: "Professional Engagement & Ring Ceremony Planners", description: "", icon: faSmile },
+    { title: "Engagement & Ring Ceremony Planners", description: "", icon: faSmile },
     { title: "Creative Theme & Décor Concepts", description: "", icon: faCheckCircle },
     { title: "Complete Event Planning Solutions", description: "", icon: faCheckCircle },
     { title: "Luxury Stage & Floral Decorations", description: "", icon: faPalette },
     { title: "Personalized Couple-Centric Experiences", description: "", icon: faCheckCircle },
     { title: "Expert Guest Management Services", description: "", icon: faBriefcase },
-    { title: "Professional Photography & Entertainment Coordination", description: "", icon: faBriefcase },
+    { title: "Photography & Entertainment Coordination", description: "", icon: faBriefcase },
     { title: "Seamless Event Execution", description: "", icon: faCheckCircle }
   ],
   gallery: [
@@ -408,7 +408,7 @@ export const RingCeremonyData = {
   ],
   finalCTA: {
     title: "Contact Us",
-    text: "Partner with Leor Media for professional ring ceremony planning services services.",
+    text: "Partner with Leor Media for ring ceremony planning services services.",
     phones: ["+91-9666643456", "+91-9542248999"],
     ctas: [
       { text: "WhatsApp Us", link: "https://wa.me/919666643456", icon: "whatsapp" },
@@ -434,7 +434,7 @@ export const ReceptionsData = {
   introduction: {
     heading: "Creating Elegant Wedding Receptions That Leave Lasting Memories",
     text: "A wedding reception is the grand celebration of love, happiness, and new beginnings. It is a special occasion where family, friends, and loved ones gather to celebrate the couple's journey and create unforgettable memories together. Every reception deserves beautiful décor, exceptional hospitality, entertainment, and flawless event execution.",
-    details: "At Leor Media, we specialize in professional Reception Event Planning and Management Services, creating extraordinary wedding receptions that reflect your style, personality, and vision. Whether you desire an intimate gathering or a grand luxury celebration, our experienced team ensures every detail is planned to perfection."
+    details: "At Leor Media, we specialize in Reception Event Planning and Management Services, creating extraordinary wedding receptions that reflect your style, personality, and vision. Whether you desire an intimate gathering or a grand luxury celebration, our experienced team ensures every detail is planned to perfection."
   },
   services: [
     { title: "Personalized Reception Planning", description: "Every celebration is unique. We work closely with couples and families to understand their preferences, traditions, themes, and expectations, creating a customized reception experience that perfectly reflects their vision.", icon: faGlassCheers },
@@ -442,16 +442,16 @@ export const ReceptionsData = {
     { title: "Theme-Based Reception Events", description: "From royal and luxury themes to contemporary, floral, destination-inspired, and cultural celebrations, we create unique reception concepts that enhance the beauty of your special day.", icon: faGlassCheers },
     { title: "Entertainment & Live Performances", description: "Keep your guests engaged with live music, DJs, celebrity appearances, dance performances, emcee services, cultural entertainment, and interactive experiences that make the celebration unforgettable.", icon: faMusic },
     { title: "Guest Management & Hospitality", description: "We manage guest invitations, welcome services, seating arrangements, VIP coordination, accommodation support, transportation, and hospitality services to ensure a smooth experience for every attendee.", icon: faBriefcase },
-    { title: "Photography & Cinematic Videography", description: "Capture every smile, celebration, and heartfelt moment with professional photography, candid shoots, cinematic videography, drone coverage, and wedding highlight films.", icon: faCamera },
+    { title: "Photography & Cinematic Videography", description: "Capture every smile, celebration, and heartfelt moment with photography, candid shoots, cinematic videography, drone coverage, and wedding highlight films.", icon: faCamera },
     { title: "Catering & Dining Experiences", description: "Provide your guests with exceptional culinary experiences through customized menus, premium catering services, live food counters, dessert stations, and luxury dining arrangements.", icon: faUtensils }
   ],
   whyChoose: [
-    { title: "Professional Reception Event Planners", description: "", icon: faGlassCheers },
+    { title: "Reception Event Planners", description: "", icon: faGlassCheers },
     { title: "Luxury Wedding Reception Expertise", description: "", icon: faGlassCheers },
     { title: "Creative Décor & Theme Concepts", description: "", icon: faCheckCircle },
     { title: "Complete Guest Management Solutions", description: "", icon: faBriefcase },
     { title: "Premium Entertainment Coordination", description: "", icon: faBriefcase },
-    { title: "Professional Photography & Videography Services", description: "", icon: faCamera },
+    { title: "Photography & Videography Services", description: "", icon: faCamera },
     { title: "Personalized Event Planning", description: "", icon: faCheckCircle },
     { title: "Flawless Event Execution", description: "", icon: faCheckCircle }
   ],
@@ -506,22 +506,22 @@ export const MehendiData = {
   introduction: {
     heading: "Creating Colorful, Joyful & Unforgettable Mehendi Celebrations",
     text: "A Mehendi ceremony is one of the most vibrant and cherished pre-wedding events, filled with laughter, music, dance, traditions, and beautiful memories. It is a celebration where family and friends come together to bless the couple and enjoy the festive spirit before the wedding day.",
-    details: "At Leor Media, we specialize in professional Mehendi Ceremony Planning and Management Services, creating stunning celebrations that perfectly blend tradition, elegance, and entertainment. From intimate family gatherings to grand luxury Mehendi events, we ensure every detail is beautifully planned and flawlessly executed."
+    details: "At Leor Media, we specialize in Mehendi Ceremony Planning and Management Services, creating stunning celebrations that perfectly blend tradition, elegance, and entertainment. From intimate family gatherings to grand luxury Mehendi events, we ensure every detail is beautifully planned and flawlessly executed."
   },
   services: [
     { title: "Customized Mehendi Theme Planning", description: "Every couple has a unique style and vision. We create personalized Mehendi themes ranging from traditional and floral concepts to royal, bohemian, vibrant, and luxury celebrations.", icon: faCheckCircle },
     { title: "Mehendi Décor & Venue Styling", description: "Transform your venue with colorful floral décor, ethnic backdrops, vibrant seating lounges, decorative umbrellas, customized stages, themed installations, and elegant lighting arrangements.", icon: faBriefcase },
-    { title: "Professional Mehendi Artists", description: "We arrange experienced Mehendi artists who create beautiful bridal Mehendi designs, family Mehendi services, guest Mehendi stations, and customized henna artwork.", icon: faCamera },
+    { title: "Mehendi Artists", description: "We arrange experienced Mehendi artists who create beautiful bridal Mehendi designs, family Mehendi services, guest Mehendi stations, and customized henna artwork.", icon: faCamera },
     { title: "Entertainment & Live Performances", description: "Keep the celebration lively with DJs, dhol artists, live musicians, dance performances, cultural entertainment, emcees, and interactive activities that create unforgettable moments.", icon: faMusic },
     { title: "Guest Management & Hospitality", description: "From guest invitations and welcome arrangements to seating management, refreshments, transportation assistance, and hospitality services, we ensure a seamless experience for everyone.", icon: faBriefcase },
-    { title: "Photography & Videography", description: "Capture every joyful moment with professional photography, candid shoots, cinematic videography, drone coverage, and social media-worthy wedding content.", icon: faCamera },
+    { title: "Photography & Videography", description: "Capture every joyful moment with photography, candid shoots, cinematic videography, drone coverage, and social media-worthy wedding content.", icon: faCamera },
     { title: "Food & Beverage Experiences", description: "Enhance the celebration with customized catering services, live food stations, themed menus, traditional delicacies, mocktail counters, and premium dining experiences.", icon: faUtensils }
   ],
   whyChoose: [
-    { title: "Professional Mehendi Ceremony Planners", description: "", icon: faScroll },
+    { title: "Mehendi Ceremony Planners", description: "", icon: faScroll },
     { title: "Creative Theme & Décor Concepts", description: "", icon: faCheckCircle },
     { title: "Luxury Wedding Event Expertise", description: "", icon: faCheckCircle },
-    { title: "Professional Mehendi Artist Coordination", description: "", icon: faBriefcase },
+    { title: "Mehendi Artist Coordination", description: "", icon: faBriefcase },
     { title: "Complete Guest Management Services", description: "", icon: faBriefcase },
     { title: "Premium Entertainment Solutions", description: "", icon: faSmile },
     { title: "Personalized Wedding Experiences", description: "", icon: faCheckCircle },
@@ -565,10 +565,10 @@ export const SangeetData = {
   SeoName: { seotitle: "sangeet" },
   coverimage: SangeetImg,
   title: "Sangeet Ceremony Planning Services - Leor Media",
-  subtitle: "Creating unforgettable Sangeet celebrations with spectacular décor, live entertainment, professional choreography, premium hospitality, and flawless event execution.",
+  subtitle: "Creating unforgettable Sangeet celebrations with spectacular décor, live entertainment, choreography, premium hospitality, and flawless event execution.",
   hero: {
     title: "Luxury Sangeet Ceremony Planning Services",
-    subtitle: "Creating unforgettable Sangeet celebrations with spectacular décor, live entertainment, professional choreography, premium hospitality, and flawless event execution.",
+    subtitle: "Creating unforgettable Sangeet celebrations with spectacular décor, live entertainment, choreography, premium hospitality, and flawless event execution.",
     highlights: ["Premium Services","Expert Planners","Flawless Execution"],
     ctas: [
       { text: "Book Consultation", link: "/contactus", primary: true },
@@ -583,18 +583,18 @@ export const SangeetData = {
   services: [
     { title: "Customized Sangeet Theme Planning", description: "Every couple has a unique vision for their celebration. We create personalized Sangeet themes ranging from royal and glamorous setups to Bollywood-inspired, traditional, contemporary, and luxury concepts.", icon: faCheckCircle },
     { title: "Stunning Stage & Venue Decoration", description: "Transform your venue with elegant stage designs, LED backdrops, floral arrangements, thematic décor, ambient lighting, dance floors, and premium event styling that create a spectacular atmosphere.", icon: faBriefcase },
-    { title: "Choreography & Dance Performances", description: "Make your Sangeet unforgettable with professional choreography services for couples, families, and friends. We coordinate dance performances, rehearsals, and stage presentations to ensure a memorable show.", icon: faMusic },
+    { title: "Choreography & Dance Performances", description: "Make your Sangeet unforgettable with choreography services for couples, families, and friends. We coordinate dance performances, rehearsals, and stage presentations to ensure a memorable show.", icon: faMusic },
     { title: "Live Entertainment & Music", description: "Enhance the celebration with DJs, live bands, celebrity performances, singers, dhol artists, emcees, and interactive entertainment that keeps guests engaged throughout the event.", icon: faMusic },
-    { title: "Sound, Lighting & Technical Production", description: "Our advanced production solutions include professional sound systems, LED walls, intelligent lighting, special effects, smoke machines, visual displays, and event technology for a world-class experience.", icon: faMusic },
+    { title: "Sound, Lighting & Technical Production", description: "Our advanced production solutions include sound systems, LED walls, intelligent lighting, special effects, smoke machines, visual displays, and event technology for a world-class experience.", icon: faMusic },
     { title: "Guest Management & Hospitality", description: "From invitations and welcome arrangements to seating coordination, accommodation support, transportation, and hospitality services, we ensure a seamless experience for all guests.", icon: faBriefcase },
-    { title: "Photography & Cinematic Videography", description: "Capture every dance, smile, and celebration with professional photography, candid moments, cinematic wedding films, drone coverage, and social media-ready content.", icon: faCamera },
+    { title: "Photography & Cinematic Videography", description: "Capture every dance, smile, and celebration with photography, candid moments, cinematic wedding films, drone coverage, and social media-ready content.", icon: faCamera },
     { title: "Catering & Food Experiences", description: "Delight your guests with premium catering services, live food stations, customized menus, dessert counters, mocktail bars, and luxury dining experiences.", icon: faUtensils }
   ],
   whyChoose: [
-    { title: "Professional Sangeet Event Planners", description: "", icon: faUserTie },
+    { title: "Sangeet Event Planners", description: "", icon: faUserTie },
     { title: "Luxury Wedding Celebration Expertise", description: "", icon: faCheckCircle },
     { title: "Creative Theme & Décor Concepts", description: "", icon: faCheckCircle },
-    { title: "Professional Choreography Services", description: "", icon: faUserTie },
+    { title: "Choreography Services", description: "", icon: faUserTie },
     { title: "Premium Entertainment Coordination", description: "", icon: faBriefcase },
     { title: "Complete Guest Management Solutions", description: "", icon: faBriefcase },
     { title: "Advanced Event Production Services", description: "", icon: faCheckCircle },
@@ -625,7 +625,7 @@ export const SangeetData = {
   ],
   finalCTA: {
     title: "Contact Us",
-    text: "Partner with Leor Media for professional sangeet ceremony planning services services.",
+    text: "Partner with Leor Media for sangeet ceremony planning services services.",
     phones: ["+91-9666643456", "+91-9542248999"],
     ctas: [
       { text: "WhatsApp Us", link: "https://wa.me/919666643456", icon: "whatsapp" },
@@ -640,7 +640,7 @@ export const EntertainmentAndArtistsData = {
   title: "Entertainment & Artists Management Services - Leor Media",
   subtitle: "Bringing world-class entertainment, celebrity appearances, live performances, and unforgettable experiences to every event.",
   hero: {
-    title: "Professional Entertainment & Artists Management Services",
+    title: "Entertainment & Artists Management Services",
     subtitle: "Bringing world-class entertainment, celebrity appearances, live performances, and unforgettable experiences to every event.",
     highlights: ["Premium Services","Expert Planners","Flawless Execution"],
     ctas: [
@@ -655,15 +655,15 @@ export const EntertainmentAndArtistsData = {
   },
   services: [
     { title: "Celebrity Management & Appearances", description: "Make your event truly memorable with celebrity appearances, guest interactions, brand ambassadors, influencers, and special guest performances that attract attention and create excitement.", icon: faBriefcase },
-    { title: "Live Music & Band Performances", description: "Enhance your event with professional singers, live bands, instrumental artists, fusion music groups, and cultural performers who create engaging and memorable experiences.", icon: faMusic },
-    { title: "DJ & Music Entertainment", description: "From wedding receptions and sangeet nights to corporate parties and nightlife events, our professional DJs deliver energetic performances tailored to your audience.", icon: faMusic },
+    { title: "Live Music & Band Performances", description: "Enhance your event with singers, live bands, instrumental artists, fusion music groups, and cultural performers who create engaging and memorable experiences.", icon: faMusic },
+    { title: "DJ & Music Entertainment", description: "From wedding receptions and sangeet nights to corporate parties and nightlife events, our DJs deliver energetic performances tailored to your audience.", icon: faMusic },
     { title: "Dance & Cultural Performances", description: "Bring your event to life with traditional dance groups, cultural performers, Bollywood dance teams, folk artists, and contemporary entertainment acts.", icon: faMusic },
-    { title: "Anchors, Emcees & Hosts", description: "Professional anchors and event hosts keep your audience engaged, manage event flow, and create an interactive atmosphere throughout the program.", icon: faMicrophone },
+    { title: "Anchors, Emcees & Hosts", description: "anchors and event hosts keep your audience engaged, manage event flow, and create an interactive atmosphere throughout the program.", icon: faMicrophone },
     { title: "Corporate Entertainment Solutions", description: "We provide customized entertainment experiences for conferences, annual day celebrations, employee engagement programs, award functions, product launches, and corporate gatherings.", icon: faSmile },
     { title: "Event Production & Technical Support", description: "Our services include stage production, sound systems, LED walls, intelligent lighting, special effects, visual displays, and technical management to ensure flawless performances.", icon: faCheckCircle }
   ],
   whyChoose: [
-    { title: "Professional Artist Management Team", description: "", icon: faBriefcase },
+    { title: "Artist Management Team", description: "", icon: faBriefcase },
     { title: "Access to Celebrity & Influencer Networks", description: "", icon: faCamera },
     { title: "Customized Entertainment Solutions", description: "", icon: faSmile },
     { title: "Experienced Event Production Specialists", description: "", icon: faCheckCircle },
@@ -697,7 +697,7 @@ export const EntertainmentAndArtistsData = {
   ],
   finalCTA: {
     title: "Turning Every Event into an Extraordinary Experience",
-    text: "At Leor Media, we believe great entertainment creates unforgettable memories. Our expertise in artist management, event production, talent coordination, and audience engagement helps deliver exceptional performances that leave a lasting impression. Whether you're planning a wedding, corporate event, festival, product launch, or large public gathering, Leor Media provides professional Entertainment & Artists Management Services that bring energy, excitement, and world-class performances to your event.",
+    text: "At Leor Media, we believe great entertainment creates unforgettable memories. Our expertise in artist management, event production, talent coordination, and audience engagement helps deliver exceptional performances that leave a lasting impression. Whether you're planning a wedding, corporate event, festival, product launch, or large public gathering, Leor Media provides Entertainment & Artists Management Services that bring energy, excitement, and world-class performances to your event.",
     phones: ["+91-9666643456", "+91-9542248999"],
     ctas: [
       { text: "WhatsApp Us", link: "https://wa.me/919666643456", icon: "whatsapp" },
@@ -710,10 +710,10 @@ export const HospitalityData = {
   SeoName: { seotitle: "hospitality" },
   coverimage: HospitalityImg,
   title: "Hospitality Management Services - Leor Media",
-  subtitle: "Delivering exceptional guest experiences through personalized hospitality, seamless coordination, premium service, and professional event support.",
+  subtitle: "Delivering exceptional guest experiences through personalized hospitality, seamless coordination, premium service, and event support.",
   hero: {
-    title: "Professional Hospitality Management Services",
-    subtitle: "Delivering exceptional guest experiences through personalized hospitality, seamless coordination, premium service, and professional event support.",
+    title: "Hospitality Management Services",
+    subtitle: "Delivering exceptional guest experiences through personalized hospitality, seamless coordination, premium service, and event support.",
     highlights: ["Premium Services","Expert Planners","Flawless Execution"],
     ctas: [
       { text: "Book Consultation", link: "/contactus", primary: true },
@@ -721,8 +721,8 @@ export const HospitalityData = {
     ]
   },
   introduction: {
-    heading: "Professional Hospitality Management Services",
-    text: "Delivering exceptional guest experiences through personalized hospitality, seamless coordination, premium service, and professional event support.",
+    heading: "Hospitality Management Services",
+    text: "Delivering exceptional guest experiences through personalized hospitality, seamless coordination, premium service, and event support.",
     details: ""
   },
   services: [
@@ -735,7 +735,7 @@ export const HospitalityData = {
     { title: "On-Site Guest Support", description: "Our hospitality professionals provide continuous assistance throughout the event, helping guests with seating, directions, schedules, accommodations, and special requests.", icon: faUsers }
   ],
   whyChoose: [
-    { title: "Professional Hospitality Management Team", description: "", icon: faBriefcase },
+    { title: "Hospitality Management Team", description: "", icon: faBriefcase },
     { title: "VIP & Celebrity Guest Coordination", description: "", icon: faBriefcase },
     { title: "Personalized Guest Experience Solutions", description: "", icon: faUsers },
     { title: "Complete Travel & Accommodation Support", description: "", icon: faBriefcase },
@@ -768,7 +768,7 @@ export const HospitalityData = {
     { question: "Can you customize the decoration theme?", answer: "Absolutely. We offer customized themes based on your vision and preferences." }
   ],
   finalCTA: {
-    title: "Delivering Exceptional Guest Experiences with Professional Hospitality Solutions",
+    title: "Delivering Exceptional Guest Experiences with Hospitality Solutions",
     text: "Hospitality is one of the most important elements of any successful event. From welcoming guests and managing accommodations to ensuring comfort, convenience, and personalized service, exceptional hospitality creates lasting impressions and enhances the overall event experience. At Leor Media, we specialize in Hospitality Management Services for weddings, corporate events, conferences, exhibitions, destination weddings, cultural programs, VIP gatherings, and large-scale celebrations. Our dedicated hospitality team ensures every guest receives a warm welcome and outstanding service from arrival to departure.",
     phones: ["+91-9666643456", "+91-9542248999"],
     ctas: [
@@ -782,10 +782,10 @@ export const GuestManagementData = {
   SeoName: { seotitle: "guest-management" },
   coverimage: GuestManagementImg,
   title: "Guest Management Services - Leor Media",
-  subtitle: "Ensuring seamless guest experiences through efficient coordination, personalized support, professional hospitality, and flawless event management.",
+  subtitle: "Ensuring seamless guest experiences through efficient coordination, personalized support, hospitality, and flawless event management.",
   hero: {
-    title: "Professional Guest Management Services",
-    subtitle: "Ensuring seamless guest experiences through efficient coordination, personalized support, professional hospitality, and flawless event management.",
+    title: "Guest Management Services",
+    subtitle: "Ensuring seamless guest experiences through efficient coordination, personalized support, hospitality, and flawless event management.",
     highlights: ["Premium Services","Expert Planners","Flawless Execution"],
     ctas: [
       { text: "Book Consultation", link: "/contactus", primary: true },
@@ -793,21 +793,21 @@ export const GuestManagementData = {
     ]
   },
   introduction: {
-    heading: "Professional Guest Management Services",
-    text: "Ensuring seamless guest experiences through efficient coordination, personalized support, professional hospitality, and flawless event management.",
+    heading: "Guest Management Services",
+    text: "Ensuring seamless guest experiences through efficient coordination, personalized support, hospitality, and flawless event management.",
     details: ""
   },
   services: [
     { title: "Invitation & RSVP Management", description: "We assist with guest list planning, invitation distribution, RSVP tracking, attendance confirmations, and communication management to ensure organized event preparation.", icon: faBriefcase },
     { title: "Guest Registration & Check-In Services", description: "Our team manages registration desks, attendee verification, welcome counters, digital check-ins, badge distribution, and guest assistance for a hassle-free arrival experience.", icon: faUsers },
-    { title: "Welcome & Reception Management", description: "Create a positive first impression with professional guest reception services, welcome assistance, information desks, and personalized guest support throughout the event.", icon: faBriefcase },
+    { title: "Welcome & Reception Management", description: "Create a positive first impression with guest reception services, welcome assistance, information desks, and personalized guest support throughout the event.", icon: faBriefcase },
     { title: "VIP Guest Coordination", description: "We provide specialized services for VIP guests, executives, celebrities, speakers, and distinguished attendees, ensuring personalized attention and seamless coordination.", icon: faBriefcase },
     { title: "Accommodation & Travel Assistance", description: "From hotel reservations and room allocations to airport transfers and transportation arrangements, we ensure comfortable travel experiences for guests attending your event.", icon: faBriefcase },
     { title: "Seating & Venue Coordination", description: "Our guest management specialists oversee seating plans, venue navigation, guest flow management, and special seating requirements to ensure smooth event operations.", icon: faBriefcase },
     { title: "On-Site Guest Support", description: "Dedicated guest relations teams remain available throughout the event to assist attendees, answer queries, resolve concerns, and enhance the overall guest experience.", icon: faUsers }
   ],
   whyChoose: [
-    { title: "Professional Guest Management Experts", description: "", icon: faBriefcase },
+    { title: "Guest Management Experts", description: "", icon: faBriefcase },
     { title: "Personalized Guest Experience Solutions", description: "", icon: faUsers },
     { title: "VIP & Executive Guest Coordination", description: "", icon: faBriefcase },
     { title: "Seamless Registration & Check-In Services", description: "", icon: faUsers },
@@ -841,7 +841,7 @@ export const GuestManagementData = {
   ],
   finalCTA: {
     title: "Delivering Seamless Guest Experiences from Invitation to Departure",
-    text: "A successful event is measured not only by its décor, entertainment, or venue but also by the experience of its guests. Efficient guest management ensures that every attendee feels welcomed, comfortable, valued, and well-informed throughout the event journey. At Leor Media, we specialize in professional Guest Management Services for weddings, corporate events, conferences, exhibitions, destination weddings, award ceremonies, product launches, and large-scale celebrations. Our dedicated team manages every guest-related detail, ensuring a smooth and memorable experience from start to finish.",
+    text: "A successful event is measured not only by its décor, entertainment, or venue but also by the experience of its guests. Efficient guest management ensures that every attendee feels welcomed, comfortable, valued, and well-informed throughout the event journey. At Leor Media, we specialize in Guest Management Services for weddings, corporate events, conferences, exhibitions, destination weddings, award ceremonies, product launches, and large-scale celebrations. Our dedicated team manages every guest-related detail, ensuring a smooth and memorable experience from start to finish.",
     phones: ["+91-9666643456", "+91-9542248999"],
     ctas: [
       { text: "WhatsApp Us", link: "https://wa.me/919666643456", icon: "whatsapp" },
@@ -856,7 +856,7 @@ export const PhotographyAndVideographyData = {
   title: "Photography & Videography Services - Leor Media",
   subtitle: "Capturing life's most important moments through stunning photography, cinematic videography, creative storytelling, and unforgettable visual experiences.",
   hero: {
-    title: "Professional Photography & Videography Services",
+    title: "Photography & Videography Services",
     subtitle: "Capturing life's most important moments through stunning photography, cinematic videography, creative storytelling, and unforgettable visual experiences.",
     highlights: ["Premium Services","Expert Planners","Flawless Execution"],
     ctas: [
@@ -866,24 +866,24 @@ export const PhotographyAndVideographyData = {
   },
   introduction: {
     heading: "Capturing Every Moment, Preserving Every Memory",
-    text: "Every event tells a unique story filled with emotions, celebrations, and unforgettable moments. Professional photography and videography ensure that these precious memories are beautifully captured and preserved for a lifetime.",
+    text: "Every event tells a unique story filled with emotions, celebrations, and unforgettable moments. photography and videography ensure that these precious memories are beautifully captured and preserved for a lifetime.",
     details: "At Leor Media, we provide premium Photography & Videography Services for weddings, corporate events, destination weddings, product launches, conferences, cultural events, private celebrations, and large-scale functions. Our experienced photographers, cinematographers, and creative editors transform every moment into timeless memories through stunning visuals and cinematic storytelling."
   },
   services: [
-    { title: "Professional Event Photography", description: "Our photographers capture candid emotions, key moments, guest interactions, stage events, décor details, and memorable highlights that tell the complete story of your event.", icon: faCamera },
-    { title: "Cinematic Videography", description: "We create high-quality cinematic films that showcase the emotions, excitement, and atmosphere of your celebration through professional storytelling techniques.", icon: faCamera },
+    { title: "Event Photography", description: "Our photographers capture candid emotions, key moments, guest interactions, stage events, décor details, and memorable highlights that tell the complete story of your event.", icon: faCamera },
+    { title: "Cinematic Videography", description: "We create high-quality cinematic films that showcase the emotions, excitement, and atmosphere of your celebration through storytelling techniques.", icon: faCamera },
     { title: "Wedding Photography & Films", description: "From pre-wedding shoots and engagement ceremonies to weddings, receptions, mehendi, and sangeet celebrations, we create stunning visual memories that couples cherish forever.", icon: faCamera },
-    { title: "Corporate Event Coverage", description: "Our team provides professional photography and videography services for conferences, seminars, product launches, award functions, corporate meetings, and business events.", icon: faBuilding },
+    { title: "Corporate Event Coverage", description: "Our team provides photography and videography services for conferences, seminars, product launches, award functions, corporate meetings, and business events.", icon: faBuilding },
     { title: "Drone Photography & Aerial Cinematography", description: "Capture breathtaking aerial views and unique perspectives with advanced drone photography and videography that add a cinematic touch to your event coverage.", icon: faCamera },
-    { title: "Live Streaming Services", description: "Expand your event reach with professional live-streaming solutions for weddings, conferences, seminars, religious events, and corporate programs.", icon: faCheckCircle },
-    { title: "Editing & Post Production", description: "Our creative editing team enhances every image and video through professional color correction, sound enhancement, cinematic editing, visual effects, and highlight reel creation.", icon: faCheckCircle }
+    { title: "Live Streaming Services", description: "Expand your event reach with live-streaming solutions for weddings, conferences, seminars, religious events, and corporate programs.", icon: faCheckCircle },
+    { title: "Editing & Post Production", description: "Our creative editing team enhances every image and video through color correction, sound enhancement, cinematic editing, visual effects, and highlight reel creation.", icon: faCheckCircle }
   ],
   whyChoose: [
-    { title: "Professional Photographers & Videographers", description: "", icon: faCamera },
+    { title: "Photographers & Videographers", description: "", icon: faCamera },
     { title: "Cinematic Storytelling Expertise", description: "", icon: faCheckCircle },
     { title: "High-Resolution Photography Services", description: "", icon: faCamera },
     { title: "Advanced Drone Coverage", description: "", icon: faCheckCircle },
-    { title: "Professional Editing & Post Production", description: "", icon: faUserTie },
+    { title: "Editing & Post Production", description: "", icon: faUserTie },
     { title: "Creative & Candid Photography Style", description: "", icon: faCamera },
     { title: "Complete Event Coverage Solutions", description: "", icon: faCheckCircle },
     { title: "Customized Photography Packages", description: "", icon: faCamera }
@@ -946,7 +946,7 @@ export const ThemeDecorsData = {
     { title: "Wedding Theme Décor", description: "From royal weddings and floral celebrations to luxury destination weddings and traditional ceremonies, we create breathtaking wedding décor experiences that leave lasting impressions.", icon: faCheckCircle },
     { title: "Stage & Backdrop Design", description: "Make your event the center of attention with stunning stage setups, designer backdrops, LED installations, floral walls, custom structures, and premium visual elements.", icon: faPalette },
     { title: "Floral Decoration Services", description: "Enhance the elegance of your event with fresh flower arrangements, floral arches, hanging installations, centerpieces, entrance décor, and customized floral concepts.", icon: faPalette },
-    { title: "Corporate Event Décor", description: "We design professional event environments for conferences, product launches, award functions, annual day celebrations, exhibitions, and business gatherings that strengthen brand identity.", icon: faBuilding },
+    { title: "Corporate Event Décor", description: "We design event environments for conferences, product launches, award functions, annual day celebrations, exhibitions, and business gatherings that strengthen brand identity.", icon: faBuilding },
     { title: "Lighting & Ambience Creation", description: "Our décor solutions include ambient lighting, mood lighting, decorative fixtures, LED effects, and creative illumination techniques that elevate the overall event experience.", icon: faCamera },
     { title: "Entrance & Venue Styling", description: "Create unforgettable first impressions with grand entrance designs, welcome zones, photo booths, themed installations, lounge areas, and immersive décor elements.", icon: faBriefcase }
   ],
@@ -1000,7 +1000,7 @@ export const BirthdayPartiesData = {
   title: "Birthday Party Planning Services - Leor Media",
   subtitle: "Creating fun-filled birthday celebrations with creative themes, beautiful décor, exciting entertainment, and unforgettable memories for all ages.",
   hero: {
-    title: "Professional Birthday Party Planning Services",
+    title: "Birthday Party Planning Services",
     subtitle: "Creating fun-filled birthday celebrations with creative themes, beautiful décor, exciting entertainment, and unforgettable memories for all ages.",
     highlights: ["Premium Services","Expert Planners","Flawless Execution"],
     ctas: [
@@ -1019,16 +1019,16 @@ export const BirthdayPartiesData = {
     { title: "Kids Birthday Party Planning", description: "We organize exciting birthday celebrations for children with cartoon themes, games, magic shows, entertainers, fun activities, mascots, and interactive experiences that keep kids engaged and happy.", icon: faCakeCandles },
     { title: "Entertainment & Activities", description: "Make your celebration unforgettable with DJs, live music, games, emcees, dance performances, magicians, artists, performers, and customized entertainment programs.", icon: faSmile },
     { title: "Catering & Food Arrangements", description: "Delight your guests with customized menus, themed food counters, birthday cakes, dessert stations, snacks, beverages, and complete catering services.", icon: faUtensils },
-    { title: "Photography & Videography", description: "Capture every smile and precious moment with professional photography, candid shoots, cinematic videos, drone coverage, and social media-ready event highlights.", icon: faCamera },
+    { title: "Photography & Videography", description: "Capture every smile and precious moment with photography, candid shoots, cinematic videos, drone coverage, and social media-ready event highlights.", icon: faCamera },
     { title: "Guest Management & Event Coordination", description: "From invitations and RSVP management to guest assistance and on-site coordination, our team ensures a smooth and enjoyable experience for everyone.", icon: faBriefcase }
   ],
   whyChoose: [
-    { title: "Professional Birthday Party Planners", description: "", icon: faCakeCandles },
+    { title: "Birthday Party Planners", description: "", icon: faCakeCandles },
     { title: "Creative Theme & Decoration Concepts", description: "", icon: faPalette },
     { title: "Customized Event Solutions", description: "", icon: faCheckCircle },
     { title: "Fun-Filled Entertainment Programs", description: "", icon: faSmile },
     { title: "Complete Event Coordination", description: "", icon: faBriefcase },
-    { title: "Professional Photography & Videography", description: "", icon: faCamera },
+    { title: "Photography & Videography", description: "", icon: faCamera },
     { title: "Personalized Guest Experiences", description: "", icon: faUsers },
     { title: "Stress-Free Event Management", description: "", icon: faBriefcase }
   ],
@@ -1072,7 +1072,7 @@ export const PersonalCelebrationsData = {
   title: "Personal Celebrations Planning Services - Leor Media",
   subtitle: "Creating memorable celebrations for life's special moments with personalized planning, creative décor, exceptional hospitality, and flawless event execution.",
   hero: {
-    title: "Professional Personal Celebrations Planning Services",
+    title: "Personal Celebrations Planning Services",
     subtitle: "Creating memorable celebrations for life's special moments with personalized planning, creative décor, exceptional hospitality, and flawless event execution.",
     highlights: ["Premium Services","Expert Planners","Flawless Execution"],
     ctas: [
@@ -1091,17 +1091,17 @@ export const PersonalCelebrationsData = {
     { title: "Birthday & Anniversary Celebrations", description: "From children's birthdays and milestone birthdays to wedding anniversaries and family celebrations, we create joyful events that bring loved ones together.", icon: faCakeCandles },
     { title: "Surprise Parties & Special Events", description: "Make your special moments even more memorable with professionally planned surprise parties, achievement celebrations, retirement functions, reunions, and personalized gatherings.", icon: faCheckCircle },
     { title: "Entertainment & Activities", description: "Keep your guests engaged with live music, DJs, performers, games, interactive activities, emcees, cultural programs, and customized entertainment options.", icon: faSmile },
-    { title: "Photography & Videography", description: "Capture every smile, emotion, and celebration through professional photography, cinematic videography, candid moments, and high-quality event coverage.", icon: faCamera },
+    { title: "Photography & Videography", description: "Capture every smile, emotion, and celebration through photography, cinematic videography, candid moments, and high-quality event coverage.", icon: faCamera },
     { title: "Catering & Hospitality", description: "We coordinate delicious catering services, customized menus, guest hospitality, refreshments, and dining experiences that complement your event perfectly.", icon: faUtensils },
     { title: "Guest Management & Event Coordination", description: "From invitations and RSVP tracking to guest assistance and on-site coordination, our team ensures a smooth and enjoyable experience for everyone.", icon: faBriefcase }
   ],
   whyChoose: [
-    { title: "Professional Event Planning Team", description: "", icon: faUserTie },
+    { title: "Event Planning Team", description: "", icon: faUserTie },
     { title: "Personalized Celebration Experiences", description: "", icon: faCheckCircle },
     { title: "Creative Theme & Décor Concepts", description: "", icon: faCheckCircle },
     { title: "Complete Event Management Solutions", description: "", icon: faBriefcase },
     { title: "Premium Entertainment Services", description: "", icon: faSmile },
-    { title: "Professional Photography & Videography", description: "", icon: faCamera },
+    { title: "Photography & Videography", description: "", icon: faCamera },
     { title: "Customized Packages for Every Occasion", description: "", icon: faCheckCircle },
     { title: "Seamless Event Execution", description: "", icon: faCheckCircle }
   ],
@@ -1145,7 +1145,7 @@ export const ProductLaunchesData = {
   title: "Product Launch Event Management Services - Leor Media",
   subtitle: "Creating powerful product launch experiences that generate excitement, maximize brand visibility, engage audiences, and drive business growth.",
   hero: {
-    title: "Professional Product Launch Event Management Services",
+    title: "Product Launch Event Management Services",
     subtitle: "Creating powerful product launch experiences that generate excitement, maximize brand visibility, engage audiences, and drive business growth.",
     highlights: ["Premium Services","Expert Planners","Flawless Execution"],
     ctas: [
@@ -1155,7 +1155,7 @@ export const ProductLaunchesData = {
   },
   introduction: {
     heading: "# product-launches",
-    text: "Professional Product Launch Event Management Services",
+    text: "Product Launch Event Management Services",
     details: "Creating powerful product launch experiences that generate excitement, maximize brand visibility, engage audiences, and drive business growth."
   },
   services: [
@@ -1166,10 +1166,10 @@ export const ProductLaunchesData = {
     { title: "Media & Press Management", description: "We coordinate media invitations, press interactions, journalist engagement, photography coverage, and public relations support to maximize event exposure.", icon: faBriefcase },
     { title: "Celebrity & Influencer Engagement", description: "Boost visibility and credibility through celebrity appearances, influencers, brand ambassadors, keynote speakers, and industry experts who amplify your launch reach.", icon: faCamera },
     { title: "Audio Visual & Technical Production", description: "Our advanced event production services include LED walls, projection mapping, sound systems, lighting design, live streaming, and technical support for flawless presentations.", icon: faMusic },
-    { title: "Guest Management & Hospitality", description: "We manage registrations, invitations, VIP coordination, attendee experiences, hospitality services, and on-site support to ensure a professional event atmosphere.", icon: faBriefcase }
+    { title: "Guest Management & Hospitality", description: "We manage registrations, invitations, VIP coordination, attendee experiences, hospitality services, and on-site support to ensure a event atmosphere.", icon: faBriefcase }
   ],
   whyChoose: [
-    { title: "Professional Product Launch Experts", description: "", icon: faUserTie },
+    { title: "Product Launch Experts", description: "", icon: faUserTie },
     { title: "Creative Brand Activation Strategies", description: "", icon: faBullseye },
     { title: "End-to-End Event Management", description: "", icon: faBriefcase },
     { title: "Advanced Event Production Solutions", description: "", icon: faCheckCircle },
@@ -1203,7 +1203,7 @@ export const ProductLaunchesData = {
   ],
   finalCTA: {
     title: "Contact Us",
-    text: "Partner with Leor Media for professional product launch event management services services.",
+    text: "Partner with Leor Media for product launch event management services services.",
     phones: ["+91-9666643456", "+91-9542248999"],
     ctas: [
       { text: "WhatsApp Us", link: "https://wa.me/919666643456", icon: "whatsapp" },
@@ -1218,7 +1218,7 @@ export const ConcertAndGigsData = {
   title: "Concerts & Live Gigs by Leor Media",
   subtitle: "Delivering extraordinary live entertainment experiences with world-class production, artist management, audience engagement, and flawless event execution.",
   hero: {
-    title: "Professional Concerts & Gigs Management Services",
+    title: "Concerts & Gigs Management Services",
     subtitle: "Delivering extraordinary live entertainment experiences with world-class production, artist management, audience engagement, and flawless event execution.",
     highlights: ["Stellar Production", "A-List Artists", "Massive Crowd Management"],
     ctas: [
@@ -1260,7 +1260,7 @@ export const ConcertAndGigsData = {
   ],
   finalCTA: {
     title: "Plan Your Next Live Music Event with Leor Media",
-    text: "Let Leor Media manage your concert or live gig with professional execution and world-class technical production.",
+    text: "Let Leor Media manage your concert or live gig with execution and world-class technical production.",
     phones: ["+91-9666643456", "+91-9542248999"],
     ctas: [
       { text: "WhatsApp Us", link: "https://wa.me/919666643456", icon: "whatsapp" },
@@ -1275,7 +1275,7 @@ export const AwardNightsData = {
   title: "Award Night Event Management Services - Leor Media",
   subtitle: "Creating prestigious award ceremonies that celebrate excellence, recognize achievements, inspire success, and deliver unforgettable guest experiences.",
   hero: {
-    title: "Professional Award Night Event Management Services",
+    title: "Award Night Event Management Services",
     subtitle: "Creating prestigious award ceremonies that celebrate excellence, recognize achievements, inspire success, and deliver unforgettable guest experiences.",
     highlights: ["Premium Services","Expert Planners","Flawless Execution"],
     ctas: [
@@ -1290,16 +1290,16 @@ export const AwardNightsData = {
   },
   services: [
     { title: "Strategic Event Planning", description: "Every successful award night begins with careful planning. Our team develops customized event concepts, award categories, show flow, stage programs, guest experiences, and event timelines that align with your objectives.", icon: faCheckCircle },
-    { title: "Venue Selection & Event Setup", description: "We help select the ideal venue and transform it into a prestigious award ceremony environment with elegant décor, branding elements, premium seating arrangements, and professional event infrastructure.", icon: faBriefcase },
+    { title: "Venue Selection & Event Setup", description: "We help select the ideal venue and transform it into a prestigious award ceremony environment with elegant décor, branding elements, premium seating arrangements, and event infrastructure.", icon: faBriefcase },
     { title: "Stage Design & Award Presentation Setup", description: "Create a grand atmosphere with stunning stage designs, LED backdrops, award presentation areas, custom branding, red carpet setups, and immersive visual experiences.", icon: faCamera },
     { title: "Audio Visual & Technical Production", description: "Our advanced event production services include LED screens, sound systems, intelligent lighting, projection technology, live streaming, and technical support to ensure a world-class presentation experience.", icon: faMusic },
-    { title: "Celebrity Hosts & Entertainment", description: "Enhance audience engagement with professional anchors, celebrity hosts, entertainers, live music performances, dance shows, and interactive event segments.", icon: faCamera },
+    { title: "Celebrity Hosts & Entertainment", description: "Enhance audience engagement with anchors, celebrity hosts, entertainers, live music performances, dance shows, and interactive event segments.", icon: faCamera },
     { title: "Award Coordination & Ceremony Management", description: "We manage award categories, winner announcements, trophy distribution, stage coordination, scripting, rehearsals, and overall ceremony flow to ensure a seamless experience.", icon: faBriefcase },
     { title: "Guest Management & Hospitality", description: "From invitations and registrations to VIP handling, hospitality services, accommodation support, and guest assistance, we provide exceptional attendee experiences.", icon: faBriefcase },
-    { title: "Photography & Videography", description: "Capture every achievement and memorable moment with professional photography, cinematic videography, drone coverage, highlight reels, and media-ready event content.", icon: faCamera }
+    { title: "Photography & Videography", description: "Capture every achievement and memorable moment with photography, cinematic videography, drone coverage, highlight reels, and media-ready event content.", icon: faCamera }
   ],
   whyChoose: [
-    { title: "Professional Award Night Organizers", description: "", icon: faBriefcase },
+    { title: "Award Night Organizers", description: "", icon: faBriefcase },
     { title: "Creative Event Concepts & Production", description: "", icon: faCheckCircle },
     { title: "Elegant Stage & Décor Design", description: "", icon: faPalette },
     { title: "Celebrity & Host Management", description: "", icon: faBriefcase },
@@ -1333,7 +1333,7 @@ export const AwardNightsData = {
   ],
   finalCTA: {
     title: "Contact Us",
-    text: "Partner with Leor Media for professional award night event management services services.",
+    text: "Partner with Leor Media for award night event management services services.",
     phones: ["+91-9666643456", "+91-9542248999"],
     ctas: [
       { text: "WhatsApp Us", link: "https://wa.me/919666643456", icon: "whatsapp" },
@@ -1348,7 +1348,7 @@ export const CarnivalsData = {
   title: "Carnival Event Management Services - Leor Media",
   subtitle: "Creating exciting carnival experiences with fun games, live entertainment, vibrant décor, interactive activities, and unforgettable moments for all ages.",
   hero: {
-    title: "Professional Carnival Event Management SPervices",
+    title: "Carnival Event Management SPervices",
     subtitle: "Creating exciting carnival experiences with fun games, live entertainment, vibrant décor, interactive activities, and unforgettable moments for all ages.",
     highlights: ["Premium Services","Expert Planners","Flawless Execution"],
     ctas: [
@@ -1357,7 +1357,7 @@ export const CarnivalsData = {
     ]
   },
   introduction: {
-    heading: "Professional Carnival Event Management SPervices",
+    heading: "Carnival Event Management SPervices",
     text: "Creating exciting carnival experiences with fun games, live entertainment, vibrant décor, interactive activities, and unforgettable moments for all ages.",
     details: ""
   },
@@ -1367,12 +1367,12 @@ export const CarnivalsData = {
     { title: "Fun Games & Activity Zones", description: "Keep guests entertained with exciting carnival games, children's activities, adventure zones, skill challenges, inflatable attractions, family entertainment areas, and interactive experiences.", icon: faSmile },
     { title: "Live Entertainment & Performances", description: "Create an energetic atmosphere with live music, DJs, dance performances, cultural shows, magicians, mascots, street performers, celebrity appearances, and stage entertainment.", icon: faMusic },
     { title: "Food Stalls & Festival Experiences", description: "Enhance the carnival experience with food courts, snack counters, dessert stations, beverage kiosks, live cooking stalls, and customized culinary experiences.", icon: faUtensils },
-    { title: "Crowd Management & Safety Planning", description: "Our professional team manages visitor flow, security coordination, emergency planning, crowd control, and safety measures to ensure a secure and enjoyable event environment.", icon: faBriefcase },
+    { title: "Crowd Management & Safety Planning", description: "Our team manages visitor flow, security coordination, emergency planning, crowd control, and safety measures to ensure a secure and enjoyable event environment.", icon: faBriefcase },
     { title: "Sponsorship & Brand Activation", description: "Maximize event visibility with sponsorship opportunities, promotional activities, experiential marketing zones, brand engagement programs, and audience interaction campaigns.", icon: faBullseye },
-    { title: "Photography & Event Coverage", description: "Capture the excitement and energy of your carnival through professional photography, videography, drone coverage, social media content, and live event documentation.", icon: faCamera }
+    { title: "Photography & Event Coverage", description: "Capture the excitement and energy of your carnival through photography, videography, drone coverage, social media content, and live event documentation.", icon: faCamera }
   ],
   whyChoose: [
-    { title: "Professional Carnival Event Organizers", description: "", icon: faBriefcase },
+    { title: "Carnival Event Organizers", description: "", icon: faBriefcase },
     { title: "Creative Theme & Experience Design", description: "", icon: faPalette },
     { title: "Complete Event Production Solutions", description: "", icon: faCheckCircle },
     { title: "Interactive Entertainment Planning", description: "", icon: faSmile },
@@ -1406,7 +1406,7 @@ export const CarnivalsData = {
   ],
   finalCTA: {
     title: "Contact Us",
-    text: "Partner with Leor Media for professional carnival event management services services.",
+    text: "Partner with Leor Media for carnival event management services services.",
     phones: ["+91-9666643456", "+91-9542248999"],
     ctas: [
       { text: "WhatsApp Us", link: "https://wa.me/919666643456", icon: "whatsapp" },
@@ -1421,7 +1421,7 @@ export const BrandPromotionalEventsData = {
   title: "Brand Promotional Event Management Services - Leor Media",
   subtitle: "Creating impactful brand experiences through innovative promotions, customer engagement, experiential marketing, and powerful brand activation campaigns.",
   hero: {
-    title: "Professional Brand Promotional Event Management Services",
+    title: "Brand Promotional Event Management Services",
     subtitle: "Creating impactful brand experiences through innovative promotions, customer engagement, experiential marketing, and powerful brand activation campaigns.",
     highlights: ["Premium Services","Expert Planners","Flawless Execution"],
     ctas: [
@@ -1445,7 +1445,7 @@ export const BrandPromotionalEventsData = {
     { title: "Lead Generation & Customer Engagement", description: "Drive business growth through customer interaction programs, lead collection activities, promotional contests, surveys, and audience engagement initiatives.", icon: faSmile }
   ],
   whyChoose: [
-    { title: "Professional Brand Promotion Experts", description: "", icon: faBullhorn },
+    { title: "Brand Promotion Experts", description: "", icon: faBullhorn },
     { title: "Creative Marketing & Activation Strategies", description: "", icon: faBullhorn },
     { title: "Customized Promotional Campaigns", description: "", icon: faBullhorn },
     { title: "End-to-End Event Management", description: "", icon: faBriefcase },
@@ -1479,7 +1479,7 @@ export const BrandPromotionalEventsData = {
   ],
   finalCTA: {
     title: "Contact Us",
-    text: "Partner with Leor Media for professional brand promotional event management services services.",
+    text: "Partner with Leor Media for brand promotional event management services services.",
     phones: ["+91-9666643456", "+91-9542248999"],
     ctas: [
       { text: "WhatsApp Us", link: "https://wa.me/919666643456", icon: "whatsapp" },
@@ -1494,7 +1494,7 @@ export const CelebArtistManagementData = {
   title: "Celebrity & Artist Management Services - Leor Media",
   subtitle: "Connecting events with celebrities, influencers, performers, and talented artists to create memorable experiences and powerful audience engagement.",
   hero: {
-    title: "Professional Celebrity & Artist Management Services",
+    title: "Celebrity & Artist Management Services",
     subtitle: "Connecting events with celebrities, influencers, performers, and talented artists to create memorable experiences and powerful audience engagement.",
     highlights: ["Premium Services","Expert Planners","Flawless Execution"],
     ctas: [
@@ -1503,29 +1503,29 @@ export const CelebArtistManagementData = {
     ]
   },
   introduction: {
-    heading: "Professional Celebrity & Artist Management Services",
+    heading: "Celebrity & Artist Management Services",
     text: "Connecting events with celebrities, influencers, performers, and talented artists to create memorable experiences and powerful audience engagement.",
     details: ""
   },
   services: [
-    { title: "Celebrity Booking & Coordination", description: "We arrange celebrity appearances for corporate events, product launches, brand activations, award functions, inaugurations, cultural festivals, and special occasions, ensuring professional coordination from start to finish.", icon: faBriefcase },
+    { title: "Celebrity Booking & Coordination", description: "We arrange celebrity appearances for corporate events, product launches, brand activations, award functions, inaugurations, cultural festivals, and special occasions, ensuring coordination from start to finish.", icon: faBriefcase },
     { title: "Artist Management Services", description: "Our team manages singers, musicians, DJs, dancers, comedians, motivational speakers, performers, and entertainers to deliver exceptional audience experiences.", icon: faBriefcase },
     { title: "Influencer Marketing & Brand Collaborations", description: "Boost your brand's visibility through influencer partnerships, social media promotions, celebrity endorsements, and strategic brand collaborations that maximize audience reach.", icon: faBullhorn },
     { title: "Live Concerts & Entertainment Shows", description: "From celebrity concerts and live music performances to cultural events and public entertainment programs, we manage every aspect of artist engagement and event execution.", icon: faMusic },
     { title: "Corporate Event Talent Solutions", description: "Enhance business events with keynote speakers, celebrity guests, motivational speakers, business influencers, anchors, and entertainment professionals who add value and engagement.", icon: faBuilding },
     { title: "Hospitality & Logistics Management", description: "We handle travel arrangements, accommodation, artist hospitality, security coordination, backstage management, transportation, and VIP services to ensure a seamless experience.", icon: faBriefcase },
-    { title: "Contract & Performance Management", description: "Our professional team oversees artist negotiations, contracts, scheduling, performance requirements, technical arrangements, and event coordination.", icon: faBriefcase },
+    { title: "Contract & Performance Management", description: "Our team oversees artist negotiations, contracts, scheduling, performance requirements, technical arrangements, and event coordination.", icon: faBriefcase },
     { title: "Event Production & Technical Support", description: "We provide complete stage production, sound systems, LED walls, lighting design, visual displays, and technical management to support world-class performances.", icon: faCheckCircle }
   ],
   whyChoose: [
-    { title: "Professional Celebrity Management Team", description: "", icon: faBriefcase },
+    { title: "Celebrity Management Team", description: "", icon: faBriefcase },
     { title: "Extensive Network of Artists & Performers", description: "", icon: faCamera },
     { title: "Seamless Talent Coordination", description: "", icon: faBriefcase },
     { title: "End-to-End Event Support", description: "", icon: faCheckCircle },
     { title: "Corporate & Entertainment Event Expertise", description: "", icon: faSmile },
     { title: "VIP Hospitality Management", description: "", icon: faBriefcase },
     { title: "Advanced Event Production Solutions", description: "", icon: faCheckCircle },
-    { title: "Reliable & Professional Execution", description: "", icon: faUserTie }
+    { title: "Reliable & Execution", description: "", icon: faUserTie }
   ],
   gallery: [
     { title: "Celebrity & Artist Management Services", image: EntertainmentImg },
@@ -1552,7 +1552,7 @@ export const CelebArtistManagementData = {
   ],
   finalCTA: {
     title: "Contact Us",
-    text: "Partner with Leor Media for professional celebrity & artist management services services.",
+    text: "Partner with Leor Media for celebrity & artist management services services.",
     phones: ["+91-9666643456", "+91-9542248999"],
     ctas: [
       { text: "WhatsApp Us", link: "https://wa.me/919666643456", icon: "whatsapp" },
@@ -1565,10 +1565,10 @@ export const CorporateSeminarsData = {
   SeoName: { seotitle: "corporate-seminars" },
   coverimage: CorporateEventsImg,
   title: "Corporate Seminars Management Services - Leor Media",
-  subtitle: "Empowering Businesses Through Professional Knowledge-Sharing Events",
+  subtitle: "Empowering Businesses Through Knowledge-Sharing Events",
   hero: {
     title: "corporate-seminars",
-    subtitle: "Empowering Businesses Through Professional Knowledge-Sharing Events",
+    subtitle: "Empowering Businesses Through Knowledge-Sharing Events",
     highlights: ["Premium Services","Expert Planners","Flawless Execution"],
     ctas: [
       { text: "Book Consultation", link: "/contactus", primary: true },
@@ -1576,27 +1576,27 @@ export const CorporateSeminarsData = {
     ]
   },
   introduction: {
-    heading: "Empowering Businesses Through Professional Knowledge-Sharing Events",
-    text: "Corporate seminars play a vital role in business growth, employee development, industry networking, and knowledge sharing. Whether it's a leadership seminar, business workshop, training session, educational conference, industry forum, or professional development event, successful execution requires strategic planning, seamless coordination, and a highly professional environment.",
+    heading: "Empowering Businesses Through Knowledge-Sharing Events",
+    text: "Corporate seminars play a vital role in business growth, employee development, industry networking, and knowledge sharing. Whether it's a leadership seminar, business workshop, training session, educational conference, industry forum, or development event, successful execution requires strategic planning, seamless coordination, and a highly environment.",
     details: "At Leor Media, we specialize in Corporate Seminars Management Services, delivering impactful seminar experiences that inspire learning, encourage collaboration, and strengthen business relationships. From planning and venue management to technical production and attendee engagement, we ensure every seminar achieves its objectives while providing an exceptional participant experience."
   },
   services: [
     { title: "Strategic Seminar Planning", description: "Every successful seminar begins with a clear strategy. Our team works closely with clients to understand objectives, audience requirements, event goals, and content structure to create a well-organized and impactful seminar experience.", icon: faCheckCircle },
-    { title: "Venue Selection & Setup", description: "We help identify and manage the ideal venue based on audience size, seminar format, accessibility, and technical requirements. Our team handles complete venue setup to ensure a professional atmosphere.", icon: faBriefcase },
+    { title: "Venue Selection & Setup", description: "We help identify and manage the ideal venue based on audience size, seminar format, accessibility, and technical requirements. Our team handles complete venue setup to ensure a atmosphere.", icon: faBriefcase },
     { title: "Speaker & Guest Coordination", description: "We coordinate keynote speakers, industry experts, trainers, panelists, moderators, and special guests, ensuring smooth communication and flawless session management.", icon: faBriefcase },
     { title: "Audio Visual & Technical Support", description: "Our advanced event technology solutions include LED screens, projectors, sound systems, microphones, presentation support, video conferencing, live streaming, and technical assistance throughout the event.", icon: faMusic },
     { title: "Registration & Attendee Management", description: "From online registrations and invitations to attendee check-ins and information desks, we manage the entire participant experience with professionalism and efficiency.", icon: faBriefcase },
-    { title: "Branding & Event Production", description: "Enhance your seminar's impact with custom branding, stage backdrops, digital displays, signage, presentation screens, and professional event production solutions.", icon: faPalette },
+    { title: "Branding & Event Production", description: "Enhance your seminar's impact with custom branding, stage backdrops, digital displays, signage, presentation screens, and event production solutions.", icon: faPalette },
     { title: "Hospitality & Guest Services", description: "We provide complete hospitality services, including refreshments, catering, VIP assistance, transportation coordination, accommodation arrangements, and guest support.", icon: faUsers },
-    { title: "Photography & Event Coverage", description: "Capture every important moment with professional photography, videography, live coverage, social media content creation, and post-event highlight reels.", icon: faCamera }
+    { title: "Photography & Event Coverage", description: "Capture every important moment with photography, videography, live coverage, social media content creation, and post-event highlight reels.", icon: faCamera }
   ],
   whyChoose: [
-    { title: "Professional Corporate Event Experts", description: "", icon: faUserTie },
+    { title: "Corporate Event Experts", description: "", icon: faUserTie },
     { title: "Customized Seminar Solutions", description: "", icon: faCheckCircle },
     { title: "Experienced Speaker Management Team", description: "", icon: faBriefcase },
     { title: "Advanced Audio Visual Technology", description: "", icon: faMusic },
     { title: "End-to-End Event Coordination", description: "", icon: faBriefcase },
-    { title: "Professional Registration Management", description: "", icon: faBriefcase },
+    { title: "Registration Management", description: "", icon: faBriefcase },
     { title: "Premium Hospitality Services", description: "", icon: faUtensils },
     { title: "Flawless Event Execution", description: "", icon: faCheckCircle }
   ],
@@ -1625,7 +1625,7 @@ export const CorporateSeminarsData = {
   ],
   finalCTA: {
     title: "Contact Us",
-    text: "Partner with Leor Media for professional corporate seminars management services services.",
+    text: "Partner with Leor Media for corporate seminars management services services.",
     phones: ["+91-9666643456", "+91-9542248999"],
     ctas: [
       { text: "WhatsApp Us", link: "https://wa.me/919666643456", icon: "whatsapp" },
@@ -1640,7 +1640,7 @@ export const ExhibitionsData = {
   title: "Exhibitions Management Services - Leor Media",
   subtitle: "Creating impactful exhibitions, trade shows, and business expos through innovative design, strategic planning, audience engagement, and flawless event execution.",
   hero: {
-    title: "Professional Exhibition Management Services",
+    title: "Exhibition Management Services",
     subtitle: "Creating impactful exhibitions, trade shows, and business expos through innovative design, strategic planning, audience engagement, and flawless event execution.",
     highlights: ["Premium Services","Expert Planners","Flawless Execution"],
     ctas: [
@@ -1661,10 +1661,10 @@ export const ExhibitionsData = {
     { title: "Audio Visual & Technical Production", description: "Our advanced event technology services include LED screens, sound systems, digital presentations, live demonstrations, lighting solutions, and technical support throughout the event.", icon: faMusic },
     { title: "Exhibitor & Visitor Management", description: "We manage exhibitor registrations, attendee registrations, visitor assistance, information desks, entry management, networking zones, and customer engagement activities.", icon: faBriefcase },
     { title: "Lead Generation & Business Networking", description: "Our exhibition solutions are designed to facilitate meaningful business interactions, networking opportunities, lead generation activities, and brand-building experiences.", icon: faBullseye },
-    { title: "Photography & Event Documentation", description: "Capture every important moment through professional photography, videography, drone coverage, social media content creation, and event highlight production.", icon: faCamera }
+    { title: "Photography & Event Documentation", description: "Capture every important moment through photography, videography, drone coverage, social media content creation, and event highlight production.", icon: faCamera }
   ],
   whyChoose: [
-    { title: "Professional Exhibition Management Experts", description: "", icon: faBriefcase },
+    { title: "Exhibition Management Experts", description: "", icon: faBriefcase },
     { title: "Creative Stall Design & Fabrication", description: "", icon: faPalette },
     { title: "End-to-End Event Coordination", description: "", icon: faBriefcase },
     { title: "Advanced Event Technology Solutions", description: "", icon: faCheckCircle },
@@ -1698,7 +1698,7 @@ export const ExhibitionsData = {
   ],
   finalCTA: {
     title: "Contact Us",
-    text: "Partner with Leor Media for professional exhibitions management services services.",
+    text: "Partner with Leor Media for exhibitions management services services.",
     phones: ["+91-9666643456", "+91-9542248999"],
     ctas: [
       { text: "WhatsApp Us", link: "https://wa.me/919666643456", icon: "whatsapp" },
@@ -1765,7 +1765,7 @@ export const GenericWeddingPlannersDetailPageData = {
 
   coverimage: DestinationWeddingImg,
   title:"Event Planning Services",
-  subtitle:"Turning your special moments into lifelong memories with professional planning and flawless execution.",
+  subtitle:"Turning your special moments into lifelong memories with planning and flawless execution.",
   coverImage: {
     src: DestinationWeddingImg,
     style: {

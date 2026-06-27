@@ -576,7 +576,7 @@ const HomePage = () => {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {galleryImages.map((imgSrc, index) => (
+            {galleryImages.slice(0, 8).map((imgSrc, index) => (
               <div
                 key={index}
                 className="group relative aspect-square overflow-hidden rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer bg-white"
@@ -588,6 +588,16 @@ const HomePage = () => {
                 />
               </div>
             ))}
+          </div>
+
+          <div className="mt-10 md:mt-12 flex justify-center">
+            <Link
+              to="/gallery"
+              className="inline-flex items-center px-8 py-3.5 bg-primary text-black font-extrabold rounded-full hover:bg-primary/95 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/20 tracking-wider text-sm uppercase group"
+            >
+              View Full Gallery
+              <FaArrowRight className="ml-2.5 text-[14px] transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
           </div>
         </div>
       </section>

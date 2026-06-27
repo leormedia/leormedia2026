@@ -70,7 +70,7 @@ export const EventsCompany = {
       title: "Corporate Events",
       path: "/services/events/corporate-events",
       icon: faBriefcase,
-      description: "Professional event management for businesses.",
+      description: "event management for businesses.",
     },
     {
       title: "Entertainment Events",
@@ -103,17 +103,17 @@ export const EventsCompany = {
 export const CorporateMeetingsData = {
   SeoName: { seotitle: "corporate-meetings" },
   title: "Corporate Meetings Management - Leor Media",
-  subtitle: "Professional Corporate Meeting Planning & Management Services",
+  subtitle: "Corporate Meeting Planning & Management Services",
   coverimage: EventHeroCover,
   categoryLabel: "Corporate Meetings Management",
   hero: {
     title: "Corporate Meetings",
-    subtitle: "Professional Corporate Meeting Planning & Management Services",
+    subtitle: "Corporate Meeting Planning & Management Services",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
   },
   introduction: {
-    heading: "Professional Corporate Meeting Planning & Management Services",
-    text: "Successful corporate meetings require more than just a venue. They demand strategic planning, flawless execution, and a professional environment that inspires collaboration and productivity. At Leor Media, we specialize in corporate meeting management, delivering seamless experiences for businesses of all sizes.",
+    heading: "Corporate Meeting Planning & Management Services",
+    text: "Successful corporate meetings require more than just a venue. They demand strategic planning, flawless execution, and a environment that inspires collaboration and productivity. At Leor Media, we specialize in corporate meeting management, delivering seamless experiences for businesses of all sizes.",
     details:
       "Whether you are organizing board meetings, annual business conferences, client presentations, leadership summits, team-building sessions, or corporate networking events, our expert team ensures every detail is managed with precision and professionalism.",
   },
@@ -140,7 +140,7 @@ export const CorporateMeetingsData = {
     {
       title: "Branding & Event Design",
       description:
-        "We create professional branding elements, stage designs, digital displays, welcome signage, and customized event experiences that reflect your company's identity.",
+        "We create branding elements, stage designs, digital displays, welcome signage, and customized event experiences that reflect your company's identity.",
       icon: faDraftingCompass,
     },
     {
@@ -167,18 +167,18 @@ export const ConferencesSeminarsData = {
   SeoName: { seotitle: "conferences-seminars" },
   title: "Conferences & Seminars - Leor Media",
   subtitle:
-    "Creating impactful conferences, inspiring seminars, and memorable professional events through strategic planning and flawless execution.",
+    "Creating impactful conferences, inspiring seminars, and memorable events through strategic planning and flawless execution.",
   coverimage: EventHeroCover,
   categoryLabel: "Conferences & Seminars",
   hero: {
-    title: "Professional Conferences & Seminars Management Services",
+    title: "Conferences & Seminars Management Services",
     subtitle:
-      "Creating impactful conferences, inspiring seminars, and memorable professional events through strategic planning and flawless execution.",
+      "Creating impactful conferences, inspiring seminars, and memorable events through strategic planning and flawless execution.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
   },
   introduction: {
-    heading: "Professional Conference & Seminar Planning Services",
-    text: "Transform your ideas into impactful events with Leor Media's expert conference & seminar management services. We specialize in planning, organizing, and executing professional conferences, business seminars, industry summits, educational workshops, leadership forums, and corporate knowledge-sharing events.",
+    heading: "Conference & Seminar Planning Services",
+    text: "Transform your ideas into impactful events with Leor Media's expert conference & seminar management services. We specialize in planning, organizing, and executing conferences, business seminars, industry summits, educational workshops, leadership forums, and corporate knowledge-sharing events.",
     details:
       "Whether you're hosting a small business seminar or a large-scale international conference, our experienced event management team ensures every aspect of your event is planned and executed flawlessly.",
   },
@@ -187,7 +187,7 @@ export const ConferencesSeminarsData = {
     {
       title: "Venue Selection & Event Setup",
       description:
-        "We identify and manage the ideal venue based on your event requirements, audience size, and business objectives. From conference halls to convention centers, we ensure a professional and comfortable environment.",
+        "We identify and manage the ideal venue based on your event requirements, audience size, and business objectives. From conference halls to convention centers, we ensure a and comfortable environment.",
       icon: faBriefcase,
     },
     {
@@ -223,7 +223,7 @@ export const ConferencesSeminarsData = {
   ],
   finalCTA: {
     title: "Contact Us",
-    text: "At Leor Media, we believe every conference and seminar should create lasting value for attendees. Our expertise, creativity, and attention to detail help organizations deliver impactful events that educate, inspire, and strengthen professional relationships. Partner with Leor Media to create conferences and seminars that leave a lasting impression on your audience and achieve your event objectives successfully.",
+    text: "At Leor Media, we believe every conference and seminar should create lasting value for attendees. Our expertise, creativity, and attention to detail help organizations deliver impactful events that educate, inspire, and strengthen relationships. Partner with Leor Media to create conferences and seminars that leave a lasting impression on your audience and achieve your event objectives successfully.",
     phones: ["+91-9666643456"],
   },
 };
@@ -236,7 +236,7 @@ export const ProductLaunchEventsData = {
   coverimage: EventHeroCover,
   categoryLabel: "Product Launch Events",
   hero: {
-    title: "Professional Product Launch Event Management Services",
+    title: "Product Launch Event Management Services",
     subtitle:
       "Creating unforgettable product launch experiences that build excitement, strengthen brand presence, and drive business success.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
@@ -259,7 +259,7 @@ export const ProductLaunchEventsData = {
     {
       title: "Venue Selection & Event Setup",
       description:
-        "Our team identifies the ideal venue and creates a professional event environment with customized layouts, stage design, seating arrangements, and branded event experiences.",
+        "Our team identifies the ideal venue and creates a event environment with customized layouts, stage design, seating arrangements, and branded event experiences.",
       icon: faBriefcase,
     },
     {
@@ -308,7 +308,7 @@ export const AwardFunctionsData = {
   coverimage: EventHeroCover,
   categoryLabel: "Award Functions",
   hero: {
-    title: "Professional Award Functions Management Services",
+    title: "Award Functions Management Services",
     subtitle:
       "Creating prestigious award ceremonies that celebrate achievements, inspire excellence, and deliver unforgettable experiences with elegance and professionalism. 🏆✨",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
@@ -336,7 +336,7 @@ export const AwardFunctionsData = {
     {
       title: "Stage Design & Award Presentation Experience",
       description:
-        "Our creative team develops stunning stage designs, LED backdrops, award presentation zones, red carpet experiences, and professional branding elements that elevate the prestige of your event.",
+        "Our creative team develops stunning stage designs, LED backdrops, award presentation zones, red carpet experiences, and branding elements that elevate the prestige of your event.",
       icon: faStar,
     },
     {
@@ -354,7 +354,7 @@ export const AwardFunctionsData = {
     {
       title: "Photography & Videography",
       description:
-        "Capture every memorable moment with professional photography, videography, event highlights, interviews, and award ceremony coverage.",
+        "Capture every memorable moment with photography, videography, event highlights, interviews, and award ceremony coverage.",
       icon: faStar,
     },
     {
@@ -450,7 +450,7 @@ export const AnnualDayCelebrationsData = {
   coverimage: EventHeroCover,
   categoryLabel: "Annual Day Celebrations",
   hero: {
-    title: "Professional Annual Day Celebrations Management Services",
+    title: "Annual Day Celebrations Management Services",
     subtitle:
       "Transforming annual celebrations into memorable experiences that recognize achievements, inspire employees, and strengthen organizational culture.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
@@ -472,7 +472,7 @@ export const AnnualDayCelebrationsData = {
     {
       title: "Venue Selection & Event Setup",
       description:
-        "From luxury banquet halls and convention centers to outdoor venues, we help select the perfect location and create stunning event environments with professional décor and seamless arrangements.",
+        "From luxury banquet halls and convention centers to outdoor venues, we help select the perfect location and create stunning event environments with décor and seamless arrangements.",
       icon: faBriefcase,
     },
     {
@@ -521,7 +521,7 @@ export const EmployeeEngagementEventsData = {
   coverimage: EventHeroCover,
   categoryLabel: "Employee Engagement Events",
   hero: {
-    title: "Professional Employee Engagement Events Management Services",
+    title: "Employee Engagement Events Management Services",
     subtitle:
       "Creating meaningful employee experiences that boost morale, strengthen workplace culture, improve collaboration, and inspire organizational success.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
@@ -592,7 +592,7 @@ export const CelebrityManagementData = {
   coverimage: EventHeroCover,
   categoryLabel: "Celebrity Management",
   hero: {
-    title: "Professional Celebrity Management Services",
+    title: "Celebrity Management Services",
     subtitle:
       "Connecting brands and events with renowned celebrities, influencers, and performers to create unforgettable experiences, powerful brand visibility, and lasting audience impact.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
@@ -601,7 +601,7 @@ export const CelebrityManagementData = {
     heading: "Bringing Star Power to Your Events",
     text: "A celebrity appearance can transform an ordinary event into an extraordinary experience. Whether it's a corporate gathering, brand launch, award ceremony, wedding celebration, concert, promotional campaign, or private event, celebrity presence creates excitement, attracts attention, and leaves a lasting impression.",
     details:
-      "At Leor Media, we specialize in professional Celebrity Management Services, connecting brands and event organizers with renowned celebrities, artists, influencers, performers, speakers, and public personalities to create unforgettable event experiences.",
+      "At Leor Media, we specialize in Celebrity Management Services, connecting brands and event organizers with renowned celebrities, artists, influencers, performers, speakers, and public personalities to create unforgettable event experiences.",
   },
   servicesTitle: "Celebrity Management Services",
   services: [
@@ -650,7 +650,7 @@ export const CelebrityManagementData = {
   ],
   finalCTA: {
     title: "Contact Us",
-    text: "Partner with Leor Media for professional celebrity management services.",
+    text: "Partner with Leor Media for celebrity management services.",
     phones: ["+91-9666643456"],
   },
 };
@@ -663,7 +663,7 @@ export const LiveConcertsData = {
   coverimage: EventHeroCover,
   categoryLabel: "Live Concerts",
   hero: {
-    title: "Professional Live Concert Management Services",
+    title: "Live Concert Management Services",
     subtitle:
       "Creating electrifying live concert experiences with world-class production, artist management, audience engagement, and seamless event execution.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
@@ -697,13 +697,13 @@ export const LiveConcertsData = {
     {
       title: "Sound, Lighting & Technical Solutions",
       description:
-        "Deliver an immersive live music experience with advanced sound systems, professional lighting, video production, LED displays, live streaming, and technical event support.",
+        "Deliver an immersive live music experience with advanced sound systems, lighting, video production, LED displays, live streaming, and technical event support.",
       icon: faMusic,
     },
     {
       title: "Crowd Management & Security",
       description:
-        "We prioritize safety through professional crowd management, security planning, access control, emergency support, and on-site event supervision.",
+        "We prioritize safety through crowd management, security planning, access control, emergency support, and on-site event supervision.",
       icon: faBriefcase,
     },
     {
@@ -734,7 +734,7 @@ export const DjNightsData = {
   coverimage: EventHeroCover,
   categoryLabel: "DJ Nights & Club Events",
   hero: {
-    title: "Professional DJ Night Event Management Services",
+    title: "DJ Night Event Management Services",
     subtitle:
       "Creating electrifying DJ night experiences with powerful music, stunning visuals, world-class entertainment, and unforgettable party vibes.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
@@ -754,7 +754,7 @@ export const DjNightsData = {
       icon: faBriefcase,
     },
     {
-      title: "Professional DJ Booking",
+      title: "DJ Booking",
       description:
         "We collaborate with talented DJs, celebrity DJs, music artists, and entertainment performers to create the perfect musical atmosphere for your event.",
       icon: faMusic,
@@ -774,7 +774,7 @@ export const DjNightsData = {
     {
       title: "Crowd Management & Event Security",
       description:
-        "Safety remains our priority. We provide professional crowd control, security management, entry coordination, and event supervision to ensure a smooth and enjoyable experience for all attendees.",
+        "Safety remains our priority. We provide crowd control, security management, entry coordination, and event supervision to ensure a smooth and enjoyable experience for all attendees.",
       icon: faBriefcase,
     },
     {
@@ -805,7 +805,7 @@ export const FashionShowsData = {
   coverimage: EventHeroCover,
   categoryLabel: "Fashion Shows & Runways",
   hero: {
-    title: "Professional Fashion Show Management Services",
+    title: "Fashion Show Management Services",
     subtitle:
       "Creating stunning runway experiences that showcase fashion, creativity, elegance, and brand excellence through world-class event management.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
@@ -833,7 +833,7 @@ export const FashionShowsData = {
     {
       title: "Model Coordination & Management",
       description:
-        "From professional models and show coordinators to backstage management and rehearsals, we ensure a smooth and professional runway presentation.",
+        "From models and show coordinators to backstage management and rehearsals, we ensure a smooth and runway presentation.",
       icon: faBriefcase,
     },
     {
@@ -876,7 +876,7 @@ export const CulturalEventsData = {
   coverimage: EventHeroCover,
   categoryLabel: "Cultural Events & Festivals",
   hero: {
-    title: "Professional Cultural Events Management Services",
+    title: "Cultural Events Management Services",
     subtitle:
       "Creating vibrant cultural experiences that celebrate traditions, showcase talent, inspire communities, and create unforgettable memories.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
@@ -910,7 +910,7 @@ export const CulturalEventsData = {
     {
       title: "Audio Visual & Technical Support",
       description:
-        "From professional sound systems and lighting setups to LED screens and live streaming services, we provide complete technical solutions for a flawless event experience.",
+        "From sound systems and lighting setups to LED screens and live streaming services, we provide complete technical solutions for a flawless event experience.",
       icon: faMusic,
     },
     {
@@ -1041,7 +1041,7 @@ export const MallActivationsData = {
   coverimage: EventHeroCover,
   categoryLabel: "Mall Activations",
   hero: {
-    title: "Professional Mall Activation Management Services",
+    title: "Mall Activation Management Services",
     subtitle:
       "Creating engaging brand experiences that attract shoppers, increase customer interaction, boost brand visibility, and deliver measurable marketing results.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
@@ -1113,7 +1113,7 @@ export const RoadShowsData = {
   coverimage: EventHeroCover,
   categoryLabel: "Road Shows",
   hero: {
-    title: "Professional Road Show Management Services",
+    title: "Road Show Management Services",
     subtitle:
       "Creating high-impact road show campaigns that increase brand visibility, engage audiences, and deliver powerful on-ground marketing experiences.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
@@ -1184,7 +1184,7 @@ export const StoreLaunchesData = {
   coverimage: EventHeroCover,
   categoryLabel: "Store Launches",
   hero: {
-    title: "Professional Store Launch Management Services",
+    title: "Store Launch Management Services",
     subtitle:
       "Creating impactful store launch experiences that attract customers, build brand awareness, generate excitement, and drive business growth.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
@@ -1237,13 +1237,13 @@ export const StoreLaunchesData = {
     {
       title: "Hospitality & Guest Management",
       description:
-        "From VIP guest coordination and customer registrations to refreshments, hospitality, and event-day support, we ensure a smooth and professional experience for everyone attending.",
+        "From VIP guest coordination and customer registrations to refreshments, hospitality, and event-day support, we ensure a smooth and experience for everyone attending.",
       icon: faBriefcase,
     },
   ],
   finalCTA: {
     title: "Contact Us",
-    text: "At Leor Media, we understand that first impressions matter. Our innovative approach, creative event concepts, and professional execution help businesses launch their stores with confidence while creating memorable experiences that attract customers and strengthen brand visibility. Partner with Leor Media to organize a successful Store Launch Event that generates excitement, increases footfall, and sets the foundation for long-term business success.",
+    text: "At Leor Media, we understand that first impressions matter. Our innovative approach, creative event concepts, and execution help businesses launch their stores with confidence while creating memorable experiences that attract customers and strengthen brand visibility. Partner with Leor Media to organize a successful Store Launch Event that generates excitement, increases footfall, and sets the foundation for long-term business success.",
     phones: ["+91-9666643456"],
   },
 };
@@ -1252,17 +1252,17 @@ export const PoliticalCampaignEventsData = {
   SeoName: { seotitle: "political-campaign-events" },
   title: "Political Campaign Events - Leor Media",
   subtitle:
-    "Delivering well-organized public outreach events, campaign gatherings, and community engagement programs with seamless planning and professional execution.",
+    "Delivering well-organized public outreach events, campaign gatherings, and community engagement programs with seamless planning and execution.",
   coverimage: EventHeroCover,
   categoryLabel: "Political Campaign Events",
   hero: {
-    title: "Professional Political Campaign Event Management Services",
+    title: "Political Campaign Event Management Services",
     subtitle:
-      "Delivering well-organized public outreach events, campaign gatherings, and community engagement programs with seamless planning and professional execution.",
+      "Delivering well-organized public outreach events, campaign gatherings, and community engagement programs with seamless planning and execution.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
   },
   introduction: {
-    heading: "Professional Event Management for Public Outreach Campaigns",
+    heading: "Event Management for Public Outreach Campaigns",
     text: "Successful political and public outreach events require strategic planning, seamless coordination, and effective audience engagement. At Leor Media, we specialize in organizing and managing political campaign events, public meetings, awareness programs, community outreach initiatives, and large-scale gatherings with professionalism and precision.",
     details:
       "From campaign launches and public rallies to voter awareness programs and community engagement events, our experienced team ensures every event is executed smoothly while delivering a memorable experience for attendees.",
@@ -1278,7 +1278,7 @@ export const PoliticalCampaignEventsData = {
     {
       title: "Stage Design & Event Production",
       description:
-        "We create professional stage setups, podium arrangements, LED displays, event branding, backdrops, and audience seating layouts that enhance visibility and engagement.",
+        "We create stage setups, podium arrangements, LED displays, event branding, backdrops, and audience seating layouts that enhance visibility and engagement.",
       icon: faDraftingCompass,
     },
     {
@@ -1296,7 +1296,7 @@ export const PoliticalCampaignEventsData = {
     {
       title: "Branding & Promotional Support",
       description:
-        "We provide event branding materials, banners, digital displays, signage, and promotional elements that create a professional and organized event environment.",
+        "We provide event branding materials, banners, digital displays, signage, and promotional elements that create a and organized event environment.",
       icon: faDraftingCompass,
     },
     {
@@ -1314,7 +1314,7 @@ export const PoliticalCampaignEventsData = {
   ],
   finalCTA: {
     title: "Contact Us",
-    text: "At Leor Media, we understand the importance of professional event execution in public outreach and community engagement. Our expertise in event planning, logistics, branding, and production helps organizations conduct impactful events that are organized, engaging, and memorable. Partner with Leor Media to plan and manage Political Campaign Events with professionalism, efficiency, and attention to every detail.",
+    text: "At Leor Media, we understand the importance of event execution in public outreach and community engagement. Our expertise in event planning, logistics, branding, and production helps organizations conduct impactful events that are organized, engaging, and memorable. Partner with Leor Media to plan and manage Political Campaign Events with professionalism, efficiency, and attention to every detail.",
     phones: ["+91-9666643456"],
   },
 };
@@ -1327,7 +1327,7 @@ export const PublicRelationEventsData = {
   coverimage: EventHeroCover,
   categoryLabel: "Public Relations Events",
   hero: {
-    title: "Professional Public Relations Event Management Services",
+    title: "Public Relations Event Management Services",
     subtitle:
       "Creating impactful PR events that strengthen brand reputation, engage stakeholders, generate media visibility, and build meaningful connections.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
@@ -1336,7 +1336,7 @@ export const PublicRelationEventsData = {
     heading: "Building Strong Relationships Through Impactful Events",
     text: "Public relations events play a crucial role in shaping brand perception, strengthening stakeholder relationships, and enhancing public visibility. A well-executed PR event creates meaningful connections, generates positive media attention, and reinforces brand credibility.",
     details:
-      "At Leor Media, we specialize in planning and executing professional public relations events that help organizations communicate effectively with their audiences, media representatives, business partners, investors, customers, and the community.",
+      "At Leor Media, we specialize in planning and executing public relations events that help organizations communicate effectively with their audiences, media representatives, business partners, investors, customers, and the community.",
   },
   servicesTitle: "Public Relations Events Services",
   services: [
@@ -1349,7 +1349,7 @@ export const PublicRelationEventsData = {
     {
       title: "Press Conferences & Media Events",
       description:
-        "We organize professional press conferences, media briefings, product announcements, and corporate communication events that facilitate effective interaction between organizations and media representatives.",
+        "We organize press conferences, media briefings, product announcements, and corporate communication events that facilitate effective interaction between organizations and media representatives.",
       icon: faBullhorn,
     },
     {
@@ -1361,7 +1361,7 @@ export const PublicRelationEventsData = {
     {
       title: "Event Branding & Production",
       description:
-        "From stage design and event décor to branded displays, LED screens, signage, and promotional materials, we create professional event environments that reflect your brand identity.",
+        "From stage design and event décor to branded displays, LED screens, signage, and promotional materials, we create event environments that reflect your brand identity.",
       icon: faDraftingCompass,
     },
     {
@@ -1379,7 +1379,7 @@ export const PublicRelationEventsData = {
     {
       title: "Photography, Videography & Event Coverage",
       description:
-        "Capture every important moment with professional photography, videography, social media coverage, event highlights, and media-ready content creation.",
+        "Capture every important moment with photography, videography, social media coverage, event highlights, and media-ready content creation.",
       icon: faStar,
     },
   ],
@@ -1398,7 +1398,7 @@ export const ExhibitionStallDesignData = {
   coverimage: EventHeroCover,
   categoryLabel: "Exhibition Stall Design",
   hero: {
-    title: "Professional Exhibition Stall Design Services",
+    title: "Exhibition Stall Design Services",
     subtitle:
       "Designing innovative exhibition stalls that attract visitors, showcase your brand, increase engagement, and generate valuable business opportunities.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
@@ -1469,14 +1469,14 @@ export const TradeShowManagementData = {
   coverimage: EventHeroCover,
   categoryLabel: "Trade Show Management",
   hero: {
-    title: "Professional Trade Show Management Services",
+    title: "Trade Show Management Services",
     subtitle:
       "Creating impactful trade show experiences that increase brand visibility, generate quality leads, strengthen business relationships, and drive measurable growth.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
   },
   introduction: {
     heading:
-      "Maximizing Brand Visibility Through Professional Trade Show Experiences",
+      "Maximizing Brand Visibility Through Trade Show Experiences",
     text: "Trade shows provide businesses with a powerful platform to showcase products, connect with industry leaders, generate quality leads, and build valuable business relationships. A successful trade show presence requires strategic planning, innovative presentation, and flawless execution.",
     details:
       "At Leor Media, we specialize in comprehensive Trade Show Management Services, helping brands create impactful exhibition experiences that attract visitors, strengthen brand recognition, and deliver measurable business results.",
@@ -1541,7 +1541,7 @@ export const ExpoPromotionsData = {
   coverimage: EventHeroCover,
   categoryLabel: "Expo Promotions",
   hero: {
-    title: "Professional Expo Promotion Services",
+    title: "Expo Promotion Services",
     subtitle:
       "Driving brand visibility, audience engagement, and lead generation through innovative expo promotions, strategic marketing campaigns, and impactful exhibition experiences.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
@@ -1550,7 +1550,7 @@ export const ExpoPromotionsData = {
     heading: "Maximizing Brand Exposure Through Strategic Expo Promotions",
     text: "Expos and exhibitions offer businesses a unique opportunity to connect with potential customers, showcase products, generate qualified leads, and strengthen brand visibility. However, success at an expo requires more than simply having a booth—it requires strategic promotion, audience engagement, and impactful brand experiences.",
     details:
-      "At Leor Media, we specialize in **Expo Promotion Services** that help businesses stand out in competitive exhibition environments. Our creative promotional strategies, interactive marketing activities, and professional event management solutions ensure your brand attracts attention and achieves measurable results.",
+      "At Leor Media, we specialize in **Expo Promotion Services** that help businesses stand out in competitive exhibition environments. Our creative promotional strategies, interactive marketing activities, and event management solutions ensure your brand attracts attention and achieves measurable results.",
   },
   servicesTitle: "Expo Promotions Services",
   services: [
@@ -1593,13 +1593,13 @@ export const ExpoPromotionsData = {
     {
       title: "Audio Visual & Promotional Support",
       description:
-        "We provide LED screens, digital displays, branding materials, promotional setups, presentation systems, and technical support to create a professional exhibition presence.",
+        "We provide LED screens, digital displays, branding materials, promotional setups, presentation systems, and technical support to create a exhibition presence.",
       icon: faMusic,
     },
   ],
   finalCTA: {
     title: "Contact Us",
-    text: "Partner with Leor Media for professional expo promotions services.",
+    text: "Partner with Leor Media for expo promotions services.",
     phones: ["+91-9666643456"],
   },
 };
@@ -1612,7 +1612,7 @@ export const PoojaEventsData = {
   coverimage: EventHeroCover,
   categoryLabel: "Pooja Events",
   hero: {
-    title: "Professional Pooja Event Management Services",
+    title: "Pooja Event Management Services",
     subtitle:
       "Organizing sacred pooja ceremonies with traditional elegance, spiritual devotion, seamless planning, and memorable event experiences.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
@@ -1621,7 +1621,7 @@ export const PoojaEventsData = {
     heading: "Celebrating Sacred Traditions with Grace & Perfection",
     text: "Pooja ceremonies hold deep spiritual significance and mark important milestones in life, business, and family traditions. Whether it's a housewarming ceremony, Satyanarayana Swamy Vratham, Ganesh Pooja, Lakshmi Pooja, Vastu Pooja, Bhoomi Pooja, or temple event, every ritual deserves a peaceful, well-organized, and memorable celebration.",
     details:
-      "At Leor Media, we specialize in professional Pooja event management services, ensuring every religious and spiritual gathering is conducted with devotion, tradition, and flawless execution. Our experienced team manages every detail, allowing families and organizations to focus on the spiritual significance of the occasion.",
+      "At Leor Media, we specialize in Pooja event management services, ensuring every religious and spiritual gathering is conducted with devotion, tradition, and flawless execution. Our experienced team manages every detail, allowing families and organizations to focus on the spiritual significance of the occasion.",
   },
   servicesTitle: "Pooja Events Services",
   services: [
@@ -1664,13 +1664,13 @@ export const PoojaEventsData = {
     {
       title: "Photography & Videography",
       description:
-        "Capture every meaningful moment of your sacred ceremony with professional photography and videography services that preserve memories for years to come.",
+        "Capture every meaningful moment of your sacred ceremony with photography and videography services that preserve memories for years to come.",
       icon: faStar,
     },
   ],
   finalCTA: {
     title: "Contact Us",
-    text: "At Leor Media, we understand the importance of preserving traditions while ensuring a seamless event experience. Our dedication to excellence, attention to detail, and respect for cultural values help create meaningful pooja events that bring families, communities, and organizations together. Whether you're planning a small family ceremony or a large religious gathering, Leor Media provides professional Pooja event management services that make every occasion peaceful, organized, and unforgettable.",
+    text: "At Leor Media, we understand the importance of preserving traditions while ensuring a seamless event experience. Our dedication to excellence, attention to detail, and respect for cultural values help create meaningful pooja events that bring families, communities, and organizations together. Whether you're planning a small family ceremony or a large religious gathering, Leor Media provides Pooja event management services that make every occasion peaceful, organized, and unforgettable.",
     phones: ["+91-9666643456"],
   },
 };
@@ -1683,7 +1683,7 @@ export const TempleFestivalsData = {
   coverimage: EventHeroCover,
   categoryLabel: "Temple Festivals",
   hero: {
-    title: "Professional Temple Festival Management Services",
+    title: "Temple Festival Management Services",
     subtitle:
       "Organizing sacred temple festivals with devotion, tradition, seamless planning, and exceptional event management for unforgettable spiritual experiences.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
@@ -1692,7 +1692,7 @@ export const TempleFestivalsData = {
     heading: "Celebrating Divine Traditions with Grandeur & Devotion",
     text: "Temple festivals are a beautiful expression of faith, culture, tradition, and community spirit. These sacred celebrations bring devotees together to honor deities, preserve cultural heritage, and experience spiritual joy. Organizing a successful temple festival requires careful planning, seamless coordination, and respect for religious traditions.",
     details:
-      "At Leor Media, we specialize in professional Temple Festival Management Services, delivering well-organized, spiritually enriching, and memorable celebrations. From annual temple festivals and Brahmotsavams to religious processions and cultural programs, our experienced team manages every aspect with dedication and excellence.",
+      "At Leor Media, we specialize in Temple Festival Management Services, delivering well-organized, spiritually enriching, and memorable celebrations. From annual temple festivals and Brahmotsavams to religious processions and cultural programs, our experienced team manages every aspect with dedication and excellence.",
   },
   servicesTitle: "Temple Festivals Services",
   services: [
@@ -1723,7 +1723,7 @@ export const TempleFestivalsData = {
     {
       title: "Sound Systems & Technical Support",
       description:
-        "Ensure clear communication and devotional experiences with professional audio systems, microphones, LED screens, live streaming solutions, and technical event support.",
+        "Ensure clear communication and devotional experiences with audio systems, microphones, LED screens, live streaming solutions, and technical event support.",
       icon: faMusic,
     },
     {
@@ -1741,7 +1741,7 @@ export const TempleFestivalsData = {
   ],
   finalCTA: {
     title: "Contact Us",
-    text: "At Leor Media, we understand the spiritual importance of temple festivals and the responsibility of managing sacred events with care and devotion. Our expertise in festival planning, event infrastructure, logistics, and crowd management helps create meaningful celebrations that honor traditions and bring communities together. Whether it's a local temple festival or a large-scale religious celebration, Leor Media provides professional Temple Festival Management Services that ensure every event is organized with excellence, respect, and spiritual significance.",
+    text: "At Leor Media, we understand the spiritual importance of temple festivals and the responsibility of managing sacred events with care and devotion. Our expertise in festival planning, event infrastructure, logistics, and crowd management helps create meaningful celebrations that honor traditions and bring communities together. Whether it's a local temple festival or a large-scale religious celebration, Leor Media provides Temple Festival Management Services that ensure every event is organized with excellence, respect, and spiritual significance.",
     phones: ["+91-9666643456"],
   },
 };
@@ -1754,7 +1754,7 @@ export const TraditionalCeremoniesData = {
   coverimage: EventHeroCover,
   categoryLabel: "Traditional Ceremonies",
   hero: {
-    title: "Professional Traditional Ceremonies Management Services",
+    title: "Traditional Ceremonies Management Services",
     subtitle:
       "Celebrating cultural traditions and family milestones with elegant planning, seamless execution, and unforgettable experiences.",
     ctas: [{ text: "Book Consultation", link: "/contactus", primary: true }],
@@ -1800,7 +1800,7 @@ export const TraditionalCeremoniesData = {
     {
       title: "Photography & Videography Services",
       description:
-        "Capture every meaningful moment with professional photography and videography that preserves the memories of your special occasion for generations to come.",
+        "Capture every meaningful moment with photography and videography that preserves the memories of your special occasion for generations to come.",
       icon: faStar,
     },
     {
@@ -1812,7 +1812,7 @@ export const TraditionalCeremoniesData = {
   ],
   finalCTA: {
     title: "Contact Us",
-    text: "At Leor Media, we believe that traditional ceremonies deserve thoughtful planning and heartfelt execution. Our dedication to preserving customs while delivering professional event management ensures every celebration is meaningful, memorable, and stress-free. Whether you're organizing an intimate family gathering or a large traditional celebration, Leor Media provides traditional ceremony management services that honor your traditions and create unforgettable memories for generations to cherish.",
+    text: "At Leor Media, we believe that traditional ceremonies deserve thoughtful planning and heartfelt execution. Our dedication to preserving customs while delivering event management ensures every celebration is meaningful, memorable, and stress-free. Whether you're organizing an intimate family gathering or a large traditional celebration, Leor Media provides traditional ceremony management services that honor your traditions and create unforgettable memories for generations to cherish.",
     phones: ["+91-9666643456"],
   },
 };

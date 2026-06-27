@@ -29,9 +29,9 @@ const Footer = () => {
                   />
                 </a>
                 <p className="max-w-xs mt-4 text-secondary">
-                  Leor Media offers creative event management, branding, and
-                  advertising solutions that elevate your brand and connect with
-                  your audience effectively.
+                  We are a fast-growing agency and we take over organising every event of your life with
+
+perfection. In this way, we live up to our motto ‘Memories in Making’.
                 </p>
 
                 <div className="flex space-x-6 text-secondary pt-2">

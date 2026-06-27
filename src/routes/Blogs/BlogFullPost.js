@@ -173,7 +173,19 @@ function FullBlog() {
               <h4 className="font-FKScreamerBold text-[18px] md:text-[20px] lg:text-[22px] uppercase tracking-widest text-gray-900 mb-1">Found this helpful?</h4>
               <p className="text-sm md:text-base text-gray-500 font-medium">Share this article with your network.</p>
             </div>
-            <button className="flex items-center gap-2 px-6 py-3 bg-white text-gray-900 rounded-full font-bold shadow-sm border border-gray-200 hover:border-primary hover:text-primary transition-all active:scale-95 uppercase tracking-widest text-[14px]">
+            <button 
+              onClick={() => {
+                if (navigator.share) {
+                  navigator.share({
+                    title: post.title,
+                    url: window.location.href,
+                  });
+                } else {
+                  navigator.clipboard.writeText(window.location.href);
+                  alert('Link copied to clipboard!');
+                }
+              }}
+              className="flex items-center gap-2 px-6 py-3 bg-white text-gray-900 rounded-full font-bold shadow-sm border border-gray-200 hover:border-primary hover:text-primary transition-all active:scale-95 uppercase tracking-widest text-[14px]">
               <FiShare2 />
               Share Post
             </button>

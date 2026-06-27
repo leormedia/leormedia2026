@@ -26,6 +26,7 @@ const ReturnPolicy = lazy(() => import("./components/Documents/ReturnsPolicy"));
 const Error404 = lazy(() => import("./components/Tools/Error404"));
 
 const Home = lazy(() => import("./routes/Home.js"));
+const Gallery = lazy(() => import("./routes/Gallery.js"));
 const Aboutus = lazy(() => import("./routes/Aboutus"));
 const Contactus = lazy(() => import("./routes/Contactus.js"));
 const Services = lazy(() => import("./routes/Services/Services.js"));
@@ -59,6 +60,7 @@ const GoogleAnalytics = lazy(() => import("./routes/auth/Admin/GoogleAnalytics")
 
 const routes = [
   { path: "/", element: <Home /> },
+  { path: "/gallery", element: <Gallery /> },
   { path: "/*", element: <Error404 /> },
   
   // Admin Routes
@@ -145,17 +147,15 @@ const routes = [
 
 export function App() {
   const location = useLocation();
-  const [isLoading, setIsLoading] = useState(() => !sessionStorage.getItem("hasVisited"));
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (isLoading) {
-      const timer = setTimeout(() => {
-        setIsLoading(false);
-        sessionStorage.setItem("hasVisited", "true");
-      }, 4500); // Wait for text animation and logo reveal
-      return () => clearTimeout(timer);
-    }
-  }, [isLoading]);
+    setIsLoading(true);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 4500); // Wait for text animation and logo reveal
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
 
   useEffect(() => {
     window.scrollTo(0, 0);

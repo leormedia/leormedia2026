@@ -249,42 +249,7 @@ const SubpagesWeddingplanners = ({ pageData, seoData }) => {
           </div>
         </section>
 
-        {/* 6. Packages Section */}
-        {(data.packages || data.pricing) && (
-          <section className="py-24 bg-white">
-            <div className="container mx-auto px-6">
-              <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <span className="text-primary font-bold tracking-widest uppercase block">Our Packages</span>
-                <h2 className="text-[26px] md:text-[38px] lg:text-5xl font-bold text-slate-900">Tailored Luxury Experiences</h2>
-              </div>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {(data.packages || data.pricing).map((pkg, idx) => (
-                  <div key={idx} className={`relative p-10 rounded-3xl border transition-all ${pkg.highlighted ?"border-primary bg-slate-900 text-white scale-105 z-10 shadow-2xl" :"border-gray-200 bg-white text-slate-900 hover:border-primary/50"}`}>
-                    {pkg.highlighted && (
-                      <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-6 py-2 bg-primary text-white  font-bold rounded-full uppercase tracking-widest">
-                        Most Popular
-                      </span>
-                    )}
-                    <h3 className="text-lg md:text-xl lg:text-[22px] font-bold mb-2">{pkg.title}</h3>
-                    <div className="font-extrabold text-primary mb-8">{pkg.price}</div>
-                    <ul className="space-y-4 mb-12">
-                      {pkg.features.map((feature, fIdx) => (
-                        <li key={fIdx} className="flex items-center gap-3">
-                          <FaCheckCircle className="text-primary flex-shrink-0" />
-                          <span className="opacity-90">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Link to="/get-quotation" className={`block text-center py-4 rounded-xl font-bold transition-all ${pkg.highlighted ?"bg-primary text-white hover:bg-primary-dark" :"bg-gray-100 text-slate-900 hover:bg-primary hover:text-white"}`}>
-                      Get Quote
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
+       
 
         {/* 7. Process Section */}
         {data.process && (
