@@ -3,7 +3,7 @@ import React, { useState, useEffect, lazy, Suspense } from "react";
 import { AnimatePresence } from "framer-motion";
 import PageTransition from "./components/PageTransition";
 import LogoLoader from "./components/LogoLoader";
-import seoData from "./assets/data/seo.json";
+import axios from "axios";
 
 // Import data detail configs statically
 import { WeddingPlannersDetailPageData } from "./routes/Services/WeddingPlannersPage/WeddingPlannersDetailPageData.jsx";
@@ -57,6 +57,7 @@ const BlogsAdmin = lazy(() => import("./routes/auth/Admin/BlogsAdmin"));
 const Leads = lazy(() => import("./routes/auth/Admin/Leads"));
 const AdminContactus = lazy(() => import("./routes/auth/Admin/AdminContactus"));
 const GoogleAnalytics = lazy(() => import("./routes/auth/Admin/GoogleAnalytics"));
+const SeoAdmin = lazy(() => import("./routes/auth/Admin/SeoAdmin"));
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -70,6 +71,7 @@ const routes = [
   { path: "/auth/leads", element: <PrivateRoute><Leads /></PrivateRoute> },
   { path: "/auth/contactus", element: <PrivateRoute><AdminContactus /></PrivateRoute> },
   { path: "/auth/google-analytics", element: <PrivateRoute><GoogleAnalytics /></PrivateRoute> },
+  { path: "/auth/seo", element: <PrivateRoute><SeoAdmin /></PrivateRoute> },
 
 
 
@@ -148,6 +150,14 @@ const routes = [
 export function App() {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
+  const [seoData, setSeoData] = useState({});
+
+  useEffect(() => {
+    // Fetch dynamic SEO data from DB
+    axios.get("/api/seo")
+      .then(res => setSeoData(res.data))
+      .catch(err => console.error("Failed to load SEO data", err));
+  }, []);
 
   useEffect(() => {
     setIsLoading(true);

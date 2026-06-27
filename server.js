@@ -5,6 +5,7 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 const mysql = require('mysql2/promise');
 const { GoogleAuth } = require('google-auth-library');
+const fs = require('fs').promises;
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -81,11 +82,48 @@ const initDb = async () => {
         `);
         console.log("Database table 'blogs' is ready.");
 
+        await db.query(`
+            CREATE TABLE IF NOT EXISTS seo_metadata (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                page_key VARCHAR(255) UNIQUE NOT NULL,
+                title VARCHAR(255),
+                description TEXT,
+                keywords TEXT,
+                canonical VARCHAR(255),
+                og_image VARCHAR(255),
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+            )
+        `);
+        console.log("Database table 'seo_metadata' is ready.");
+
         // Insert default admin if no users exist
         const [users] = await db.query('SELECT id FROM admin_users LIMIT 1');
         if (users.length === 0) {
             await db.query("INSERT INTO admin_users (identifier, password, role) VALUES ('admin', 'password', 'admin')");
             console.log("Default admin user created: admin / password");
+        }
+
+        // Migrate SEO data from JSON to DB if DB is empty
+        const [seoRows] = await db.query('SELECT id FROM seo_metadata LIMIT 1');
+        if (seoRows.length === 0) {
+            try {
+                const fs = require('fs').promises;
+                const path = require('path');
+                const seoJsonPath = path.join(__dirname, 'src', 'assets', 'data', 'seo.json');
+                const fileData = await fs.readFile(seoJsonPath, 'utf8');
+                const seoJson = JSON.parse(fileData);
+                
+                for (const [key, data] of Object.entries(seoJson)) {
+                    await db.query(
+                        'INSERT INTO seo_metadata (page_key, title, description, keywords, canonical, og_image) VALUES (?, ?, ?, ?, ?, ?)',
+                        [key, data.title || '', data.description || '', data.keywords || '', data.canonical || '', data.ogImage || '']
+                    );
+                }
+                console.log("Migrated SEO data from JSON to database.");
+            } catch (err) {
+                console.error("Error migrating SEO data:", err);
+            }
         }
     } catch (err) {
         console.error("Error initializing DB:", err);
@@ -223,6 +261,50 @@ app.post('/api/contact', async (req, res) => {
 });
 
 // --- ADMIN DASHBOARD APIs ---
+
+// --- SEO APIs ---
+app.get('/api/seo', async (req, res) => {
+    try {
+        const [rows] = await db.query('SELECT * FROM seo_metadata');
+        // Convert rows to the old JSON structure: { "home": {title: "...", ...} }
+        const seoData = {};
+        rows.forEach(row => {
+            seoData[row.page_key] = {
+                title: row.title,
+                description: row.description,
+                keywords: row.keywords,
+                canonical: row.canonical,
+                ogImage: row.og_image
+            };
+        });
+        res.json(seoData);
+    } catch (error) {
+        console.error('Error fetching SEO from DB:', error);
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+app.put('/api/seo/:page_key', async (req, res) => {
+    try {
+        const pageKey = req.params.page_key;
+        const { title, description, keywords, canonical, ogImage } = req.body;
+        
+        // Upsert the data (insert if not exists, update if exists)
+        await db.query(
+            `INSERT INTO seo_metadata (page_key, title, description, keywords, canonical, og_image) 
+             VALUES (?, ?, ?, ?, ?, ?) 
+             ON DUPLICATE KEY UPDATE 
+             title = VALUES(title), description = VALUES(description), keywords = VALUES(keywords), 
+             canonical = VALUES(canonical), og_image = VALUES(og_image)`,
+            [pageKey, title || '', description || '', keywords || '', canonical || '', ogImage || '']
+        );
+        
+        res.json({ success: true, message: 'SEO data updated successfully' });
+    } catch (error) {
+        console.error('Error updating SEO in DB:', error);
+        res.status(500).json({ error: 'Server error' });
+    }
+});
 
 // Google Analytics Dashboard API
 app.get('/api/ga/dashboard', async (req, res) => {

@@ -55,6 +55,11 @@ const AdminNavbar = () => {
       icon: <FcBusinessContact className="text-[18px]" />,
     },
     {
+      name: "SEO Manager",
+      path: "/auth/seo",
+      icon: <FcGlobe className="text-[18px]" />,
+    },
+    {
       name: "Go to Website",
       path: "/",
       icon: <FcGlobe className="text-[18px]" />,
