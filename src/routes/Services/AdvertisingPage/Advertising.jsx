@@ -2,36 +2,14 @@ import { Link } from"react-router-dom";
 import { AdvertisingCompany } from"./AdvertisementDetailPageData";
 import { ServicesCoverImage } from"../../../assets/data/Imagedata";
 import { GlobalData } from"../../../assets/data/GlodalData";
-import seoData from"../../../assets/data/seo.json";
-import { Helmet } from"react-helmet-async";
+import SEO from "../../../components/SEO/SEO";
 import { FontAwesomeIcon } from"@fortawesome/react-fontawesome";
 import { FaArrowRight, FaPhone, FaQuestion, FaWhatsapp, FaRocket } from "react-icons/fa";
-
-const { title, description, keywords, canonical, ogImage } =
-  seoData.advertising;
 
 const Advertising = () => {
   return (
     <div className="">
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Leor Media" />
-        <meta name="language" content="en" />
-        <meta name="distribution" content="global" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        <link rel="canonical" href={canonical} />
-      </Helmet>
+      <SEO pageKey="advertising" />
 
       <main className="space-y-8 my-6">
         {/* Section-1: Hero Section */}

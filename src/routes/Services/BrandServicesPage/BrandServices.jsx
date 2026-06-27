@@ -1,6 +1,6 @@
 import React, { useState } from"react";
 import { Link } from"react-router-dom";
-import { Helmet } from"react-helmet-async";
+import SEO from "../../../components/SEO/SEO";
 import Slider from"react-slick";
 import BrandServicesBg from"../../../assets/Images/pexels-photo-196644.jpeg";
 import { 
@@ -13,11 +13,7 @@ import { MdOutlineDesignServices, MdOutlineBrandingWatermark, MdCampaign } from"
 import { BiTask, BiSupport } from"react-icons/bi";
 import { GlobalData } from"../../../assets/data/GlodalData";
 import { BrandingCompany } from"./BrandingDetailPageData";
-import seoData from"../../../assets/data/seo.json";
-import"slick-carousel/slick/slick.css";
 import"slick-carousel/slick/slick-theme.css";
-
-const { title, description, keywords, canonical, ogImage } = seoData.branding;
 
 const BrandingServices = () => {
   const [activeFaq, setActiveFaq] = useState(null);
@@ -66,15 +62,7 @@ const BrandingServices = () => {
 
   return (
     <div className="bg-white">
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <link rel="canonical" href={canonical} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-      </Helmet>
+      <SEO pageKey="branding" />
 
       {/* Section-1: Hero Section */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-gray-900 mt-14">

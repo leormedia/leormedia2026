@@ -14,21 +14,14 @@ import { IoCall } from"react-icons/io5";
 import { ServicesCoverImage } from"../../assets/data/Imagedata";
 
 import { GlobalData } from"../../assets/data/GlodalData";
-import seoData from"../../assets/data/seo.json";
 import SEO from"../../components/SEO/SEO";
 
-
-const { title, description, keywords, canonical, ogImage } = seoData.services;
 const Services = () => {
   return (
     <div className="services">
 
       <SEO 
-        title={title}
-        description={description}
-        keywords={keywords}
-        image={ogImage}
-        url={canonical}
+        pageKey="services" 
         schemaMarkup={{
           "@context": "https://schema.org",
           "@type": "Service",
@@ -37,8 +30,7 @@ const Services = () => {
             "@type": "Organization",
             "name": "Leor Media",
             "url": "https://leormedia.com"
-          },
-          "description": description
+          }
         }}
       />
       <main>

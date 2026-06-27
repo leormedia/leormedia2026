@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import React, { useState, useEffect, lazy, Suspense } from "react";
+import React, { useState, useEffect, lazy, Suspense, createContext } from "react";
 import { AnimatePresence } from "framer-motion";
 import PageTransition from "./components/PageTransition";
 import LogoLoader from "./components/LogoLoader";
@@ -58,6 +58,8 @@ const Leads = lazy(() => import("./routes/auth/Admin/Leads"));
 const AdminContactus = lazy(() => import("./routes/auth/Admin/AdminContactus"));
 const GoogleAnalytics = lazy(() => import("./routes/auth/Admin/GoogleAnalytics"));
 const SeoAdmin = lazy(() => import("./routes/auth/Admin/SeoAdmin"));
+
+export const SeoContext = createContext({});
 
 export function App() {
   const location = useLocation();
@@ -175,7 +177,7 @@ export function App() {
   const isAuthRoute = location.pathname.startsWith("/auth") && location.pathname !== "/auth/login";
 
   return (
-    <>
+    <SeoContext.Provider value={seoData}>
       <LogoLoader isLoading={isLoading} />
       <Suspense fallback={<div className="fixed inset-0 bg-white z-[99]" />}>
         {isAuthRoute && <AdminNavbar />}
@@ -209,7 +211,7 @@ export function App() {
           </div>
         </main>
       </Suspense>
-    </>
+    </SeoContext.Provider>
   );
 }
 

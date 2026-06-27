@@ -3,8 +3,7 @@ import { Link } from"react-router-dom";
 import { FontAwesomeIcon } from"@fortawesome/react-fontawesome";
 import { WeddingPlannersCoverimage } from"../../../assets/data/Imagedata";
 import { GlobalData } from"../../../assets/data/GlodalData";
-import seoData from"../../../assets/data/seo.json";
-import { Helmet } from"react-helmet-async";
+import SEO from "../../../components/SEO/SEO";
 import { 
   FaArrowRight, 
   FaPhone, 
@@ -41,8 +40,6 @@ const importAll = (r) =>
 const galleryImages = importAll(
   require.context("../../../assets/gallery", false, /\.(png|jpe?g|svg|webp|avif)$/),
 );
-
-const { title, description, keywords, canonical, ogImage } = seoData.weddingPlanners;
 
 // Counter Component for Why Choose Us Section
 const Counter = ({ end, label, icon }) => {
@@ -127,12 +124,7 @@ const WeddingPlannersPage = () => {
 
   return (
     <div className="bg-white">
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <link rel="canonical" href={canonical} />
-      </Helmet>
+      <SEO pageKey="weddingPlanners" />
 
       {/* 1. HERO SECTION */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-gray-900 mt-14">

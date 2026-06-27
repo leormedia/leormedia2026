@@ -10,7 +10,6 @@ import { HiOutlineMail } from "react-icons/hi";
 import React, { useState, useMemo } from "react";
 import { GlobalData } from "../assets/data/GlodalData";
 import SEO from "../components/SEO/SEO";
-import seoData from "../assets/data/seo.json";
 import { Link } from "react-router-dom";
 import { User, Mail, PhoneCall, BookOpen, MessageSquare, Send } from "lucide-react";
 
@@ -142,9 +141,6 @@ const ContactForm = () => {
     }
   };
 
-  const { title, description, keywords, canonical, ogImage } =
-    seoData.contactus;
-
   const contactMethods = [
     {
       icon: <HiOutlineMail className="text-[20px]" />,
@@ -171,13 +167,7 @@ const ContactForm = () => {
 
   return (
     <div className="min-h-screen bg-white my-6 mt-28">
-      <SEO 
-        title={title}
-        description={description}
-        keywords={keywords}
-        image={ogImage}
-        url={canonical}
-      />
+      <SEO pageKey="contactus" />
 
       {/* Hero Section */}
       <section

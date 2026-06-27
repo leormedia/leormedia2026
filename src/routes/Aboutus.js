@@ -12,14 +12,20 @@ import {
   AdvertisingImage,
   GoogleFavicon
 } from "../assets/data/Imagedata.jsx";
-import seoData from "../assets/data/seo.json";
 
 const Aboutus = () => {
-  const { title, description, keywords, canonical, ogImage } = seoData.aboutus;
+  const { title, description, keywords, canonical, ogImage } = {
+    title: "About Us - Leor Media",
+    description: "Learn more about Leor Media, a premier event management and digital marketing agency in Visakhapatnam.",
+    keywords: "About Leor Media, event management, digital marketing, branding agency",
+    canonical: "https://leormedia.com/about",
+    ogImage: "/images/og-about.jpg"
+  };
 
   return (
     <div className="bg-white overflow-hidden">
       <SEO 
+        pageKey="aboutus"
         title={title}
         description={description}
         keywords={keywords}

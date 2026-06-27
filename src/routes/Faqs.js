@@ -3,11 +3,8 @@ import { HiChevronDown, HiSearch } from "react-icons/hi";
 import { GenericWeddingPlannersDetailPageData } from "./Services/WeddingPlannersPage/WeddingPlannersDetailPageData";
 import { GenericDigitalMediaMarketingDetailPageData } from "./Services/DigitalMarketingPage/DigitalMediaMarketingDetailPageData";
 import { GenericBrandingDetailPageData } from "./Services/BrandServicesPage/BrandingDetailPageData";
-
-import seoData from "../assets/data/seo.json";
-import { Helmet } from "react-helmet-async";
-
-const { title, description, keywords, canonical, ogImage } = seoData.faq;
+import { GlobalData } from "../assets/data/GlodalData";
+import SEO from "../components/SEO/SEO";
 
 // Reusable FAQ section component
 const FaqSection = ({ title, faqs, openIndex, toggle, offset }) => (
@@ -179,31 +176,7 @@ function Faqs() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Leor Media" />
-        <meta name="language" content="en" />
-        <meta name="distribution" content="global" />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:type" content="website" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-
-        {/* Canonical Link */}
-        <link rel="canonical" href={canonical} />
-      </Helmet>
+      <SEO pageKey="faq" />
 
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">

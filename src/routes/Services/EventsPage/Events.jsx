@@ -8,12 +8,10 @@ import {
 } from"react-icons/fa";
 import { EventsCompany } from"./EventsDetailPageData.jsx";
 import { GlobalData } from"../../../assets/data/GlodalData";
-import seoData from"../../../assets/data/seo.json";
+import SEO from "../../../components/SEO/SEO";
 import { eventsLinks } from"../../../components/Navbar/MenuItems.js";
 
 const Events = () => {
-  const { title, description, keywords, canonical, ogImage } = seoData.events;
-
   const stats = [
     { label:"Events Managed", value:"500+" },
     { label:"Happy Clients", value:"450+" },
@@ -23,16 +21,7 @@ const Events = () => {
 
   return (
     <div className="bg-white">
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <link rel="canonical" href={canonical} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonical} />
-      </Helmet>
+      <SEO pageKey="events" />
 
       {/* Hero Section */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-gray-900 mt-14">

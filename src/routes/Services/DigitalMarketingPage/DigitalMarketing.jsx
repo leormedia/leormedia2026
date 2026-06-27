@@ -14,11 +14,9 @@ import {
   DigitalMarketingImage 
 } from"../../../assets/data/Imagedata";
 import { GlobalData } from"../../../assets/data/GlodalData";
-import seoData from"../../../assets/data/seo.json";
+import SEO from "../../../components/SEO/SEO";
 import"slick-carousel/slick/slick.css";
 import"slick-carousel/slick/slick-theme.css";
-
-const { title, description, keywords, canonical, ogImage } = seoData.digitalmarketing;
 
 const DigitalMarketing = () => {
   const services = [
@@ -65,15 +63,7 @@ const DigitalMarketing = () => {
 
   return (
     <div className="bg-white">
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <link rel="canonical" href={canonical} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-      </Helmet>
+      <SEO pageKey="digitalmarketing" />
 
       {/* Section-1: Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gray-900">

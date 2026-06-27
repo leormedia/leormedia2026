@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import SEO from '../../components/SEO/SEO';
-import seoData from "../../assets/data/seo.json";
 import { FiCalendar, FiArrowRight, FiCheckCircle, FiShare2 } from 'react-icons/fi';
 import axios from 'axios';
 
@@ -59,7 +58,7 @@ function FullBlog() {
     return { __html: htmlContent };
   };
   
-  const seo = seoData.blogPost || {
+  const seo = {
     title: "{postTitle} | Leor Media Blogs",
     description: "Read {postTitle} on Leor Media Blogs. Stay updated with tech and marketing insights.",
     keywords: "Leor Media, {postTitle}, blogs",

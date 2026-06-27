@@ -2,10 +2,8 @@ import React, { useState, useEffect } from 'react';
 import SEO from '../../components/SEO/SEO';
 import { Link } from 'react-router-dom';
 import { BlogCoverimage } from '../../assets/data/Imagedata';
-import seoData from "../../assets/data/seo.json";
 import axios from 'axios';
 import { FaArrowRight } from "react-icons/fa";
-const { title, description, keywords, canonical, ogImage } = seoData.blogs;
 
 function BlogPage() {
   const [blogsData, setBlogsData] = useState([]);
@@ -55,13 +53,7 @@ function BlogPage() {
 
   return (
     <div className="blogs-page">
-      <SEO 
-        title={title}
-        description={description}
-        keywords={keywords}
-        image={ogImage}
-        url={canonical}
-      />
+      <SEO pageKey="blogs" />
 
       <main>
         {/* Hero Section */}

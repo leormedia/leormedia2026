@@ -271,6 +271,7 @@ const HomePage = () => {
   return (
     <>
       <SEO 
+        pageKey="home"
         title="Best Event Management & Digital Marketing Agency" 
         description="Leor Media is a premier agency specializing in luxury weddings, corporate events, and data-driven digital marketing solutions."
         keywords="event management, luxury weddings, digital marketing agency, branding solutions"
