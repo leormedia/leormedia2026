@@ -1,4 +1,3 @@
-
 {
   "homepage": "https://leormedia.com",
   "name": "leormedia",
@@ -89,10 +88,12 @@
       "/auth/google-analytics",
       "/auth/leads",
       "/auth/login",
+      "/auth/seo",
       "/blogs",
       "/blogs/%7BpostSlug%7D",
       "/contactus",
       "/frequently-asked-questions",
+      "/gallery",
       "/get-quotation",
       "/services",
       "/services/advertisement",

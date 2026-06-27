@@ -59,7 +59,12 @@ const AdminContactus = lazy(() => import("./routes/auth/Admin/AdminContactus"));
 const GoogleAnalytics = lazy(() => import("./routes/auth/Admin/GoogleAnalytics"));
 const SeoAdmin = lazy(() => import("./routes/auth/Admin/SeoAdmin"));
 
-const routes = [
+export function App() {
+  const location = useLocation();
+  const [isLoading, setIsLoading] = useState(true);
+  const [seoData, setSeoData] = useState({});
+
+  const routes = [
   { path: "/", element: <Home /> },
   { path: "/gallery", element: <Gallery /> },
   { path: "/*", element: <Error404 /> },
@@ -145,12 +150,7 @@ const routes = [
     element: <SubpagesEvents pageData={EventsDetailPageData} seoData={seoData} />,
   },
   /*---------Events End---------*/
-];
-
-export function App() {
-  const location = useLocation();
-  const [isLoading, setIsLoading] = useState(true);
-  const [seoData, setSeoData] = useState({});
+  ];
 
   useEffect(() => {
     // Fetch dynamic SEO data from DB
